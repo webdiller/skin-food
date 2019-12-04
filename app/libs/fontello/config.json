@@ -1,0 +1,52 @@
+{
+  "name": "",
+  "css_prefix_text": "icon-",
+  "css_use_suffix": false,
+  "hinting": true,
+  "units_per_em": 1000,
+  "ascent": 850,
+  "glyphs": [
+    {
+      "uid": "9dd9e835aebe1060ba7190ad2b2ed951",
+      "css": "search",
+      "code": 59392,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "0d08dbb1dd648a43bdea81b7e6c9e036",
+      "css": "location",
+      "code": 59393,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "35674c31693db324f2fd6a48f1079263",
+      "css": "down-micro",
+      "code": 59394,
+      "src": "websymbols"
+    },
+    {
+      "uid": "5b4b9a59f7acb6839fa7fefe0d433165",
+      "css": "heart-circled",
+      "code": 59395,
+      "src": "elusive"
+    },
+    {
+      "uid": "c0a07aca383ff2a164a4d691fa46e35c",
+      "css": "left-open",
+      "code": 59396,
+      "src": "elusive"
+    },
+    {
+      "uid": "dc4a03854ef986d64565143bea4241aa",
+      "css": "right-open",
+      "code": 59397,
+      "src": "elusive"
+    },
+    {
+      "uid": "628e5fc59fc5965a6b91189467b037d5",
+      "css": "heart",
+      "code": 59398,
+      "src": "elusive"
+    }
+  ]
+}

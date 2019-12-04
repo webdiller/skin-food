@@ -1,0 +1,290 @@
+@import "part"
+@import "normalize"
+@import "libs"
+@import "vars"
+@import "fonts"
+
+html
+    scroll-behavior: smooth
+    box-sizing: border-box
+
+*, *::before, *::after
+    box-sizing: border-box
+
+body
+    overflow-x: hidden
+    font-family: $proxy
+    font-weight: 400
+    min-height: 100vh
+    margin: 0
+    padding: 0
+
+h1,h2,h3,h4,h5,h6,p
+    margin: 0
+
+a
+    color: #1B1414
+    transition: all .2s ease
+
+a:hover
+    color: #000000
+    text-decoration: none
+
+.body-container
+    display: flex
+    flex-direction: column
+
+.region
+    background: $grey
+    &__wrapper
+        height: 30px
+        display: flex
+        justify-content: center
+        align-items: center
+        span
+            margin-right: 10px
+        p
+            margin-right: 10px
+            font-size: 13px
+            color: #888888
+        select
+            font-size: 13px
+            font-weight: 600
+    &-icon
+        color: $pink
+
+.select-city
+    &:not(.is-multiple)
+        height: 100%
+    select
+        border: none
+        background: transparent
+        &:active,
+        &:focus
+            border-color: none
+            box-shadow: none
+    &:not(.is-multiple):not(.is-loading)::after
+        border-color: #AEAEAE
+
+.header
+    &__wrapper
+        display: flex
+        justify-content: space-between
+        align-items: center
+        max-width: 1240px
+        margin: 0 auto
+        padding: 0 20px
+        height: 75px
+        background: #fff
+        opacity: 1
+        visibility: visible
+        transition: all .4s ease
+        &.disabled
+            visibility: hidden
+            opacity: 0
+    &__title
+        display: flex
+        align-items: center
+        font-size: 30px
+        &-heart
+            font-size: 9px
+            margin: 0 10px
+        &.disabled
+            display: none
+    &__menu
+        &.active
+            order: 4
+            margin-left: auto
+    &__search
+        margin-right: auto
+        &.active
+            margin-right: 0
+            margin-left: 0
+    &__like
+        margin-left: auto
+        &.active
+            margin-left: 0
+    &__basket
+
+
+.main-menu
+    &__wrapper
+        height: 0
+        transition: all .5s ease
+        &.active
+            height: 1000px
+
+
+
+.breadcrumb
+    background: #F78C9F
+    margin-bottom: 0 !important
+    &__list
+        height: 30px
+        line-height: 30px
+        max-width: 1240px
+        padding: 0 20px
+        margin: 0 auto
+    &__item
+    &__link
+        font-size: 11px
+        text-decoration-line: underline
+        color: $pink
+        transition: all .3s ease
+        &:hover
+            color: $hoverpink
+
+.swiper
+    &__wrapper
+        max-width: 1240px
+        padding: 0 20px
+        margin: 0 auto
+    &-tabs
+    &-list
+        justify-content: space-between !important
+        li
+            a
+                font-size: 15px
+                color: #F68C9F
+                transition: all .1s ease
+                &:hover
+                    border: none
+                    box-shadow: inset 0 -3px 0 #F68C9F
+            &.is-active
+                a
+                    color: #000
+                    box-shadow: inset 0 -3px 0 #F68C9F
+                    border: none
+
+.main
+    background: #FFDDE4
+    background-size: cover
+    position: relative
+    &__wrapper
+        max-width: 1240px
+        padding: 27px 20px 45px 20px
+        margin: 0 auto
+        min-height: 1000px
+    &__img
+        position: absolute
+        bottom: 0
+        left: 0
+        right: 0
+        height: 593px
+        background: url(../img/main-bg.png) no-repeat center
+
+.footer
+    margin-top: auto
+    padding: 0
+    background: #FFFFFF
+    &__wrapper
+        max-width: 582px
+        padding: 36px 20px 20px 20px
+        margin: 0 auto
+        display: flex
+        justify-content: space-between
+        flex-wrap: wrap
+    &__left
+    &__right
+    &__contacts
+    &__contacts-list
+    &__socials
+    &__socials-with-title
+    &__payment-list
+    &__navigation-users
+    &__navigation-main
+
+.credits
+    background: #fff
+    &__wrapper
+        text-align: center
+        max-width: 708px
+        margin: 0 auto
+        color: #888888
+        text-align: center
+        padding: 0 20px
+        height: 66px
+        display: flex
+        align-items: center
+        justify-content: center
+        border-top: 1px solid #E7E7E7
+    &__text
+        font-size: 9px
+        max-width: 584px
+        margin: 0 auto
+
+.contacts-list
+    &__title
+        font-size: 14px
+        margin-bottom: 18px
+        letter-spacing: 0.04em
+        color: #1A1A1A
+    &__link
+        display: block
+        font-size: 14px
+        line-height: 200%
+        letter-spacing: 0.04em
+        font-weight: 600
+        color: #1A1A1A
+
+.socials
+    display: flex
+    align-items: center
+    &__item
+        &:not(:last-child)
+            margin-right: 17px
+    &__link
+
+.socials-with-title
+    &__title
+        font-weight: 600
+        font-size: 14px
+        line-height: 17px
+        letter-spacing: 0.04em
+        color: #1A1A1A
+        margin-bottom: 15px
+    &__list
+        display: flex
+        align-items: center
+    &__item
+        &:not(:last-child)
+            margin-right: 18px
+    &__link
+
+.payment-list
+    &__item
+    &__img
+
+.navigation-users
+    &__title
+        margin-bottom: 15px
+        font-weight: 600
+        font-size: 14px
+        line-height: 17px
+        letter-spacing: 0.04em
+        color: #1A1A1A
+    &__list
+    &__item
+    &__link
+        font-size: 14px
+        line-height: 29px
+        letter-spacing: 0.04em
+        color: #000000
+
+.navigation-main
+    &__title
+        margin-bottom: 15px
+        font-weight: 600
+        font-size: 14px
+        line-height: 17px
+        letter-spacing: 0.04em
+        color: #1A1A1A
+    &__list
+    &__item
+    &__link
+        font-size: 14px
+        line-height: 29px
+        letter-spacing: 0.04em
+        color: #000000
+
+@import "media"
