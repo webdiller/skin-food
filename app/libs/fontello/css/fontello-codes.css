@@ -13,6 +13,8 @@
 .icon-down-open-big:before { content: '\e80b'; } /* '' */
 .icon-right-open-mini:before { content: '\e80c'; } /* '' */
 .icon-left-open-mini:before { content: '\e80d'; } /* '' */
+.icon-left-open-big:before { content: '\e80e'; } /* '' */
+.icon-star:before { content: '\e80f'; } /* '' */
 .icon-shop:before { content: '\e835'; } /* '' */
 .icon-menu:before { content: '\f0c9'; } /* '' */
 .icon-shopping-bag:before { content: '\f290'; } /* '' */

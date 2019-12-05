@@ -18,7 +18,7 @@ $(document).ready(function () {
         basket.addEventListener('click', () => {
             counter += 25;
             basketCounter.innerText = counter;
-        })
+        });
 
         function openMenu(selector) {
             selector.addEventListener('click', () => {
@@ -61,5 +61,13 @@ $(document).ready(function () {
             doc.body.classList.toggle('disable-y');
         })
     }());
+
+    const swiperModule = (function () {
+        const carousel = document.getElementById
+        $('#carouselExampleIndicators').carousel('pause');
+    }())
+    $('#carouselExampleIndicators').carousel({
+        interval: false
+    });
 
 });

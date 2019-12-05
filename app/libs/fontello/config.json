@@ -107,6 +107,18 @@
       "css": "left-open-mini",
       "code": 59405,
       "src": "entypo"
+    },
+    {
+      "uid": "884cfc3e6e2d456dd2a2ca0dbb9e6337",
+      "css": "left-open-big",
+      "code": 59406,
+      "src": "entypo"
+    },
+    {
+      "uid": "b392c847bf41826598f12c02be842253",
+      "css": "star",
+      "code": 59407,
+      "src": "mfglabs"
     }
   ]
 }
