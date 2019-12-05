@@ -44,7 +44,6 @@ gulp.task(`browserSync`, function () {
 
 gulp.task(`scripts`, function () {
     return gulp.src([
-        `${PATH}/libs/jquery-1.8.3/jquery.min.js`,
         `${PATH}/libs/lozad.js`,
         `${PATH}/libs/ofi.min.js`,
     ])

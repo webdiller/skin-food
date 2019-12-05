@@ -23,7 +23,8 @@
     "gulp-rename": "^1.4.0",
     "gulp-sass": "^4.0.2",
     "gulp-uglify": "^3.0.2",
-    "imagemin-pngquant": "^8.0.0"
+    "imagemin-pngquant": "^8.0.0",
+    "uikit": "^3.2.4"
   },
   "dependencies": {
     "brazzers-carousel": "^1.0.1"

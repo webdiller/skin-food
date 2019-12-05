@@ -33,9 +33,17 @@ a:hover
 .body-container
     display: flex
     flex-direction: column
+    &.disable-y
+        overflow-y: hidden
 
 .region
     background: $grey
+    position: relative
+    &.active
+        position: fixed
+        top: 0
+        right: 0
+        left: 0
     &__wrapper
         height: 30px
         display: flex
@@ -47,26 +55,79 @@ a:hover
             margin-right: 10px
             font-size: 13px
             color: #888888
-        select
-            font-size: 13px
-            font-weight: 600
     &-icon
         color: $pink
-
-.select-city
-    &:not(.is-multiple)
-        height: 100%
-    select
-        border: none
+    &__btn
         background: transparent
-        &:active,
-        &:focus
-            border-color: none
-            box-shadow: none
-    &:not(.is-multiple):not(.is-loading)::after
-        border-color: #AEAEAE
+        border: none
+        outline: none
+        position: relative
+        &::after
+            content: "\e802"
+            font-family: fontello
+            color: #AEAEAE
+            transform: scale(1.3)
+            position: absolute
+            margin-left: 10px
+            border: none
+            transition: all .3s ease
+        &.active
+            &::after
+                transform: scale(1.3) rotate(-180deg)
+    &__countries
+        content: ""
+        background: #fff
+        position: fixed
+        top: 30px
+        left: 0
+        right: 0
+        bottom: 0
+        opacity: 0
+        z-index: -1
+        height: 0
+        width: 100%
+        visibility: hidden
+        transition: all .3s ease
+        &.active
+            height: 100%
+            overflow-y: scroll
+            z-index: 100
+            visibility: visible
+            opacity: 1
+    &-list
+        display: flex
+        flex-wrap: wrap
+        padding: 0
+        margin: 0
+        list-style-type: none
+        &--padding
+            max-width: 1240px
+            margin: 0 auto
+            padding: 40px 20px
+        &__item
+            flex-basis: 40%
+            width: 40%
+        &__link
+
+.site
+    &-title
+        display: inline-flex
+        align-items: center
+        font-size: 30px
+        &-heart
+            font-size: 9px
+            margin: 0 10px
+        &.disabled
+            display: none
+    &-description
+        text-transform: uppercase
+        letter-spacing: 4px
+        display: block
+        font-size: 13px
+        color: #1E1E1F
 
 .header
+    border-bottom: 1px solid #E7E7E7
     &__wrapper
         display: flex
         justify-content: space-between
@@ -82,6 +143,11 @@ a:hover
         &.disabled
             visibility: hidden
             opacity: 0
+    &-icon
+        color: #F78C9F
+        font-size: 23px
+        &:hover
+            color: $hoverpink
     &__title
         display: flex
         align-items: center
@@ -92,69 +158,158 @@ a:hover
         &.disabled
             display: none
     &__menu
+        margin-right: 30px
         &.active
+            margin-right: 0
             order: 4
             margin-left: auto
     &__search
         margin-right: auto
         &.active
-            margin-right: 0
+            margin-right: 30px
             margin-left: 0
     &__like
         margin-left: auto
+        margin-right: 20px
         &.active
+            margin-right: 30px
             margin-left: 0
     &__basket
-
+        position: relative
+        font-size: 26px
+        &-counter
+            position: absolute
+            bottom: -4px
+            font-size: 10px
+            left: 50%
+            transform: translateX(-50%)
+            color: #fff
 
 .main-menu
     &__wrapper
         height: 0
         transition: all .5s ease
+        max-width: 1240px
+        margin: 0 auto
+        visibility: hidden
+        opacity: 0
         &.active
-            height: 1000px
+            opacity: 1
+            visibility: visible
+            padding: 15px 20px 65px 20px
+            height: 100%
 
+.menu-list
+    transition: all 5s ease
+    margin-bottom: 0
+    visibility: hidden
+    &.active
+        visibility: visible
+    &__item
+        padding: 13px 0
+        border-bottom: 1px solid #E7E7E7
+    &__link
+        display: block
+        font-size: 15px
+        line-height: 31px
+        letter-spacing: 0.04em
+        color: #1E1E1F
+        font-weight: 600
+        &::after
+            content: "\e80a"
+            font-family: "fontello"
+            color: #CFCFCF
+            position: absolute
+            margin-left: 10px
+            border: none
+            transition: all .3s ease
+        &[aria-expanded="true"]::after
+            transform: rotate(90deg)
+    &__inner-list
+    &__inner-item
+    &__inner-link
+        display: block
 
+.profile-menu
+    padding: 0
+    margin: 0
+    list-style-type: none
+    &__item
+        padding: 13px 0
+        display: flex
+        align-items: center
+        border-bottom: 1px solid #E7E7E7
+    &__title
+        font-size: 15px
+        line-height: 31px
+        letter-spacing: 0.04em
+        color: #1E1E1F
+        font-weight: 600
+        margin-right: auto
+    &__mail
+        font-size: 15px
+        text-align: right
+        letter-spacing: 0.04em
+        color: #CFCFCF
+        margin-right: 20px
+    &__btn
+        border: none
+        outline: none
+        background: transparent
+        font-size: 13px
+        text-align: right
+        letter-spacing: 0.04em
+        color: #f78c9f
+        text-decoration: underline
+    &__link
+        margin-right: auto
+        font-size: 15px
+        line-height: 31px
+        letter-spacing: 0.04em
+        color: #1E1E1F
+        font-weight: 600
 
-.breadcrumb
-    background: #F78C9F
-    margin-bottom: 0 !important
-    &__list
-        height: 30px
-        line-height: 30px
+.breadcrumbs
+    background-color: #F78C9F
+    &__wrapper
         max-width: 1240px
         padding: 0 20px
         margin: 0 auto
-    &__item
-    &__link
-        font-size: 11px
-        text-decoration-line: underline
-        color: $pink
-        transition: all .3s ease
-        &:hover
-            color: $hoverpink
+    &-nav
+    &-list
+        padding: 0
+        margin: 0
+        display: flex
+        list-style-type: none
+        &__item
+            padding: 12px 10px 12px 0
+        &__link
+            font-size: 14px
+            letter-spacing: 0.04em
+            text-decoration-line: underline
+            color: #FFFFFF
+            &:hover
+                color: #fff
+    &__current
+        font-size: 15px
+        line-height: 31px
+        letter-spacing: 0.04em
+        font-weight: 600
+        text-transform: uppercase
+        color: #FFFFFF
+        padding-bottom: 10px
 
 .swiper
     &__wrapper
         max-width: 1240px
         padding: 0 20px
         margin: 0 auto
-    &-tabs
-    &-list
-        justify-content: space-between !important
-        li
-            a
-                font-size: 15px
-                color: #F68C9F
-                transition: all .1s ease
-                &:hover
-                    border: none
-                    box-shadow: inset 0 -3px 0 #F68C9F
-            &.is-active
-                a
-                    color: #000
-                    box-shadow: inset 0 -3px 0 #F68C9F
-                    border: none
+
+.slider
+    &__wrapper
+        max-width: 1240px
+        padding: 0 20px
+        margin: 0 auto
 
 .main
     background: #FFDDE4
@@ -165,6 +320,9 @@ a:hover
         padding: 27px 20px 45px 20px
         margin: 0 auto
         min-height: 1000px
+        display: flex
+        flex-direction: column
+        height: 100%
     &__img
         position: absolute
         bottom: 0
@@ -172,6 +330,100 @@ a:hover
         right: 0
         height: 593px
         background: url(../img/main-bg.png) no-repeat center
+    &__bottom
+        position: relative
+        z-index: 10
+        margin-top: auto
+        text-align: center
+
+.contacts-list
+    &__title
+        font-size: 14px
+        margin-bottom: 18px
+        letter-spacing: 0.04em
+        color: #1A1A1A
+    &__link
+        display: block
+        font-size: 14px
+        line-height: 200%
+        letter-spacing: 0.04em
+        font-weight: 600
+        color: #1A1A1A
+
+.socials
+    padding: 0
+    margin: 0
+    list-style-type: none
+    display: flex
+    align-items: center
+    &__link
+        &:not(:last-child)
+            margin-right: 17px
+    &__img
+        max-width: 100%
+        height: auto
+        width: 28px
+
+.socials-with-title
+    &__title
+        font-weight: 600
+        font-size: 14px
+        line-height: 17px
+        letter-spacing: 0.04em
+        color: #1A1A1A
+        margin-bottom: 15px
+    &__list
+        display: flex
+        align-items: center
+    &__link
+        &:not(:last-child)
+            margin-right: 18px
+    &__img
+        max-width: 100%
+        height: auto
+        width: 32px
+        filter: grayscale(1) brightness(1.2)
+        transition: all .3s ease
+        &:hover
+            filter: grayscale(.5) brightness(1)
+
+.payment-list
+    &__item
+    &__img
+
+.navigation-users
+    &__title
+        margin-bottom: 15px
+        font-weight: 600
+        font-size: 14px
+        line-height: 17px
+        letter-spacing: 0.04em
+        color: #1A1A1A
+    &__list
+        +reset-ul
+    &__item
+    &__link
+        font-size: 14px
+        line-height: 29px
+        letter-spacing: 0.04em
+        color: #000000
+
+.navigation-main
+    &__title
+        margin-bottom: 15px
+        font-weight: 600
+        font-size: 14px
+        line-height: 17px
+        letter-spacing: 0.04em
+        color: #1A1A1A
+    &__list
+        +reset-ul
+    &__item
+    &__link
+        font-size: 14px
+        line-height: 29px
+        letter-spacing: 0.04em
+        color: #000000
 
 .footer
     margin-top: auto
@@ -189,9 +441,12 @@ a:hover
     &__contacts
     &__contacts-list
     &__socials
+        padding: 20px 0
     &__socials-with-title
+        margin-bottom: 35px
     &__payment-list
     &__navigation-users
+        margin-bottom: 25px
     &__navigation-main
 
 .credits
@@ -212,79 +467,5 @@ a:hover
         font-size: 9px
         max-width: 584px
         margin: 0 auto
-
-.contacts-list
-    &__title
-        font-size: 14px
-        margin-bottom: 18px
-        letter-spacing: 0.04em
-        color: #1A1A1A
-    &__link
-        display: block
-        font-size: 14px
-        line-height: 200%
-        letter-spacing: 0.04em
-        font-weight: 600
-        color: #1A1A1A
-
-.socials
-    display: flex
-    align-items: center
-    &__item
-        &:not(:last-child)
-            margin-right: 17px
-    &__link
-
-.socials-with-title
-    &__title
-        font-weight: 600
-        font-size: 14px
-        line-height: 17px
-        letter-spacing: 0.04em
-        color: #1A1A1A
-        margin-bottom: 15px
-    &__list
-        display: flex
-        align-items: center
-    &__item
-        &:not(:last-child)
-            margin-right: 18px
-    &__link
-
-.payment-list
-    &__item
-    &__img
-
-.navigation-users
-    &__title
-        margin-bottom: 15px
-        font-weight: 600
-        font-size: 14px
-        line-height: 17px
-        letter-spacing: 0.04em
-        color: #1A1A1A
-    &__list
-    &__item
-    &__link
-        font-size: 14px
-        line-height: 29px
-        letter-spacing: 0.04em
-        color: #000000
-
-.navigation-main
-    &__title
-        margin-bottom: 15px
-        font-weight: 600
-        font-size: 14px
-        line-height: 17px
-        letter-spacing: 0.04em
-        color: #1A1A1A
-    &__list
-    &__item
-    &__link
-        font-size: 14px
-        line-height: 29px
-        letter-spacing: 0.04em
-        color: #000000
 
 @import "media"

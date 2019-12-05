@@ -6,7 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0 shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Skin Food</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/metismenujs/dist/metismenujs.min.css">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
     <link rel="stylesheet" type="text/css" href="css/style.min.css" />
 
 </head>
@@ -14,70 +18,302 @@
 <body class="body-container">
 
 
-    <div class="region">
+    <div id="region" class="region">
         <div class="region__wrapper">
             <span class="demo-icon icon-location region-icon"></span>
             <p>Ваш регион доставки</p>
-            <div class="select select-city">
-                <select>
-                    <option>Минск</option>
-                    <option>Москва</option>
-                    <option>Владивосток</option>
-                </select>
-            </div>
+            <button id="regionButton" class="region__btn">Минск</button>
+        </div>
+        <div id="countries" class="region__countries">
+            <ul class="region-list region-list--padding">
+                <li class="region-list__item"><a class="region-list__link" href="#"> Абингдон (Англия)</a></li>
+                <li class="region-list__item"><a class="region-list__link" href="#"> Амстердам</a></li>
+                <li class="region-list__item"><a class="region-list__link" href="#"> Антверпен</a></li>
+                <li class="region-list__item"><a class="region-list__link" href="#"> Архангельск</a></li>
+                <li class="region-list__item"><a class="region-list__link" href="#"> Астрахань</a></li>
+                <li class="region-list__item"><a class="region-list__link" href="#"> Атланта</a></li>
+                <li class="region-list__item"><a class="region-list__link" href="#"> Афины</a></li>
+
+                <li class="region-list__item"><a class="region-list__link" href="#">Баден (Аргау)</a></li>
+                <li class="region-list__item"><a class="region-list__link" href="#">Базель</a></li>
+                <li class="region-list__item"><a class="region-list__link" href="#">Бангалор</a></li>
+                <li class="region-list__item"><a class="region-list__link" href="#">Барселона</a></li>
+                <li class="region-list__item"><a class="region-list__link" href="#">Бендеры</a></li>
+                <li class="region-list__item"><a class="region-list__link" href="#">Берлин</a></li>
+                <li class="region-list__item"><a class="region-list__link" href="#">Берн</a></li>
+                <li class="region-list__item"><a class="region-list__link" href="#">Биробиджан</a></li>
+                <li class="region-list__item"><a class="region-list__link" href="#">Бонн</a></li>
+                <li class="region-list__item"><a class="region-list__link" href="#">Бостон</a></li>
+                <li class="region-list__item"><a class="region-list__link" href="#">Брайзах-на-Рейне</a></li>
+                <li class="region-list__item"><a class="region-list__link" href="#">Бремен</a></li>
+                <li class="region-list__item"><a class="region-list__link" href="#">Будённовск</a></li>
+                <li class="region-list__item"><a class="region-list__link" href="#">Буффало</a></li>
+                <li class="region-list__item"><a class="region-list__link" href="#">Буэнос-Айрес</a></li>
+
+                <li class="region-list__item"><a class="region-list__link" href="#">Варшава</a></li>
+                <li class="region-list__item"><a class="region-list__link" href="#">Вашингтон</a></li>
+                <li class="region-list__item"><a class="region-list__link" href="#">Веймар</a></li>
+                <li class="region-list__item"><a class="region-list__link" href="#">Вельс</a></li>
+                <li class="region-list__item"><a class="region-list__link" href="#">Вельск</a></li>
+                <li class="region-list__item"><a class="region-list__link" href="#">Вена</a></li>
+                <li class="region-list__item"><a class="region-list__link" href="#">Венеция</a></li>
+                <li class="region-list__item"><a class="region-list__link" href="#">Винница</a></li>
+                <li class="region-list__item"><a class="region-list__link" href="#">Владивосток</a></li>
+                <li class="region-list__item"><a class="region-list__link" href="#">Волгоград</a></li>
+                <li class="region-list__item"><a class="region-list__link" href="#">Вологда</a></li>
+                <li class="region-list__item"><a class="region-list__link" href="#">Вормс</a></li>
+                <li class="region-list__item"><a class="region-list__link" href="#">Воронеж</a></li>
+            </ul>
         </div>
     </div>
 
+
     <div class="header">
         <div class="header__wrapper">
-            <a class="header__menu" id="menu" href="#">M</a>
-            <a class="header__search demo-icon icon-search" id="search" href="#"></a>
 
-            <p id="title" class="header__title">SKIN <span class="header__title-heart demo-icon icon-heart"></span> FOOD
+            <a class="header-icon header__menu demo-icon icon-menu" id="menu" href="#"></a>
+            <a class="header-icon header__search demo-icon icon-search" id="search" href="#"></a>
+
+            <p id="title" class="site-title header__title">SKIN <span
+                    class="header__title-heart demo-icon icon-heart"></span> FOOD
             </p>
 
-            <a class="header__like demo-icon icon-heart-circled" id="like" href="#"></a>
-            <a class="header__basket" id="basket" href="#">B</a>
+            <a class="header-icon header__like demo-icon icon-heart-circled" id="like" href="#"></a>
+            <a class="header-icon header__basket demo-icon icon-shop" id="basket" href="#"><span id="basketCounter"
+                    class="header__basket-counter">0</span></a>
+
         </div>
     </div>
 
     <div class="main-menu">
         <div class="main-menu__wrapper">
 
+            <ul id="menuList" class="menu-list list-unstyled components">
+
+                <li class="menu-list__item active">
+                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false"
+                        class="menu-list__link dropdown-toggle">Бренды</a>
+                    <ul class="menu-list__inner-list collapse list-unstyled" id="homeSubmenu">
+                        <li class="menu-list__inner-item">
+                            <a class="menu-list__inner-link" href="#">1</a>
+                            <a class="menu-list__inner-link" href="#">2</a>
+                            <a class="menu-list__inner-link" href="#">3</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="menu-list__item">
+                    <a href="#faceSubmenu" data-toggle="collapse" aria-expanded="false"
+                        class="menu-list__link dropdown-toggle">Лицо</a>
+                    <ul class="menu-list__inner-list collapse list-unstyled" id="faceSubmenu">
+                        <li>
+                            <a href="#"> 1</a>
+                        </li>
+                        <li>
+                            <a href="#"> 2</a>
+                        </li>
+                        <li>
+                            <a href="#"> 3</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="menu-list__item">
+                    <a href="#bodySubmenu" data-toggle="collapse" aria-expanded="false"
+                        class="menu-list__link dropdown-toggle">Тело</a>
+                    <ul class="menu-list__inner-list collapse list-unstyled" id="bodySubmenu">
+                        <li>
+                            <a href="#"> 1</a>
+                        </li>
+                        <li>
+                            <a href="#"> 2</a>
+                        </li>
+                        <li>
+                            <a href="#"> 3</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="menu-list__item">
+                    <a href="#hairsSubmenu" data-toggle="collapse" aria-expanded="false"
+                        class="menu-list__link dropdown-toggle">Волосы</a>
+                    <ul class="menu-list__inner-list collapse list-unstyled" id="hairsSubmenu">
+                        <li>
+                            <a href="#"> 1</a>
+                        </li>
+                        <li>
+                            <a href="#"> 2</a>
+                        </li>
+                        <li>
+                            <a href="#"> 3</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="menu-list__item">
+                    <a href="#makeupSubmenu" data-toggle="collapse" aria-expanded="false"
+                        class="menu-list__link dropdown-toggle">Макияж</a>
+                    <ul class="menu-list__inner-list collapse list-unstyled" id="makeupSubmenu">
+                        <li>
+                            <a href="#"> 1</a>
+                        </li>
+                        <li>
+                            <a href="#"> 2</a>
+                        </li>
+                        <li>
+                            <a href="#"> 3</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="menu-list__item">
+                    <a href="#accessoiresSubmenu" data-toggle="collapse" aria-expanded="false"
+                        class="menu-list__link dropdown-toggle">Аксессуары</a>
+                    <ul class="menu-list__inner-list collapse list-unstyled" id="accessoiresSubmenu">
+                        <li>
+                            <a href="#"> 1</a>
+                        </li>
+                        <li>
+                            <a href="#"> 2</a>
+                        </li>
+                        <li>
+                            <a href="#"> 3</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="menu-list__item">
+                    <a href="#newsSubmenu" data-toggle="collapse" aria-expanded="false"
+                        class="menu-list__link dropdown-toggle">Новинки</a>
+                    <ul class="menu-list__inner-list collapse list-unstyled" id="newsSubmenu">
+                        <li>
+                            <a href="#"> 1</a>
+                        </li>
+                        <li>
+                            <a href="#"> 2</a>
+                        </li>
+                        <li>
+                            <a href="#"> 3</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="menu-list__item">
+                    <a href="#musthaveSubmenu" data-toggle="collapse" aria-expanded="false"
+                        class="menu-list__link dropdown-toggle">Must have</a>
+                    <ul class="menu-list__inner-list collapse list-unstyled" id="musthaveSubmenu">
+                        <li>
+                            <a href="#"> 1</a>
+                        </li>
+                        <li>
+                            <a href="#"> 2</a>
+                        </li>
+                        <li>
+                            <a href="#"> 3</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="menu-list__item">
+                    <a href="#bestsellersSubmenu" data-toggle="collapse" aria-expanded="false"
+                        class="menu-list__link dropdown-toggle">Бестселлеры</a>
+                    <ul class="menu-list__inner-list collapse list-unstyled" id="bestsellersSubmenu">
+                        <li>
+                            <a href="#"> 1</a>
+                        </li>
+                        <li>
+                            <a href="#"> 2</a>
+                        </li>
+                        <li>
+                            <a href="#"> 3</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="menu-list__item">
+                    <a href="#stocksSubmenu" data-toggle="collapse" aria-expanded="false"
+                        class="menu-list__link dropdown-toggle">Акции</a>
+                    <ul class="menu-list__inner-list collapse list-unstyled" id="stocksSubmenu">
+                        <li>
+                            <a href="#"> 1</a>
+                        </li>
+                        <li>
+                            <a href="#"> 2</a>
+                        </li>
+                        <li>
+                            <a href="#"> 3</a>
+                        </li>
+                    </ul>
+                </li>
+
+            </ul>
+
+            <ul class="profile-menu">
+                <li class="profile-menu__item">
+                    <p class="profile-menu__title">Профиль</p>
+                    <span class="profile-menu__mail">example@gmail.com</span>
+                    <button class="profile-menu__btn">Выйти</button>
+                </li>
+                <li class="profile-menu__item">
+                    <a class="profile-menu__link">Мои заказы</a>
+                </li>
+                <li class="profile-menu__item">
+                    <p class="profile-menu__link">Доставка</p>
+                </li>
+                <li class="profile-menu__item">
+                    <p class="profile-menu__link">Способы оплаты</p>
+                </li>
+                <li class="profile-menu__item">
+                    <p class="profile-menu__link">Контакты</p>
+                </li>
+            </ul>
+
         </div>
     </div>
+
 
 
 
 
     <div class="swiper">
         <div class="swiper__wrapper">
-            <div class="tabs is-medium swiper-tabs">
-                <ul class="swiper-list">
-                    <li class="is-active"><a>НОВИНКИ</a></li>
-                    <li><a>БЕСТСЕЛЛЕРЫ</a></li>
-                    <li><a>АКЦИИ</a></li>
-                </ul>
-            </div>
         </div>
     </div>
 
-    
-    <nav class="breadcrumb is-left" aria-label="breadcrumbs">
-        <ul class="breadcrumb__list">
-            <li class="breadcrumb__item"><a class="breadcrumb__link" href="#">Bulma</a></li>
-            <li class="breadcrumb__item"><a class="breadcrumb__link" href="#">Documentation</a></li>
-            <li class="breadcrumb__item"><a class="breadcrumb__link" href="#">Components</a></li>
-            <li class="breadcrumb__item is-active"><a class="breadcrumb__link" a href="#"
-                    aria-current="page">Breadcrumb</a></li>
-        </ul>
-    </nav>
+
+    <div class="breadcrumbs">
+        <div class="breadcrumbs__wrapper">
+            <nav class="breadcrumbs-nav">
+                <ul class="breadcrumbs-list">
+                    <li class="breadcrumbs-list__item"><a href="#" class="breadcrumbs-list__link">Главная</a></li>
+                    <li class="breadcrumbs-list__item"><a href="#" class="breadcrumbs-list__link">О нас</a></li>
+                    <li class="breadcrumbs-list__item"><a href="#" class="breadcrumbs-list__link"> Контакты</a></li>
+                </ul>
+            </nav>
+            <h1 class="breadcrumbs__current">Контакты</h1>
+        </div>
+    </div>
+
+    <div class="slider">
+        <div class="slider__wrapper">
+
+
+        </div>
+
+    </div>
 
 
     <main class="main">
         <div class="main__img"></div>
         <div class="main__wrapper">
-
+            <div class="main__products"></div>
+            <div class="main__bottom">
+                <p class="site-title">SKIN <span class="header__title-heart demo-icon icon-heart"></span> FOOD
+                </p>
+                <span class="site-description">
+                    laboratory
+                </span>
+            </div>
         </div>
     </main>
 
@@ -88,31 +324,38 @@
             <div class="footer__left">
                 <div class="contacts-list footer__contacts-list">
                     <p class="contacts-list__title">2019 skinfood.by</p>
-                    <a class="contacts-list__link" href="tel:+375 29 3-021-021">+375 29 3-021-021</a>
-                    <a class="contacts-list__link" href="tel:+375 29 3-021-021">+375 25 5-021-021</a>
-                    <a class="contacts-list__link" href="tel:+375 29 3-021-021">+375 17 3-021-021</a>
+                    <a class="contacts-list__link" href="tel:+375293021021">+375 29 3-021-021</a>
+                    <a class="contacts-list__link" href="tel:+375293021021">+375 25 5-021-021</a>
+                    <a class="contacts-list__link" href="tel:+375293021021">+375 17 3-021-021</a>
                 </div>
 
-                <ul class="socials footer__socials">
-                    <li class="socials__item"><a class="socials__link" href="#">viber</a></li>
-                    <li class="socials__item"><a class="socials__link" href="#">telegram</a></li>
-                    <li class="socials__item"><a class="socials__link" href="#">whatsapp</a></li>
-                </ul>
+                <div class="socials footer__socials">
+                    <a class="socials__link" href="#"><img class="socials__img" src="./img/socials/viber.png"
+                            alt="viber"></a>
+                    <a class="socials__link" href="#"><img class="socials__img" src="./img/socials/tele.png"
+                            alt="telegram"></a>
+                    <a class="socials__link" href="#"><img class="socials__img" src="./img/socials/whats.png"
+                            alt="whatsapp"></a>
+                </div>
 
                 <div class="socials-with-title footer__socials-with-title">
                     <p class="socials-with-title__title">Мы в соцсетях</p>
-                    <ul class="socials-with-title__list">
-                        <li class="socials-with-title__item"><a class="socials-with-title__link" href="#">vk</a></li>
-                        <li class="socials-with-title__item"><a class="socials-with-title__link" href="#">insta</a></li>
-                        <li class="socials-with-title__item"><a class="socials-with-title__link" href="#">ok</a></li>
-                        <li class="socials-with-title__item"><a class="socials-with-title__link" href="#">fb</a></li>
-                    </ul>
+                    <div class="socials-with-title__list">
+                        <a class="socials-with-title__link" href="#"><img class="socials-with-title__img"
+                                src="./img/socials/vk.png" alt="vkontakte"></a>
+                        <a class="socials-with-title__link" href="#"><img class="socials-with-title__img"
+                                src="./img/socials/inst.png" alt="instagram"></a>
+                        <a class="socials-with-title__link" href="#"><img class="socials-with-title__img"
+                                src="./img/socials/ok.png" alt="ok"></a>
+                        <a class="socials-with-title__link" href="#"><img class="socials-with-title__img"
+                                src="./img/socials/fb.png" alt="facebook"></a>
+                    </div>
                 </div>
 
                 <ul class="payment-list footer__payment-list">
-                    <li class="payment-list__item"><img class="payment-list__img" src="" alt=""></li>
-                    <li class="payment-list__item"><img class="payment-list__img" src="" alt=""></li>
-                    <li class="payment-list__item"><img class="payment-list__img" src="" alt=""></li>
+                    <li class="payment-list__item"><img class="payment-list__img" src="#" alt="#"></li>
+                    <li class="payment-list__item"><img class="payment-list__img" src="#" alt="#"></li>
+                    <li class="payment-list__item"><img class="payment-list__img" src="#" alt="#"></li>
                 </ul>
             </div>
 
@@ -165,8 +408,20 @@
 
 
     <!-- CUSTOM AND LIBS -->
+
     <script src="js/libs.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/metismenujs/dist/metismenujs.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+        </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+
     <script src="js/common.js"></script>
 </body>
 
