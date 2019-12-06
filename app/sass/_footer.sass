@@ -1,0 +1,134 @@
+/* footer start
+ */
+.footer
+    margin-top: auto
+    padding: 0
+    background: #FFFFFF
+    &__wrapper
+        max-width: 582px
+        padding: 36px 20px 20px 20px
+        margin: 0 auto
+        display: flex
+        justify-content: space-between
+        flex-wrap: wrap
+    &__left
+    &__right
+    &__contacts
+    &__contacts-list
+    &__socials
+        padding: 20px 0
+    &__socials-with-title
+        margin-bottom: 35px
+    &__payment-list
+    &__navigation-users
+        margin-bottom: 25px
+    &__navigation-main
+
+.credits
+    background: #fff
+    &__wrapper
+        text-align: center
+        max-width: 708px
+        margin: 0 auto
+        color: #888888
+        text-align: center
+        padding: 0 20px
+        height: 66px
+        display: flex
+        align-items: center
+        justify-content: center
+        border-top: 1px solid #E7E7E7
+    &__text
+        font-size: 9px
+        max-width: 584px
+        margin: 0 auto
+
+.contacts-list
+    &__title
+        font-size: 14px
+        margin-bottom: 18px
+        letter-spacing: 0.04em
+        color: #1A1A1A
+    &__link
+        display: block
+        font-size: 14px
+        line-height: 200%
+        letter-spacing: 0.04em
+        font-weight: 600
+        color: #1A1A1A
+
+.socials
+    padding: 0
+    margin: 0
+    list-style-type: none
+    display: flex
+    align-items: center
+    &__link
+        &:not(:last-child)
+            margin-right: 17px
+    &__img
+        max-width: 100%
+        height: auto
+        width: 28px
+
+.socials-with-title
+    &__title
+        font-weight: 600
+        font-size: 14px
+        line-height: 17px
+        letter-spacing: 0.04em
+        color: #1A1A1A
+        margin-bottom: 15px
+    &__list
+        display: flex
+        align-items: center
+    &__link
+        &:not(:last-child)
+            margin-right: 18px
+    &__img
+        max-width: 100%
+        height: auto
+        width: 32px
+        filter: grayscale(1) brightness(1.2)
+        transition: all .3s ease
+        &:hover
+            filter: grayscale(.5) brightness(1)
+
+.payment-list
+    +reset-ul
+    &__item
+    &__img
+
+.navigation-users
+    &__title
+        margin-bottom: 15px
+        font-weight: 600
+        font-size: 14px
+        line-height: 17px
+        letter-spacing: 0.04em
+        color: #1A1A1A
+    &__list
+        +reset-ul
+    &__item
+    &__link
+        font-size: 14px
+        line-height: 29px
+        letter-spacing: 0.04em
+        color: #000000
+
+.navigation-main
+    &__title
+        margin-bottom: 15px
+        font-weight: 600
+        font-size: 14px
+        line-height: 17px
+        letter-spacing: 0.04em
+        color: #1A1A1A
+    &__list
+        +reset-ul
+    &__item
+    &__link
+        font-size: 14px
+        line-height: 29px
+        letter-spacing: 0.04em
+        color: #000000

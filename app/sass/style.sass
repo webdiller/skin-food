@@ -37,82 +37,6 @@ a:hover
     &.disable-y
         overflow-y: hidden
 
-.region
-    background: $grey
-    position: relative
-    &.active
-        position: fixed
-        top: 0
-        right: 0
-        left: 0
-    &__wrapper
-        height: 30px
-        display: flex
-        justify-content: center
-        align-items: center
-        span
-            margin-right: 10px
-        p
-            margin-right: 10px
-            font-size: 13px
-            color: #888888
-    &-icon
-        color: $pink
-    &__btn
-        background: transparent
-        border: none
-        outline: none
-        position: relative
-        &::after
-            content: "\e802"
-            font-family: fontello
-            color: #AEAEAE
-            transform: scale(1.3)
-            position: absolute
-            margin-left: 10px
-            border: none
-            transition: all .3s ease
-        &.active
-            &::after
-                transform: scale(1.3) rotate(-180deg)
-    &__countries
-        content: ""
-        background: #fff
-        position: fixed
-        top: 30px
-        left: 0
-        right: 0
-        bottom: 0
-        opacity: 0
-        z-index: -1
-        height: 0
-        width: 100%
-        visibility: hidden
-        transition: all .3s ease
-        &.active
-            height: 100%
-            overflow-y: scroll
-            z-index: 100
-            visibility: visible
-            opacity: 1
-    &-list
-        display: flex
-        flex-wrap: wrap
-        justify-content: center
-        padding: 0
-        margin: 0
-        list-style-type: none
-        text-align: left
-        &--padding
-            max-width: 1240px
-            margin: 0 auto
-            padding: 40px 20px
-        &__item
-            flex-basis: 33%
-            width: 33%
-            margin-right: auto
-        &__link
-
 .site
     &-title
         display: inline-flex
@@ -129,67 +53,6 @@ a:hover
         display: block
         font-size: 13px
         color: #1E1E1F
-
-.header
-    border-bottom: 1px solid #E7E7E7
-    &__wrapper
-        display: flex
-        justify-content: space-between
-        align-items: center
-        max-width: 1240px
-        margin: 0 auto
-        padding: 0 20px
-        height: 75px
-        background: #fff
-        opacity: 1
-        visibility: visible
-        transition: all .4s ease
-        &.disabled
-            visibility: hidden
-            opacity: 0
-    &-icon
-        color: #F78C9F
-        font-size: 23px
-        &:hover
-            color: $hoverpink
-        &:focus
-            outline: 1px solid #f5a733
-    &__title
-        display: flex
-        align-items: center
-        font-size: 30px
-        &-heart
-            font-size: 9px
-            margin: 0 10px
-        &.disabled
-            display: none
-    &__menu
-        margin-right: 30px
-        &.active
-            margin-right: 0
-            order: 4
-            margin-left: auto
-    &__search
-        margin-right: auto
-        &.active
-            margin-right: 30px
-            margin-left: 0
-    &__like
-        margin-left: auto
-        margin-right: 20px
-        &.active
-            margin-right: 30px
-            margin-left: 0
-    &__basket
-        position: relative
-        font-size: 26px
-        &-counter
-            position: absolute
-            bottom: -4px
-            font-size: 10px
-            left: 50%
-            transform: translateX(-50%)
-            color: #fff
 
 .main-menu
     &__wrapper
@@ -337,6 +200,10 @@ a:hover
         align-items: center
         justify-content: space-between
     &__item
+        flex-basis: 220px
+        width: 220px
+        margin-bottom: 0
+        border: 0
         text-transform: uppercase
         font-weight: 600
         font-size: 15px
@@ -344,19 +211,61 @@ a:hover
         letter-spacing: 0.04em
         color: #F68C9F
         display: flex
+        justify-content: center
         align-items: center
         height: 100%
+        padding: 0
+        position: relative
+        transition: all .3s ease
+        &:hover
+            background: #fff
+            color: #1A1A1A
         &-icon
             position: relative
-            bottom: 1px
+            bottom: 2px
+            right: 2px
+            color: #F68C9F
         &.active
+            box-shadow: none
             color: #1A1A1A
+            &::before
+                content: ""
+                position: absolute
+                bottom: 0
+                height: 3px
+                background: #F68C9F
+                left: 0
+                right: 0
 
 .slider
+    background: url(../img/slider/slider-bg.jpg) no-repeat center
+    background-size: cover
     &__wrapper
         max-width: 1240px
-        padding: 0 20px
+        padding: 20px
         margin: 0 auto
+
+.slider-carousel
+    &__item
+        position: relative
+        height: 193px
+    &__img
+        max-width: 100%
+        height: 100%
+        object-fit: cover
+        border-radius: 5px
+    &__btn
+        position: absolute
+        bottom: 30px
+        left: 30px
+        background: #f78c9f
+        border: none
+        outline: none
+        min-width: 176.41px
+        min-height: 40px
+        border-radius: 4px
+        letter-spacing: 1px
+        color: #fff
 
 .main
     background: #FFDDE4
@@ -377,143 +286,15 @@ a:hover
         right: 0
         height: 593px
         background: url(../img/main-bg.png) no-repeat center
+        background-size: cover
     &__bottom
+        padding-top: 50px
         position: relative
         z-index: 10
         margin-top: auto
         text-align: center
 
-.contacts-list
-    &__title
-        font-size: 14px
-        margin-bottom: 18px
-        letter-spacing: 0.04em
-        color: #1A1A1A
-    &__link
-        display: block
-        font-size: 14px
-        line-height: 200%
-        letter-spacing: 0.04em
-        font-weight: 600
-        color: #1A1A1A
-
-.socials
-    padding: 0
-    margin: 0
-    list-style-type: none
-    display: flex
-    align-items: center
-    &__link
-        &:not(:last-child)
-            margin-right: 17px
-    &__img
-        max-width: 100%
-        height: auto
-        width: 28px
-
-.socials-with-title
-    &__title
-        font-weight: 600
-        font-size: 14px
-        line-height: 17px
-        letter-spacing: 0.04em
-        color: #1A1A1A
-        margin-bottom: 15px
-    &__list
-        display: flex
-        align-items: center
-    &__link
-        &:not(:last-child)
-            margin-right: 18px
-    &__img
-        max-width: 100%
-        height: auto
-        width: 32px
-        filter: grayscale(1) brightness(1.2)
-        transition: all .3s ease
-        &:hover
-            filter: grayscale(.5) brightness(1)
-
-.payment-list
-    +reset-ul
-    &__item
-    &__img
-
-.navigation-users
-    &__title
-        margin-bottom: 15px
-        font-weight: 600
-        font-size: 14px
-        line-height: 17px
-        letter-spacing: 0.04em
-        color: #1A1A1A
-    &__list
-        +reset-ul
-    &__item
-    &__link
-        font-size: 14px
-        line-height: 29px
-        letter-spacing: 0.04em
-        color: #000000
-
-.navigation-main
-    &__title
-        margin-bottom: 15px
-        font-weight: 600
-        font-size: 14px
-        line-height: 17px
-        letter-spacing: 0.04em
-        color: #1A1A1A
-    &__list
-        +reset-ul
-    &__item
-    &__link
-        font-size: 14px
-        line-height: 29px
-        letter-spacing: 0.04em
-        color: #000000
-
-.footer
-    margin-top: auto
-    padding: 0
-    background: #FFFFFF
-    &__wrapper
-        max-width: 582px
-        padding: 36px 20px 20px 20px
-        margin: 0 auto
-        display: flex
-        justify-content: space-between
-        flex-wrap: wrap
-    &__left
-    &__right
-    &__contacts
-    &__contacts-list
-    &__socials
-        padding: 20px 0
-    &__socials-with-title
-        margin-bottom: 35px
-    &__payment-list
-    &__navigation-users
-        margin-bottom: 25px
-    &__navigation-main
-
-.credits
-    background: #fff
-    &__wrapper
-        text-align: center
-        max-width: 708px
-        margin: 0 auto
-        color: #888888
-        text-align: center
-        padding: 0 20px
-        height: 66px
-        display: flex
-        align-items: center
-        justify-content: center
-        border-top: 1px solid #E7E7E7
-    &__text
-        font-size: 9px
-        max-width: 584px
-        margin: 0 auto
-
+@import "header"
+@import "modal"
+@import "footer"
 @import "media"

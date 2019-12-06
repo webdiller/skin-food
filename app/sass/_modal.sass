@@ -1,0 +1,107 @@
+ /* modal start
+ */
+
+.modal-list
+    +reset-ul
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    &__item
+        flex-basis: 33%
+        width: 33%
+        padding-bottom: 40px
+        &:nth-last-child(2),
+        &:nth-last-child(3),
+        &:last-child
+            padding-bottom: 0
+    &__link
+        font-size: 16px
+        text-align: center
+        letter-spacing: 0.04em
+        color: #1E1E1F
+        font-weight: 600
+        &.active
+            color: #F78C9F
+
+
+.region-modal
+    &.modal
+        padding-right: 0 !important
+    &__dialog
+        background: #fff
+        max-width: 100%
+        width: 100%
+        margin: 0
+    &__content
+        border-radius: 0
+    &__header
+        width: 100%
+        border-bottom: 1px solid #F78C9F
+    &__header-wrapper
+        max-width: 1240px
+        width: 100%
+        padding: 0 20px
+        display: flex
+        justify-content: space-between
+        align-items: center
+        margin: 0 auto
+        font-size: 17px
+        letter-spacing: 0.04em
+        color: #F78C9F
+    &__title
+        font-size: 17px
+        font-weight: 600
+        letter-spacing: 0.04em
+        color: #F78C9F
+    &__close
+        color: #F78C9F
+        font-size: 19px
+        opacity: 1
+    &__body
+        max-width: 1240px
+        margin: 0 auto
+        width: 100%
+        padding: 20px 20px 40px 20px
+    &__text-with-icon
+        font-size: 14px
+        letter-spacing: 0.04em
+        color: #AEAEAE
+        font-weight: 600
+        display: flex
+        align-items: center
+        padding: 5px 0 60px 0
+    &__icon-car
+        position: relative
+        font-size: 22px
+        color: #f78c9f
+        margin-right: 20px
+        &::before
+            transform: rotateY(3.142rad)
+    &__list
+        max-width: 800px
+        margin: 0 auto
+        padding-bottom: 70px
+    &__form
+
+.region-form
+    &__btn
+        background: #F78C9F
+        border: none
+        outline: none
+        min-width: 176.41px
+        min-height: 40px
+        border-radius: 4px
+        margin-top: 60px
+        display: block
+        margin-left: auto
+        font-weight: 600
+        letter-spacing: 1px
+        text-transform: uppercase
+        color: #fff
+    &__status
+        font-size: 13px
+        letter-spacing: 0.04em
+        text-transform: uppercase
+        color: #F78C9F
+        margin-bottom: 15px
+        font-weight: 600

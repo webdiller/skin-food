@@ -119,6 +119,12 @@
       "css": "star",
       "code": 59407,
       "src": "mfglabs"
+    },
+    {
+      "uid": "7f3d8ff1d5f6ee019f0c00ed7a86caec",
+      "css": "truck",
+      "code": 59408,
+      "src": "fontawesome"
     }
   ]
 }

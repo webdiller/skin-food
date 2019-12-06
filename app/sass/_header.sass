@@ -1,0 +1,193 @@
+ /* header start
+ */
+
+.header
+    border-bottom: 1px solid #E7E7E7
+    &__wrapper
+        display: flex
+        justify-content: space-between
+        align-items: center
+        max-width: 1240px
+        margin: 0 auto
+        padding: 0 20px
+        height: 75px
+        background: #fff
+        opacity: 1
+        visibility: visible
+        transition: all .4s ease
+        &.disabled
+            visibility: hidden
+            opacity: 0
+    &-icon
+        color: #F78C9F
+        font-size: 23px
+        &:hover
+            color: $hoverpink
+        &:focus
+            outline: 1px solid #f5a733
+    &__title
+        display: flex
+        align-items: center
+        font-size: 30px
+        &-heart
+            font-size: 9px
+            margin: 0 10px
+        &.disabled
+            display: none
+    &__menu
+        margin-right: 30px
+        &.active
+            margin-right: 0
+            order: 4
+            margin-left: auto
+    &__search
+        margin-right: auto
+        &.active
+            margin-right: 30px
+            margin-left: 0
+    &__like
+        margin-left: auto
+        margin-right: 20px
+        &.active
+            margin-right: 30px
+            margin-left: 0
+    &__basket
+        position: relative
+        font-size: 26px
+        &-counter
+            position: absolute
+            bottom: -4px
+            font-size: 10px
+            left: 50%
+            transform: translateX(-50%)
+            color: #fff
+
+.search
+    &-menu
+        background: #FFDDE4
+        &__wrapper
+            max-width: 1240px
+            padding: 0 20px
+            margin: 0 auto
+            display: flex
+            align-items: center
+            height: 65px
+
+.search-list
+    position: relative
+    top: -1px
+    width: 100%
+    height: 140px
+    background: #fff
+    border: 1px solid #FDE8ED
+    box-sizing: border-box
+    overflow-y: scroll
+    padding: 12px 22px 21px 22px
+    margin: 0
+    list-style-type: none
+    &__item
+        &:not(:last-child)
+            margin-bottom: 10px
+    &__link
+        font-size: 14px
+        letter-spacing: 0.04em
+        color: #676666
+        display: block
+        &:hover
+            color: #000
+
+.search-group
+    width: 100%
+    height: 40px
+    position: relative
+    &.search-group--modal
+        .search-group
+            &__input
+                border: 1px solid #FFDDE4
+                border-bottom-right-radius: 0
+                border-bottom-left-radius: 0
+                &::placeholder
+                    color: #676666
+                    font-weight: 400
+                    text-transform: unset
+    &__input
+        background: #FFFFFF
+        border-radius: 4px
+        width: 100%
+        height: 40px
+        padding: 10px 25px 10px 14px
+        border: none
+        &::placeholder
+            font-size: 14px
+            letter-spacing: 0.04em
+            font-weight: 600
+            color: #f78c9f
+            text-transform: uppercase
+            z-index: 10
+    &__btn
+        position: absolute
+        top: 0
+        right: 0
+        bottom: 0
+        color: #f78c9f
+        font-size: 22px
+        background: transparent
+        border: none
+        outline: none
+    &__results
+
+.region
+    background: $grey
+    position: relative
+    &.active
+        position: fixed
+        top: 0
+        right: 0
+        left: 0
+    &__wrapper
+        height: 30px
+        display: flex
+        justify-content: center
+        align-items: center
+        span
+            margin-right: 10px
+        p
+            margin-right: 10px
+            font-size: 13px
+            color: #888888
+    &-icon
+        color: $pink
+    &__btn
+        background: transparent
+        border: none
+        outline: none
+        position: relative
+        &::after
+            content: "\e802"
+            font-family: fontello
+            color: #AEAEAE
+            transform: scale(1.3)
+            position: absolute
+            margin-left: 10px
+            border: none
+            transition: all .3s ease
+        &.active
+            &::after
+                transform: scale(1.3) rotate(-180deg)
+    &-list
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+        +reset-ul
+        &__item
+            flex-basis: 33%
+            font-weight: 600
+            margin-bottom: 40px
+            &.active .region-list__link
+                color: #F78C9F
+        &__link
+            font-size: 16px
+            line-height: 207.06%
+            text-align: center
+            letter-spacing: 0.04em
+            color: #1E1E1F

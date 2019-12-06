@@ -20,56 +20,79 @@
         <div class="region__wrapper">
             <span class="demo-icon icon-location region-icon"></span>
             <p>Ваш регион доставки</p>
-            <button id="regionButton" class="region__btn">Минск</button>
-        </div>
-        <div id="countries" class="region__countries">
-            <ul class="region-list region-list--padding">
-                <li class="region-list__item"><a class="region-list__link" href="#"> Абингдон (Англия)</a></li>
-                <li class="region-list__item"><a class="region-list__link" href="#"> Амстердам</a></li>
-                <li class="region-list__item"><a class="region-list__link" href="#"> Антверпен</a></li>
-                <li class="region-list__item"><a class="region-list__link" href="#"> Архангельск</a></li>
-                <li class="region-list__item"><a class="region-list__link" href="#"> Астрахань</a></li>
-                <li class="region-list__item"><a class="region-list__link" href="#"> Атланта</a></li>
-                <li class="region-list__item"><a class="region-list__link" href="#"> Афины</a></li>
-
-                <li class="region-list__item"><a class="region-list__link" href="#">Баден (Аргау)</a></li>
-                <li class="region-list__item"><a class="region-list__link" href="#">Базель</a></li>
-                <li class="region-list__item"><a class="region-list__link" href="#">Бангалор</a></li>
-                <li class="region-list__item"><a class="region-list__link" href="#">Барселона</a></li>
-                <li class="region-list__item"><a class="region-list__link" href="#">Бендеры</a></li>
-                <li class="region-list__item"><a class="region-list__link" href="#">Берлин</a></li>
-                <li class="region-list__item"><a class="region-list__link" href="#">Берн</a></li>
-                <li class="region-list__item"><a class="region-list__link" href="#">Биробиджан</a></li>
-                <li class="region-list__item"><a class="region-list__link" href="#">Бонн</a></li>
-                <li class="region-list__item"><a class="region-list__link" href="#">Бостон</a></li>
-                <li class="region-list__item"><a class="region-list__link" href="#">Брайзах-на-Рейне</a></li>
-                <li class="region-list__item"><a class="region-list__link" href="#">Бремен</a></li>
-                <li class="region-list__item"><a class="region-list__link" href="#">Будённовск</a></li>
-                <li class="region-list__item"><a class="region-list__link" href="#">Буффало</a></li>
-                <li class="region-list__item"><a class="region-list__link" href="#">Буэнос-Айрес</a></li>
-
-                <li class="region-list__item"><a class="region-list__link" href="#">Варшава</a></li>
-                <li class="region-list__item"><a class="region-list__link" href="#">Вашингтон</a></li>
-                <li class="region-list__item"><a class="region-list__link" href="#">Веймар</a></li>
-                <li class="region-list__item"><a class="region-list__link" href="#">Вельс</a></li>
-                <li class="region-list__item"><a class="region-list__link" href="#">Вельск</a></li>
-                <li class="region-list__item"><a class="region-list__link" href="#">Вена</a></li>
-                <li class="region-list__item"><a class="region-list__link" href="#">Венеция</a></li>
-                <li class="region-list__item"><a class="region-list__link" href="#">Винница</a></li>
-                <li class="region-list__item"><a class="region-list__link" href="#">Владивосток</a></li>
-                <li class="region-list__item"><a class="region-list__link" href="#">Волгоград</a></li>
-                <li class="region-list__item"><a class="region-list__link" href="#">Вологда</a></li>
-                <li class="region-list__item"><a class="region-list__link" href="#">Вормс</a></li>
-            </ul>
+            <button id="regionButton" class="region__btn" data-toggle="modal" data-target="#regionModal">Минск</button>
         </div>
     </div>
+
+
+
+
+    <div id="regionModal" class="region-modal modal fade" tabindex="-1" role="dialog">
+        <div class="region-modal__dialog modal-dialog" role="document">
+
+            <div class="region-modal__content modal-content">
+
+                <div class="region-modal__header modal-header">
+                    <div class="region-modal__header-wrapper">
+                        <p class="region-modal__title">Выберите свой населённый пункт</p>
+                        <button type="button" aria-hidden="true" class="region-modal__close close demo-icon icon-cancel"
+                            data-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                </div>
+
+                <div class="region-modal__body modal-body">
+                    <p class="region-modal__text-with-icon">
+                        <span class="region-modal__icon-car demo-icon icon-truck"></span>
+                        Доставляем товары по всей Беларуси
+                    </p>
+                    <ul class="modal-list region-modal__list">
+                        <li class="modal-list__item"><a class="modal-list__link active" href="#">МИНСК</a></li>
+                        <li class="modal-list__item"><a class="modal-list__link" href="#">МОГИЛЕВ</a></li>
+                        <li class="modal-list__item"><a class="modal-list__link" href="#">ВИТЕБСК</a></li>
+                        <li class="modal-list__item"><a class="modal-list__link" href="#">ГРОДНО</a></li>
+                        <li class="modal-list__item"><a class="modal-list__link" href="#">БРЕСТ</a></li>
+                        <li class="modal-list__item"><a class="modal-list__link" href="#">ГОМЕЛЬ</a></li>
+                    </ul>
+
+                    <form id="regionForm" class="region-form region-modal__form">
+                        <p class="region-form__status">* Неверное название</p>
+                        <div class="search-group search-group--modal">
+                            <input id="regionInput" placeholder="Выберете ваш населённый пункт" type="text"
+                                class="search-group__input">
+
+                            <button id="regionInputButton" type="button"
+                                class="demo-icon icon-search search-group__btn">
+                            </button>
+                        </div>
+
+                        <ul id="searchList" class="search-list search-group__results">
+                            <li class="search-list__item"><a href="#" class="search-list__link">Москва</a> </li>
+                            <li class="search-list__item"><a href="#" class="search-list__link">Владивосток</a> </li>
+                            <li class="search-list__item"><a href="#" class="search-list__link">Минск</a> </li>
+                            <li class="search-list__item"><a href="#" class="search-list__link">Челябинск</a> </li>
+                            <li class="search-list__item"><a href="#" class="search-list__link">Москва</a> </li>
+                            <li class="search-list__item"><a href="#" class="search-list__link">Владивосток</a> </li>
+                            <li class="search-list__item"><a href="#" class="search-list__link">Минск</a> </li>
+                            <li class="search-list__item"><a href="#" class="search-list__link">Челябинск</a> </li>
+                        </ul>
+                        <button type="button" id="regionButton" class="region-form__btn">Выбрать</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
 
 
     <div class="header">
         <div class="header__wrapper">
 
             <a class="header-icon header__menu demo-icon icon-menu" id="menu" href="#"></a>
-            <a class="header-icon header__search demo-icon icon-search" id="search" href="#"></a>
+            <a data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false"
+                aria-controls="collapseExample" class="header-icon header__search demo-icon icon-search"
+                id="search"></a>
 
             <p id="title" class="site-title header__title">SKIN <span
                     class="header__title-heart demo-icon icon-heart"></span> FOOD
@@ -78,6 +101,17 @@
             <a class="header-icon header__like demo-icon icon-heart-circled" id="like" href="#"></a>
             <a class="header-icon header__basket demo-icon icon-shop" id="basket" href="#"><span id="basketCounter"
                     class="header__basket-counter">0</span></a>
+
+        </div>
+    </div>
+
+    <div class="search-menu collapse" id="collapseExample">
+        <div class="search-menu__wrapper">
+
+            <div class="search-group">
+                <input placeholder="Поиск" type="text" class="search-group__input"><button
+                    class="demo-icon icon-search search-group__btn"></button>
+            </div>
 
         </div>
     </div>
@@ -270,47 +304,60 @@
     </div>
 
 
+    <div class="slider">
+        <div class="slider__wrapper">
+
+            <div id="sliderCarousel" class="slider-carousel owl-carousel owl-theme">
+                <div class="slider-carousel__item item">
+                    <img src="./img/slider/slide2.jpg" alt="Слайд" class="slider-carousel__img">
+                    <button class="slider-carousel__btn">Вступить</button>
+                </div>
+                <div class="slider-carousel__item item">
+                    <img src="./img/slider/slide2.jpg" alt="Слайд" class="slider-carousel__img">
+                    <button class="slider-carousel__btn">Вступить</button>
+                </div>
+                <div class="slider-carousel__item item">
+                    <img src="./img/slider/slide2.jpg" alt="Слайд" class="slider-carousel__img">
+                    <button class="slider-carousel__btn">Вступить</button>
+                </div>
+                <div class="slider-carousel__item item">
+                    <img src="./img/slider/slide2.jpg" alt="Слайд" class="slider-carousel__img">
+                    <button class="slider-carousel__btn">Вступить</button>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
     <div class="swiper">
         <div class="swiper__wrapper">
             <div id="carouselExampleIndicators" class="swiper__carousel carousel slide">
 
                 <div class="swiper__arrows">
                     <a aria-hidden="true" class="swiper__arrow swiper__arrows-prev demo-icon icon-left-open-big"
-                        class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        href="#carouselExampleIndicators" role="button" data-slide="prev">
                     </a>
                     <a aria-hidden="true" class="swiper__arrow swiper__arrows-next demo-icon icon-right-open-big"
-                        class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        href="#carouselExampleIndicators" role="button" data-slide="next">
                     </a>
                 </div>
 
                 <div class="swiper__carousel carousel-inner">
                     <div class="swiper__slide carousel-item active">
-
-
-
-                        <div class="swiper__container btn-group sort-options">
-                            
-                            <label class="swiper__btn btn active">
-                                <input type="radio" name="sort-value" value="dom"/> <span class="swiper__item-icon demo-icon icon-star"></span> Default
-                            </label>
-                            <label class="swiper__btn btn">
-                                <input type="radio" name="sort-value" value="title" /> Title
-                            </label>
-                            <label class="swiper__btn btn">
-                                <input type="radio" name="sort-value" value="date-created" /> Date Created
-                            </label>
-
-                            <!-- <a href="#" class="swiper__item"><span class="swiper__item-icon demo-icon icon-star"></span> новинки</a>
+                        <div class="swiper__container sort-options">
+                            <a href="#" class="swiper__item active"><span
+                                    class="swiper__item-icon demo-icon icon-star"></span> новинки</a>
                             <a href="#" class="swiper__item">БЕСТСЕЛЛЕРЫ</a>
-                            <a href="#" class="swiper__item">АКЦИИ</a> -->
+                            <a href="#" class="swiper__item">АКЦИИ</a>
                         </div>
                     </div>
                     <div class="swiper__slide carousel-item">
                         <div class="swiper__container">
-
-                            <!-- <a href="#" class="swiper__item">акции</a>
+                            <a href="#" class="swiper__item">акции</a>
                             <a href="#" class="swiper__item">тренды</a>
-                            <a href="#" class="swiper__item">популярное</a> -->
+                            <a href="#" class="swiper__item">популярное</a>
                         </div>
                     </div>
                 </div>
@@ -319,7 +366,7 @@
         </div>
     </div>
 
-    <div class="breadcrumbs">
+    <!-- <div class="breadcrumbs">
         <div class="breadcrumbs__wrapper">
             <nav class="breadcrumbs-nav">
                 <ul class="breadcrumbs-list">
@@ -330,16 +377,7 @@
             </nav>
             <h1 class="breadcrumbs__current">Контакты</h1>
         </div>
-    </div>
-
-
-    <div class="slider">
-        <div class="slider__wrapper">
-
-
-        </div>
-
-    </div>
+    </div> -->
 
 
     <main class="main">
@@ -367,16 +405,9 @@
                             <div class="picture-item__inner">
                                 <div class="aspect aspect--16x9">
                                     <div class="aspect__inner">
-                                        <img src="https://images.unsplash.com/photo-1493585552824-131927c85da2?ixlib=rb-0.3.5&auto=format&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=284&h=160&fit=crop&s=6ef0f8984525fc4500d43ffa53fe8190"
-                                            srcset="https://images.unsplash.com/photo-1493585552824-131927c85da2?ixlib=rb-0.3.5&auto=format&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=284&h=160&fit=crop&s=6ef0f8984525fc4500d43ffa53fe8190 1x, https://images.unsplash.com/photo-1493585552824-131927c85da2?ixlib=rb-0.3.5&auto=format&q=55&fm=jpg&dpr=2&crop=entropy&cs=tinysrgb&w=284&h=160&fit=crop&s=6ef0f8984525fc4500d43ffa53fe8190 2x"
+                                        <img src="./img/imgex.png" srcset="./img/imgex.png"
                                             alt="A deep blue lake sits in the middle of vast hills covered with evergreen trees" />
                                     </div>
-                                </div>
-                                <div class="picture-item__details">
-                                    <figcaption class="picture-item__title"><a
-                                            href="https://unsplash.com/photos/zshyCr6HGw0" target="_blank"
-                                            rel="noopener">Lake Walchen</a></figcaption>
-                                    <p class="picture-item__tags hidden@xs">nature</p>
                                 </div>
                             </div>
                         </figure>
@@ -384,15 +415,8 @@
                             data-groups='["city"]' data-date-created="2016-07-01" data-title="Golden Gate Bridge">
                             <div class="picture-item__inner">
 
-                                <img src="https://images.unsplash.com/photo-1467348733814-f93fc480bec6?ixlib=rb-0.3.5&auto=format&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=584&h=329&fit=crop&s=2590c736835ec6555e952e19bb37f06e"
-                                    srcset="https://images.unsplash.com/photo-1467348733814-f93fc480bec6?ixlib=rb-0.3.5&auto=format&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=584&h=329&fit=crop&s=2590c736835ec6555e952e19bb37f06e 1x, https://images.unsplash.com/photo-1467348733814-f93fc480bec6?ixlib=rb-0.3.5&auto=format&q=55&fm=jpg&dpr=2&crop=entropy&cs=tinysrgb&w=584&h=329&fit=crop&s=2590c736835ec6555e952e19bb37f06e 2x"
+                                <img src="./img/imgex.png" srcset="./img/imgex.png"
                                     alt="Looking down over one of the pillars of the Golden Gate Bridge to the roadside and water below" />
-                                <div class="picture-item__details">
-                                    <figcaption class="picture-item__title"><a
-                                            href="https://unsplash.com/photos/RRNbMiPmTZY" target="_blank"
-                                            rel="noopener">Golden Gate Bridge</a></figcaption>
-                                    <p class="picture-item__tags hidden@xs">city</p>
-                                </div>
                             </div>
                         </figure>
                         <figure class="col-3@xs col-4@sm col-3@md picture-item" data-groups='["animal"]'
@@ -400,16 +424,9 @@
                             <div class="picture-item__inner">
                                 <div class="aspect aspect--16x9">
                                     <div class="aspect__inner">
-                                        <img src="https://images.unsplash.com/photo-1471005197911-88e9d4a7834d?ixlib=rb-0.3.5&auto=format&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=284&h=160&fit=crop&s=bd8b952c4c983d4bde5e2018c90c9124"
-                                            srcset="https://images.unsplash.com/photo-1471005197911-88e9d4a7834d?ixlib=rb-0.3.5&auto=format&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=284&h=160&fit=crop&s=bd8b952c4c983d4bde5e2018c90c9124 1x, https://images.unsplash.com/photo-1471005197911-88e9d4a7834d?ixlib=rb-0.3.5&auto=format&q=55&fm=jpg&dpr=2&crop=entropy&cs=tinysrgb&w=284&h=160&fit=crop&s=bd8b952c4c983d4bde5e2018c90c9124 2x"
+                                        <img src="./img/imgex.png" srcset="./img/imgex.png"
                                             alt="A close, profile view of a crocodile looking directly into the camera" />
                                     </div>
-                                </div>
-                                <div class="picture-item__details">
-                                    <figcaption class="picture-item__title"><a
-                                            href="https://unsplash.com/photos/YOX8ZMTo7hk" target="_blank"
-                                            rel="noopener">Crocodile</a></figcaption>
-                                    <p class="picture-item__tags hidden@xs">animal</p>
                                 </div>
                             </div>
                         </figure>
@@ -418,20 +435,10 @@
                             <div class="picture-item__inner">
                                 <div class="aspect aspect--16x9">
                                     <div class="aspect__inner">
-                                        <img src="https://images.unsplash.com/photo-1457364559154-aa2644600ebb?ixlib=rb-0.3.5&auto=format&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=284&h=160&fit=crop&s=3d0e3e8d72fc5667fd9fbe354e80957b"
-                                            srcset="https://images.unsplash.com/photo-1457364559154-aa2644600ebb?ixlib=rb-0.3.5&auto=format&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=284&h=160&fit=crop&s=3d0e3e8d72fc5667fd9fbe354e80957b 1x, https://images.unsplash.com/photo-1457364559154-aa2644600ebb?ixlib=rb-0.3.5&auto=format&q=55&fm=jpg&dpr=2&crop=entropy&cs=tinysrgb&w=284&h=160&fit=crop&s=3d0e3e8d72fc5667fd9fbe354e80957b 2x"
+                                        <img src="./img/imgex.png" srcset="./img/imgex.png"
                                             alt="SpaceX launches a Falcon 9 rocket from Cape Canaveral Air Force Station" />
                                     </div>
                                 </div>
-                                <div class="picture-item__details">
-                                    <figcaption class="picture-item__title"><a
-                                            href="https://unsplash.com/photos/GDdRP7U5ct0" target="_blank"
-                                            rel="noopener">SpaceX</a></figcaption>
-                                    <p class="picture-item__tags hidden@xs">space</p>
-                                </div>
-                                <p class="picture-item__description">SpaceX launches a Falcon 9 rocket from Cape
-                                    Canaveral Air
-                                    Force Station</p>
                             </div>
                         </figure>
                         <figure class="col-3@xs col-4@sm col-3@md picture-item" data-groups='["city"]'
@@ -439,16 +446,9 @@
                             <div class="picture-item__inner">
                                 <div class="aspect aspect--16x9">
                                     <div class="aspect__inner">
-                                        <img src="https://images.unsplash.com/photo-1465447142348-e9952c393450?ixlib=rb-0.3.5&auto=format&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=284&h=160&fit=crop&s=7d97e22d36a9a73beb639a936e6774e9"
-                                            srcset="https://images.unsplash.com/photo-1465447142348-e9952c393450?ixlib=rb-0.3.5&auto=format&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=284&h=160&fit=crop&s=7d97e22d36a9a73beb639a936e6774e9 1x, https://images.unsplash.com/photo-1465447142348-e9952c393450?ixlib=rb-0.3.5&auto=format&q=55&fm=jpg&dpr=2&crop=entropy&cs=tinysrgb&w=284&h=160&fit=crop&s=7d97e22d36a9a73beb639a936e6774e9 2x"
+                                        <img src="./img/imgex.png" srcset="./img/imgex.png"
                                             alt="A multi-level highway stack interchange in Puxi, Shanghai" />
                                     </div>
-                                </div>
-                                <div class="picture-item__details">
-                                    <figcaption class="picture-item__title"><a
-                                            href="https://unsplash.com/photos/7nrsVjvALnA" target="_blank"
-                                            rel="noopener">Crossroads</a></figcaption>
-                                    <p class="picture-item__tags hidden@xs">city</p>
                                 </div>
                             </div>
                         </figure>
@@ -456,15 +456,8 @@
                             data-groups='["space","nature"]' data-date-created="2016-06-29" data-title="Milky Way">
                             <div class="picture-item__inner">
 
-                                <img src="https://images.unsplash.com/photo-1467173572719-f14b9fb86e5f?ixlib=rb-0.3.5&auto=format&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=584&h=329&fit=crop&s=e641d6b3c4c2c967e80e998d02a4d03b"
-                                    srcset="https://images.unsplash.com/photo-1467173572719-f14b9fb86e5f?ixlib=rb-0.3.5&auto=format&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=584&h=329&fit=crop&s=e641d6b3c4c2c967e80e998d02a4d03b 1x, https://images.unsplash.com/photo-1467173572719-f14b9fb86e5f?ixlib=rb-0.3.5&auto=format&q=55&fm=jpg&dpr=2&crop=entropy&cs=tinysrgb&w=584&h=329&fit=crop&s=e641d6b3c4c2c967e80e998d02a4d03b 2x"
+                                <img src="./img/imgex.png" srcset="./img/imgex.png"
                                     alt="Dimly lit mountains give way to a starry night showing the Milky Way" />
-                                <div class="picture-item__details">
-                                    <figcaption class="picture-item__title"><a
-                                            href="https://unsplash.com/photos/_4Ib-a8g9aA" target="_blank"
-                                            rel="noopener">Milky Way</a></figcaption>
-                                    <p class="picture-item__tags hidden@xs">space, nature</p>
-                                </div>
                             </div>
                         </figure>
                         <figure class="col-6@xs col-8@sm col-6@md picture-item picture-item--h2" data-groups='["space"]'
@@ -472,18 +465,10 @@
                             <div class="picture-item__inner">
                                 <div class="aspect aspect--16x9">
                                     <div class="aspect__inner">
-                                        <img src="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?ixlib=rb-0.3.5&auto=format&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=584&h=329&fit=crop&s=f4856588634def31d5885dc396fe9a2e"
-                                            srcset="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?ixlib=rb-0.3.5&auto=format&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=584&h=329&fit=crop&s=f4856588634def31d5885dc396fe9a2e 1x, https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?ixlib=rb-0.3.5&auto=format&q=55&fm=jpg&dpr=2&crop=entropy&cs=tinysrgb&w=584&h=329&fit=crop&s=f4856588634def31d5885dc396fe9a2e 2x"
+                                        <img src="./img/imgex.png" srcset="./img/imgex.png"
                                             alt="NASA Satellite view of Earth" />
                                     </div>
                                 </div>
-                                <div class="picture-item__details">
-                                    <figcaption class="picture-item__title"><a
-                                            href="https://unsplash.com/photos/yZygONrUBe8" target="_blank"
-                                            rel="noopener">Earth</a></figcaption>
-                                    <p class="picture-item__tags hidden@xs">space</p>
-                                </div>
-                                <p class="picture-item__description">NASA Satellite view of Earth</p>
                             </div>
                         </figure>
                         <figure class="col-3@xs col-4@sm col-3@md picture-item picture-item--h2"
@@ -491,18 +476,10 @@
                             <div class="picture-item__inner">
                                 <div class="aspect aspect--16x9">
                                     <div class="aspect__inner">
-                                        <img src="https://images.unsplash.com/photo-1437622368342-7a3d73a34c8f?ixlib=rb-0.3.5&auto=format&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=284&h=160&fit=crop&s=bc4e1180b6b8789d38c614edc8d0dd01"
-                                            srcset="https://images.unsplash.com/photo-1437622368342-7a3d73a34c8f?ixlib=rb-0.3.5&auto=format&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=284&h=160&fit=crop&s=bc4e1180b6b8789d38c614edc8d0dd01 1x, https://images.unsplash.com/photo-1437622368342-7a3d73a34c8f?ixlib=rb-0.3.5&auto=format&q=55&fm=jpg&dpr=2&crop=entropy&cs=tinysrgb&w=284&h=160&fit=crop&s=bc4e1180b6b8789d38c614edc8d0dd01 2x"
+                                        <img src="./img/imgex.png" srcset="./img/imgex.png"
                                             alt="A close up of a turtle underwater" />
                                     </div>
                                 </div>
-                                <div class="picture-item__details">
-                                    <figcaption class="picture-item__title"><a
-                                            href="https://unsplash.com/photos/L-2p8fapOA8" target="_blank"
-                                            rel="noopener">Turtle</a></figcaption>
-                                    <p class="picture-item__tags hidden@xs">animal</p>
-                                </div>
-                                <p class="picture-item__description">A close up of a turtle underwater</p>
                             </div>
                         </figure>
                         <figure class="col-3@xs col-4@sm col-3@md picture-item" data-groups='["nature"]'
@@ -510,16 +487,9 @@
                             <div class="picture-item__inner">
                                 <div class="aspect aspect--16x9">
                                     <div class="aspect__inner">
-                                        <img src="https://images.unsplash.com/uploads/1413142095961484763cf/d141726c?ixlib=rb-0.3.5&auto=format&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=284&h=160&fit=crop&s=6141097da144d759176d77b4024c064b"
-                                            srcset="https://images.unsplash.com/uploads/1413142095961484763cf/d141726c?ixlib=rb-0.3.5&auto=format&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=284&h=160&fit=crop&s=6141097da144d759176d77b4024c064b 1x, https://images.unsplash.com/uploads/1413142095961484763cf/d141726c?ixlib=rb-0.3.5&auto=format&q=55&fm=jpg&dpr=2&crop=entropy&cs=tinysrgb&w=284&h=160&fit=crop&s=6141097da144d759176d77b4024c064b 2x"
+                                        <img src="./img/imgex.png" srcset="./img/imgex.png"
                                             alt="Many trees stand alonside a hill which overlooks a pedestrian path, next to the ocean at Stanley Park in Vancouver, Canada" />
                                     </div>
-                                </div>
-                                <div class="picture-item__details">
-                                    <figcaption class="picture-item__title"><a
-                                            href="https://unsplash.com/photos/b-yEdfrvQ50" target="_blank"
-                                            rel="noopener">Stanley Park</a></figcaption>
-                                    <p class="picture-item__tags hidden@xs">nature</p>
                                 </div>
                             </div>
                         </figure>
@@ -528,16 +498,9 @@
                             <div class="picture-item__inner">
                                 <div class="aspect aspect--16x9">
                                     <div class="aspect__inner">
-                                        <img src="https://images.unsplash.com/photo-1484244233201-29892afe6a2c?ixlib=rb-0.3.5&auto=format&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=284&h=160&fit=crop&s=98423596f72d9f0913a4d44f0580a34c"
-                                            srcset="https://images.unsplash.com/photo-1484244233201-29892afe6a2c?ixlib=rb-0.3.5&auto=format&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=284&h=160&fit=crop&s=98423596f72d9f0913a4d44f0580a34c 1x, https://images.unsplash.com/photo-1484244233201-29892afe6a2c?ixlib=rb-0.3.5&auto=format&q=55&fm=jpg&dpr=2&crop=entropy&cs=tinysrgb&w=284&h=160&fit=crop&s=98423596f72d9f0913a4d44f0580a34c 2x"
+                                        <img src="./img/imgex.png" srcset="./img/imgex.png"
                                             alt="An intrigued cat sits in grass next to a flag planted in front of it with an astronaut space kitty sticker on beige fabric." />
                                     </div>
-                                </div>
-                                <div class="picture-item__details">
-                                    <figcaption class="picture-item__title"><a
-                                            href="https://unsplash.com/photos/FqkBXo2Nkq0" target="_blank"
-                                            rel="noopener">Astronaut Cat</a></figcaption>
-                                    <p class="picture-item__tags hidden@xs">animal</p>
                                 </div>
                             </div>
                         </figure>
@@ -545,15 +508,8 @@
                             data-groups='["city"]' data-date-created="2017-01-19" data-title="San Francisco">
                             <div class="picture-item__inner">
 
-                                <img src="https://images.unsplash.com/photo-1484851050019-ca9daf7736fb?ixlib=rb-0.3.5&auto=format&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=584&h=329&fit=crop&s=05325a7cc678f7f765cbbdcf7159ab89"
-                                    srcset="https://images.unsplash.com/photo-1484851050019-ca9daf7736fb?ixlib=rb-0.3.5&auto=format&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=584&h=329&fit=crop&s=05325a7cc678f7f765cbbdcf7159ab89 1x, https://images.unsplash.com/photo-1484851050019-ca9daf7736fb?ixlib=rb-0.3.5&auto=format&q=55&fm=jpg&dpr=2&crop=entropy&cs=tinysrgb&w=584&h=329&fit=crop&s=05325a7cc678f7f765cbbdcf7159ab89 2x"
+                                <img src="./img/imgex.png" srcset="./img/imgex.png"
                                     alt="Pier 14 at night, looking towards downtown San Francisco's brightly lit buildings" />
-                                <div class="picture-item__details">
-                                    <figcaption class="picture-item__title"><a
-                                            href="https://unsplash.com/photos/h3jarbNzlOg" target="_blank"
-                                            rel="noopener">San Francisco</a></figcaption>
-                                    <p class="picture-item__tags hidden@xs">city</p>
-                                </div>
                             </div>
                         </figure>
                         <figure class="col-3@xs col-4@sm col-3@md picture-item" data-groups='["nature","city"]'
@@ -561,16 +517,9 @@
                             <div class="picture-item__inner">
                                 <div class="aspect aspect--16x9">
                                     <div class="aspect__inner">
-                                        <img src="https://images.unsplash.com/photo-1445346366695-5bf62de05412?ixlib=rb-0.3.5&auto=format&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=284&h=160&fit=crop&s=1822bfd69c4021973a3d926e9294b70f"
-                                            srcset="https://images.unsplash.com/photo-1445346366695-5bf62de05412?ixlib=rb-0.3.5&auto=format&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=284&h=160&fit=crop&s=1822bfd69c4021973a3d926e9294b70f 1x, https://images.unsplash.com/photo-1445346366695-5bf62de05412?ixlib=rb-0.3.5&auto=format&q=55&fm=jpg&dpr=2&crop=entropy&cs=tinysrgb&w=284&h=160&fit=crop&s=1822bfd69c4021973a3d926e9294b70f 2x"
+                                        <img src="./img/imgex.png" srcset="./img/imgex.png"
                                             alt="Looking down on central park and the surrounding builds from the Rockefellar Center" />
                                     </div>
-                                </div>
-                                <div class="picture-item__details">
-                                    <figcaption class="picture-item__title"><a
-                                            href="https://unsplash.com/photos/utwYoEu9SU8" target="_blank"
-                                            rel="noopener">Central Park</a></figcaption>
-                                    <p class="picture-item__tags hidden@xs">nature, city</p>
                                 </div>
                             </div>
                         </figure>
@@ -678,6 +627,10 @@
 
     <!-- CUSTOM AND LIBS -->
 
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
     <script src="js/libs.min.js"></script>
     <script src="libs/shuffle.js"></script>
     <script>
@@ -834,9 +787,7 @@
 
     </script>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
+
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
         </script>

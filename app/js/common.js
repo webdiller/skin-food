@@ -2,10 +2,11 @@
 
 $(document).ready(function () {
 
-    const navigationModule = (function () {
+    const doc = document;
 
-        const doc = document,
-            menu = doc.getElementById('menu'),
+    const headerModule = (function () {
+
+        const menu = doc.getElementById('menu'),
             menuList = doc.getElementById('menuList'),
             search = doc.getElementById('search'),
             title = doc.getElementById('title'),
@@ -50,22 +51,48 @@ $(document).ready(function () {
     }());
 
     const countriesModule = (function () {
-        const doc = document,
-            regionButton = doc.getElementById('regionButton'),
-            region = doc.getElementById('region'),
+        const regionButton = doc.getElementById('regionButton'),
             countries = doc.getElementById('countries');
-
-        regionButton.addEventListener('click', () => {
-            regionButton.classList.toggle('active');
-            countries.classList.toggle('active');
-            doc.body.classList.toggle('disable-y');
-        })
     }());
 
     const swiperModule = (function () {
         const carousel = document.getElementById
         $('#carouselExampleIndicators').carousel('pause');
+    }());
+
+
+    const regionModule = (function () {
+        const regionForm = doc.getElementById('regionForm'),
+            regionInput = doc.getElementById('regionInput'),
+            regionInputButton = doc.getElementById('regionInputButton'),
+            regionButton = doc.getElementById('regionButton');
+
+        regionInput.addEventListener('input', function () {
+            console.log(this.value);
+        });
+
+    }());
+
+
+    const sliderModule = (function () {
+        $('#sliderCarousel').owlCarousel({
+            loop: true,
+            center: false,
+            nav: false,
+            dots: true,
+            margin: 20,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 2
+                }
+            }
+        })
     }())
+
+
     $('#carouselExampleIndicators').carousel({
         interval: false
     });
