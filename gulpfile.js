@@ -44,7 +44,9 @@ gulp.task(`browserSync`, function () {
 
 gulp.task(`scripts`, function () {
     return gulp.src([
+        `${PATH}/libs/jquery-3.3.1/jquery-3.3.1.slim.min.js`,
         `${PATH}/libs/owl-carousel/owl.carousel.min.js`,
+        `${PATH}/libs/simpleParallax.js`,
         `${PATH}/libs/lozad.js`,
         `${PATH}/libs/ofi.min.js`,
     ])

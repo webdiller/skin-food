@@ -35,7 +35,7 @@
                 <div class="region-modal__header modal-header">
                     <div class="region-modal__header-wrapper">
                         <p class="region-modal__title">Выберите свой населённый пункт</p>
-                        <button type="button" aria-hidden="true" class="region-modal__close close demo-icon icon-cancel"
+                        <button type="button" aria-hidden="true" class="region-modal__close close demo-icon icon-cancel-1"
                             data-dismiss="modal" aria-label="Close"></button>
                     </div>
                 </div>
@@ -75,7 +75,7 @@
                             <li class="search-list__item"><a href="#" class="search-list__link">Минск</a> </li>
                             <li class="search-list__item"><a href="#" class="search-list__link">Челябинск</a> </li>
                         </ul>
-                        <button type="button" id="regionButton" class="region-form__btn">Выбрать</button>
+                        <button type="button" id="regionButtonSubmit" class="region-form__btn">Выбрать</button>
                     </form>
                 </div>
 
@@ -308,6 +308,23 @@
         <div class="slider__wrapper">
 
             <div id="sliderCarousel" class="slider-carousel owl-carousel owl-theme">
+
+                <div class="slider-carousel__item item">
+                    <img src="./img/slider/slide2.jpg" alt="Слайд" class="slider-carousel__img">
+                    <button class="slider-carousel__btn">Вступить</button>
+                </div>
+                <div class="slider-carousel__item item">
+                    <img src="./img/slider/slide2.jpg" alt="Слайд" class="slider-carousel__img">
+                    <button class="slider-carousel__btn">Вступить</button>
+                </div>
+                <div class="slider-carousel__item item">
+                    <img src="./img/slider/slide2.jpg" alt="Слайд" class="slider-carousel__img">
+                    <button class="slider-carousel__btn">Вступить</button>
+                </div>
+                <div class="slider-carousel__item item">
+                    <img src="./img/slider/slide2.jpg" alt="Слайд" class="slider-carousel__img">
+                    <button class="slider-carousel__btn">Вступить</button>
+                </div>
                 <div class="slider-carousel__item item">
                     <img src="./img/slider/slide2.jpg" alt="Слайд" class="slider-carousel__img">
                     <button class="slider-carousel__btn">Вступить</button>
@@ -333,40 +350,42 @@
 
     <div class="swiper">
         <div class="swiper__wrapper">
-            <div id="carouselExampleIndicators" class="swiper__carousel carousel slide">
 
-                <div class="swiper__arrows">
-                    <a aria-hidden="true" class="swiper__arrow swiper__arrows-prev demo-icon icon-left-open-big"
-                        href="#carouselExampleIndicators" role="button" data-slide="prev">
-                    </a>
-                    <a aria-hidden="true" class="swiper__arrow swiper__arrows-next demo-icon icon-right-open-big"
-                        href="#carouselExampleIndicators" role="button" data-slide="next">
-                    </a>
+            <!-- carousel for mobile -->
+            <div id="swiperCarouselMobile" class="swiper-carousel swiper-carousel--mobile owl-carousel owl-theme">
+                <div class="swiper-carousel__slide item">
+                    <a href="#" class="swiper-carousel__item active">НОВИНКИ</a>
+                    <a href="#" class="swiper-carousel__item">БЕСТСЕЛЛЕРЫ</a>
                 </div>
-
-                <div class="swiper__carousel carousel-inner">
-                    <div class="swiper__slide carousel-item active">
-                        <div class="swiper__container sort-options">
-                            <a href="#" class="swiper__item active"><span
-                                    class="swiper__item-icon demo-icon icon-star"></span> новинки</a>
-                            <a href="#" class="swiper__item">БЕСТСЕЛЛЕРЫ</a>
-                            <a href="#" class="swiper__item">АКЦИИ</a>
-                        </div>
-                    </div>
-                    <div class="swiper__slide carousel-item">
-                        <div class="swiper__container">
-                            <a href="#" class="swiper__item">акции</a>
-                            <a href="#" class="swiper__item">тренды</a>
-                            <a href="#" class="swiper__item">популярное</a>
-                        </div>
-                    </div>
+                <div class="swiper-carousel__slide item">
+                    <a href="#" class="swiper-carousel__item">АКЦИИ</a>
+                    <a href="#" class="swiper-carousel__item">популярное</a>
                 </div>
-
+                <div class="swiper-carousel__slide item">
+                    <a href="#" class="swiper-carousel__item">премиум</a>
+                    <a href="#" class="swiper-carousel__item">распродажи</a>
+                </div>
             </div>
+
+            <!-- carousel for desktop -->
+            <div id="swiperCarouselDesktop" class="swiper-carousel swiper-carousel--desktop owl-carousel owl-theme">
+                <div class="swiper-carousel__slide item">
+                    <a href="#" class="swiper-carousel__item active">НОВИНКИ</a>
+                    <a href="#" class="swiper-carousel__item">БЕСТСЕЛЛЕРЫ</a>
+                    <a href="#" class="swiper-carousel__item">АКЦИИ</a>
+                </div>
+                <div class="swiper-carousel__slide item">
+                    <a href="#" class="swiper-carousel__item">популярное</a>
+                    <a href="#" class="swiper-carousel__item">премиум</a>
+                    <a href="#" class="swiper-carousel__item">распродажи</a>
+                </div>
+            </div>
+
         </div>
     </div>
 
-    <!-- <div class="breadcrumbs">
+
+    <div class="breadcrumbs">
         <div class="breadcrumbs__wrapper">
             <nav class="breadcrumbs-nav">
                 <ul class="breadcrumbs-list">
@@ -377,155 +396,53 @@
             </nav>
             <h1 class="breadcrumbs__current">Контакты</h1>
         </div>
-    </div> -->
+    </div>
 
 
     <main class="main">
         <div class="main__img"></div>
         <div class="main__wrapper">
             <div class="main__products">
-                <div class="container">
-                    <div class="row">
-                        <div class=" col-3@md">
-                        </div>
+
+                <div class="grid">
+                    <div class="grid-sizer"></div>
+
+                    <!-- 1 -->
+                    <div class="grid-item">
+                        <a href="#"><img class="parallax-up" alt="баннер" src="./img/grid/banner-1.jpg" /></a>
                     </div>
-                    <div class="row">
-                        <div class="col-12@sm filters-group-wrap">
-                            <fieldset class="filters-group">
-
-                            </fieldset>
-                        </div>
+                    <div class="grid-item">
+                        <a href="#"><img alt="баннер" src="./img/grid/banner-2.jpg" /></a>
                     </div>
-                </div>
 
-                <div class="container">
-                    <div id="grid" class="row my-shuffle-container">
-                        <figure class="col-3@xs col-4@sm col-3@md picture-item" data-groups='["nature"]'
-                            data-date-created="2017-04-30" data-title="Lake Walchen">
-                            <div class="picture-item__inner">
-                                <div class="aspect aspect--16x9">
-                                    <div class="aspect__inner">
-                                        <img src="./img/imgex.png" srcset="./img/imgex.png"
-                                            alt="A deep blue lake sits in the middle of vast hills covered with evergreen trees" />
-                                    </div>
-                                </div>
-                            </div>
-                        </figure>
-                        <figure class="col-3@xs col-8@sm col-6@md picture-item picture-item--overlay"
-                            data-groups='["city"]' data-date-created="2016-07-01" data-title="Golden Gate Bridge">
-                            <div class="picture-item__inner">
+                    <div class="grid-item">
+                        <a href="#"><img alt="баннер" src="./img/grid/banner-3.jpg" /></a>
+                    </div>
 
-                                <img src="./img/imgex.png" srcset="./img/imgex.png"
-                                    alt="Looking down over one of the pillars of the Golden Gate Bridge to the roadside and water below" />
-                            </div>
-                        </figure>
-                        <figure class="col-3@xs col-4@sm col-3@md picture-item" data-groups='["animal"]'
-                            data-date-created="2016-08-12" data-title="Crocodile">
-                            <div class="picture-item__inner">
-                                <div class="aspect aspect--16x9">
-                                    <div class="aspect__inner">
-                                        <img src="./img/imgex.png" srcset="./img/imgex.png"
-                                            alt="A close, profile view of a crocodile looking directly into the camera" />
-                                    </div>
-                                </div>
-                            </div>
-                        </figure>
-                        <figure class="col-3@xs col-4@sm col-3@md picture-item picture-item--h2" data-groups='["space"]'
-                            data-date-created="2016-03-07" data-title="SpaceX">
-                            <div class="picture-item__inner">
-                                <div class="aspect aspect--16x9">
-                                    <div class="aspect__inner">
-                                        <img src="./img/imgex.png" srcset="./img/imgex.png"
-                                            alt="SpaceX launches a Falcon 9 rocket from Cape Canaveral Air Force Station" />
-                                    </div>
-                                </div>
-                            </div>
-                        </figure>
-                        <figure class="col-3@xs col-4@sm col-3@md picture-item" data-groups='["city"]'
-                            data-date-created="2016-06-09" data-title="Crossroads">
-                            <div class="picture-item__inner">
-                                <div class="aspect aspect--16x9">
-                                    <div class="aspect__inner">
-                                        <img src="./img/imgex.png" srcset="./img/imgex.png"
-                                            alt="A multi-level highway stack interchange in Puxi, Shanghai" />
-                                    </div>
-                                </div>
-                            </div>
-                        </figure>
-                        <figure class="col-6@xs col-8@sm col-6@md picture-item picture-item--overlay"
-                            data-groups='["space","nature"]' data-date-created="2016-06-29" data-title="Milky Way">
-                            <div class="picture-item__inner">
+                    <!-- 2 -->
+                    <div class="grid-item">
+                        <a href="#"><img alt="баннер" src="./img/grid/banner-6.jpg" /></a>
+                    </div>
+                    <div class="grid-item">
+                        <a href="#"><img class="parallax-up" alt="баннер" src="./img/grid/banner-4.jpg" /></a>
+                    </div>
+                    <div class="grid-item">
+                        <a href="#"><img alt="баннер" src="./img/grid/banner-5.jpg" /></a>
+                    </div>
 
-                                <img src="./img/imgex.png" srcset="./img/imgex.png"
-                                    alt="Dimly lit mountains give way to a starry night showing the Milky Way" />
-                            </div>
-                        </figure>
-                        <figure class="col-6@xs col-8@sm col-6@md picture-item picture-item--h2" data-groups='["space"]'
-                            data-date-created="2015-11-06" data-title="Earth">
-                            <div class="picture-item__inner">
-                                <div class="aspect aspect--16x9">
-                                    <div class="aspect__inner">
-                                        <img src="./img/imgex.png" srcset="./img/imgex.png"
-                                            alt="NASA Satellite view of Earth" />
-                                    </div>
-                                </div>
-                            </div>
-                        </figure>
-                        <figure class="col-3@xs col-4@sm col-3@md picture-item picture-item--h2"
-                            data-groups='["animal"]' data-date-created="2015-07-23" data-title="Turtle">
-                            <div class="picture-item__inner">
-                                <div class="aspect aspect--16x9">
-                                    <div class="aspect__inner">
-                                        <img src="./img/imgex.png" srcset="./img/imgex.png"
-                                            alt="A close up of a turtle underwater" />
-                                    </div>
-                                </div>
-                            </div>
-                        </figure>
-                        <figure class="col-3@xs col-4@sm col-3@md picture-item" data-groups='["nature"]'
-                            data-date-created="2014-10-12" data-title="Stanley Park">
-                            <div class="picture-item__inner">
-                                <div class="aspect aspect--16x9">
-                                    <div class="aspect__inner">
-                                        <img src="./img/imgex.png" srcset="./img/imgex.png"
-                                            alt="Many trees stand alonside a hill which overlooks a pedestrian path, next to the ocean at Stanley Park in Vancouver, Canada" />
-                                    </div>
-                                </div>
-                            </div>
-                        </figure>
-                        <figure class="col-3@xs col-4@sm col-3@md picture-item" data-groups='["animal"]'
-                            data-date-created="2017-01-12" data-title="Astronaut Cat">
-                            <div class="picture-item__inner">
-                                <div class="aspect aspect--16x9">
-                                    <div class="aspect__inner">
-                                        <img src="./img/imgex.png" srcset="./img/imgex.png"
-                                            alt="An intrigued cat sits in grass next to a flag planted in front of it with an astronaut space kitty sticker on beige fabric." />
-                                    </div>
-                                </div>
-                            </div>
-                        </figure>
-                        <figure class="col-3@xs col-8@sm col-6@md picture-item picture-item--overlay"
-                            data-groups='["city"]' data-date-created="2017-01-19" data-title="San Francisco">
-                            <div class="picture-item__inner">
-
-                                <img src="./img/imgex.png" srcset="./img/imgex.png"
-                                    alt="Pier 14 at night, looking towards downtown San Francisco's brightly lit buildings" />
-                            </div>
-                        </figure>
-                        <figure class="col-3@xs col-4@sm col-3@md picture-item" data-groups='["nature","city"]'
-                            data-date-created="2015-10-20" data-title="Central Park">
-                            <div class="picture-item__inner">
-                                <div class="aspect aspect--16x9">
-                                    <div class="aspect__inner">
-                                        <img src="./img/imgex.png" srcset="./img/imgex.png"
-                                            alt="Looking down on central park and the surrounding builds from the Rockefellar Center" />
-                                    </div>
-                                </div>
-                            </div>
-                        </figure>
-                        <div class="col-1@sm col-1@xs my-sizer-element"></div>
+                    <!-- 3 -->
+                    <div class="grid-item">
+                        <a href="#"><img alt="баннер" src="./img/grid/banner-9.jpg" /></a>
+                    </div>
+                    <div class="grid-item">
+                        <a href="#"><img alt="баннер" src="./img/grid/banner-8.jpg" /></a>
+                    </div>
+                    <div class="grid-item">
+                        <a href="#"><img class="parallax-up" alt="баннер" src="./img/grid/banner-7.jpg" /></a>
                     </div>
                 </div>
+
+
             </div>
             <div class="main__bottom">
                 <p class="site-title">SKIN <span class="header__title-heart demo-icon icon-heart"></span> FOOD
@@ -568,15 +485,20 @@
                         <a class="socials-with-title__link" href="#"><img class="socials-with-title__img"
                                 src="./img/socials/ok.png" alt="ok"></a>
                         <a class="socials-with-title__link" href="#"><img class="socials-with-title__img"
-                                src="./img/socials/fb.png" alt="facebook"></a>
+                                src="./img/socials/fb.png" alt="facebook">
+                        </a>
                     </div>
                 </div>
 
                 <ul class="payment-list footer__payment-list">
-                    <li class="payment-list__item"><img class="payment-list__img" src="./img/payment.png" alt="#"></li>
-                    <li class="payment-list__item"><img class="payment-list__img" src="./img/payment.png" alt="#"></li>
-                    <li class="payment-list__item"><img class="payment-list__img" src="./img/payment.png" alt="#"></li>
+                    <li class="payment-list__item"><img class="payment-list__img" src="./img/payment.png" alt="#">
+                    </li>
+                    <li class="payment-list__item"><img class="payment-list__img" src="./img/payment.png" alt="#">
+                    </li>
+                    <li class="payment-list__item"><img class="payment-list__img" src="./img/payment.png" alt="#">
+                    </li>
                 </ul>
+
             </div>
 
             <div class="footer__right">
@@ -585,12 +507,14 @@
                     <ul class="navigation-users__list">
                         <li class="navigation-users__item"><a class="navigation-users__link" href="#">Оплата и
                                 доставка</a></li>
-                        <li class="navigation-users__item"><a class="navigation-users__link" href="#">Помощь</a></li>
+                        <li class="navigation-users__item"><a class="navigation-users__link" href="#">Помощь</a>
+                        </li>
                         <li class="navigation-users__item"><a class="navigation-users__link" href="#">Подарочные
                                 сертификаты</a></li>
                         <li class="navigation-users__item"><a class="navigation-users__link" href="#">Привилегии</a>
                         </li>
-                        <li class="navigation-users__item"><a class="navigation-users__link" href="#">SkinFood Club</a>
+                        <li class="navigation-users__item"><a class="navigation-users__link" href="#">SkinFood
+                                Club</a>
                         </li>
                         <li class="navigation-users__item"><a class="navigation-users__link" href="#">Подписаться на
                                 рассылку</a>
@@ -602,14 +526,43 @@
                 <div class="navigation-main footer__navigation-main">
                     <p class="navigation-main__title">Компания</p>
                     <ul class="navigation-main__list">
-                        <li class="navigation-main__item"><a class="navigation-main__link" href="#">О компании</a></li>
-                        <li class="navigation-main__item"><a class="navigation-main__link" href="#">Оптовые продажи</a>
+                        <li class="navigation-main__item"><a class="navigation-main__link" href="#">О компании</a>
                         </li>
-                        <li class="navigation-main__item"><a class="navigation-main__link" href="#">Сертификаты</a></li>
-                        <li class="navigation-main__item"><a class="navigation-main__link" href="#">Способ оплаты</a>
+                        <li class="navigation-main__item"><a class="navigation-main__link" href="#">Оптовые
+                                продажи</a>
+                        </li>
+                        <li class="navigation-main__item"><a class="navigation-main__link" href="#">Сертификаты</a>
+                        </li>
+                        <li class="navigation-main__item"><a class="navigation-main__link" href="#">Способ
+                                оплаты</a>
                         </li>
                     </ul>
                 </div>
+
+                <div class="socials-with-title socials-with-title--show-on-mobile footer__socials-with-title">
+                    <p class="socials-with-title__title">Мы в соцсетях</p>
+                    <div class="socials-with-title__list">
+                        <a class="socials-with-title__link" href="#"><img class="socials-with-title__img"
+                                src="./img/socials/vk.png" alt="vkontakte"></a>
+                        <a class="socials-with-title__link" href="#"><img class="socials-with-title__img"
+                                src="./img/socials/inst.png" alt="instagram"></a>
+                        <a class="socials-with-title__link" href="#"><img class="socials-with-title__img"
+                                src="./img/socials/ok.png" alt="ok"></a>
+                        <a class="socials-with-title__link" href="#"><img class="socials-with-title__img"
+                                src="./img/socials/fb.png" alt="facebook">
+                        </a>
+                    </div>
+                </div>
+
+                <ul class="payment-list payment-list--show-on-mobile footer__payment-list">
+                    <li class="payment-list__item"><img class="payment-list__img" src="./img/payment.png" alt="#">
+                    </li>
+                    <li class="payment-list__item"><img class="payment-list__img" src="./img/payment.png" alt="#">
+                    </li>
+                    <li class="payment-list__item"><img class="payment-list__img" src="./img/payment.png" alt="#">
+                    </li>
+                </ul>
+
             </div>
 
         </div>
@@ -626,168 +579,9 @@
     </div>
 
     <!-- CUSTOM AND LIBS -->
-
-
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
     <script src="js/libs.min.js"></script>
-    <script src="libs/shuffle.js"></script>
-    <script>
-        var Shuffle = window.Shuffle;
-
-        class Demo {
-            constructor(element) {
-                this.element = element;
-                this.shuffle = new Shuffle(element, {
-                    itemSelector: '.picture-item',
-                    sizer: element.querySelector('.my-sizer-element'),
-                });
-
-                // Log events.
-                this.addShuffleEventListeners();
-                this._activeFilters = [];
-                this.addFilterButtons();
-                this.addSorting();
-                this.addSearchFilter();
-            }
-
-            /**
-             * Shuffle uses the CustomEvent constructor to dispatch events. You can listen
-             * for them like you normally would (with jQuery for example).
-             */
-            addShuffleEventListeners() {
-                this.shuffle.on(Shuffle.EventType.LAYOUT, (data) => {
-                    console.log('layout. data:', data);
-                });
-                this.shuffle.on(Shuffle.EventType.REMOVED, (data) => {
-                    console.log('removed. data:', data);
-                });
-            }
-
-            addFilterButtons() {
-                const options = document.querySelector('.filter-options');
-                if (!options) {
-                    return;
-                }
-
-                const filterButtons = Array.from(options.children);
-                const onClick = this._handleFilterClick.bind(this);
-                filterButtons.forEach((button) => {
-                    button.addEventListener('click', onClick, false);
-                });
-            }
-
-            _handleFilterClick(evt) {
-                const btn = evt.currentTarget;
-                const isActive = btn.classList.contains('active');
-                const btnGroup = btn.getAttribute('data-group');
-
-                this._removeActiveClassFromChildren(btn.parentNode);
-
-                let filterGroup;
-                if (isActive) {
-                    btn.classList.remove('active');
-                    filterGroup = Shuffle.ALL_ITEMS;
-                } else {
-                    btn.classList.add('active');
-                    filterGroup = btnGroup;
-                }
-
-                this.shuffle.filter(filterGroup);
-            }
-
-            _removeActiveClassFromChildren(parent) {
-                const { children } = parent;
-                for (let i = children.length - 1; i >= 0; i--) {
-                    children[i].classList.remove('active');
-                }
-            }
-
-            addSorting() {
-                const buttonGroup = document.querySelector('.sort-options');
-                if (!buttonGroup) {
-                    return;
-                }
-                buttonGroup.addEventListener('change', this._handleSortChange.bind(this));
-            }
-
-            _handleSortChange(evt) {
-                // Add and remove `active` class from buttons.
-                const buttons = Array.from(evt.currentTarget.children);
-                buttons.forEach((button) => {
-                    if (button.querySelector('input').value === evt.target.value) {
-                        button.classList.add('active');
-                    } else {
-                        button.classList.remove('active');
-                    }
-                });
-
-                // Create the sort options to give to Shuffle.
-                const { value } = evt.target;
-                let options = {};
-
-                function sortByDate(element) {
-                    return element.getAttribute('data-created');
-                }
-
-                function sortByTitle(element) {
-                    return element.getAttribute('data-title').toLowerCase();
-                }
-
-                if (value === 'date-created') {
-                    options = {
-                        reverse: true,
-                        by: sortByDate,
-                    };
-                } else if (value === 'title') {
-                    options = {
-                        by: sortByTitle,
-                    };
-                }
-                this.shuffle.sort(options);
-            }
-
-            // Advanced filtering
-            addSearchFilter() {
-                const searchInput = document.querySelector('.js-shuffle-search');
-                if (!searchInput) {
-                    return;
-                }
-                searchInput.addEventListener('keyup', this._handleSearchKeyup.bind(this));
-            }
-
-            /**
-             * Filter the shuffle instance by items with a title that matches the search input.
-             * @param {Event} evt Event object.
-             */
-            _handleSearchKeyup(evt) {
-                const searchText = evt.target.value.toLowerCase();
-                this.shuffle.filter((element, shuffle) => {
-                    // If there is a current filter applied, ignore elements that don't match it.
-                    if (shuffle.group !== Shuffle.ALL_ITEMS) {
-                        // Get the item's groups.
-                        const groups = JSON.parse(element.getAttribute('data-groups'));
-                        const isElementInCurrentGroup = groups.indexOf(shuffle.group) !== -1;
-                        // Only search elements in the current group
-                        if (!isElementInCurrentGroup) {
-                            return false;
-                        }
-                    }
-                    const titleElement = element.querySelector('.picture-item__title');
-                    const titleText = titleElement.textContent.toLowerCase().trim();
-                    return titleText.indexOf(searchText) !== -1;
-                });
-            }
-        }
-
-        document.addEventListener('DOMContentLoaded', () => {
-            window.demo = new Demo(document.getElementById('grid'));
-        });
-
-    </script>
-
-
+    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.js"></script>
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
         </script>

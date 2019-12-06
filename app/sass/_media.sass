@@ -17,8 +17,27 @@
 	.region-list__item
 		flex-basis: 50%
 		width: 50%
+	.swiper-carousel--desktop
+		display: none !important
+	.swiper-carousel--mobile 
+		display: block !important
+	.swiper-carousel__item
+		font-size: 11px
 
 @media only screen and (max-width : 420px)
+	// footer
+	.socials-with-title__img
+		width: 25px
+	.socials__img
+		width: 22px
+	.socials-with-title
+		display: none
+	.socials-with-title--show-on-mobile
+		display: block
+	.payment-list
+		display: none
+	.payment-list--show-on-mobile
+		display: block
 	.footer__wrapper
 		padding-top: 20px
 	.footer__left,
@@ -41,6 +60,12 @@
 		display: none
 
 @media only screen and (max-width : 375px)
+	// header
+	.region__wrapper p,
+	.region__btn
+		font-size: 11px
+	.slider__wrapper
+		padding: 15px 20px
 	.slider-carousel__item
 		height: 188px
 	.region-list__item
@@ -69,6 +94,23 @@
 			font-size: 7px
 	.profile-menu__mail
 		display: none
+	// masonry grid
+	.grid-item, .grid-sizer
+		width: 50%
+	// swiper
+	.swiper-carousel.owl-theme .owl-nav [class*=owl-]
+		top: 6px
+	.swiper-carousel__slide
+		height: 45px
+	// map
+	.region-modal__title
+		font-size: 14px
+	.region-modal__text-with-icon
+		padding-bottom: 20px
+	.modal-list__item
+		padding-bottom: 20px
+	.modal-list__link
+		font-size: 12px
 
 
 

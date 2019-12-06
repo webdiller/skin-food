@@ -50,22 +50,12 @@ $(document).ready(function () {
 
     }());
 
-    const countriesModule = (function () {
-        const regionButton = doc.getElementById('regionButton'),
-            countries = doc.getElementById('countries');
-    }());
-
-    const swiperModule = (function () {
-        const carousel = document.getElementById
-        $('#carouselExampleIndicators').carousel('pause');
-    }());
-
 
     const regionModule = (function () {
         const regionForm = doc.getElementById('regionForm'),
             regionInput = doc.getElementById('regionInput'),
             regionInputButton = doc.getElementById('regionInputButton'),
-            regionButton = doc.getElementById('regionButton');
+            regionButtonSubmit = doc.getElementById('regionButtonSubmit');
 
         regionInput.addEventListener('input', function () {
             console.log(this.value);
@@ -90,11 +80,81 @@ $(document).ready(function () {
                 }
             }
         })
-    }())
+    }());
+
+    const swiperModule = (function () {
+        $('#swiperCarouselMobile').owlCarousel({
+            loop: true,
+            center: false,
+            nav: true,
+            mouseDrag: true,
+            navSpeed: 800,
+            navText: ['<span class="swiper-carousel__icon demo-icon icon-left-open-big"></span>','<span class="swiper-carousel__icon demo-icon icon-right-open-big"></span>'],
+            dots: false,
+            items: 1,
+            mouseDrag: false,
+            responsive: {
+                0: {
+                    items: 1
+                }
+            }
+        })
+        
+        $('#swiperCarouselDesktop').owlCarousel({
+            loop: true,
+            center: false,
+            nav: true,
+            mouseDrag: true,
+            navSpeed: 800,
+            navText: ['<span class="swiper-carousel__icon demo-icon icon-left-open-big"></span>','<span class="swiper-carousel__icon demo-icon icon-right-open-big"></span>'],
+            dots: false,
+            items: 1,
+            mouseDrag: false,
+            responsive: {
+                0: {
+                    items: 1
+                }
+            }
+        })
+    }());
 
 
     $('#carouselExampleIndicators').carousel({
         interval: false
     });
+
+
+
+    const masonryGridModule = (function () {
+        // external js: masonry.pkgd.js, imagesloaded.pkgd.js
+        // init Masonry after all images have loaded
+        var $grid = $('.grid').imagesLoaded(function () {
+            $grid.masonry({
+                itemSelector: '.grid-item',
+                percentPosition: true,
+                columnWidth: '.grid-sizer'
+            });
+        });
+    }())
+
+
+    const masonryParalaxModule = (function () {
+        var imageUp = document.getElementsByClassName('parallax-up');
+
+        // new simpleParallax(imageUp, {
+        //     delay: 1,
+        //     transition: 'cubic-bezier(0,0,0,1)',
+        //     overflow: true,
+        //     orientation: 'up'
+        // });
+
+        // new simpleParallax(imageDown, {
+        //     delay: 4,
+        //     transition: 'cubic-bezier(0,0,0,1)',
+        //     overflow: true,
+        //     orientation: 'down'
+        // });
+    }())
+
 
 });

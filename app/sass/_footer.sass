@@ -1,5 +1,100 @@
-/* footer start
+ /* footer start
  */
+
+.contacts-list
+    &__title
+        font-size: 14px
+        margin-bottom: 18px
+        letter-spacing: 0.04em
+        color: #1A1A1A
+    &__link
+        display: block
+        font-size: 14px
+        line-height: 200%
+        letter-spacing: 0.04em
+        font-weight: 600
+        color: #1A1A1A
+
+.socials
+    padding: 0
+    margin: 0
+    list-style-type: none
+    display: flex
+    align-items: center
+    &__link
+        &:not(:last-child)
+            margin-right: 17px
+    &__img
+        max-width: 100%
+        height: auto
+        width: 28px
+
+.socials-with-title
+    &--show-on-mobile
+        display: none
+    &__title
+        font-weight: 600
+        font-size: 14px
+        line-height: 17px
+        letter-spacing: 0.04em
+        color: #1A1A1A
+        margin-bottom: 15px
+    &__list
+        display: flex
+        align-items: center
+    &__link
+        &:not(:last-child)
+            margin-right: 18px
+    &__img
+        max-width: 100%
+        height: auto
+        width: 32px
+        filter: grayscale(1) brightness(1.2)
+        transition: all .3s ease
+        &:hover
+            filter: grayscale(.5) brightness(1)
+
+.payment-list
+    &--show-on-mobile
+        display: none
+    +reset-ul
+    &__item
+    &__img
+
+.navigation-users
+    &__title
+        margin-bottom: 15px
+        font-weight: 600
+        font-size: 14px
+        line-height: 17px
+        letter-spacing: 0.04em
+        color: #1A1A1A
+    &__list
+        +reset-ul
+    &__item
+    &__link
+        font-size: 14px
+        line-height: 29px
+        letter-spacing: 0.04em
+        color: #000000
+
+.navigation-main
+    &__title
+        margin-bottom: 15px
+        font-weight: 600
+        font-size: 14px
+        line-height: 17px
+        letter-spacing: 0.04em
+        color: #1A1A1A
+    &__list
+        +reset-ul
+    &__item
+    &__link
+        font-size: 14px
+        line-height: 29px
+        letter-spacing: 0.04em
+        color: #000000
+
 .footer
     margin-top: auto
     padding: 0
@@ -42,93 +137,3 @@
         font-size: 9px
         max-width: 584px
         margin: 0 auto
-
-.contacts-list
-    &__title
-        font-size: 14px
-        margin-bottom: 18px
-        letter-spacing: 0.04em
-        color: #1A1A1A
-    &__link
-        display: block
-        font-size: 14px
-        line-height: 200%
-        letter-spacing: 0.04em
-        font-weight: 600
-        color: #1A1A1A
-
-.socials
-    padding: 0
-    margin: 0
-    list-style-type: none
-    display: flex
-    align-items: center
-    &__link
-        &:not(:last-child)
-            margin-right: 17px
-    &__img
-        max-width: 100%
-        height: auto
-        width: 28px
-
-.socials-with-title
-    &__title
-        font-weight: 600
-        font-size: 14px
-        line-height: 17px
-        letter-spacing: 0.04em
-        color: #1A1A1A
-        margin-bottom: 15px
-    &__list
-        display: flex
-        align-items: center
-    &__link
-        &:not(:last-child)
-            margin-right: 18px
-    &__img
-        max-width: 100%
-        height: auto
-        width: 32px
-        filter: grayscale(1) brightness(1.2)
-        transition: all .3s ease
-        &:hover
-            filter: grayscale(.5) brightness(1)
-
-.payment-list
-    +reset-ul
-    &__item
-    &__img
-
-.navigation-users
-    &__title
-        margin-bottom: 15px
-        font-weight: 600
-        font-size: 14px
-        line-height: 17px
-        letter-spacing: 0.04em
-        color: #1A1A1A
-    &__list
-        +reset-ul
-    &__item
-    &__link
-        font-size: 14px
-        line-height: 29px
-        letter-spacing: 0.04em
-        color: #000000
-
-.navigation-main
-    &__title
-        margin-bottom: 15px
-        font-weight: 600
-        font-size: 14px
-        line-height: 17px
-        letter-spacing: 0.04em
-        color: #1A1A1A
-    &__list
-        +reset-ul
-    &__item
-    &__link
-        font-size: 14px
-        line-height: 29px
-        letter-spacing: 0.04em
-        color: #000000

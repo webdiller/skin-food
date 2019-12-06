@@ -1,7 +1,7 @@
 @import "part"
 @import "normalize"
 @import "libs"
-@import "shafle"
+@import "masonry"
 @import "vars"
 @import "fonts"
 
@@ -16,6 +16,7 @@ body
     overflow-x: hidden
     font-family: $proxy
     font-weight: 400
+    min-width: 320px
     min-height: 100vh
     margin: 0
     padding: 0
@@ -153,14 +154,26 @@ a:hover
         display: flex
         list-style-type: none
         &__item
-            padding: 12px 10px 12px 0
+            padding: 12px 0 12px 0
         &__link
             font-size: 14px
             letter-spacing: 0.04em
             text-decoration-line: underline
             color: #FFFFFF
+            font-weight: 600
+            position: relative
+            padding-right: 13px
+            &::after
+                content: "/"
+                top: 0
+                right: 3px
+                position: absolute
             &:hover
                 color: #fff
+        &__item:last-child &__link
+            padding-right: 0
+        &__item:last-child &__link::after
+            content: ""
     &__current
         font-size: 15px
         line-height: 31px
@@ -175,30 +188,16 @@ a:hover
         max-width: 1240px
         padding: 0 20px
         margin: 0 auto
-    &__carousel
-    &__dots
-        margin: 0
-    &__arrow
-        font-size: 18px
-        color: #F68C9F
-        margin-top: calc(35px -14px)
-        background: #fff
-        z-index: 10
-    &__arrows
-        display: flex
-        justify-content: space-between
-        position: absolute
-        left: 0
-        right: 0
-        &-prev
-        &-next
+
+.swiper-carousel
+    &--desktop
+    &--mobile
+        display: none !important
     &__slide
-    &__container
-        padding: 0 80px
-        height: 65px
         display: flex
-        align-items: center
         justify-content: space-between
+        align-items: center
+        height: 65px
     &__item
         flex-basis: 220px
         width: 220px
@@ -210,32 +209,41 @@ a:hover
         line-height: 18px
         letter-spacing: 0.04em
         color: #F68C9F
-        display: flex
-        justify-content: center
-        align-items: center
         height: 100%
+        display: flex
+        align-items: center
+        justify-content: center
+        text-align: center
         padding: 0
         position: relative
         transition: all .3s ease
-        &:hover
-            background: #fff
-            color: #1A1A1A
-        &-icon
-            position: relative
-            bottom: 2px
-            right: 2px
-            color: #F68C9F
-        &.active
-            box-shadow: none
-            color: #1A1A1A
-            &::before
-                content: ""
-                position: absolute
-                bottom: 0
-                height: 3px
-                background: #F68C9F
-                left: 0
-                right: 0
+        &::before
+            content: ""
+            position: absolute
+            transition: all .3s ease
+            bottom: 0
+            left: 0
+            right: 0
+            height: 3px
+        &.active::before
+            background: #F68C9F
+    &__icon
+        color: #F68C9F
+    &.owl-theme 
+        .owl-nav
+            margin-top: 0
+            position: absolute
+            top: 0
+            left: 0
+            height: 20px
+            right: 0
+            display: flex
+            justify-content: space-between
+            [class*=owl-]
+                position: relative
+                top: 14px
+                &:hover
+                    background: transparent
 
 .slider
     background: url(../img/slider/slider-bg.jpg) no-repeat center
@@ -266,6 +274,14 @@ a:hover
         border-radius: 4px
         letter-spacing: 1px
         color: #fff
+    &.owl-theme .owl-nav.disabled+.owl-dots
+        margin-top: 20px
+        .owl-dot span
+            background: #fff
+            border: 1px solid #f78c9f
+            transition: all .3s ease
+        .owl-dot.active span
+            border: 1px solid #fff
 
 .main
     background: #FFDDE4
@@ -275,7 +291,6 @@ a:hover
         max-width: 1240px
         padding: 27px 20px 45px 20px
         margin: 0 auto
-        min-height: 1000px
         display: flex
         flex-direction: column
         height: 100%
