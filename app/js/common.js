@@ -39,6 +39,14 @@ $(document).ready(function () {
                     search.classList.toggle('active');
                 }, 300);
 
+                // fix
+                try {
+                    doc.querySelector('.main-navigation').classList.toggle('menu-open');
+                    doc.querySelector('.body-container').classList.toggle('disable-y');
+                } catch (error) {
+                    console.log(error);
+                }
+
                 setTimeout(() => {
                     $('.header__wrapper').removeClass('disabled');
                 }, 500);
@@ -82,6 +90,7 @@ $(document).ready(function () {
         })
     }());
 
+
     const swiperModule = (function () {
         $('#swiperCarouselMobile').owlCarousel({
             loop: true,
@@ -89,7 +98,7 @@ $(document).ready(function () {
             nav: true,
             mouseDrag: true,
             navSpeed: 800,
-            navText: ['<span class="swiper-carousel__icon demo-icon icon-left-open-big"></span>','<span class="swiper-carousel__icon demo-icon icon-right-open-big"></span>'],
+            navText: ['<span class="swiper-carousel__icon demo-icon icon-left-open-big"></span>', '<span class="swiper-carousel__icon demo-icon icon-right-open-big"></span>'],
             dots: false,
             items: 1,
             mouseDrag: false,
@@ -99,14 +108,14 @@ $(document).ready(function () {
                 }
             }
         })
-        
+
         $('#swiperCarouselDesktop').owlCarousel({
             loop: true,
             center: false,
             nav: true,
             mouseDrag: true,
             navSpeed: 800,
-            navText: ['<span class="swiper-carousel__icon demo-icon icon-left-open-big"></span>','<span class="swiper-carousel__icon demo-icon icon-right-open-big"></span>'],
+            navText: ['<span class="swiper-carousel__icon demo-icon icon-left-open-big"></span>', '<span class="swiper-carousel__icon demo-icon icon-right-open-big"></span>'],
             dots: false,
             items: 1,
             mouseDrag: false,
@@ -117,11 +126,6 @@ $(document).ready(function () {
             }
         })
     }());
-
-
-    $('#carouselExampleIndicators').carousel({
-        interval: false
-    });
 
 
 
@@ -138,23 +142,14 @@ $(document).ready(function () {
     }())
 
 
-    const masonryParalaxModule = (function () {
-        var imageUp = document.getElementsByClassName('parallax-up');
+    const fixedHeaderModule = (function () {
+        $(window).scroll(function () {
+            var sticky = $('.main-navigation'),
+                scroll = $(window).scrollTop();
 
-        // new simpleParallax(imageUp, {
-        //     delay: 1,
-        //     transition: 'cubic-bezier(0,0,0,1)',
-        //     overflow: true,
-        //     orientation: 'up'
-        // });
-
-        // new simpleParallax(imageDown, {
-        //     delay: 4,
-        //     transition: 'cubic-bezier(0,0,0,1)',
-        //     overflow: true,
-        //     orientation: 'down'
-        // });
+            if (scroll >= 30) sticky.addClass('main-fixed');
+            else sticky.removeClass('main-fixed');
+        });
     }())
-
 
 });

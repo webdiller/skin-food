@@ -1,7 +1,18 @@
  /* header start
  */
 
+.main-fixed
+    position: fixed
+    top: 0
+    right: 0
+    left: 0
+    z-index: 100
+    &.menu-open
+        bottom: 0
+        overflow-y: scroll
+
 .header
+    background: #fff
     border-bottom: 1px solid #E7E7E7
     &__wrapper
         display: flex
@@ -101,6 +112,8 @@
     height: 40px
     position: relative
     &.search-group--modal
+        position: relative
+        z-index: 10
         .search-group
             &__input
                 border: 1px solid #FFDDE4
