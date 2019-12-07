@@ -21,6 +21,7 @@ body
     margin: 0
     padding: 0
     opacity: 1
+    padding-right: 0 !important
     visibility: visible
 
 h1,h2,h3,h4,h5,h6,p
@@ -34,7 +35,6 @@ a:hover
     color: #000000
     text-decoration: none
 
-    
 .body-container
     display: flex
     flex-direction: column
@@ -57,6 +57,16 @@ a:hover
         display: block
         font-size: 13px
         color: #1E1E1F
+
+.main-navigation
+    &.active
+        position: fixed
+        top: 0
+        right: 0
+        left: 0
+        bottom: 0
+        overflow-y: scroll
+        z-index: 1000
 
 .main-menu
     background: #fff
@@ -233,7 +243,7 @@ a:hover
             background: #F68C9F
     &__icon
         color: #F68C9F
-    &.owl-theme 
+    &.owl-theme
         .owl-nav
             margin-top: 0
             position: absolute
@@ -298,6 +308,9 @@ a:hover
         display: flex
         flex-direction: column
         height: 100%
+        min-height: 600px
+        position: relative
+        z-index: 10
     &__img
         position: absolute
         bottom: 0
@@ -312,6 +325,173 @@ a:hover
         z-index: 10
         margin-top: auto
         text-align: center
+
+.products
+.products-head
+    &__wrapper
+        display: flex
+        align-items: center
+        justify-content: space-between
+        margin-bottom: 25px
+
+    &__btn
+        background: #f78c9f
+        border: none
+        outline: none
+        min-width: 160px
+        min-height: 35px
+        border-radius: 4px
+        display: block
+        font-size: 14px
+        font-weight: 600
+        letter-spacing: 1px
+        color: #fff
+        text-transform: uppercase
+        &-icon
+            color: #fff
+
+.filter
+    margin-bottom: 0
+    background: transparent
+    border: none
+    &:focus,
+    &:active
+        background: transparent
+    &__select
+        padding: 0
+        background: transparent
+        border: none
+        border-radius: 4px
+        font-size: 14px
+        font-weight: 600
+        color: #1E1E1F
+        &:focus,
+        &:active
+            background: transparent
+
+.products-list
+    &__wrapper
+        display: flex
+        flex-wrap: wrap
+        justify-content: center
+
+.product
+    background: #FFFFFF
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.25)
+    border-radius: 5px
+    transition: all .3s ease
+    margin: 0 10px 25px 10px
+    &:hover
+        box-shadow: 0px 12px 12px rgba(0, 0, 0, 0.25)
+    &__wrapper
+        padding: 15px 20px 17px 15px
+        text-align: center
+        display: flex
+        flex-direction: column
+        align-items: center
+    &__link
+    &__img
+        height: 182px
+    &__name
+        font-size: 11px
+        line-height: 23px
+        letter-spacing: 0.04em
+        text-transform: uppercase
+        font-weight: 600
+        color: #F78C9F
+    &__descr
+        font-size: 14px
+        line-height: 20px
+        letter-spacing: 0.04em
+        color: #1A1A1A
+        padding: 0 0 6px 0
+        max-width: 187px
+        padding-bottom: 5px
+    &__tag
+        font-size: 10px
+        line-height: 15px
+        text-align: center
+        letter-spacing: 0.04em
+        text-transform: uppercase
+        color: #AEAEAE
+        padding-bottom: 5px
+    &__price
+        font-size: 15px
+        line-height: 22px
+        letter-spacing: 0.04em
+        color: #1A1A1A
+        font-weight: 600
+    &__btn-empty
+        font-size: 12px
+        line-height: 18px
+        letter-spacing: 0.04em
+        text-decoration-line: underline
+        color: #4A71FF
+        background: transparent
+        border: none
+        outline: none
+    &__btn-add
+        margin-top: 10px
+        background: #F78C9F
+        border-radius: 4px
+        font-size: 13px
+        border: none
+        outline: none
+        letter-spacing: 0.04em
+        text-transform: uppercase
+        color: #FFFFFF
+        padding: 8px 30px 8px 30px
+
+.products-pagination
+    &__wrapper
+        padding-top: 15px
+        display: flex
+        flex-direction: column
+        align-items: center
+    &__status
+        font-size: 15px
+        line-height: 22px
+        text-align: center
+        letter-spacing: 0.04em
+        color: #686868
+        font-weight: 600
+        padding-bottom: 20px
+    &__status-current
+    &__status-all
+    &__list
+        display: inline-flex
+        justify-content: center
+        align-items: center
+        +reset-ul
+    &__item
+        &-arrow .products-pagination__link
+            border-bottom: 0
+            color: #f78c9f
+        &.disabled
+            display: none
+        &.active
+            .products-pagination__link
+                position: relative
+                border-bottom: 0
+                &::before
+                    content: ""
+                    position: absolute
+                    border: 1.5px solid #f78c9f
+                    border-radius: 50%
+                    width: 25px
+                    height: 25px
+                    top: 50%
+                    right: 50%
+                    transform: translate(50%, -50%)
+    &__link
+        font-size: 18px
+        line-height: 26px
+        text-align: center
+        letter-spacing: 0.04em
+        color: #363636
+        display: inline-block
+        margin: 0 10px
+        border-bottom: 1px solid #3e3e3e
 
 @import "header"
 @import "modal"

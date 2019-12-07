@@ -2,11 +2,13 @@
 
 $(document).ready(function () {
 
-    const doc = document;
+    const doc = document,
+        bodySelector = doc.getElementById('bodySelector');
 
     const headerModule = (function () {
 
         const menu = doc.getElementById('menu'),
+            mainNavigation = doc.getElementById('mainNavigation'),
             menuList = doc.getElementById('menuList'),
             search = doc.getElementById('search'),
             title = doc.getElementById('title'),
@@ -33,19 +35,14 @@ $(document).ready(function () {
                     menu.classList.toggle('icon-cancel-1');
 
                     menuList.classList.toggle('active');
+                    mainNavigation.classList.toggle('active');
+
+                    bodySelector.classList.toggle('disable-y');
 
                     selector.classList.toggle('active');
                     like.classList.toggle('active');
                     search.classList.toggle('active');
                 }, 300);
-
-                // fix
-                try {
-                    doc.querySelector('.main-navigation').classList.toggle('menu-open');
-                    doc.querySelector('.body-container').classList.toggle('disable-y');
-                } catch (error) {
-                    console.log(error);
-                }
 
                 setTimeout(() => {
                     $('.header__wrapper').removeClass('disabled');
