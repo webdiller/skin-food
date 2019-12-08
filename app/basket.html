@@ -27,51 +27,7 @@
         </div>
     </div>
 
-    <!-- Modal -->
-    <div class="filter-modal modal fade" id="filterModal" tabindex="-1" role="dialog"
-        aria-labelledby="filterModal" aria-hidden="true">
-        <div class="filter-modal__dialog modal-dialog" role="document">
-            <div class="filter-modal__content modal-content">
 
-                <div class="filter-modal__header">
-                    <div class="filter-modal__wrapper">
-                        <p class="filter-modal__title">Фильтр</p>
-                        <button type="button" class="filter-modal__close close demo-icon icon-cancel-1"
-                            data-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                </div>
-
-                <form class="filter-form">
-                    <div class="filter-form__wrapper">
-                        <ul class="main-filter">
-                            <li class="main-filter__item"><a href="#!" class="main-filter__link">Цена</a></li>
-                            <li class="main-filter__item"><a href="#!" class="main-filter__link">Тип</a></li>
-                            <li class="main-filter__item"><a href="#!" class="main-filter__link">Действие</a></li>
-                            <li class="main-filter__item"><a href="#!" class="main-filter__link">Тип кожи</a></li>
-                            <li class="main-filter__item"><a href="#!" class="main-filter__link">Возраст</a></li>
-                            <li class="main-item">
-                                <a class="main-item__link" href="#!">
-                                    <p class="main-item__title">Время применения</p>
-                                    <span class="main-item__descr">Ночной крем, Дневной крем, Вечерний крем</span>
-                                </a>
-                                <button class="main-item__btn">очитстить</button>
-                                <a href="#!" class="main-item__icon-link demo-icon"></a>
-                            </li>
-                            <li class="main-filter__item"><a href="#!" class="main-filter__link">Активные
-                                    ингредиенты</a></li>
-                        </ul>
-                        <div class="filter-form__buttons">
-                            <button class="filter-form__btn-reset">Сбросить</button>
-                            <button class="filter-form__btn-show">показать</button>
-                        </div>
-                    </div>
-                </form>
-
-            </div>
-        </div>
-    </div>
-
-    <!-- Region modal -->
     <div id="regionModal" class="region-modal modal fade" tabindex="-1" role="dialog">
         <div class="region-modal__dialog modal-dialog" role="document">
 
@@ -130,6 +86,7 @@
     </div>
 
 
+
     <header id="mainNavigation" class="main-navigation">
         <div class="header">
             <div class="header__wrapper">
@@ -144,8 +101,8 @@
                 </a>
 
                 <a class="header-icon header__like demo-icon icon-heart-circled" id="like" href="#!"></a>
-                <a class="header-icon header__basket demo-icon icon-shop" id="basket" href="basket.html"><span id="basketCounter"
-                        class="header__basket-counter">0</span></a>
+                <a class="header-icon header__basket demo-icon icon-shop" id="basket" href="basket.html"><span
+                        id="basketCounter" class="header__basket-counter">0</span></a>
 
             </div>
         </div>
@@ -351,221 +308,184 @@
     </header>
 
 
-    <div class="breadcrumbs">
-        <div class="breadcrumbs__wrapper">
-            <nav class="breadcrumbs-nav">
-                <ul class="breadcrumbs-list">
-                    <li class="breadcrumbs-list__item"><a href="/" class="breadcrumbs-list__link">Главная</a></li>
-                    <li class="breadcrumbs-list__item"><a href="#!" class="breadcrumbs-list__link">Лицо</a></li>
-                    <li class="breadcrumbs-list__item"><a href="#!" class="breadcrumbs-list__link">Очищение</a></li>
-                    <li class="breadcrumbs-list__item"><a href="#!" class="breadcrumbs-list__link">Очищающий крем</a>
-                    </li>
-                </ul>
-            </nav>
-            <h1 class="breadcrumbs__current">Главная</h1>
-        </div>
-    </div>
-
-
-    <main class="main">
+    <main class="main main--basket">
         <div class="main__wrapper">
 
-            <div class="products">
-                <div class="products-head">
-                    <div class="products-head__wrapper">
-                        <div class="form-group filter">
-                            <select class="filter__select form-control" id="exampleFormControlSelect1">
-                                <option>Сначала популярные</option>
-                                <option>Новое</option>
-                                <option>Акции</option>
-                                <option>Распродажи</option>
-                                <option>Тренд</option>
-                            </select>
+            <div class="basket">
+                <div class="basket__wrapper">
+
+                    <ul class="basket-list">
+                        <li class="basket-list__item">
+                            <img src="./img/products/product-10.jpg"
+                                alt="Маска для кожи вокруг глаз. SNP Bird’s Nest Aqua Eye Patch"
+                                class="basket-list__img">
+                            <div class="basket-list__content">
+                                <p class="basket-list__tag">Маска для кожи вокруг глаз</p>
+                                <p class="basket-list__name">SNP Bird’s Nest Aqua Eye Patch</p>
+                                <div class="basket-list__descr">
+                                    <span class="basket-list__descr-key">Тон: </span>
+                                    <span class="basket-list__descr-value">lite beige n.13</span>
+                                </div>
+
+                            </div>
+                            <div class="basket-counter basket-list__counter">
+                                <button class="basket-counter__btn-less demo-icon icon-minus"></button>
+                                <input placeholder="0" type="number" class="basket-counter__input">
+                                <button class="basket-counter__btn-more demo-icon icon-plus"></button>
+                            </div>
+
+                            <p class="basket-list__price">30.20 руб</p>
+                            <button class="basket-list__close demo-icon icon-cancel-1"></button>
+                        </li>
+
+                        <li class="basket-list__item">
+                            <img src="./img/products/product-10.jpg"
+                                alt="Маска для кожи вокруг глаз. SNP Bird’s Nest Aqua Eye Patch"
+                                class="basket-list__img">
+                            <div class="basket-list__content">
+                                <p class="basket-list__tag">Маска для кожи вокруг глаз</p>
+                                <p class="basket-list__name">SNP Bird’s Nest Aqua Eye Patch</p>
+                                <div class="basket-list__descr">
+                                    <span class="basket-list__descr-key">Тон: </span>
+                                    <span class="basket-list__descr-value">lite beige n.13</span>
+                                </div>
+
+
+                            </div>
+                            <div class="basket-counter basket-list__counter">
+                                <button class="basket-counter__btn-less demo-icon icon-minus"></button>
+                                <input placeholder="0" type="number" class="basket-counter__input">
+                                <button class="basket-counter__btn-more demo-icon icon-plus"></button>
+                            </div>
+
+                            <p class="basket-list__price">30.20 руб</p>
+                            <button class="basket-list__close demo-icon icon-cancel-1"></button>
+                        </li>
+                    </ul>
+
+                    <ul class="promo-list">
+                        <li class="promo-list__item">
+                            <p class="promo-list__title">+ Выберите бесплатно к заказу</p>
+                            <button class="promo-list__btn">выбрать подарок</button>
+                        </li>
+                        <li class="promo-list__item flex-end">
+                            <p class="promo-list__subtitle">промокод:</p>
+                            <input type="text" class="promo-list__input">
+                            <button class="promo-list__btn">применить код</button>
+                        </li>
+                    </ul>
+
+                    <ul class="contacts">
+                        <li class="contacts__item space-between">
+                            <p class="contacts__title">Личные данные</p>
+                            <div class="form-input-group contacts__group">
+                                <label for="contactName" class="form-input-group__label">Имя</label>
+                                <input id="contactName" type="text" placeholder="Мария" class="form-input-group__input">
+                            </div>
+                            <div class="form-input-group contacts__group">
+                                <label for="contactLastName" class="form-input-group__label">Фамилия</label>
+                                <input id="contactLastName" type="text" placeholder="Нефедова"
+                                    class="form-input-group__input">
+                            </div>
+                            <div class="form-input-group contacts__group">
+                                <label for="contactEmail" class="form-input-group__label required"><span
+                                        class="form-input-group__label-icon">*</span> e-mail</label>
+                                <input required id="contactEmail" type="email" placeholder="example@gmail.com"
+                                    class="form-input-group__input">
+                            </div>
+                        </li>
+                    </ul>
+
+
+                    <div class="delivery">
+                        <div class="delivery__wrapper">
+                            <p class="delivery__title">Доставка</p>
+
+                            <div class="form-input-group contacts__group">
+                                <label for="contactCity" class="form-input-group__label required"><span
+                                        class="form-input-group__label-icon">*</span> город</label>
+                                <input placeholder="Минск" required id="contactCity" type="text"
+                                    class="form-input-group__input">
+                            </div>
+
+                            <div class="delivery__radio-buttons">
+                                <div class="form-radio-group mb-2">
+                                    <input checked type="radio" name="deliveryType" value="Курьером до клиента - 6 руб"
+                                        id="delivery1" class="form-radio-group__input">
+                                    <label class="form-radio-group__label" for="delivery1">Курьером до клиента - 6
+                                        руб</label>
+                                </div>
+                                <div class="form-radio-group">
+                                    <input type="radio" name="deliveryType" value="До ПВЗ г. Минске - 2 руб"
+                                        id="delivery2" class="form-radio-group__input">
+                                    <label class="form-radio-group__label" for="delivery2">До ПВЗ г. Минске - 2 руб
+                                    </label>
+                                    <small class="form-radio-group__small">Бесплатно при сумме заказа от 30 руб</small>
+                                </div>
+                            </div>
+
+                            <p class="time delivery__time">
+                                <span class="time__title">Время доставки</span>
+                                <span class="time__descr">Среда, 10 Апреля 10:00-16:00</span>
+                            </p>
+
+                            <!-- <div class="form-input-group">
+                                <label for="contactCity" class="form-input-group__label required"><span
+                                        class="form-input-group__label-icon">*</span>Улица </label>
+                                <input placeholder="Пушкина" required id="contactCity" type="text"
+                                    class="form-input-group__input">
+                            </div>
+
+                            <div class="form-input-group">
+                                <label for="contactCity" class="form-input-group__label required"><span
+                                        class="form-input-group__label-icon">*</span>Дом </label>
+                                <input placeholder="30" required id="contactCity" type="text"
+                                    class="form-input-group__input">
+                            </div>
+
+                            <div class="form-input-group">
+                                <label for="contactCity" class="form-input-group__label required"><span
+                                        class="form-input-group__label-icon">*</span>Квартира </label>
+                                <input placeholder="1" required id="contactCity" type="text"
+                                    class="form-input-group__input">
+                            </div>
+
+                            <div class="form-input-group">
+                                <label for="contactCity" class="form-input-group__label required"><span
+                                        class="form-input-group__label-icon">*</span>Телефон </label>
+                                <input placeholder="+ 375 29 123 45 67" required id="contactCity" type="text"
+                                    class="form-input-group__input">
+                            </div>
+
+                            <div class="form-textarea-group">
+                                <textarea name="comment" id="" cols="30" rows="10"></textarea>
+                            </div>
+                            <p class="delivery__bottom-text">Поля, обязательные для заполнения</p> -->
                         </div>
-                        <button data-toggle="modal" data-target="#filterModal" class="products-head__btn">фильтр <span
-                                class="products-head__btn-icon demo-icon icon-right-open-big"></span></button>
                     </div>
-                </div>
 
-                <div class="products-list">
-                    <div class="products-list__wrapper">
 
-                        <div class="product">
-                            <div style="--bgColor: #EF2B50" data-status="-30 % АКЦИЯ" class="product__wrapper">
-                                <a class="product__link" href="#!">
-                                    <img src="./img/products/product-1.jpg" alt="сыворотка для глаз"
-                                        class="product__img">
-                                </a>
-                                <p class="product__name">hello beauty</p>
-                                <p class="product__descr">Сыворотка для кожи
-                                    вокруг глаз</p>
-                                <p class="product__tag">Сыворотка для глаз</p>
-                                <p class="product__price">от 410 до 470 byn</p>
-                                <button class="product__btn-empty">Сообщить о появлении</button>
-                                <button class="product__btn-add">в корзину</button>
-                            </div>
+
+                    <div class="basket-check">
+                        <div class="basket-check__wrapper">
+                            <p class="basket-check__total-cost">Общая стоимость: 30.20 руб</p>
+                            <p class="basket-check__cost-of-delivery">Стоимость доставки: 6.00 руб</p>
+                            <p class="basket-check__total-pay">К оплате: 30.20 руб</p>
                         </div>
-
-                        <div class="product">
-                            <div style="--bgColor: #B970E8" data-status="MUST HAVE" class="product__wrapper">
-                                <a class="product__link" href="#!">
-                                    <img src="./img/products/product-2.jpg" alt="сыворотка для глаз"
-                                        class="product__img">
-                                </a>
-                                <p class="product__name">hello beauty</p>
-                                <p class="product__descr">Сыворотка для кожи
-                                    вокруг глаз</p>
-                                <p class="product__tag">Сыворотка для глаз</p>
-                                <p class="product__price">от 410 до 470 byn</p>
-                                <button class="product__btn-empty">Сообщить о появлении</button>
-                                <button class="product__btn-add">в корзину</button>
-                            </div>
-                        </div>
-
-                        <div class="product">
-                            <div style="--bgColor: #1CD169" data-status="НОВИНКА" class="product__wrapper">
-                                <a class="product__link" href="#!">
-                                    <img src="./img/products/product-3.jpg" alt="сыворотка для глаз"
-                                        class="product__img">
-                                </a>
-                                <p class="product__name">hello beauty</p>
-                                <p class="product__descr">Сыворотка для кожи
-                                    вокруг глаз</p>
-                                <p class="product__tag">Сыворотка для глаз</p>
-                                <p class="product__price">от 410 до 470 byn</p>
-                                <button class="product__btn-empty">Сообщить о появлении</button>
-                                <button class="product__btn-add">в корзину</button>
-                            </div>
-                        </div>
-
-                        <div class="product">
-                            <div style="--bgColor: #F1B155" data-status="БЕСТСЕЛЛЕР" class="product__wrapper">
-                                <a class="product__link" href="#!">
-                                    <img src="./img/products/product-4.jpg" alt="сыворотка для глаз"
-                                        class="product__img">
-                                </a>
-                                <p class="product__name">hello beauty</p>
-                                <p class="product__descr">Сыворотка для кожи
-                                    вокруг глаз</p>
-                                <p class="product__tag">Сыворотка для глаз</p>
-                                <p class="product__price">от 410 до 470 byn</p>
-                                <button class="product__btn-empty">Сообщить о появлении</button>
-                                <button class="product__btn-add">в корзину</button>
-                            </div>
-                        </div>
-
-                        <div class="product">
-                            <div class="product__wrapper">
-                                <a class="product__link" href="#!">
-                                    <img src="./img/products/product-5.jpg" alt="сыворотка для глаз"
-                                        class="product__img">
-                                </a>
-                                <p class="product__name">hello beauty</p>
-                                <p class="product__descr">Сыворотка для кожи
-                                    вокруг глаз</p>
-                                <p class="product__tag">Сыворотка для глаз</p>
-                                <p class="product__price">от 410 до 470 byn</p>
-                                <button class="product__btn-empty">Сообщить о появлении</button>
-                                <button class="product__btn-add">в корзину</button>
-                            </div>
-                        </div>
-
-                        <div class="product">
-                            <div class="product__wrapper">
-                                <a class="product__link" href="#!">
-                                    <img src="./img/products/product-6.jpg" alt="сыворотка для глаз"
-                                        class="product__img">
-                                </a>
-                                <p class="product__name">hello beauty</p>
-                                <p class="product__descr">Сыворотка для кожи
-                                    вокруг глаз</p>
-                                <p class="product__tag">Сыворотка для глаз</p>
-                                <p class="product__price">от 410 до 470 byn</p>
-                                <button class="product__btn-empty">Сообщить о появлении</button>
-                                <button class="product__btn-add">в корзину</button>
-                            </div>
-                        </div>
-
-                        <div class="product">
-                            <div class="product__wrapper">
-                                <a class="product__link" href="#!">
-                                    <img src="./img/products/product-7.jpg" alt="сыворотка для глаз"
-                                        class="product__img">
-                                </a>
-                                <p class="product__name">hello beauty</p>
-                                <p class="product__descr">Сыворотка для кожи
-                                    вокруг глаз</p>
-                                <p class="product__tag">Сыворотка для глаз</p>
-                                <p class="product__price">от 410 до 470 byn</p>
-                                <button class="product__btn-empty">Сообщить о появлении</button>
-                                <button class="product__btn-add">в корзину</button>
-                            </div>
-                        </div>
-
-                        <div class="product">
-                            <div class="product__wrapper">
-                                <a class="product__link" href="#!">
-                                    <img src="./img/products/product-8.jpg" alt="сыворотка для глаз"
-                                        class="product__img">
-                                </a>
-                                <p class="product__name">hello beauty</p>
-                                <p class="product__descr">Сыворотка для кожи
-                                    вокруг глаз</p>
-                                <p class="product__tag">Сыворотка для глаз</p>
-                                <p class="product__price">от 410 до 470 byn</p>
-                                <button class="product__btn-empty">Сообщить о появлении</button>
-                                <button class="product__btn-add">в корзину</button>
-                            </div>
-                        </div>
-
                     </div>
-                </div>
 
-                <div class="products-pagination">
-                    <div class="products-pagination__wrapper">
-                        <p class="products-pagination__status">Показано
-                            <span class="products-pagination__status-current">60</span> из
-                            <span class="products-pagination__status-all">250</span>
-                        </p>
-                        <ul class="products-pagination__list">
-                            <li class="products-pagination__item products-pagination__item-arrow"><a href="#!"
-                                    class="products-pagination__link products-pagination__link-icon demo-icon icon-left-open-big"></a>
-                            </li>
-                            <li class="products-pagination__item active"><a href="#!"
-                                    class="products-pagination__link">1</a></li>
-                            <li class="products-pagination__item"><a href="#!" class="products-pagination__link">2</a>
-                            </li>
-                            <li class="products-pagination__item"><a href="#!" class="products-pagination__link">3</a>
-                            </li>
-                            <li class="products-pagination__item"><a href="#!" class="products-pagination__link">4</a>
-                            </li>
-                            <li class="products-pagination__item"><a href="#!" class="products-pagination__link">5</a>
-                            </li>
-                            <li class="products-pagination__item"><a href="#!" class="products-pagination__link">...</a>
-                            </li>
-                            <li class="products-pagination__item"><a href="#!" class="products-pagination__link">15</a>
-                            </li>
-                            <li class="products-pagination__item products-pagination__item-arrow"><a href="#!"
-                                    class="products-pagination__link products-pagination__link-icon demo-icon icon-right-open-big"></a>
-                            </li>
-                        </ul>
+                    <div class="basket-control">
+                        <div class="basket-control__wrapper">
+                            <p class="basket-control__total-pay">30.20 руб</p>
+                            <button class="basket-control__btn-pay">Подтвердить заказ</button>
+                        </div>
                     </div>
-                </div>
 
+                </div>
             </div>
 
 
-
-
-            <div class="main__bottom">
-                <p class="site-title">SKIN <span class="header__title-heart demo-icon icon-heart"></span> FOOD
-                </p>
-                <span class="site-description">
-                    laboratory
-                </span>
-            </div>
         </div>
-        <div class="main__img"></div>
     </main>
 
 

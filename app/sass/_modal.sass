@@ -2,10 +2,10 @@
  */
 
 .modal-list
-    +reset-ul
     display: flex
     flex-wrap: wrap
     justify-content: space-between
+    +reset-ul
     &__item
         text-align: center
         flex-basis: 33%
@@ -23,7 +23,6 @@
         font-weight: 600
         &.active
             color: #F78C9F
-
 
 .region-modal
     &.modal
@@ -110,3 +109,144 @@
         color: #F78C9F
         margin-bottom: 15px
         font-weight: 600
+
+.filter-form
+    background: #fff
+    height: 100%
+    &__wrapper
+        max-width: 1240px
+        padding: 0 20px
+        margin: 0 auto
+        min-height: 90vh
+        display: flex
+        flex-direction: column
+    &__buttons
+        margin-top: auto
+        text-align: right
+    &__btn-reset
+        border: 1px solid #F78C9F
+        box-sizing: border-box
+        border-radius: 4px
+        outline: none
+        background: transparent
+        font-size: 15px
+        letter-spacing: 0.04em
+        text-transform: uppercase
+        color: #F78C9F
+        min-width: 176.41px
+        min-height: 40px
+        font-weight: 600
+        margin-right: 48px
+        display: inline-block
+    &__btn-show
+        font-weight: 600
+        background: #F78C9F
+        border-radius: 4px
+        border: none
+        outline: none
+        font-size: 15px
+        letter-spacing: 0.04em
+        text-transform: uppercase
+        color: #fff
+        min-width: 176.41px
+        min-height: 40px
+        display: inline-block
+
+.main-filter
+    +reset-ul
+    &__item
+        padding: 16px 0
+        border-bottom: 1px solid #e7e7e7
+    &__link
+        display: block
+        font-size: 17px
+        font-weight: 600
+        letter-spacing: .04em
+        color: #1e1e1f
+        position: relative
+        display: block
+        &::after
+            position: absolute
+            right: 0
+            content: "\e80a"
+            color: #f78c9f
+            font-family: "fontello"
+
+.main-item
+    display: flex
+    border-bottom: 1px solid #e7e7e7
+    height: 57.8px
+    &__link
+        display: flex
+        flex-direction: column
+        justify-content: center
+    &__title
+        font-size: 14px
+        font-weight: 600
+        letter-spacing: 0.04em
+        color: #4B4B4B
+    &__descr
+        font-size: 15px
+        letter-spacing: 0.04em
+        color: #AEAEAE
+    &__btn
+        margin-left: auto
+        border: none
+        outline: none
+        background: transparent
+        font-size: 14px
+        font-weight: 600
+        letter-spacing: 0.04em
+        text-decoration-line: underline
+        color: #F68C9F
+        margin-right: 20px
+    &__icon-link
+        display: flex
+        align-items: center
+        position: relative
+        font-size: 17px
+        font-weight: 600
+        &::before
+            position: absolute
+            right: 0
+            content: "\e80a"
+            color: #f78c9f
+            font-family: "fontello"
+
+.filter-modal
+    &.modal
+        padding-right: 0 !important
+        background: #fff
+    &__dialog
+        margin: 0
+        max-width: 100%
+    &__content
+        border-radius: 0
+        padding: 0
+        border: none
+    &__wrapper
+        max-width: 1240px
+        padding: 0 20px
+        margin: 0 auto
+        width: 100%
+        display: flex
+        justify-content: center
+    &__header
+        background: #F78C9F
+        padding: 1rem 0
+    &__title
+        font-size: 17px
+        letter-spacing: 0.04em
+        text-transform: uppercase
+        color: #FFFFFF
+        margin-left: auto
+    &__close
+        margin-left: auto
+        opacity: 1
+        color: #fff
+        font-size: 19px
+        transition: all .3s ease
+        &:hover
+            opacity: .9
+            color: #fff
+    &__list

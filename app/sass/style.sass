@@ -21,7 +21,6 @@ body
     margin: 0
     padding: 0
     opacity: 1
-    padding-right: 0 !important
     visibility: visible
 
 h1,h2,h3,h4,h5,h6,p
@@ -301,6 +300,10 @@ a:hover
     background: #FFDDE4
     background-size: cover
     position: relative
+    &--basket 
+        background: #fff
+        .main__wrapper
+            min-height: 100%
     &__wrapper
         max-width: 1240px
         padding: 27px 20px 45px 20px
@@ -389,6 +392,22 @@ a:hover
         display: flex
         flex-direction: column
         align-items: center
+        position: relative
+        overflow: hidden
+        border-radius: 5px
+        &::before
+            content: attr(data-status)
+            position: absolute
+            top: 0
+            right: 0
+            width: 100px
+            height: 18px
+            line-height: 18px
+            font-size: 9px
+            font-weight: 600
+            background: var(--bgColor)
+            letter-spacing: 0.04em
+            color: #fff
     &__link
     &__img
         height: 182px
@@ -493,7 +512,20 @@ a:hover
         margin: 0 10px
         border-bottom: 1px solid #3e3e3e
 
+.grid-ex
+    display: flex
+    justify-content: center
+    position: relative
+    &__layout
+        flex-basis: 30%
+        width: 30%
+        margin: 0 10px 0 0
+    &__item
+        margin: 0 0 20px 0
+        width: 100%
+
 @import "header"
 @import "modal"
+@import "basket-and-profile"
 @import "footer"
 @import "media"

@@ -16,13 +16,6 @@ $(document).ready(function () {
             basket = doc.getElementById('basket'),
             basketCounter = doc.getElementById('basketCounter');
 
-        let counter = 0;
-
-        basket.addEventListener('click', () => {
-            counter += 25;
-            basketCounter.innerText = counter;
-        });
-
         function openMenu(selector) {
             selector.addEventListener('click', () => {
                 $('.header__wrapper').addClass('disabled');
@@ -70,83 +63,136 @@ $(document).ready(function () {
 
 
     const sliderModule = (function () {
-        $('#sliderCarousel').owlCarousel({
-            loop: true,
-            center: false,
-            nav: false,
-            dots: true,
-            margin: 20,
-            responsive: {
-                0: {
-                    items: 1
-                },
-                600: {
-                    items: 2
+        try {
+            $('#sliderCarousel').owlCarousel({
+                loop: true,
+                center: false,
+                nav: false,
+                dots: true,
+                margin: 20,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    600: {
+                        items: 2
+                    }
                 }
-            }
-        })
+            })
+        } catch (error) {
+            console.log(error);
+        }
     }());
 
 
     const swiperModule = (function () {
-        $('#swiperCarouselMobile').owlCarousel({
-            loop: true,
-            center: false,
-            nav: true,
-            mouseDrag: true,
-            navSpeed: 800,
-            navText: ['<span class="swiper-carousel__icon demo-icon icon-left-open-big"></span>', '<span class="swiper-carousel__icon demo-icon icon-right-open-big"></span>'],
-            dots: false,
-            items: 1,
-            mouseDrag: false,
-            responsive: {
-                0: {
-                    items: 1
+        try {
+            $('#swiperCarouselMobile').owlCarousel({
+                loop: true,
+                center: false,
+                nav: true,
+                mouseDrag: true,
+                navSpeed: 800,
+                navText: ['<span class="swiper-carousel__icon demo-icon icon-left-open-big"></span>', '<span class="swiper-carousel__icon demo-icon icon-right-open-big"></span>'],
+                dots: false,
+                items: 1,
+                mouseDrag: false,
+                responsive: {
+                    0: {
+                        items: 1
+                    }
                 }
-            }
-        })
+            })
 
-        $('#swiperCarouselDesktop').owlCarousel({
-            loop: true,
-            center: false,
-            nav: true,
-            mouseDrag: true,
-            navSpeed: 800,
-            navText: ['<span class="swiper-carousel__icon demo-icon icon-left-open-big"></span>', '<span class="swiper-carousel__icon demo-icon icon-right-open-big"></span>'],
-            dots: false,
-            items: 1,
-            mouseDrag: false,
-            responsive: {
-                0: {
-                    items: 1
+            $('#swiperCarouselDesktop').owlCarousel({
+                loop: true,
+                center: false,
+                nav: true,
+                mouseDrag: true,
+                navSpeed: 800,
+                navText: ['<span class="swiper-carousel__icon demo-icon icon-left-open-big"></span>', '<span class="swiper-carousel__icon demo-icon icon-right-open-big"></span>'],
+                dots: false,
+                items: 1,
+                mouseDrag: false,
+                responsive: {
+                    0: {
+                        items: 1
+                    }
                 }
-            }
-        })
+            })
+        } catch (error) {
+            console.log(error);
+        }
     }());
 
 
 
     const masonryGridModule = (function () {
-        // external js: masonry.pkgd.js, imagesloaded.pkgd.js
-        // init Masonry after all images have loaded
-        var $grid = $('.grid').imagesLoaded(function () {
-            $grid.masonry({
-                itemSelector: '.grid-item',
-                percentPosition: true,
-                columnWidth: '.grid-sizer'
+        try {
+            // external js: masonry.pkgd.js, imagesloaded.pkgd.js
+            // init Masonry after all images have loaded
+            var $grid = $('.grid').imagesLoaded(function () {
+                $grid.masonry({
+                    itemSelector: '.grid-item',
+                    percentPosition: true,
+                    columnWidth: '.grid-sizer'
+                });
             });
-        });
-    }())
+        } catch (error) {
+            console.log(error);
+        }
+    }());
 
 
     const fixedHeaderModule = (function () {
-        $(window).scroll(function () {
-            var sticky = $('.main-navigation'),
-                scroll = $(window).scrollTop();
+        try {
+            $(window).scroll(function () {
+                var sticky = $('.main-navigation'),
+                    scroll = $(window).scrollTop();
 
-            if (scroll >= 30) sticky.addClass('main-fixed');
-            else sticky.removeClass('main-fixed');
-        });
+                if (scroll >= 30) sticky.addClass('main-fixed');
+                else sticky.removeClass('main-fixed');
+            });
+        } catch (error) {
+            console.log(error);
+        }
+    }());
+
+
+    const exampleModule = (function () {
+
+        let blocks = doc.getElementById('blocks');
+        var p = $('.inner-b1');
+        let counter = 0;
+        p.click(() => {
+            counter += 10;
+            var offsetP = $('.inner-b1').offset({
+                left: counter
+            });
+
+            console.log(p.position());
+            // console.log(offsetP.offset().left)
+        })
+
     }())
+
+    const exampleModule2 = (function () {
+
+        // var blocks = $('#blocks');
+        // var blocksOffset = blocks.offset();
+        // var blocksPosition = blocks.position();
+
+        // console.log(blocksPosition);
+
+        // window.addEventListener('scroll', function () {
+        //     console.log(parseInt(pageYOffset));
+        // });
+
+
+
+
+    }())
+
+
 
 });

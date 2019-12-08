@@ -1,0 +1,399 @@
+.basket
+    &__wrapper
+
+.basket-list
+    display: flex
+    flex-direction: column
+    border-bottom: 1px solid #e7e7e7
+    +reset-ul
+    &__item
+        display: flex
+        align-items: center
+        justify-content: space-between
+        &:not(:last-child)
+            padding-bottom: 25px
+        &:last-child
+            padding-bottom: 40px
+    &__img
+        margin-right: 36px
+    &__content
+        margin-right: 50px
+    &__tag
+        font-size: 12px
+        line-height: 17px
+        letter-spacing: 0.04em
+        color: #1E1E1F
+    &__name
+        font-size: 14px
+        line-height: 17px
+        letter-spacing: 0.04em
+        font-weight: 600
+        color: #1E1E1F
+        margin-bottom: 2px
+    &__descr
+        font-size: 11px
+        line-height: 140.07%
+        letter-spacing: 0.04em
+        color: #4B4B4B
+        &-key
+            font-weight: 600
+            position: relative
+            padding-right: 10px
+            &::before
+                content: "*"
+                position: absolute
+                top: -3px
+                right: 5px
+                color: #f78c9f
+        &-value
+    &__counter
+        margin-right: 50px
+    &__price
+        font-size: 16px
+        text-align: right
+        letter-spacing: 0.04em
+        color: #1E1E1F
+        font-weight: 600
+        margin-left: auto
+        margin-right: 80px
+    &__close
+        color: #f78c9f
+        font-size: 19px
+        opacity: 1
+        border: none
+        outline: none
+        background: transparent
+
+.basket-counter
+    position: relative
+    max-width: 85px
+    height: 30px
+    &__btn-less
+        position: absolute
+        top: 50%
+        left: 0
+        transform: translateY(-50%)
+        border: none
+        outline: none
+        background: transparent
+        padding: 0
+        color: #CFCFCF
+    &__input
+        border: 1px solid #ADADAD
+        box-sizing: border-box
+        border-radius: 4px
+        padding: 0 20px
+        background: transparent
+        width: 100%
+        height: 100%
+        text-align: center
+        font-size: 14px
+        line-height: 207.06%
+        display: flex
+        align-items: center
+        letter-spacing: 0.04em
+        text-transform: uppercase
+        font-weight: 600
+        color: #6A6A6A
+        &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button
+            -webkit-appearance: none
+            margin: 0
+        &[type=number]
+            -moz-appearance: textfield
+    &__btn-more
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+        border: none
+        outline: none
+        background: transparent
+        right: 0
+        padding: 0
+        color: #CFCFCF
+
+.form-input-group
+    position: relative
+    height: 37px
+    &__label
+        position: absolute
+        top: 4px
+        left: 15px
+        font-size: 7px
+        margin-bottom: 0
+        letter-spacing: 0.04em
+        text-transform: uppercase
+        color: #AEAEAE
+        &-icon
+            color: #f78c9f
+    &__input
+        text-transform: capitalize
+        border: 1px solid #ADADAD
+        box-sizing: border-box
+        border-radius: 4px
+        font-size: 11px
+        letter-spacing: 0.04em
+        color: #4B4B4B
+        height: 100%
+        width: 100%
+        padding: 8px 15px 3px 15px
+        font-weight: 600
+
+.contacts
+    display: flex
+    flex-wrap: wrap
+    +reset-ul
+    &__item
+        width: 100%
+        padding: 20px 0
+        display: flex
+        flex-wrap: wrap
+        align-items: center
+        position: relative
+        border-bottom: 1px solid #E7E7E7
+        &.space-between
+            justify-content: space-between
+    &__group
+        flex-basis: 32.5%
+        width: 32.5%
+    &__title
+        flex-basis: 100%
+        width: 100%
+        font-size: 13px
+        line-height: 207.06%
+        letter-spacing: 0.04em
+        color: #1E1E1F
+        font-weight: 600
+        margin-bottom: 18px
+
+.basket-check
+    &__wrapper
+        max-width: 1240px
+        padding: 20px 0 15px 0
+        margin: 0 auto
+        display: flex
+        flex-direction: column
+        align-items: flex-end
+    &__total-cost
+        font-weight: 600
+        font-size: 11px
+        line-height: 160%
+        text-align: right
+        letter-spacing: 0.04em
+        color: #AEAEAE
+    &__cost-of-delivery
+        font-weight: 600
+        font-size: 11px
+        line-height: 160%
+        text-align: right
+        letter-spacing: 0.04em
+        color: #AEAEAE
+    &__total-pay
+        font-weight: 600
+        font-size: 13px
+        line-height: 160%
+        text-align: right
+        letter-spacing: 0.04em
+        color: #000
+
+.basket-control
+    position: fixed
+    left: 0
+    right: 0
+    bottom: 0
+    background: #fff
+    &__wrapper
+        height: 70px
+        display: flex
+        align-items: center
+    &__total-pay
+        height: 100%
+        flex-basis: 50%
+        width: 50%
+        text-align: right
+        font-size: 23px
+        padding-right: 30px
+        line-height: 70px
+        font-weight: 600
+        letter-spacing: 0.04em
+        color: #1E1E1F
+        border-top: 2px solid #FFDDE4
+        border-right: 2px solid #FFDDE4
+    &__btn-pay
+        height: 100%
+        flex-basis: 50%
+        width: 50%
+        font-weight: 600
+        font-size: 17px
+        text-align: center
+        letter-spacing: 0.04em
+        text-transform: uppercase
+        color: #FFFFFF
+        background: #F78C9F
+        text-align: center
+        border: none
+        outline: none
+        transition: all .3s ease
+        &:hover
+            background: #f86480
+        &:focus
+            background: #f86480
+
+.promo-list
+    max-width: 1240px
+    padding: 0 20px
+    border-bottom: 1px solid  #E7E7E7
+    display: flex
+    align-items: center
+    justify-content: space-between
+    +reset-ul
+    &__item
+        display: flex
+        align-items: center
+        justify-content: flex-start
+        padding: 20px 0
+        flex-basis: 50%
+        width: 50%
+        &.flex-end
+            justify-content: flex-end
+    &__title
+        font-size: 10px
+        letter-spacing: 0.04em
+        color: #1E1E1F
+        margin-right: 20px
+        font-weight: 600
+    &__btn
+        font-size: 9px
+        text-align: center
+        letter-spacing: 0.04em
+        text-transform: uppercase
+        color: #FFFFFF
+        border: none
+        outline: none
+        background:
+        background: #F78C9F
+        border-radius: 4px
+        max-width: 130px
+        height: 30px
+        font-weight: 600
+    &__subtitle
+        font-size: 8px
+        line-height: 12px
+        letter-spacing: 0.04em
+        text-transform: uppercase
+        color: #AEAEAE
+        font-weight: 600
+        margin-right: 20px
+    &__input
+        height: 30px
+        width: 86px
+        border: 1px solid #ADADAD
+        box-sizing: border-box
+        border-radius: 4px
+        font-size: 11px
+        padding: 0 6px
+        text-transform: uppercase
+        font-weight: 600
+        color: #6a6a6a
+        text-align: center
+        margin-right: 30px
+
+.time
+    &__title
+        display: block
+        font-size: 11px
+        letter-spacing: 0.04em
+        color: #4B4B4B
+    &__descr
+        display: block
+        font-size: 11px
+        letter-spacing: 0.04em
+        color: #aeaeae
+        display: block
+
+.delivery
+    &__wrapper
+        padding: 20px 0 15px 0
+    &__title
+        font-size: 13px
+        letter-spacing: .04em
+        color: #1e1e1f
+        font-weight: 600
+        margin-bottom: 18px
+    &__select
+        padding: 15px 0
+    &__radio-buttons
+        padding: 15px 0
+    &__time
+        padding-bottom: 20px
+    &__bottom-text
+        font-size: 7px
+        line-height: 146.16%
+        letter-spacing: 0.04em
+        text-transform: uppercase
+        font-weight: 600
+        color: #AEAEAE
+
+.form-radio-group
+    position: relative
+    &__input
+        z-index: -1
+        opacity: 0
+        background: #fff
+        box-sizing: border-box
+        font-size: 11px
+        width: 0
+        &:focus
+            + .form-radio-group__label
+                &::before
+                    border: 1px solid #007bff
+        &:checked
+            + .form-radio-group__label
+                transition: all .5s ease
+                color: #4B4B4B
+                &::after
+                    opacity: 1
+                    visibility: visible
+            ~ .form-radio-group__small
+                color: #4B4B4B
+    &__label
+        position: relative
+        padding-left: 25px
+        font-weight: 600
+        font-size: 11px
+        margin-bottom: 0
+        color: #AEAEAE
+        &::before
+            content: ""
+            position: absolute
+            width: 15px
+            height: 15px
+            border: 1px solid #ADADAD
+            box-sizing: border-box
+            border-radius: 50%
+            top: 50%
+            transform: translateY(-50%)
+            left: 0
+            transition: all .2s ease
+        &::after
+            opacity: 0
+            transition: all .2s ease
+            visibility: hidden
+            content: ""
+            position: absolute
+            width: 8px
+            height: 8px
+            background: #F78C9F
+            box-sizing: border-box
+            border-radius: 50%
+            top: 50%
+            transform: translateY(-50%)
+            left: 3.5px
+    &__small
+        display: block
+        padding-left: 30px
+        font-size: 11px
+        line-height: 140.07%
+        letter-spacing: 0.04em
+        color: #AEAEAE
+        font-weight: 600
