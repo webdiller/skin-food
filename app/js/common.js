@@ -72,10 +72,18 @@ $(document).ready(function () {
                 margin: 20,
                 responsive: {
                     0: {
-                        items: 1
+                        items: 1,
+                        nav: false,
                     },
                     600: {
-                        items: 2
+                        items: 2,
+                        nav: false,
+                    },
+                    1300: {
+                        items: 2,
+                        nav: true,
+                        dots: false, 
+                        navText: ['<span class="slider-carousel__icon demo-icon icon-left-open-big"></span>', '<span class="slider-carousel__icon demo-icon icon-right-open-big"></span>'],
                     }
                 }
             })

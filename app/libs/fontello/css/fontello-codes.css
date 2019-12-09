@@ -18,6 +18,11 @@
 .icon-truck:before { content: '\e810'; } /* '' */
 .icon-plus:before { content: '\e811'; } /* '' */
 .icon-minus:before { content: '\e812'; } /* '' */
+.icon-user:before { content: '\e813'; } /* '' */
+.icon-eye:before { content: '\e814'; } /* '' */
+.icon-up-open-big:before { content: '\e815'; } /* '' */
 .icon-shop:before { content: '\e835'; } /* '' */
+.icon-crown:before { content: '\e844'; } /* '' */
 .icon-menu:before { content: '\f0c9'; } /* '' */
 .icon-shopping-bag:before { content: '\f290'; } /* '' */
+.icon-percent:before { content: '\f295'; } /* '' */

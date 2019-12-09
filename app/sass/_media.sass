@@ -1,13 +1,76 @@
 @import "vars"
 
-@media only screen and (max-width : 1200px)
-	/**/
+@media only screen and (max-width : 1350px)
+	.slider-carousel.owl-theme .owl-nav
+		display: none
 
 @media only screen and (max-width : 992px)
-	/**/
+	.footer__wrapper
+		flex-wrap: wrap
+	.footer__contact-list,
+	.footer__socials-with-payment,
+	.footer__navigation-users,
+	.footer__navigation-main
+		flex-basis: 50%
+		width: 50%
+		padding-left: 20%
+	.footer__contact-list
+		order: 1
+	.footer__navigation-users
+		order: 2
+		margin-bottom: 25px
+	.footer__socials-with-payment
+		order: 3
+	.footer__navigation-main
+		order: 4
+	.contact-list__phone
+		font-weight: 700
 
 @media only screen and (max-width : 768px)
-	/**/
+	// footer
+	.footer__contact-list, .footer__navigation-main, .footer__navigation-users, .footer__socials-with-payment
+		padding-left: 15%
+	.credits__wrapper
+		flex-direction: column
+		align-items: center
+	.credits__main-info, .credits__second-info
+		flex-basis: auto
+	.credits__second-info
+		min-width: auto
+	.grid-item, .grid-sizer
+		width: 33.3333%
+	.credits__main-info, .credits__second-info
+		font-size: 9px
+	.credits__main-info, .credits__second-info
+		text-align: center
+	// header
+	.region__contacts-and-delivery
+		display: none
+	.region__wrapper
+		justify-content: center
+	.search-group.search-group--header,
+	.header__user
+		display: none
+	.header__menu
+		display: block
+	.header__search
+		display: block
+		margin-right: 0
+	.navigation
+		display: none
+	.main-fixed .header__arrow-up, .main-fixed .header__views
+		display: none
+	.main-fixed
+		.header__search
+			margin-right: auto
+	.main-navigation.active .header__search.active
+		margin-right: 30px
+	.filter-form__btn-reset
+		margin-right: 20px
+	.filter-form__btn-reset, .filter-form__btn-show
+		font-size: 12px
+		min-width: 157px
+		height: 40px
 
 @media only screen and (max-width : 576px)
 	.region-list--padding
@@ -21,6 +84,34 @@
 		display: block !important
 	.swiper-carousel__item
 		font-size: 11px
+	// footer
+	.footer__contact-list, .footer__navigation-main, .footer__navigation-users, .footer__socials-with-payment
+		padding-left: 0
+
+@media only screen and (max-width : 480px)
+	// footer
+	.footer__wrapper
+		justify-content: center
+		align-items: center
+		flex-direction: column
+	.footer__contact-list
+		text-align: center
+	.contact-list__messengers
+		justify-content: center
+		margin-bottom: 20px
+	.footer__navigation-users
+		text-align: left
+	.navigation-users__title,
+	.navigation-main__title
+		text-align: center
+	.footer__navigation-main
+		text-align: left
+	.footer__socials-with-payment
+		order: 4
+	.socials-with-payment__title
+		display: none
+	.footer__navigation-main
+		margin-bottom: 15px
 
 @media only screen and (max-width : 420px)
 	// header
@@ -49,38 +140,17 @@
 	.grid-item, .grid-sizer
 		width: 50%
 	// footer
-	.socials-with-title__img
-		width: 25px
-	.socials__img
-		width: 22px
-	.socials-with-title
-		display: none
-	.socials-with-title--show-on-mobile
-		display: block
-	.payment-list
-		display: none
-	.payment-list--show-on-mobile
-		display: block
 	.footer__wrapper
 		padding-top: 20px
-	.footer__left,
-	.footer__right
-		width: 100%
-		flex-basis: 100%
-		text-align: center
-	.socials
-		justify-content: center
-	.socials-with-title__list
-		justify-content: center
-	.footer__navigation-users,
-	.footer__navigation-main
-		max-width: 200px
-		margin: 0 auto 25px auto
-	.navigation-users__list,
-	.navigation-main__list
-		text-align: left
-	.socials-with-title__title
-		display: none
+	.footer__contact-list, .footer__navigation-main, .footer__navigation-users, .footer__socials-with-payment
+		min-width: 200px
+	.filter-form__buttons
+		display: flex
+		justify-content: space-between
+	.filter-form__btn-reset, .filter-form__btn-show
+		min-width: 48%
+		flex-basis: 48%
+		min-height: 30px
 
 @media only screen and (max-width : 375px)
 	// breadcrumbs

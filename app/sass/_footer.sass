@@ -1,70 +1,49 @@
  /* footer start
  */
 
-.contacts-list
+.contact-list
     &__title
         font-size: 14px
         margin-bottom: 18px
         letter-spacing: 0.04em
         color: #1A1A1A
-    &__link
+    &__phones
+        margin-bottom: 15px
+    &__phone
         display: block
-        font-size: 14px
+        font-size: 16px
         line-height: 200%
         letter-spacing: 0.04em
-        font-weight: 600
+        font-weight: 400
         color: #1A1A1A
-
-.socials
-    padding: 0
-    margin: 0
-    list-style-type: none
-    display: flex
-    align-items: center
-    &__link
-        &:not(:last-child)
-            margin-right: 17px
-    &__img
-        max-width: 100%
-        height: auto
-        width: 28px
-
-.socials-with-title
-    &--show-on-mobile
-        display: none
-    &__title
-        font-weight: 600
-        font-size: 14px
-        line-height: 17px
-        letter-spacing: 0.04em
-        color: #1A1A1A
-        margin-bottom: 15px
-    &__list
+    &__messengers
         display: flex
         align-items: center
-    &__link
+    &__messenger
+        width: 31px
+        height: 31px
         &:not(:last-child)
-            margin-right: 18px
-    &__img
-        max-width: 100%
-        height: auto
-        width: 32px
-        filter: grayscale(1) brightness(1.2)
-        transition: all .3s ease
-        &:hover
-            filter: grayscale(.5) brightness(1)
-
-.payment-list
-    &--show-on-mobile
-        display: none
-    +reset-ul
-    &__item
-    &__img
+            margin-right: 15px
+        &-viber
+            background: url('../img/socials/css_sprites.png') -2290px 0
+            width: 31px
+            height: 31px
+            background-size: auto 100%
+        &-whatsapp
+            background: url('../img/socials/css_sprites.png') -2114px 0
+            width: 31px
+            height: 31px
+            background-size: auto 100%
+        &-telegram
+            background: url('../img/socials/css_sprites.png') -2259px 0
+            width: 31px
+            height: 31px
+            background-size: auto 100%
 
 .navigation-users
     &__title
         margin-bottom: 15px
-        font-weight: 600
+        font-weight: 700
         font-size: 14px
         line-height: 17px
         letter-spacing: 0.04em
@@ -81,7 +60,7 @@
 .navigation-main
     &__title
         margin-bottom: 15px
-        font-weight: 600
+        font-weight: 700
         font-size: 14px
         line-height: 17px
         letter-spacing: 0.04em
@@ -95,45 +74,105 @@
         letter-spacing: 0.04em
         color: #000000
 
+.socials-with-payment
+    &__title
+        margin-bottom: 15px
+        font-weight: 700
+        font-size: 14px
+        line-height: 17px
+        letter-spacing: 0.04em
+        color: #1A1A1A
+    &__messengers
+        display: flex
+        align-items: center
+        padding-bottom: 35px
+    &__link
+        filter: grayscale(1) brightness(1.3)
+        transition: all .3s ease
+        &:hover
+            filter: grayscale(.5) brightness(1)
+        &-vk
+            background: url('../img/socials/css_sprites.png') -2321px 0
+            width: 31px
+            height: 31px
+            background-size: auto 100%
+        &-insta
+            background: url('../img/socials/css_sprites.png') -2435px 0
+            width: 31px
+            height: 31px
+            background-size: auto 100%
+        &-ok
+            background: url('../img/socials/css_sprites.png') -2227px 0
+            width: 31px
+            height: 31px
+            background-size: auto 100%
+        &-fb
+            background: url('../img/socials/css_sprites.png') -2165px 0
+            width: 32px
+            height: 31px
+            background-size: auto 100%
+        &:not(:last-child)
+            margin-right: 15px
+
+.payment-list
+    display: flex
+    align-items: center
+    flex-wrap: wrap
+    &__img
+        &-visa
+            background: url('../img/socials/css_sprites.png') no-repeat -171px -1px
+            width: 181px
+            height: 27px
+            margin-bottom: 10px
+        &-mastercard
+            background: url('../img/socials/css_sprites.png') -1px -1px
+            width: 172px
+            height: 27px
+
 .footer
     margin-top: auto
     padding: 0
     background: #FFFFFF
     &__wrapper
-        max-width: 582px
         padding: 36px 20px 20px 20px
         margin: 0 auto
         display: flex
+        max-width: 1065px
         justify-content: space-between
-        flex-wrap: wrap
-    &__left
-    &__right
-    &__contacts
-    &__contacts-list
-    &__socials
-        padding: 20px 0
-    &__socials-with-title
-        margin-bottom: 35px
-    &__payment-list
-    &__navigation-users
-        margin-bottom: 25px
+    &__contact-list
+        flex-basis: 250px
     &__navigation-main
+        flex-basis: 250px
+    &__navigation-users
+        flex-basis: 250px
+    &__socials-with-payment
+        flex-basis: 250px
 
 .credits
     background: #fff
     &__wrapper
         text-align: center
-        max-width: 708px
         margin: 0 auto
         color: #888888
         text-align: center
-        padding: 0 20px
-        height: 66px
+        padding: 25px 20px
+        max-width: 1065px
         display: flex
-        align-items: center
-        justify-content: center
+        flex-wrap: wrap
+        align-items: flex-end
+        justify-content: flex-start
         border-top: 1px solid #E7E7E7
-    &__text
-        font-size: 9px
-        max-width: 584px
-        margin: 0 auto
+        display: flex
+    &__main-info
+        flex-basis: 250px
+        font-size: 12px
+        color: rgb(114, 114, 114)
+        line-height: 1.5
+        text-align: left
+    &__second-info
+        flex-basis: 250px
+        font-size: 12px
+        color: rgb(114, 114, 114)
+        line-height: 1.5
+        text-align: left
+        min-width: 350px

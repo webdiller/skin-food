@@ -137,6 +137,36 @@
       "css": "minus",
       "code": 59410,
       "src": "entypo"
+    },
+    {
+      "uid": "8b80d36d4ef43889db10bc1f0dc9a862",
+      "css": "user",
+      "code": 59411,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "186dec7a13156bbe2550790c158fb85d",
+      "css": "crown",
+      "code": 59460,
+      "src": "fontelico"
+    },
+    {
+      "uid": "2c452255d4fed51ef0a6ef86436a7d08",
+      "css": "percent",
+      "code": 62101,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "c5fd349cbd3d23e4ade333789c29c729",
+      "css": "eye",
+      "code": 59412,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "0805cca616b3c12714f35af4d0912c10",
+      "css": "up-open-big",
+      "code": 59413,
+      "src": "entypo"
     }
   ]
 }
