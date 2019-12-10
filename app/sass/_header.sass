@@ -22,6 +22,9 @@
 .header
     background: #fff
     border-bottom: 1px solid #E7E7E7
+    &__wrapper-for-icons
+        position: relative
+        +set-container
     &__wrapper
         display: flex
         justify-content: space-between
@@ -40,8 +43,27 @@
     &-icon
         color: #F78C9F
         font-size: 23px
+        position: relative
+        text-align: center
+        &::after
+            opacity: 0
+            height: 0
+            display: block
+            left: 0
+            right: 0
+            height: 1.5px
+            transition: all .3s ease
+            content: ""
+            position: absolute
+            width: 100%
+            margin: 0 4px
+            bottom: -6px
+            margin: 0
         &:hover
             color: $hoverpink
+            &::after
+                opacity: 1
+                background: $hoverpink
         &:focus
             outline: 1px solid #f5a733
     &__title
@@ -95,6 +117,8 @@
     &__menu
         display: none
         margin-right: 30px
+        &::after
+            display: none
         &.active
             margin-right: 0
             order: 4
@@ -102,6 +126,8 @@
     &__search
         display: none
         margin-right: auto
+        &::after
+            display: none
         &.active
             margin-right: 30px
             margin-left: 0
@@ -138,7 +164,7 @@
 .navigation
     background: #eb849a
     &__wrapper
-        max-width: 1040px
+        max-width: 1065px
         padding: 0 20px
         margin: 0 auto
         height: 42px
@@ -199,6 +225,23 @@
     width: 100%
     height: 40px
     position: relative
+    &.search-group--modal-user
+        .search-group__btn
+            color: #adadad
+        .search-group__input
+            border: 1px solid #adadad
+            border-radius: 4px
+            font-size: 14px
+            color: #4b4b4b
+            height: 40px
+            width: 100%
+            padding: 0 15px
+            font-weight: 400
+            &::placeholder
+                font-size: 16px
+                font-weight: 400
+                text-transform: lowercase
+                color: rgb(136, 136, 136)
     &.search-group--header
         max-width: 290px
         height: 31px
@@ -249,7 +292,7 @@
         border-radius: 4px
         width: 100%
         height: 40px
-        padding: 10px 25px 10px 14px
+        padding: 10px 35px 10px 14px
         border: none
         &::placeholder
             font-size: 14px
@@ -276,6 +319,12 @@
         height: 30px
         display: flex
         align-items: center
+        +set-container
+    &__wrapper-for-information
+        position: relative
+        +set-container
+    &__wrapper-for-contacts
+        position: relative
         +set-container
     &__title
         margin-right: 10px
@@ -316,7 +365,6 @@
         color: rgb(136, 136, 136)
         font-weight: bold
         +reset-btn
-
     &-list
         display: flex
         flex-wrap: wrap
@@ -334,3 +382,123 @@
             text-align: center
             letter-spacing: 0.04em
             color: #1E1E1F
+
+.user-info
+    display: none
+    position: absolute
+    top: 0
+    right: 20px
+    z-index: 100
+    border: 1px solid #adadad
+    box-shadow: 0 6px 10px rgba(0,0,0,.25)
+    border-radius: 4px
+    &__header
+        background: #fff
+        padding: 10px 20px
+        width: 300px
+        border-bottom: 1px solid #adadad
+        border-top-left-radius: 4px
+        border-top-right-radius: 4px
+    &__body
+        background: #fff
+        padding: 10px 20px 15px 20px
+        width: 300px
+        border-bottom-left-radius: 4px
+        border-bottom-right-radius: 4px
+    &__name
+        font-size: 16px
+        font-weight: 700
+    &__btn-out
+        color: #F78C9F
+        font-size: 12px
+        padding: 0
+        text-decoration: underline
+        +reset-btn
+    &__link
+        display: block
+        font-size: 13px
+        &:not(:last-child)
+            padding-bottom: 10px
+
+.contacts-info
+    display: none
+    position: absolute
+    top: 0
+    right: 40px
+    z-index: 100
+    border: 1px solid #adadad
+    border-radius: 4px
+    box-shadow: 0 6px 10px rgba(0,0,0,.25)
+    &__body
+        background: #fff
+        border-radius: 4px
+        padding: 25px 25px 20px 35px
+        width: 300px
+    &__link
+        display: block
+        font-size: 16px
+        padding-bottom: 5px
+        &-icon
+        &-arrow
+        &-egg
+        &-phone
+        &-code
+            display: inline-block
+            font-size: 12px
+            color: #adadad
+    &__time
+        padding-top: 10px
+        display: flex
+        font-size: 14px
+        padding-bottom: 10px
+    &__title
+        padding-right: 4px
+    &__descr
+        font-weight: 700
+
+.region-info
+    position: absolute
+    top: 0
+    left: 20px
+    z-index: 100
+    border: 1px solid #adadad
+    border-radius: 4px
+    box-shadow: 0 6px 10px rgba(0,0,0,.25)
+    &__body
+        background: #fff
+        border-radius: 4px
+        padding: 25px
+        width: 320px
+    &__top-text
+        font-size: 13px
+        letter-spacing: .04em
+        color: #aeaeae
+        font-weight: 500
+        margin-bottom: 10px
+    &__current-city
+        font-size: 16px
+        letter-spacing: .04em
+        color: #1e1e1f
+        font-weight: 700
+        margin-bottom: 15px
+    &__footer
+        display: flex
+        align-items: center
+        justify-content: space-between
+    &__submit
+        background: #f78c9f
+        border: none
+        outline: none
+        min-height: 35px
+        padding: 0 10px
+        font-size: 13px
+        font-weight: 700
+        border-radius: 4px
+        letter-spacing: 1px
+        color: #fff
+    &__dismiss
+        color: #f78c9f
+        font-size: 13px
+        font-weight: 700
+        padding: 0
+        +reset-btn

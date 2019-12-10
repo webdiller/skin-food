@@ -62,20 +62,63 @@
             </div>
         </div>
     </div>
+
     <div id="region" class="region">
-        <div class="region__wrapper">
-            <div class="region__city">
-                <span class="demo-icon icon-location region-icon"></span>
-                <p class="region__title">Ваш регион доставки</p>
-                <button class="region__btn" data-toggle="modal" data-target="#regionModal">Минск
-                </button>
+            <div class="region__wrapper">
+                <div class="region__city">
+                    <span class="demo-icon icon-location region-icon"></span>
+                    <p class="region__title">Ваш регион доставки</p>
+                    <button class="region__btn" data-toggle="modal" data-target="#regionModal">Минск
+                    </button>
+                </div>
+                <div class="region__contacts-and-delivery">
+                    <button id="regionContactsBtn" class="region__btn region__btn--contacts">Контакты</button>
+                    <button class="region__delivery">Доставка и оплата</button>
+                </div>
             </div>
-            <div class="region__contacts-and-delivery">
-                <button class="region__btn region__btn--contacts">Контакты</button>
-                <button class="region__delivery">Доставка и оплата</button>
+            <div class="region__wrapper-for-information">
+                <div class="region-info">
+                    <div class="region-info__body">
+                        <p class="region-info__top-text">Информация о доставке <br> будет отображаться для региона</p>
+                        <p class="region-info__current-city">г.Минск</p>
+                        <div class="region-info__footer">
+                            <button id="submitCity" class="region-info__submit">Подтвердить</button>
+                            <button data-toggle="modal" data-target="#regionModal" class="region-info__dismiss">Выбрать
+                                другой</button></div>
+                    </div>
+                </div>
+            </div>
+            <div class="region__wrapper-for-contacts">
+                <div id="regionContactsWindow" class="contacts-info">
+                    <div class="contacts-info__body">
+                        <a href="#" class="contacts-info__link contacts-info__link-icon-arrow" href="tel:+375293021021">
+                            <span class="contacts-info__link-code">+375 (29)</span>
+                            3-021-021
+                        </a>
+                        <a href="#" class="contacts-info__link contacts-info__link-icon-egg" href="tel:+375293021021">
+                            <span class="contacts-info__link-code">+375 (29)</span>
+                            3-021-021
+                        </a>
+                        <a href="#" class="contacts-info__link contacts-info__link contacts-info__link-icon-phone" href="tel:+375293021021">
+                            <span class="contacts-info__link-code">+375 (29)</span>
+                            3-021-021
+                        </a>
+                        <div class="contacts-info__time">
+                            <p class="contacts-info__title">Ежедневно</p>
+                            <p class="contacts-info__descr">с 10:00 до 18:00</p>
+                        </div>
+                        <div class="contact-list">
+                            <div class="contact-list__messengers">
+                                <a href="#" class="contact-list__messenger contact-list__messenger-viber"></a>
+                                <a href="#" class="contact-list__messenger contact-list__messenger-whatsapp"></a>
+                                <a href="#" class="contact-list__messenger contact-list__messenger-telegram"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
+    
 
 
 
@@ -95,62 +138,87 @@
                 </div>
 
                 <div class="region-modal__body modal-body">
+
                     <p class="region-modal__text-with-icon">
                         <span class="region-modal__icon-car demo-icon icon-truck"></span>
                         Доставляем товары по всей Беларуси
                     </p>
-                    <ul class="modal-list region-modal__list">
-                        <li class="modal-list__item"><a class="modal-list__link active" href="#!">МИНСК</a></li>
-                        <li class="modal-list__item"><a class="modal-list__link" href="#!">МОГИЛЕВ</a></li>
-                        <li class="modal-list__item"><a class="modal-list__link" href="#!">ВИТЕБСК</a></li>
-                        <li class="modal-list__item"><a class="modal-list__link" href="#!">ГРОДНО</a></li>
-                        <li class="modal-list__item"><a class="modal-list__link" href="#!">БРЕСТ</a></li>
-                        <li class="modal-list__item"><a class="modal-list__link" href="#!">ГОМЕЛЬ</a></li>
-                    </ul>
 
-                    <form id="regionForm" class="region-form region-modal__form">
-                        <p class="region-form__status">* Неверное название</p>
-                        <div class="search-group search-group--modal">
-                            <input id="regionInput" placeholder="Выберете ваш населённый пункт" type="text"
-                                class="search-group__input">
-
-                            <button id="regionInputButton" type="button"
-                                class="demo-icon icon-search search-group__btn">
-                            </button>
-                        </div>
-
-                        <ul id="searchList" class="search-list search-group__results">
-                            <li class="search-list__item"><a href="#!" class="search-list__link">Москва</a> </li>
-                            <li class="search-list__item"><a href="#!" class="search-list__link">Владивосток</a> </li>
-                            <li class="search-list__item"><a href="#!" class="search-list__link">Минск</a> </li>
-                            <li class="search-list__item"><a href="#!" class="search-list__link">Челябинск</a> </li>
-                            <li class="search-list__item"><a href="#!" class="search-list__link">Москва</a> </li>
-                            <li class="search-list__item"><a href="#!" class="search-list__link">Владивосток</a> </li>
-                            <li class="search-list__item"><a href="#!" class="search-list__link">Минск</a> </li>
-                            <li class="search-list__item"><a href="#!" class="search-list__link">Челябинск</a> </li>
+                    <div class="region-modal__cities">
+                        <ul class="modal-list region-modal__list">
+                            <li class="modal-list__item"><a class="modal-list__link active" href="#!">МИНСК</a></li>
+                            <li class="modal-list__item"><a class="modal-list__link" href="#!">МОГИЛЕВ</a></li>
+                            <li class="modal-list__item"><a class="modal-list__link" href="#!">ВИТЕБСК</a></li>
+                            <li class="modal-list__item"><a class="modal-list__link" href="#!">ГРОДНО</a></li>
+                            <li class="modal-list__item"><a class="modal-list__link" href="#!">БРЕСТ</a></li>
+                            <li class="modal-list__item"><a class="modal-list__link" href="#!">ГОМЕЛЬ</a></li>
                         </ul>
-                        <button type="button" id="regionButtonSubmit" class="region-form__btn">Выбрать</button>
-                    </form>
+
+                        <form id="regionForm" class="region-form region-modal__form">
+                            <p class="region-form__status d-none">* Неверное название</p>
+                            <div class="search-group search-group--modal">
+                                <input id="regionInput" placeholder="Выберете ваш населённый пункт" type="text"
+                                    class="search-group__input">
+
+                                <button id="regionInputButton" type="button"
+                                    class="demo-icon icon-search search-group__btn">
+                                </button>
+                            </div>
+
+                            <ul id="searchList" class="search-list search-group__results">
+                                <li class="search-list__item"><a href="#!" class="search-list__link">Москва</a> </li>
+                                <li class="search-list__item"><a href="#!" class="search-list__link">Владивосток</a>
+                                </li>
+                                <li class="search-list__item"><a href="#!" class="search-list__link">Минск</a> </li>
+                                <li class="search-list__item"><a href="#!" class="search-list__link">Челябинск</a> </li>
+                                <li class="search-list__item"><a href="#!" class="search-list__link">Москва</a> </li>
+                                <li class="search-list__item"><a href="#!" class="search-list__link">Владивосток</a>
+                                </li>
+                                <li class="search-list__item"><a href="#!" class="search-list__link">Минск</a> </li>
+                                <li class="search-list__item"><a href="#!" class="search-list__link">Челябинск</a> </li>
+                            </ul>
+                            <button type="button" id="regionButtonSubmit" class="region-form__btn">Выбрать</button>
+                        </form>
+                    </div>
+
                 </div>
 
             </div>
         </div>
     </div>
 
+
+
     <!-- open modal if user-icon is clicked -->
-    <div class="user-modal modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="userModal"
+    <div class="user-modal modal fade" id="userModal" tabindex="-1" role="dialog" aria-labelledby="userModal"
         aria-hidden="true">
         <div class="user-modal__dialog modal-dialog" role="document">
             <div class="user-modal__content modal-content">
                 <div class="user-modal__header modal-header">
-                    <a href="#!" class="user-modal__link-head">Войти</a>
-                    <a href="#!" class="user-modal__link-head">Зарегистрироваться</a>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
+                    <a href="#!" class="user-modal__link-entry">Войти</a>
+                    <a href="#!" class="user-modal__link-registration">Зарегистрироваться</a>
+                    <button type="button" class="user-modal__close demo-icon icon-cancel-1" data-dismiss="modal"
+                        aria-label="Close"></button>
                 </div>
                 <div class="user-modal__body modal-body">
                     <p class="user-modal__title">Вход через социальные сети</p>
+                    <div class="socials-with-payment socials-with-payment--user-modal">
+                        <div class="socials-with-payment__messengers">
+                            <a class="socials-with-payment__link socials-with-payment__link-fb" href="#"></a>
+                            <a class="socials-with-payment__link socials-with-payment__link-vk" href="#"></a>
+                            <a class="socials-with-payment__link socials-with-payment__link-ok" href="#"></a>
+                        </div>
+                    </div>
+
+                    <input type="text" id="userModalEmail" placeholder="E-mail или телефон"
+                        class="user-modal__input mb-3">
+
+                    <div class="search-group search-group--modal-user">
+                        <input id="userModalPassword" placeholder="Пароль" type="password" class="search-group__input">
+                        <button id="regionInputButton" type="button" class="demo-icon icon-eye search-group__btn">
+                        </button>
+                    </div>
+
                 </div>
                 <div class="user-modal__footer">
                     <button class="user-modal__btn-submit">Войти</button>
@@ -185,7 +253,7 @@
                 <a href="#" class="header__views demo-icon icon-eye">просмотрено
                     <span class="header__views-count">(1)</span>
                 </a>
-                <a class="header-icon header__user demo-icon icon-user" data-toggle="modal" data-target="#exampleModal"
+                <a class="header-icon header__user demo-icon icon-user" data-toggle="modal" data-target="#userModal"
                     id="user" href="#!"></a>
                 <a class="header-icon header__like demo-icon icon-heart-circled" id="like" href="#!"></a>
                 <a class="header-icon header__basket demo-icon icon-shop" id="basket" href="basket.html"><span
@@ -373,7 +441,7 @@
                     <li class="profile-menu__item">
                         <p class="profile-menu__title">Профиль</p>
                         <span class="profile-menu__mail">example@gmail.com</span>
-                        <button class="profile-menu__btn">Выйти</button>
+                        <button data-toggle="modal" data-target="#userModal" class="profile-menu__btn">Выйти</button>
                     </li>
                     <li class="profile-menu__item">
                         <a href="#!" class="profile-menu__link">Мои заказы</a>
@@ -597,12 +665,10 @@
             </div>
 
 
-
-
             <div class="main__bottom">
                 <p class="site-title">SKIN <span class="header__title-heart demo-icon icon-heart"></span> FOOD
                 </p>
-                <span class="site-description">
+                <span class="site-description main__description">
                     laboratory
                 </span>
             </div>

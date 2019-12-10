@@ -4,6 +4,12 @@
 	.slider-carousel.owl-theme .owl-nav
 		display: none
 
+@media only screen and (max-width : 1150px)
+	.region-modal
+		padding-right: 0 !important
+	.region-modal__dialog
+		margin-top: 0
+
 @media only screen and (max-width : 992px)
 	.footer__wrapper
 		flex-wrap: wrap
@@ -71,6 +77,23 @@
 		font-size: 12px
 		min-width: 157px
 		height: 40px
+	// modals
+	.region-modal__cities
+		flex-direction: column
+		align-items: center
+	.region-modal__form
+		flex-basis: 100%
+		width: 100%
+	.region-modal__list
+		padding-bottom: 80px
+	.region-form__btn
+		margin-right: 0
+		margin-left: auto
+	.region-modal__dialog
+		border-radius: 0
+	.region-modal__list
+		flex-basis: 100%
+		width: 100%
 
 @media only screen and (max-width : 576px)
 	.region-list--padding
@@ -87,6 +110,49 @@
 	// footer
 	.footer__contact-list, .footer__navigation-main, .footer__navigation-users, .footer__socials-with-payment
 		padding-left: 0
+	// modal
+	.region-modal__close
+		font-size: 15px
+	.region-modal__header-wrapper
+		padding: 10px 20px
+	.region-modal__title
+		color: #F78C9F
+		white-space: nowrap
+	.region-modal__body
+		padding: 20px 20px 30px 20px
+	.region-modal__title
+		font-size: 14px
+	.region-modal__text-with-icon
+		font-size: 10px
+		padding-bottom: 25px
+	.modal-list__link
+		font-size: 12px
+		color: #000
+	.region-modal__list
+		max-width: 320px
+		padding-bottom: 35px
+	.modal-list__item
+		flex-basis: 35%
+		width: 35%
+		padding-bottom: 15px
+		text-align: center
+	.region-form__status
+		font-size: 7px
+	.search-group.search-group--modal .search-group__input,
+	.search-group.search-group--modal .search-group__input::placeholder,
+	.search-list__link
+		font-size: 10px
+	.search-list
+		padding: 12px 15px
+	.search-group.search-group--modal,
+	.search-group.search-group--modal .search-group__input
+		height: 30px
+	.search-group__btn
+		font-size: 15px
+	.region-form__btn
+		min-width: 110px
+		min-height: 25px
+		font-size: 11px
 
 @media only screen and (max-width : 480px)
 	// footer
@@ -185,6 +251,8 @@
 		padding: 6px 20px 6px
 		font-size: 9px
 	// header
+	.region-info__body
+		width: 280px
 	.header__menu
 		margin-right: 10px
 	.header__like
@@ -214,4 +282,10 @@
 	.modal-list__item
 		padding-bottom: 20px
 	.modal-list__link
+		font-size: 12px
+	// modals
+	.user-modal__dialog
+		max-width: 280px
+	.user-modal__link-entry,
+	.user-modal__link-registration
 		font-size: 12px

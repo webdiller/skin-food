@@ -22,6 +22,7 @@ body
     padding: 0
     opacity: 1
     visibility: visible
+    position: relative
 
 h1,h2,h3,h4,h5,h6,p
     margin: 0
@@ -350,6 +351,7 @@ a:hover
         background-size: cover
     &__bottom
         padding-top: 50px
+        padding-bottom: 25px
         position: relative
         z-index: 10
         margin-top: auto
@@ -549,6 +551,61 @@ a:hover
     &__item
         margin: 0 0 20px 0
         width: 100%
+
+.grid-images
+    &__wrapper
+        display: flex
+        justify-content: space-between
+    &__layout
+        flex-basis: 24%
+        width: 24%
+    &__head
+        text-align: center
+        height: 60px
+        display: flex
+        justify-content: center
+        align-items: center
+        border-top-right-radius: 5px
+        border-top-left-radius: 5px
+        background: #fde8ed
+    &__title
+        font-size: 14px
+        color: rgb(26, 26, 26)
+        line-height: 2.357
+        position: relative
+        padding-left: 45px
+        display: flex
+        align-items: center
+        &-news::before
+            position: absolute
+            content: "\e80f"
+            font-family: "fontello"
+            font-size: 23px
+            left: 0
+            color: #edadbb
+        &-must-have::before
+            position: absolute
+            content: "\e806"
+            font-family: "fontello"
+            font-size: 23px
+            left: 0
+            color: #edadbb
+        &-hits::before
+            position: absolute
+            content: "\e844"
+            font-family: "fontello"
+            font-size: 23px
+            left: 0
+            color: #edadbb
+        &-promo::before
+            position: absolute
+            content: "\f295"
+            font-family: "fontello"
+            font-size: 23px
+            left: 0
+            color: #edadbb
+    &__item
+    &__img
 
 @import "header"
 @import "modal"

@@ -50,14 +50,18 @@ $(document).ready(function () {
 
 
     const regionModule = (function () {
-        const regionForm = doc.getElementById('regionForm'),
-            regionInput = doc.getElementById('regionInput'),
-            regionInputButton = doc.getElementById('regionInputButton'),
-            regionButtonSubmit = doc.getElementById('regionButtonSubmit');
+        try {
+            const regionForm = doc.getElementById('regionForm'),
+                regionInput = doc.getElementById('regionInput'),
+                regionInputButton = doc.getElementById('regionInputButton'),
+                regionButtonSubmit = doc.getElementById('regionButtonSubmit');
 
-        regionInput.addEventListener('input', function () {
-            console.log(this.value);
-        });
+            regionInput.addEventListener('input', function () {
+                console.log(this.value);
+            });
+        } catch (error) {
+            console.log('regionModule', error);
+        }
 
     }());
 
@@ -82,7 +86,7 @@ $(document).ready(function () {
                     1300: {
                         items: 2,
                         nav: true,
-                        dots: false, 
+                        dots: false,
                         navText: ['<span class="slider-carousel__icon demo-icon icon-left-open-big"></span>', '<span class="slider-carousel__icon demo-icon icon-right-open-big"></span>'],
                     }
                 }
@@ -134,7 +138,6 @@ $(document).ready(function () {
     }());
 
 
-
     const masonryGridModule = (function () {
         try {
             // external js: masonry.pkgd.js, imagesloaded.pkgd.js
@@ -167,40 +170,32 @@ $(document).ready(function () {
     }());
 
 
-    const exampleModule = (function () {
 
-        let blocks = doc.getElementById('blocks');
-        var p = $('.inner-b1');
-        let counter = 0;
-        p.click(() => {
-            counter += 10;
-            var offsetP = $('.inner-b1').offset({
-                left: counter
-            });
+    const submitCityModule = (function () {
 
-            console.log(p.position());
-            // console.log(offsetP.offset().left)
-        })
-
-    }())
-
-    const exampleModule2 = (function () {
-
-        // var blocks = $('#blocks');
-        // var blocksOffset = blocks.offset();
-        // var blocksPosition = blocks.position();
-
-        // console.log(blocksPosition);
-
-        // window.addEventListener('scroll', function () {
-        //     console.log(parseInt(pageYOffset));
-        // });
+        try {
+            $('#submitCity').click(function () {
+                $(this).closest('.region-info').fadeOut();
+            })
+        } catch (error) {
+            console.log(error);
+        }
 
 
+    }());
 
 
-    }())
+    const contactsWindowModal = (function () {
+        try {
+            $('#regionContactsBtn').click(function () {
+                $('#regionContactsWindow').fadeToggle('1000');
+            })
+            $('#user').click(function () {
+                $('#userInfoWindow').fadeToggle('1000');
 
-
-
+            })
+        } catch (error) {
+            console.log(error);
+        }
+    }());
 });
