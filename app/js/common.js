@@ -7,60 +7,82 @@ $(document).ready(function () {
 
     const headerModule = (function () {
 
-        const menu = doc.getElementById('menu'),
-            mainNavigation = doc.getElementById('mainNavigation'),
-            menuList = doc.getElementById('menuList'),
-            search = doc.getElementById('search'),
-            title = doc.getElementById('title'),
-            like = doc.getElementById('like'),
-            basket = doc.getElementById('basket'),
-            basketCounter = doc.getElementById('basketCounter');
+        try {
+            const menu = doc.getElementById('menu'),
+                mainNavigation = doc.getElementById('mainNavigation'),
+                menuList = doc.getElementById('menuList'),
+                search = doc.getElementById('search'),
+                title = doc.getElementById('title'),
+                user = doc.getElementById('user'),
+                like = doc.getElementById('like'),
+                basket = doc.getElementById('basket'),
+                basketCounter = doc.getElementById('basketCounter');
 
-        function openMenu(selector) {
-            selector.addEventListener('click', () => {
-                $('.header__wrapper').addClass('disabled');
-                $('.main-menu__wrapper').toggleClass('active');
+            function openMenu(selector) {
+                selector.addEventListener('click', () => {
+                    $('.header__wrapper').addClass('disabled');
+                    $('.main-menu__wrapper').toggleClass('active');
 
-                setTimeout(() => {
-                    title.classList.toggle('disabled');
+                    setTimeout(() => {
+                        title.classList.toggle('disabled');
 
-                    menu.classList.toggle('icon-menu');
-                    menu.classList.toggle('icon-cancel-1');
+                        menu.classList.toggle('icon-menu');
+                        menu.classList.toggle('icon-cancel-1');
 
-                    menuList.classList.toggle('active');
-                    mainNavigation.classList.toggle('active');
+                        menuList.classList.toggle('active');
+                        mainNavigation.classList.toggle('active');
 
-                    bodySelector.classList.toggle('disable-y');
+                        bodySelector.classList.toggle('disable-y');
 
-                    selector.classList.toggle('active');
-                    like.classList.toggle('active');
-                    search.classList.toggle('active');
-                }, 300);
+                        selector.classList.toggle('active');
+                        like.classList.toggle('active');
+                        search.classList.toggle('active');
+                    }, 300);
 
-                setTimeout(() => {
-                    $('.header__wrapper').removeClass('disabled');
-                }, 500);
+                    setTimeout(() => {
+                        $('.header__wrapper').removeClass('disabled');
+                    }, 500);
 
-            })
+                })
+            }
+
+            openMenu(menu);
+
+            user.addEventListener('click', function () {
+                $('#userInfoWindow').fadeToggle();
+            });
+
+            basket.addEventListener('click', function () {
+                $('#basketInfoWindow').fadeToggle();
+            });
+            basketInfoClose.addEventListener('click', function () {
+                $('#basketInfoWindow').fadeToggle();
+            });
+
+        } catch (error) {
+            console.log(error);
         }
-
-        openMenu(menu);
 
     }());
 
 
     const regionModule = (function () {
+        // Выбор города в верху сайта
         try {
-            const regionForm = doc.getElementById('regionForm'),
-                regionInput = doc.getElementById('regionInput'),
-                regionInputButton = doc.getElementById('regionInputButton'),
-                regionButtonSubmit = doc.getElementById('regionButtonSubmit');
-
-            regionInput.addEventListener('input', function () {
-                console.log(this.value);
-            });
+            $('#submitCity').click(function () {
+                $(this).closest('.region-info').fadeOut();
+            })
         } catch (error) {
-            console.log('regionModule', error);
+            console.log(error);
+        }
+
+        // Кнопка контакты
+        try {
+            $('#regionContactsBtn').click(function () {
+                $('#regionContactsWindow').fadeToggle();
+            })
+        } catch (error) {
+            console.log(error);
         }
 
     }());
@@ -73,7 +95,7 @@ $(document).ready(function () {
                 center: false,
                 nav: false,
                 dots: true,
-                margin: 20,
+                margin: 0,
                 responsive: {
                     0: {
                         items: 1,
@@ -82,9 +104,11 @@ $(document).ready(function () {
                     600: {
                         items: 2,
                         nav: false,
+                        margin: 0
                     },
                     1300: {
                         items: 2,
+                        margin: 0,
                         nav: true,
                         dots: false,
                         navText: ['<span class="slider-carousel__icon demo-icon icon-left-open-big"></span>', '<span class="slider-carousel__icon demo-icon icon-right-open-big"></span>'],
@@ -161,41 +185,64 @@ $(document).ready(function () {
                 var sticky = $('.main-navigation'),
                     scroll = $(window).scrollTop();
 
-                if (scroll >= 30) sticky.addClass('main-fixed');
-                else sticky.removeClass('main-fixed');
+                if (scroll >= 30) {
+                    sticky.addClass('main-fixed');
+                }
+                else {
+                    sticky.removeClass('main-fixed');
+                }
             });
         } catch (error) {
             console.log(error);
         }
     }());
 
+    const select2Module = (function () {
 
 
-    const submitCityModule = (function () {
+        var $disabledResults = $(".js-example-disabled-results");
+        $disabledResults.select2();
 
-        try {
-            $('#submitCity').click(function () {
-                $(this).closest('.region-info').fadeOut();
-            })
-        } catch (error) {
-            console.log(error);
-        }
+        $('.select-dropdown-type').select2({
+            placeholder: 'Тип',
+            minimumResultsForSearch: Infinity
+        });
+
+        $('.select2-dropdown-action').select2({
+            placeholder: 'Действие',
+            minimumResultsForSearch: Infinity
+        });
+
+        $('.select-dropdown-time').select2({
+            placeholder: 'Время применения',
+            minimumResultsForSearch: Infinity
+        });
+
+        $('.select-dropdown-ingredients').select2({
+            placeholder: 'Активные ингридиенты',
+            minimumResultsForSearch: Infinity
+        });
 
 
     }());
 
+    const productTabIndexModule = ((function () {
+        // var products = $('.product');
+        // for (let i = 0; i < products.length; i++) {
+        //     $(products[i]).focusin(function () {
+        //         $(".product").addClass('focused');
+        //     });
+        //     $(products[i]).focusout(function () {
+        //         $(".product").removeClass("focused");
+        //     });
+        // }
 
-    const contactsWindowModal = (function () {
-        try {
-            $('#regionContactsBtn').click(function () {
-                $('#regionContactsWindow').fadeToggle('1000');
-            })
-            $('#user').click(function () {
-                $('#userInfoWindow').fadeToggle('1000');
+        // $(".product").focusin(function () {
+        //     $(".product").addClass('focused');
+        // });
+        // $(".product").focusout(function () {
+        //     $(".product").removeClass("focused");
+        // });
+    })());
 
-            })
-        } catch (error) {
-            console.log(error);
-        }
-    }());
 });

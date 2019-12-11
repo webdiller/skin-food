@@ -47,15 +47,15 @@
         <div class="region__wrapper-for-contacts">
             <div id="regionContactsWindow" class="contacts-info">
                 <div class="contacts-info__body">
-                    <a href="#" class="contacts-info__link contacts-info__link-icon-arrow" href="tel:+375293021021">
+                    <a class="contacts-info__link contacts-info__link-icon-arrow" href="tel:+375293021021">
                         <span class="contacts-info__link-code">+375 (29)</span>
                         3-021-021
                     </a>
-                    <a href="#" class="contacts-info__link contacts-info__link-icon-egg" href="tel:+375293021021">
+                    <a class="contacts-info__link contacts-info__link-icon-egg" href="tel:+375293021021">
                         <span class="contacts-info__link-code">+375 (29)</span>
                         3-021-021
                     </a>
-                    <a href="#" class="contacts-info__link contacts-info__link contacts-info__link-icon-phone"
+                    <a class="contacts-info__link contacts-info__link contacts-info__link-icon-phone"
                         href="tel:+375293021021">
                         <span class="contacts-info__link-code">+375 (29)</span>
                         3-021-021
@@ -77,72 +77,62 @@
     </div>
 
 
-
-
     <!-- open modal if region button is clicked -->
     <div id="regionModal" class="region-modal modal fade" tabindex="-1" role="dialog">
-        <div class="region-modal__dialog modal-dialog" role="document">
-
-            <div class="region-modal__content modal-content">
-
-                <div class="region-modal__header modal-header">
-                    <div class="region-modal__header-wrapper">
-                        <p class="region-modal__title">Выберите свой населённый пункт</p>
-                        <button type="button" aria-hidden="true"
-                            class="region-modal__close close demo-icon icon-cancel-1" data-dismiss="modal"
-                            aria-label="Close"></button>
+            <div class="region-modal__dialog modal-dialog" role="document">
+    
+                <div class="region-modal__content modal-content">
+    
+                    <div class="region-modal__header modal-header">
+                        <div class="region-modal__header-wrapper">
+                            <p class="region-modal__title">Выберите свой населённый пункт</p>
+                            <button type="button" aria-hidden="true"
+                                class="region-modal__close close demo-icon icon-cancel-1" data-dismiss="modal"
+                                aria-label="Close"></button>
+                        </div>
                     </div>
-                </div>
-
-                <div class="region-modal__body modal-body">
-
-                    <p class="region-modal__text-with-icon">
-                        <span class="region-modal__icon-car demo-icon icon-truck"></span>
-                        Доставляем товары по всей Беларуси
-                    </p>
-
-                    <div class="region-modal__cities">
-                        <ul class="modal-list region-modal__list">
-                            <li class="modal-list__item"><a class="modal-list__link active" href="#!">МИНСК</a></li>
-                            <li class="modal-list__item"><a class="modal-list__link" href="#!">МОГИЛЕВ</a></li>
-                            <li class="modal-list__item"><a class="modal-list__link" href="#!">ВИТЕБСК</a></li>
-                            <li class="modal-list__item"><a class="modal-list__link" href="#!">ГРОДНО</a></li>
-                            <li class="modal-list__item"><a class="modal-list__link" href="#!">БРЕСТ</a></li>
-                            <li class="modal-list__item"><a class="modal-list__link" href="#!">ГОМЕЛЬ</a></li>
-                        </ul>
-
-                        <form id="regionForm" class="region-form region-modal__form">
-                            <p class="region-form__status d-none">* Неверное название</p>
-                            <div class="search-group search-group--modal">
-                                <input id="regionInput" placeholder="Выберете ваш населённый пункт" type="text"
-                                    class="search-group__input">
-
-                                <button id="regionInputButton" type="button"
-                                    class="demo-icon icon-search search-group__btn">
-                                </button>
-                            </div>
-
-                            <ul id="searchList" class="search-list search-group__results">
-                                <li class="search-list__item"><a href="#!" class="search-list__link">Москва</a> </li>
-                                <li class="search-list__item"><a href="#!" class="search-list__link">Владивосток</a>
-                                </li>
-                                <li class="search-list__item"><a href="#!" class="search-list__link">Минск</a> </li>
-                                <li class="search-list__item"><a href="#!" class="search-list__link">Челябинск</a> </li>
-                                <li class="search-list__item"><a href="#!" class="search-list__link">Москва</a> </li>
-                                <li class="search-list__item"><a href="#!" class="search-list__link">Владивосток</a>
-                                </li>
-                                <li class="search-list__item"><a href="#!" class="search-list__link">Минск</a> </li>
-                                <li class="search-list__item"><a href="#!" class="search-list__link">Челябинск</a> </li>
+    
+                    <div class="region-modal__body modal-body">
+    
+                        <p class="region-modal__text-with-icon">
+                            <span class="region-modal__icon-car demo-icon icon-truck"></span>
+                            Доставляем товары по всей Беларуси
+                        </p>
+    
+                        <div class="region-modal__cities">
+                            <ul class="modal-list region-modal__list">
+                                <li class="modal-list__item"><a class="modal-list__link active" href="#!">МИНСК</a></li>
+                                <li class="modal-list__item"><a class="modal-list__link" href="#!">МОГИЛЕВ</a></li>
+                                <li class="modal-list__item"><a class="modal-list__link" href="#!">ВИТЕБСК</a></li>
+                                <li class="modal-list__item"><a class="modal-list__link" href="#!">ГРОДНО</a></li>
+                                <li class="modal-list__item"><a class="modal-list__link" href="#!">БРЕСТ</a></li>
+                                <li class="modal-list__item"><a class="modal-list__link" href="#!">ГОМЕЛЬ</a></li>
                             </ul>
-                            <button type="button" id="regionButtonSubmit" class="region-form__btn">Выбрать</button>
-                        </form>
+    
+                            <form id="regionForm" class="region-form region-modal__form">
+    
+                                <p class="region-form__status d-none">* Неверное название</p>
+    
+                                <div class="region-form__select2 select2">
+                                    <select style="width: 100%" class="select2__select js-example-disabled-results">
+                                        <option value="Выбирете город" selected>Выбирете город</option>
+                                        <option value="Минск">Минск</option>
+                                        <option value="Москва">Москва</option>
+                                        <option value="Владивосток">Владивосток</option>
+                                        <option value="Калининград">Калининград</option>
+                                        <option value="Калининград">Калининград</option>
+                                        <option value="Воронеж">Воронеж</option>
+                                    </select>
+                                </div>
+                                <button type="button" id="regionButtonSubmit" class="region-form__btn">Выбрать</button>
+                            </form>
+                        </div>
+    
                     </div>
-
+    
                 </div>
-
             </div>
         </div>
-    </div>
 
     <!-- open modal if user-icon is clicked -->
     <div class="user-modal modal fade" id="userModal" tabindex="-1" role="dialog" aria-labelledby="userModal"
@@ -170,7 +160,7 @@
 
                     <div class="search-group search-group--modal-user">
                         <input id="userModalPassword" placeholder="Пароль" type="password" class="search-group__input">
-                        <button id="regionInputButton" type="button" class="demo-icon icon-eye search-group__btn">
+                        <button type="button" class="demo-icon icon-eye search-group__btn">
                         </button>
                     </div>
 
@@ -186,6 +176,7 @@
 
     <header id="mainNavigation" class="main-navigation">
         <div class="header">
+
             <div class="header__wrapper">
 
                 <a href="#bodySelector" class="header__arrow-up demo-icon icon-up-open-big">наверх</a>
@@ -208,14 +199,90 @@
                 <a href="#" class="header__views demo-icon icon-eye">просмотрено
                     <span class="header__views-count">(1)</span>
                 </a>
-                <a class="header-icon header__user demo-icon icon-user" data-toggle="modal" data-target="#userModal"
-                    id="user" href="#!"></a>
+                <a class="header-icon header__user demo-icon icon-user" id="user" href="#!"></a>
                 <a class="header-icon header__like demo-icon icon-heart-circled" id="like" href="#!"></a>
-                <a class="header-icon header__basket demo-icon icon-shop" id="basket" href="basket.html"><span
-                        id="basketCounter" class="header__basket-counter">0</span></a>
+                <button class="header-icon header__basket demo-icon icon-shop" id="basket"><span id="basketCounter"
+                        class="header__basket-counter">0</span>
+                </button>
 
             </div>
+
+            <div class="header__wrapper-for-icons">
+
+                <div id="userInfoWindow" class="user-info">
+                    <div class="user-info__header">
+                        <p class="user-info__name">Alex Kim</p>
+                        <button data-toggle="modal" data-target="#userModal" class="user-info__btn-out">Выйти</button>
+                    </div>
+                    <div class="user-info__body">
+                        <a href="#!" class="user-info__link">Личный кабинет</a>
+                        <a href="#!" class="user-info__link">Избранное</a>
+                        <a href="#!" class="user-info__link">История заказов</a>
+                    </div>
+                </div>
+
+                <div id="basketInfoWindow" class="basket-info">
+                    <form class="basket-info__wrapper">
+                        <div class="basket-info__header">
+                            <p class="basket-info__title">Корзина</p>
+                            <p class="basket-info__descr">(Товаров:
+                                <span class="basket-info__descr-count">3</span>)
+                            </p>
+                            <button id="basketInfoClose" type="button"
+                                class="basket-info__close demo-icon icon-cancel-1"></button>
+                        </div>
+                        <div class="basket-info__body">
+                            <ul class="tiny-basket basket-info__tiny-basket">
+                                <li class="tiny-basket__item">
+                                    <img src="./img/products/product-10.jpg" alt="product" class="tiny-basket__img">
+                                    <div class="tiny-basket__content">
+                                        <p class="tiny-basket__name">SNP Bird’s Nest Aqua Eye Patch</p>
+                                        <p class="tiny-basket__tag">Маска для кожи вокруг глаз</p>
+                                        <p class="tiny-basket__type">Маска</p>
+                                    </div>
+                                    <button class="tiny-basket__btn-delete demo-icon icon-trash-empty"></button>
+                                    <p class="tiny-basket__price">1 X 30 BYN</p>
+                                </li>
+                                <li class="tiny-basket__item">
+                                    <img src="./img/products/product-10.jpg" alt="product" class="tiny-basket__img">
+                                    <div class="tiny-basket__content">
+                                        <p class="tiny-basket__name">SNP Bird’s Nest Aqua Eye Patch</p>
+                                        <p class="tiny-basket__tag">Маска для кожи вокруг глаз</p>
+                                        <p class="tiny-basket__type">Маска</p>
+                                    </div>
+                                    <button class="tiny-basket__btn-delete demo-icon icon-trash-empty"></button>
+                                    <p class="tiny-basket__price">1 X 30 BYN</p>
+                                </li>
+                                <li class="tiny-basket__item">
+                                    <img src="./img/products/product-10.jpg" alt="product" class="tiny-basket__img">
+                                    <div class="tiny-basket__content">
+                                        <p class="tiny-basket__name">SNP Bird’s Nest Aqua Eye Patch</p>
+                                        <p class="tiny-basket__tag">Маска для кожи вокруг глаз</p>
+                                        <p class="tiny-basket__type">Маска</p>
+                                    </div>
+                                    <button class="tiny-basket__btn-delete demo-icon icon-trash-empty"></button>
+                                    <p class="tiny-basket__price">1 X 30 BYN</p>
+                                </li>
+                            </ul>
+                            <div class="basket-info__footer">
+                                <div class="basket-info__check">
+                                    <p class="basket-info__total-name">Сумма заказа:</p>
+                                    <p class="basket-info__total-number">90 BYN</p>
+                                    <p class="basket-info__total-info">(Без учета доставки)</p>
+                                </div>
+                                <button id="basketInfoSubmit" type="button" class="basket-info__btn-submit">Оформить
+                                    заказ</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+
+            </div>
+
         </div>
+
+
 
         <div class="search-menu collapse" id="collapseExample">
             <div class="search-menu__wrapper">
@@ -227,6 +294,8 @@
 
             </div>
         </div>
+
+
 
 
         <div class="main-menu">
@@ -416,21 +485,6 @@
         </div>
 
     </header>
-
-
-    <div class="navigation">
-        <div class="navigation__wrapper">
-            <ul class="navigation__list">
-                <li class="navigation__item"><a href="#!" class="navigation__link">БРЕНДЫ</a></li>
-                <li class="navigation__item"><a href="#!" class="navigation__link">ЛИЦО</a></li>
-                <li class="navigation__item"><a href="#!" class="navigation__link">ТЕЛО</a></li>
-                <li class="navigation__item"><a href="#!" class="navigation__link">ВОЛОСЫ</a></li>
-                <li class="navigation__item"><a href="#!" class="navigation__link">МАКИЯЖ</a></li>
-                <li class="navigation__item"><a href="#!" class="navigation__link">аксессуары</a></li>
-                <li class="navigation__item active"><a href="#!" class="navigation__link">АКЦИИ</a></li>
-            </ul>
-        </div>
-    </div>
 
 
     <main class="main main--basket">

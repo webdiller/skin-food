@@ -3,16 +3,35 @@
 @media only screen and (max-width : 1350px)
 	.slider-carousel.owl-theme .owl-nav
 		display: none
+	.slider-carousel.owl-theme .owl-nav.disabled+.owl-dots
+		display: block
 
 @media only screen and (max-width : 1150px)
+	.navigation__inner-navigation
+		left: 0
 	.region-modal
 		padding-right: 0 !important
 	.region-modal__dialog
 		margin-top: 0
 
 @media only screen and (max-width : 992px)
+	// .error-page 992px
+	.error-page__title
+		font-size: 200px
+	.error-page__descr
+		font-size: 24px
+		margin-bottom: 35px
+	.deep-navigation__item
+		flex-basis: 170px
+		width: 170px
+	.list-with-title__title
+		font-size: 14px
+	.list-with-title__link
+		font-size: 13px
 	.footer__wrapper
 		flex-wrap: wrap
+	.deep-navigation__item:not(:last-child)
+		border-right: 0
 	.footer__contact-list,
 	.footer__socials-with-payment,
 	.footer__navigation-users,
@@ -31,9 +50,69 @@
 		order: 4
 	.contact-list__phone
 		font-weight: 700
+	.slider-carousel__item
+		height: 193px
+	.slider-carousel.owl-theme .owl-nav.disabled+.owl-dots
+		margin-top: 0
+		top: 10px
+		position: relative
+	// basket 992px
+	.basket-list__img
+		height: 90px
+		width: 90px
+	.basket-list__descr
+		font-size: 14px
+	.basket-list__tag
+		font-size: 14px
+	.basket-list__price
+		font-size: 16px
+	.basket-counter
+		height: 30px
+	.basket-list__price
+		white-space: nowrap
+		margin-right: 20px
 
 @media only screen and (max-width : 768px)
-	// footer
+	// banner-info__wrapper 768px
+	.banner-info__wrapper
+		padding: 15px 20px 15px 20px
+	.banner-info__description
+		font-size: 13px
+	.banner-info__img
+		margin-right: 20px
+	// basket 768px
+	.basket-list__item
+		flex-wrap: wrap
+		justify-content: flex-start
+		position: relative
+	.basket-list__img
+		order: 1
+		margin-right: 30px
+	.basket-list__content
+		order: 2
+		flex-basis: 50%
+	.basket-list__close
+		position: absolute
+		top: 20px
+		right: 0
+		order: 3
+	.basket-list__counter
+		order: 4
+		margin-left: 120px
+	.basket-list__price
+		flex-basis: 30%
+		margin-left: auto
+		order: 5
+	.basket-list__descr
+		font-size: 12px
+	.basket-list__tag
+		font-size: 12px
+	.basket-list__name,
+	.basket-counter__input
+		font-size: 14px
+	.basket-list__counter
+		margin-right: 20px
+	// footer 768px
 	.footer__contact-list, .footer__navigation-main, .footer__navigation-users, .footer__socials-with-payment
 		padding-left: 15%
 	.credits__wrapper
@@ -49,7 +128,7 @@
 		font-size: 9px
 	.credits__main-info, .credits__second-info
 		text-align: center
-	// header
+	// header 768px
 	.region__contacts-and-delivery
 		display: none
 	.region__wrapper
@@ -77,7 +156,7 @@
 		font-size: 12px
 		min-width: 157px
 		height: 40px
-	// modals
+	// modals 768px
 	.region-modal__cities
 		flex-direction: column
 		align-items: center
@@ -96,6 +175,46 @@
 		width: 100%
 
 @media only screen and (max-width : 576px)
+	// .error-page 992px
+	.error-page__title
+		font-size: 135px
+		margin-bottom: 50px
+	.error-page__descr
+		font-size: 18px
+		margin-bottom: 25px
+	.error-page__btn
+		font-size: 14px
+		min-width: 140px
+		min-height: 40px
+	// basket-info 576px
+	.basket-info
+		left: 0
+		right: 0
+		z-index: 200
+		border-radius: 0
+		border-left: 0
+		border-right: 0
+		&__wrapper
+			width: 100%
+	.basket-info__descr, .basket-info__title
+		font-size: 14px
+	.tiny-basket__img
+		width: 60px
+		height: 60px
+	.tiny-basket__name,
+	.tiny-basket__tag, .tiny-basket__type
+		font-size: 12px
+	.tiny-basket__price
+		font-size: 13px
+	.basket-info__btn-submit
+		font-size: 13px
+		min-width: 140px
+		min-height: 35px
+	// basket 576px
+	.basket-list__content
+		margin-right: 0
+		flex-basis: 70%
+		width: 70%
 	.region-list--padding
 		padding-top: 20px
 	.region-list__item
@@ -107,10 +226,10 @@
 		display: block !important
 	.swiper-carousel__item
 		font-size: 11px
-	// footer
+	// footer 576px
 	.footer__contact-list, .footer__navigation-main, .footer__navigation-users, .footer__socials-with-payment
 		padding-left: 0
-	// modal
+	// modal 576px
 	.region-modal__close
 		font-size: 15px
 	.region-modal__header-wrapper
@@ -155,7 +274,31 @@
 		font-size: 11px
 
 @media only screen and (max-width : 480px)
-	// footer
+	.main-navigation.active .header__search.active
+		margin-right: 15px
+	.header__like.active
+		margin-right: 10px
+	// basket 480px
+	.basket-list__item
+		align-items: flex-start
+	.basket-list__close
+		top: 0
+		right: 0
+	.basket-list__name
+		font-size: 12px
+	.basket-list__img
+		margin-right: 15px
+		width: 60px
+		height: 60px
+	.basket-list__counter
+		margin: 10px 0
+	.basket-list__counter,
+	.basket-list__price
+		flex-basis: 100%
+		width: 100%
+		margin-right: 0
+		margin-left: auto
+	// footer 480px
 	.footer__wrapper
 		justify-content: center
 		align-items: center
@@ -180,7 +323,7 @@
 		margin-bottom: 15px
 
 @media only screen and (max-width : 420px)
-	// header
+	// header 420px
 	.header__wrapper
 		height: 55px
 	.header-icon
@@ -202,10 +345,10 @@
 		&-heart
 			margin: 0 5px
 			font-size: 7px
-	// masonry grid
+	// masonry grid 420px
 	.grid-item, .grid-sizer
 		width: 50%
-	// footer
+	// footer 420px
 	.footer__wrapper
 		padding-top: 20px
 	.footer__contact-list, .footer__navigation-main, .footer__navigation-users, .footer__socials-with-payment
@@ -219,19 +362,16 @@
 		min-height: 30px
 
 @media only screen and (max-width : 375px)
-	// breadcrumbs
+	// breadcrumbs 375px
 	.breadcrumbs-list__link
 		font-size: 11px
 	.breadcrumbs__current
 		font-size: 12px
-	// filter
+	// filter 375px
 	.filter__select
 		font-size: 13px
-	.products-head__btn
-		font-size: 10px
-		min-width: 110px
-	// products
-	.product__wrapper
+	// products 375px
+	.product__body
 		padding: 10px 13px 15px 12px
 	.product__img
 		height: 136px
@@ -250,7 +390,7 @@
 	.product__btn-add
 		padding: 6px 20px 6px
 		font-size: 9px
-	// header
+	// header 375px
 	.region-info__body
 		width: 280px
 	.header__menu
@@ -269,12 +409,12 @@
 		width: 100%
 	.profile-menu__mail
 		display: none
-	// swiper
+	// swiper 375px
 	.swiper-carousel.owl-theme .owl-nav [class*=owl-]
 		top: 6px
 	.swiper-carousel__slide
 		height: 45px
-	// map
+	// map 375px
 	.region-modal__title
 		font-size: 14px
 	.region-modal__text-with-icon
@@ -283,7 +423,7 @@
 		padding-bottom: 20px
 	.modal-list__link
 		font-size: 12px
-	// modals
+	// modals 375px
 	.user-modal__dialog
 		max-width: 280px
 	.user-modal__link-entry,
