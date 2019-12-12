@@ -79,60 +79,65 @@
 
     <!-- open modal if region button is clicked -->
     <div id="regionModal" class="region-modal modal fade" tabindex="-1" role="dialog">
-            <div class="region-modal__dialog modal-dialog" role="document">
-    
-                <div class="region-modal__content modal-content">
-    
-                    <div class="region-modal__header modal-header">
-                        <div class="region-modal__header-wrapper">
-                            <p class="region-modal__title">Выберите свой населённый пункт</p>
-                            <button type="button" aria-hidden="true"
-                                class="region-modal__close close demo-icon icon-cancel-1" data-dismiss="modal"
-                                aria-label="Close"></button>
-                        </div>
+        <div class="region-modal__dialog modal-dialog" role="document">
+
+            <div class="region-modal__content modal-content">
+
+                <div class="region-modal__header modal-header">
+                    <div class="region-modal__header-wrapper">
+                        <p class="region-modal__title">Выберите свой населённый пункт</p>
+                        <button type="button" aria-hidden="true"
+                            class="region-modal__close close demo-icon icon-cancel-1" data-dismiss="modal"
+                            aria-label="Close"></button>
                     </div>
-    
-                    <div class="region-modal__body modal-body">
-    
-                        <p class="region-modal__text-with-icon">
-                            <span class="region-modal__icon-car demo-icon icon-truck"></span>
-                            Доставляем товары по всей Беларуси
-                        </p>
-    
-                        <div class="region-modal__cities">
-                            <ul class="modal-list region-modal__list">
-                                <li class="modal-list__item"><a class="modal-list__link active" href="#!">МИНСК</a></li>
-                                <li class="modal-list__item"><a class="modal-list__link" href="#!">МОГИЛЕВ</a></li>
-                                <li class="modal-list__item"><a class="modal-list__link" href="#!">ВИТЕБСК</a></li>
-                                <li class="modal-list__item"><a class="modal-list__link" href="#!">ГРОДНО</a></li>
-                                <li class="modal-list__item"><a class="modal-list__link" href="#!">БРЕСТ</a></li>
-                                <li class="modal-list__item"><a class="modal-list__link" href="#!">ГОМЕЛЬ</a></li>
-                            </ul>
-    
-                            <form id="regionForm" class="region-form region-modal__form">
-    
-                                <p class="region-form__status d-none">* Неверное название</p>
-    
-                                <div class="region-form__select2 select2">
-                                    <select style="width: 100%" class="select2__select js-example-disabled-results">
-                                        <option value="Выбирете город" selected>Выбирете город</option>
-                                        <option value="Минск">Минск</option>
-                                        <option value="Москва">Москва</option>
-                                        <option value="Владивосток">Владивосток</option>
-                                        <option value="Калининград">Калининград</option>
-                                        <option value="Калининград">Калининград</option>
-                                        <option value="Воронеж">Воронеж</option>
-                                    </select>
-                                </div>
-                                <button type="button" id="regionButtonSubmit" class="region-form__btn">Выбрать</button>
-                            </form>
-                        </div>
-    
-                    </div>
-    
                 </div>
+
+                <div class="region-modal__body modal-body">
+
+                    <p class="region-modal__text-with-icon">
+                        <span class="region-modal__icon-car demo-icon icon-truck"></span>
+                        Доставляем товары по всей Беларуси
+                    </p>
+
+                    <div class="region-modal__cities">
+                        <ul class="modal-list region-modal__list">
+                            <li class="modal-list__item"><a class="modal-list__link active" href="#!">МИНСК</a></li>
+                            <li class="modal-list__item"><a class="modal-list__link" href="#!">МОГИЛЕВ</a></li>
+                            <li class="modal-list__item"><a class="modal-list__link" href="#!">ВИТЕБСК</a></li>
+                            <li class="modal-list__item"><a class="modal-list__link" href="#!">ГРОДНО</a></li>
+                            <li class="modal-list__item"><a class="modal-list__link" href="#!">БРЕСТ</a></li>
+                            <li class="modal-list__item"><a class="modal-list__link" href="#!">ГОМЕЛЬ</a></li>
+                        </ul>
+
+                        <form id="regionForm" class="region-form region-modal__form">
+
+                            <p class="region-form__status d-none">* Неверное название</p>
+
+                            <div class="region-form__select2 select2">
+                                <select style="width: 100%" class="select2__select js-example-disabled-results">
+                                    <option disabled value="Введите ваш наеленный пункт" selected>Введите ваш наеленный пункт</option>
+                                    <option value="Минск">Минск</option>
+                                    <option value="Москва">Москва</option>
+                                    <option value="Владивосток">Владивосток</option>
+                                    <option value="Калининград">Калининград</option>
+                                    <option value="Калининград">Калининград</option>
+                                    <option value="Воронеж">Воронеж</option>
+                                </select>
+                            </div>
+                            <ul class="region-form__example-search">
+                                <li class="region-form__example-search-item active">г. Дрогичин</li>
+                                <li class="region-form__example-search-item">г. Дрогичин</li>
+                                <li class="region-form__example-search-item">г. Дрогичин</li>
+                            </ul>
+                            <button type="button" id="regionButtonSubmit" class="region-form__btn">Выбрать</button>
+                        </form>
+                    </div>
+
+                </div>
+
             </div>
         </div>
+    </div>
 
     <!-- open modal if user-icon is clicked -->
     <div class="user-modal modal fade" id="userModal" tabindex="-1" role="dialog" aria-labelledby="userModal"
@@ -199,7 +204,7 @@
                 <a href="#" class="header__views demo-icon icon-eye">просмотрено
                     <span class="header__views-count">(1)</span>
                 </a>
-                <a class="header-icon header__user demo-icon icon-user" id="user" href="#!"></a>
+                <button class="header-icon header__user demo-icon icon-user" id="user" href="#!"></button>
                 <a class="header-icon header__like demo-icon icon-heart-circled" id="like" href="#!"></a>
                 <button class="header-icon header__basket demo-icon icon-shop" id="basket"><span id="basketCounter"
                         class="header__basket-counter">0</span>
@@ -493,7 +498,7 @@
             <div class="basket">
                 <div class="basket__wrapper">
 
-                    <ul class="basket-list">
+                    <ul class="basket-list basket__basket-list">
                         <li class="basket-list__item">
                             <img src="./img/products/product-10.jpg"
                                 alt="Маска для кожи вокруг глаз. SNP Bird’s Nest Aqua Eye Patch"
@@ -542,7 +547,7 @@
                         </li>
                     </ul>
 
-                    <ul class="promo-list">
+                    <ul class="promo-list basket__promo-list">
                         <li class="promo-list__item">
                             <p class="promo-list__title">+ Выберите бесплатно к заказу</p>
                             <button class="promo-list__btn">выбрать подарок</button>
@@ -554,7 +559,7 @@
                         </li>
                     </ul>
 
-                    <ul class="contacts">
+                    <ul class="contacts basket__contacts">
                         <li class="contacts__item space-between">
                             <p class="contacts__title">Личные данные</p>
                             <div class="form-input-group contacts__group">
@@ -575,83 +580,181 @@
                         </li>
                     </ul>
 
+                    <div class="basket__left">
+                        <div class="delivery">
+                            <div class="delivery__wrapper">
+                                <p class="delivery__title">Доставка</p>
 
-                    <div class="delivery">
-                        <div class="delivery__wrapper">
-                            <p class="delivery__title">Доставка</p>
-
-                            <div class="form-input-group contacts__group">
-                                <label for="contactCity" class="form-input-group__label required"><span
-                                        class="form-input-group__label-icon">*</span> город</label>
-                                <input placeholder="Минск" required id="contactCity" type="text"
-                                    class="form-input-group__input">
-                            </div>
-
-                            <div class="delivery__radio-buttons">
-                                <div class="form-radio-group mb-2">
-                                    <input checked type="radio" name="deliveryType" value="Курьером до клиента - 6 руб"
-                                        id="delivery1" class="form-radio-group__input">
-                                    <label class="form-radio-group__label" for="delivery1">Курьером до клиента - 6
-                                        руб</label>
+                                <div class="form-input-group delivery__form-input-group">
+                                    <label for="contactCity" class="form-input-group__label required"><span
+                                            class="form-input-group__label-icon">*</span> город</label>
+                                    <input placeholder="Минск" required id="contactCity" type="text"
+                                        class="form-input-group__input">
                                 </div>
-                                <div class="form-radio-group">
-                                    <input type="radio" name="deliveryType" value="До ПВЗ г. Минске - 2 руб"
-                                        id="delivery2" class="form-radio-group__input">
-                                    <label class="form-radio-group__label" for="delivery2">До ПВЗ г. Минске - 2 руб
-                                    </label>
-                                    <small class="form-radio-group__small">Бесплатно при сумме заказа от 30 руб</small>
+
+                                <div class="delivery__radio-buttons">
+                                    <div class="form-radio-group mb-2">
+                                        <input checked type="radio" name="deliveryType"
+                                            value="Курьером до клиента - 6 руб" id="delivery1"
+                                            class="form-radio-group__input">
+                                        <label class="form-radio-group__label" for="delivery1">Курьером до клиента - 6
+                                            руб</label>
+                                    </div>
+                                    <div class="form-radio-group">
+                                        <input type="radio" name="deliveryType" value="До ПВЗ г. Минске - 2 руб"
+                                            id="delivery2" class="form-radio-group__input">
+                                        <label class="form-radio-group__label" for="delivery2">До ПВЗ г. Минске - 2 руб
+                                        </label>
+                                        <small class="form-radio-group__small">Бесплатно при сумме заказа от 30
+                                            руб</small>
+                                    </div>
+                                </div>
+
+                                <p class="time delivery__time">
+                                    <span class="time__title">Время доставки</span>
+                                    <span class="time__descr">Среда, 10 Апреля 10:00-16:00</span>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="address">
+                            <div class="address__wrapper">
+
+                                <div class="form-input-group address__form-group">
+                                    <label for="contactCity" class="form-input-group__label required"><span
+                                            class="form-input-group__label-icon">*</span> Улица</label>
+                                    <input placeholder="Пушкина" required type="text" class="form-input-group__input">
+                                </div>
+
+                                <div class="address__house">
+                                    <div class="form-input-group address__form-group address__form-group-home">
+                                        <label for="contactCity" class="form-input-group__label required"><span
+                                                class="form-input-group__label-icon">*</span> Дом</label>
+                                        <input placeholder="30" required type="text" class="form-input-group__input">
+                                    </div>
+
+                                    <div class="form-input-group address__form-group address__form-group-flat">
+                                        <label for="contactCity" class="form-input-group__label required"><span
+                                                class="form-input-group__label-icon">*</span> Квартира</label>
+                                        <input placeholder="1" required type="text" class="form-input-group__input">
+                                    </div>
+                                </div>
+
+                                <div class="form-input-group address__form-group">
+                                    <label for="contactCity" class="form-input-group__label required"><span
+                                            class="form-input-group__label-icon">*</span> Телефон</label>
+                                    <input placeholder="+375291234567" required type="text"
+                                        class="form-input-group__input">
+                                </div>
+
+                                <div class="form-textarea-group address__form-group address__form-group-comment">
+                                    <label class="form-textarea-group__label" for="contactComment">Комментарий</label>
+                                    <textarea rows="30" class="form-textarea-group__textarea" id="contactComment">
+
+                                                </textarea>
+                                </div>
+
+
+                                <div class="address__text-info">
+                                    <span class="address__text-info-icon">*</span> Поля, обязательные для заполнения
                                 </div>
                             </div>
+                        </div>
+                    </div>
 
-                            <p class="time delivery__time">
-                                <span class="time__title">Время доставки</span>
-                                <span class="time__descr">Среда, 10 Апреля 10:00-16:00</span>
-                            </p>
+                    <div class="basket__right">
+                        <div class="bonus">
+                            <div class="bonus__wrapper">
+                                <p class="bonus__title">Бонусная программа</p>
+                                <p class="bonus__subtitle">Для использования бонусного счета необходимо</p>
+                                <button class="bonus__btn">авторизоваться</button>
 
-                            <!-- <div class="form-input-group">
-                                <label for="contactCity" class="form-input-group__label required"><span
-                                        class="form-input-group__label-icon">*</span>Улица </label>
-                                <input placeholder="Пушкина" required id="contactCity" type="text"
-                                    class="form-input-group__input">
+                                <div class="payment">
+                                    <div class="payment__wrapper">
+                                        <p class="payment__title">Оплата</p>
+
+
+                                        <div class="payment__radio-list">
+
+                                            <div class="form-radio-group payment__form-radio-group border-bottom pb-2">
+                                                <input checked type="radio" name="paymentType"
+                                                    value="Оплатить при получении" id="paytype1"
+                                                    class="form-radio-group__input">
+                                                <label class="form-radio-group__label" for="paytype1">
+                                                    Оплатить при получении
+                                                </label>
+                                            </div>
+
+                                            <div class="payment__radio-list-inner">
+                                                <div class="form-radio-group payment__form-radio-group">
+                                                    <input checked type="radio" name="paymentTypeInner"
+                                                        value="Наличными" id="paytype11"
+                                                        class="form-radio-group__input">
+                                                    <label class="form-radio-group__label" for="paytype11">
+                                                        Наличными
+                                                    </label>
+                                                </div>
+
+                                                <div class="form-radio-group payment__form-radio-group">
+                                                    <input type="radio" name="paymentTypeInner" value="Картой рассрочки"
+                                                        id="paytype12" class="form-radio-group__input">
+                                                    <label class="form-radio-group__label" for="paytype12">
+                                                        Картой рассрочки
+                                                    </label>
+                                                </div>
+
+                                                <div class="form-radio-group payment__form-radio-group">
+                                                    <input type="radio" name="paymentTypeInner"
+                                                        value="Другой банковской картой" id="paytype13"
+                                                        class="form-radio-group__input">
+                                                    <label class="form-radio-group__label" for="paytype13">
+                                                        Другой банковской картой
+                                                    </label>
+                                                </div>
+
+                                                <div class="form-radio-group payment__form-radio-group">
+                                                    <input type="radio" name="paymentTypeInner"
+                                                        value="Подарочным сертификатом" id="paytype14"
+                                                        class="form-radio-group__input">
+                                                    <label class="form-radio-group__label" for="paytype14">
+                                                        Подарочным сертификатом
+                                                    </label>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-radio-group payment__form-radio-group pb-1 border-bottom">
+                                                <input type="radio" name="paymentType" value="Оплатить сейчас онлайн"
+                                                    id="paytype2" class="form-radio-group__input">
+                                                <label class="form-radio-group__label" for="paytype2">
+                                                    Оплатить сейчас онлайн
+                                                </label>
+                                            </div>
+
+                                            <div class="form-radio-group payment__form-radio-group pt-1">
+                                                <input type="radio" name="paymentType" value="Купить в рассрочку"
+                                                    id="paytype3" class="form-radio-group__input">
+                                                <label class="form-radio-group__label" for="paytype3">
+                                                    Купить в рассрочку
+                                                </label>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                </div>
                             </div>
-
-                            <div class="form-input-group">
-                                <label for="contactCity" class="form-input-group__label required"><span
-                                        class="form-input-group__label-icon">*</span>Дом </label>
-                                <input placeholder="30" required id="contactCity" type="text"
-                                    class="form-input-group__input">
-                            </div>
-
-                            <div class="form-input-group">
-                                <label for="contactCity" class="form-input-group__label required"><span
-                                        class="form-input-group__label-icon">*</span>Квартира </label>
-                                <input placeholder="1" required id="contactCity" type="text"
-                                    class="form-input-group__input">
-                            </div>
-
-                            <div class="form-input-group">
-                                <label for="contactCity" class="form-input-group__label required"><span
-                                        class="form-input-group__label-icon">*</span>Телефон </label>
-                                <input placeholder="+ 375 29 123 45 67" required id="contactCity" type="text"
-                                    class="form-input-group__input">
-                            </div>
-
-                            <div class="form-textarea-group">
-                                <textarea name="comment" id="" cols="30" rows="10"></textarea>
-                            </div>
-                            <p class="delivery__bottom-text">Поля, обязательные для заполнения</p> -->
                         </div>
                     </div>
 
 
-
-                    <div class="basket-check">
+                    <div class="basket-check basket__check">
                         <div class="basket-check__wrapper">
                             <p class="basket-check__total-cost">Общая стоимость: 30.20 руб</p>
                             <p class="basket-check__cost-of-delivery">Стоимость доставки: 6.00 руб</p>
                             <p class="basket-check__total-pay">К оплате: 30.20 руб</p>
                         </div>
                     </div>
+
 
                     <div class="basket-control">
                         <div class="basket-control__wrapper">

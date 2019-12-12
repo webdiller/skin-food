@@ -115,7 +115,7 @@
 
                             <div class="region-form__select2 select2">
                                 <select style="width: 100%" class="select2__select js-example-disabled-results">
-                                    <option value="Выбирете город" selected>Выбирете город</option>
+                                    <option disabled value="Введите ваш наеленный пункт" selected>Введите ваш наеленный пункт</option>
                                     <option value="Минск">Минск</option>
                                     <option value="Москва">Москва</option>
                                     <option value="Владивосток">Владивосток</option>
@@ -124,6 +124,11 @@
                                     <option value="Воронеж">Воронеж</option>
                                 </select>
                             </div>
+                            <ul class="region-form__example-search">
+                                <li class="region-form__example-search-item active">г. Дрогичин</li>
+                                <li class="region-form__example-search-item">г. Дрогичин</li>
+                                <li class="region-form__example-search-item">г. Дрогичин</li>
+                            </ul>
                             <button type="button" id="regionButtonSubmit" class="region-form__btn">Выбрать</button>
                         </form>
                     </div>
@@ -199,7 +204,7 @@
                 <a href="#" class="header__views demo-icon icon-eye">просмотрено
                     <span class="header__views-count">(1)</span>
                 </a>
-                <a class="header-icon header__user demo-icon icon-user" id="user" href="#!"></a>
+                <button class="header-icon header__user demo-icon icon-user" id="user" href="#!"></button>
                 <a class="header-icon header__like demo-icon icon-heart-circled" id="like" href="#!"></a>
                 <button class="header-icon header__basket demo-icon icon-shop" id="basket"><span id="basketCounter"
                         class="header__basket-counter">0</span>
@@ -1692,8 +1697,6 @@
 
 
 
-
-
     <div class="slider">
         <div class="slider__wrapper">
 
@@ -1701,35 +1704,35 @@
 
                 <div class="slider-carousel__item item">
                     <img src="./img/slider/slide2.jpg" alt="Слайд" class="slider-carousel__img">
-                    <button class="slider-carousel__btn">Вступить</button>
+                    <!-- <button class="slider-carousel__btn">Вступить</button> -->
                 </div>
                 <div class="slider-carousel__item item">
                     <img src="./img/slider/slide2.jpg" alt="Слайд" class="slider-carousel__img">
-                    <button class="slider-carousel__btn">Вступить</button>
+                    <!-- <button class="slider-carousel__btn">Вступить</button> -->
                 </div>
                 <div class="slider-carousel__item item">
                     <img src="./img/slider/slide2.jpg" alt="Слайд" class="slider-carousel__img">
-                    <button class="slider-carousel__btn">Вступить</button>
+                    <!-- <button class="slider-carousel__btn">Вступить</button> -->
                 </div>
                 <div class="slider-carousel__item item">
                     <img src="./img/slider/slide2.jpg" alt="Слайд" class="slider-carousel__img">
-                    <button class="slider-carousel__btn">Вступить</button>
+                    <!-- <button class="slider-carousel__btn">Вступить</button> -->
                 </div>
                 <div class="slider-carousel__item item">
                     <img src="./img/slider/slide2.jpg" alt="Слайд" class="slider-carousel__img">
-                    <button class="slider-carousel__btn">Вступить</button>
+                    
                 </div>
                 <div class="slider-carousel__item item">
                     <img src="./img/slider/slide2.jpg" alt="Слайд" class="slider-carousel__img">
-                    <button class="slider-carousel__btn">Вступить</button>
+                    <!-- <button class="slider-carousel__btn">Вступить</button> -->
                 </div>
                 <div class="slider-carousel__item item">
                     <img src="./img/slider/slide2.jpg" alt="Слайд" class="slider-carousel__img">
-                    <button class="slider-carousel__btn">Вступить</button>
+                    <!-- <button class="slider-carousel__btn">Вступить</button> -->
                 </div>
                 <div class="slider-carousel__item item">
                     <img src="./img/slider/slide2.jpg" alt="Слайд" class="slider-carousel__img">
-                    <button class="slider-carousel__btn">Вступить</button>
+                    <!-- <button class="slider-carousel__btn">Вступить</button> -->
                 </div>
 
             </div>
@@ -1780,105 +1783,58 @@
         <div class="main__img"></div>
         <div class="main__wrapper">
 
-            <!-- <div class="grid-images">
-                <div class="grid-images__wrapper">
+            <div class="grid-images">
+                <div class="grid-images__wrapper ">
 
                     <div class="grid-images__layout">
                         <a href="#" class="grid-images__head">
                             <p class="grid-images__title grid-images__title-news">НОВИНКИ</p>
                         </a>
-                        <div class="grid-images__item"><img src="" alt="" class="grid-images__img"></div>
-                        <div class="grid-images__item"><img src="" alt="" class="grid-images__img"></div>
-                        <div class="grid-images__item"><img src="" alt="" class="grid-images__img"></div>
+                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-1.jpg" alt=""
+                                class="grid-images__img"></a>
+                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-2.jpg" alt=""
+                                class="grid-images__img"></a>
+                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-3.jpg" alt=""
+                                class="grid-images__img">
+                        </a>
                     </div>
 
                     <div class="grid-images__layout">
                         <a href="#" class="grid-images__head">
                             <p class="grid-images__title grid-images__title-must-have">MUST HAVE</p>
                         </a>
-                        <div class="grid-images__item"><img src="" alt="" class="grid-images__img"></div>
-                        <div class="grid-images__item"><img src="" alt="" class="grid-images__img"></div>
-                        <div class="grid-images__item"><img src="" alt="" class="grid-images__img"></div>
+                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-4.jpg" alt=""
+                                class="grid-images__img"></a>
+                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-5.jpg" alt=""
+                                class="grid-images__img"></a>
+                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-6.jpg" alt=""
+                                class="grid-images__img"></a>
                     </div>
 
                     <div class="grid-images__layout">
                         <a href="#" class="grid-images__head">
                             <p class="grid-images__title grid-images__title-hits">БЕСТСЕЛЛЕРЫ</p>
                         </a>
-                        <div class="grid-images__item"><img src="" alt="" class="grid-images__img"></div>
-                        <div class="grid-images__item"><img src="" alt="" class="grid-images__img"></div>
-                        <div class="grid-images__item"><img src="" alt="" class="grid-images__img"></div>
-                    </div>
-
-                    <div class="grid-images__layout">
-                        <a href="#" class="grid-images__head">
-                            <p class="grid-images__title grid-images__title-promo">АКЦИИ</p>
-                        </a>
-                        <div class="grid-images__item"><img src="" alt="" class="grid-images__img"></div>
-                        <div class="grid-images__item"><img src="" alt="" class="grid-images__img"></div>
-                        <div class="grid-images__item"><img src="" alt="" class="grid-images__img"></div>
-                    </div>
-
-                </div>
-            </div> -->
-
-            <!-- <div class="grid-ex">
-                <div class="grid-ex__layout">
-                    <img src="./img/grid/banner-1.jpg" alt="" class="grid-ex__item">
-                    <img src="./img/grid/banner-1.jpg" alt="" class="grid-ex__item">
-                    <img src="./img/grid/banner-1.jpg" alt="" class="grid-ex__item">
-                    <img src="./img/grid/banner-1.jpg" alt="" class="grid-ex__item">
-                    <img src="./img/grid/banner-1.jpg" alt="" class="grid-ex__item">
-                </div>
-                <div id="example" class="grid-ex__layout">
-                    <img src="./img/grid/banner-2.jpg" alt="" class="grid-ex__item">
-                    <img src="./img/grid/banner-2.jpg" alt="" class="grid-ex__item">
-                    <img src="./img/grid/banner-2.jpg" alt="" class="grid-ex__item">
-                </div>
-                <div class="grid-ex__layout">
-                    <img src="./img/grid/banner-3.jpg" alt="" class="grid-ex__item">
-                    <img src="./img/grid/banner-3.jpg" alt="" class="grid-ex__item">
-                    <img src="./img/grid/banner-3.jpg" alt="" class="grid-ex__item">
-                    <img src="./img/grid/banner-3.jpg" alt="" class="grid-ex__item">
-                    <img src="./img/grid/banner-3.jpg" alt="" class="grid-ex__item">
-                </div>
-            </div> -->
-
-            <div class="grid">
-                <div class="grid-sizer"></div>
-
-                <div class="grid-item">
-                    <a href="catalog.html"><img class="parallax-up" alt="баннер" src="./img/grid/banner-1.jpg" /></a>
-                </div>
-                <div class="grid-item">
-                    <a href="catalog.html"><img alt="баннер" src="./img/grid/banner-2.jpg" /></a>
+                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-7.jpg" alt=""
+                                class="grid-images__img"></a>
+                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-8.jpg" alt=""
+                                class="grid-images__img"></a>
+                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-9.jpg" alt=""
+                                class="grid-images__img"></a>
                 </div>
 
-                <div class="grid-item">
-                    <a href="catalog.html"><img alt="баннер" src="./img/grid/banner-3.jpg" /></a>
+                <div class="grid-images__layout">
+                    <a href="#" class="grid-images__head">
+                        <p class="grid-images__title grid-images__title-promo">АКЦИИ</p>
+                    </a>
+                    <a href="#!" class="grid-images__item"><img src="./img/grid/banner-1.jpg" alt=""
+                            class="grid-images__img"></a>
+                    <a href="#!" class="grid-images__item"><img src="./img/grid/banner-2.jpg" alt=""
+                            class="grid-images__img"></a>
                 </div>
 
-                <div class="grid-item">
-                    <a href="catalog.html"><img alt="баннер" src="./img/grid/banner-6.jpg" /></a>
-                </div>
-                <div class="grid-item">
-                    <a href="catalog.html"><img class="parallax-up" alt="баннер" src="./img/grid/banner-4.jpg" /></a>
-                </div>
-                <div class="grid-item">
-                    <a href="catalog.html"><img alt="баннер" src="./img/grid/banner-5.jpg" /></a>
-                </div>
-
-                <div class="grid-item">
-                    <a href="catalog.html"><img alt="баннер" src="./img/grid/banner-9.jpg" /></a>
-                </div>
-                <div class="grid-item">
-                    <a href="catalog.html"><img alt="баннер" src="./img/grid/banner-8.jpg" /></a>
-                </div>
-                <div class="grid-item">
-                    <a href="catalog.html"><img class="parallax-up" alt="баннер" src="./img/grid/banner-7.jpg" /></a>
-                </div>
             </div>
-
+        </div>
 
         </div>
         <div class="main__bottom">
@@ -1982,6 +1938,7 @@
 
     <!-- CUSTOM AND LIBS -->
     <script src="js/libs.min.js"></script>
+    <script src="libs/rellax.min.js"></script>
     <script src="js/common.js"></script>
 </body>
 

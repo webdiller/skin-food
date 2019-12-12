@@ -243,6 +243,11 @@ $(document).ready(function () {
         // $(".product").focusout(function () {
         //     $(".product").removeClass("focused");
         // });
+
+        // Accepts any class name
+        // var rellax = new Rellax('.rellax', {
+        //     wrapper: '.grid-images'
+        // });
     })());
 
 });

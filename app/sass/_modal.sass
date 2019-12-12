@@ -65,7 +65,7 @@
         max-width: 1065px
         margin: 0 auto
         width: 100%
-        padding: 20px 40px 80px 40px
+        padding: 20px 40px 30px 40px
     &__text-with-icon
         font-size: 14px
         letter-spacing: 0.04em
@@ -96,6 +96,7 @@
     display: flex
     flex-direction: column
     min-height: 300px
+    position: relative
     &__btn
         background: #F78C9F
         border: none
@@ -118,6 +119,19 @@
         margin-bottom: 15px
         font-weight: 700
     &__select2
+    &__example-search
+        margin: 0
+        list-style: none
+        padding: 10px 0 0 10px
+        &.disabled
+            display: none
+        &-item
+            font-size: 14px
+            font-weight: 400
+            &:not(:last-child)
+                margin-bottom: 10px
+            &.active
+                font-weight: 700
 
 .select2
     &__select
@@ -125,7 +139,6 @@
         background: transparent
     .select2-container--open .select2-dropdown--below
         border: none
-
 
 .filter-form
     background: #fff

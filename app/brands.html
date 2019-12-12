@@ -13,55 +13,12 @@
             visibility: hidden;
         }
     </style>
+
     <link rel="stylesheet" type="text/css" href="css/style.min.css" />
 </head>
 
 <body id="bodySelector" class="body-container">
 
-
-    <!-- Modal -->
-    <div class="filter-modal modal fade" id="filterModal" tabindex="-1" role="dialog" aria-labelledby="filterModal"
-        aria-hidden="true">
-        <div class="filter-modal__dialog modal-dialog" role="document">
-            <div class="filter-modal__content modal-content">
-
-                <div class="filter-modal__header">
-                    <div class="filter-modal__wrapper">
-                        <p class="filter-modal__title">Фильтр</p>
-                        <button type="button" class="filter-modal__close close demo-icon icon-cancel-1"
-                            data-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                </div>
-
-                <form class="filter-form">
-                    <div class="filter-form__wrapper">
-                        <ul class="main-filter">
-                            <li class="main-filter__item"><a href="#!" class="main-filter__link">Цена</a></li>
-                            <li class="main-filter__item"><a href="#!" class="main-filter__link">Тип</a></li>
-                            <li class="main-filter__item"><a href="#!" class="main-filter__link">Действие</a></li>
-                            <li class="main-filter__item"><a href="#!" class="main-filter__link">Тип кожи</a></li>
-                            <li class="main-filter__item"><a href="#!" class="main-filter__link">Возраст</a></li>
-                            <li class="main-item">
-                                <a class="main-item__link" href="#!">
-                                    <p class="main-item__title">Время применения</p>
-                                    <span class="main-item__descr">Ночной крем, Дневной крем, Вечерний крем</span>
-                                </a>
-                                <button class="main-item__btn">очитстить</button>
-                                <a href="#!" class="main-item__icon-link demo-icon"></a>
-                            </li>
-                            <li class="main-filter__item"><a href="#!" class="main-filter__link">Активные
-                                    ингредиенты</a></li>
-                        </ul>
-                        <div class="filter-form__buttons">
-                            <button class="filter-form__btn-reset">Сбросить</button>
-                            <button class="filter-form__btn-show">показать</button>
-                        </div>
-                    </div>
-                </form>
-
-            </div>
-        </div>
-    </div>
 
     <div id="region" class="region">
         <div class="region__wrapper">
@@ -119,7 +76,6 @@
             </div>
         </div>
     </div>
-
 
     <!-- open modal if region button is clicked -->
     <div id="regionModal" class="region-modal modal fade" tabindex="-1" role="dialog">
@@ -532,7 +488,9 @@
 
             </div>
         </div>
+
     </header>
+
 
     <div class="navigation">
         <div class="navigation__wrapper">
@@ -1738,305 +1696,265 @@
     </div>
 
 
-    <div class="breadcrumbs">
-        <div class="breadcrumbs__wrapper">
-            <nav class="breadcrumbs-nav">
-                <ul class="breadcrumbs-list">
-                    <li class="breadcrumbs-list__item"><a href="#!" class="breadcrumbs-list__link">Главная</a></li>
-                    <li class="breadcrumbs-list__item"><a href="#!" class="breadcrumbs-list__link"> Лицо</a></li>
-                    <li class="breadcrumbs-list__item"><a href="#!" class="breadcrumbs-list__link"> Очищение</a></li>
-                    <li class="breadcrumbs-list__item"><a href="#!" class="breadcrumbs-list__link"> Очищающий крем</a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-    </div>
-
 
 
     <main class="main">
-        <div class="main__wrapper">
+        <div class="slider slider--brands">
+            <div class="slider__wrapper">
 
-            <div class="products">
+                <div id="sliderCarousel" class="slider-carousel owl-carousel owl-theme">
 
-                <div class="products-head">
-                    <div class="products-head__wrapper">
-
-                        <div class="banner-info">
-                            <div class="banner-info__wrapper clearfix">
-                                <img src="https://static-eu.insales.ru/images/collections/1/7909/1990373/brands_1548324413_APIEU_Logo_800x800.png" alt=",rand image" class="banner-info__img">
-                                <p class="banner-info__title"></p>
-                                <div class="banner-info__description">
-                                    Бренд A'PIEU является дочерним брендом Missha. Прекрасный дизайн, непревзойденное
-                                    качество, демократичные цены! Продукция рассчитана преимущественно для молодой кожи
-                                    от 20 лет. Бережно очищает нежную молодую кожу и защищает от негативных факторов
-                                    окружающей среды.
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- <div class="main-filter">
-                            <div class="main-filter__wrapper">
-                                <div class="select2-group">
-                                    <select style="width: 30%" class="main-filter__select select-dropdown-type">
-                                        <option value="Тип 1">Тип 1</option>
-                                        <option value="Тип 2">Тип 2</option>
-                                        <option value="Тип 3">Тип 3</option>
-                                    </select>
-                                </div>
-                                <div class="select2-group">
-                                    <select style="width: 30%" class="main-filter__select select2-dropdown-action">
-                                        <option value="Действие 1">Действие 1</option>
-                                        <option value="Действие 2">Действие 2</option>
-                                        <option value="Действие 3">Действие 3</option>
-                                    </select>
-                                </div>
-                                <div class="select2-group">
-                                    <select style="width: 30%" class="main-filter__select select2-multiple-type">
-                                        <option value="Тип кожи 1">Тип кожи 1</option>
-                                        <option value="Тип кожи 2">Тип кожи 2</option>
-                                        <option value="Тип кожи 3">Тип кожи 3</option>
-                                    </select>
-                                </div>
-                                <div class="select2-group">
-                                    <select style="width: 30%" class="main-filter__select select2-multiple-type2">
-                                        <option value="Тип кожи 1">Тип кожи 1</option>
-                                        <option value="Тип кожи 2">Тип кожи 2</option>
-                                        <option value="Тип кожи 3">Тип кожи 3</option>
-                                    </select>
-                                </div>
-                                <div class="select2-group">
-                                    <select style="width: 30%" class="main-filter__select select-dropdown-time">
-                                        <option value="Утреннее время">Утреннее время</option>
-                                        <option value="Дневное время">Дневное время</option>
-                                        <option value="Ночное время">Ночное время</option>
-                                    </select>
-                                </div>
-                                <div class="select2-group">
-                                    <select style="width: 30%" class="main-filter__select select-dropdown-ingredients">
-                                        <option value="Ингридиент 1">Ингридиент 1</option>
-                                        <option value="Ингридиент 2">Ингридиент 2</option>
-                                        <option value="Ингридиент 3">Ингридиент 3</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div> -->
-
-                        <!-- <div class="filter-with-tags">
-                            <div class="filter-with-tags__wrapper">
-                                <p class="filter-with-tags__current">очищающий крем</p>
-                                <div class="filter-with-tags__tags">
-                                    <p class="filter-with-tags__title">Смотрите также:</p>
-                                    <a href="#!" class="filter-with-tags__tag">Средство для снятия макияжа глаз</a>
-                                    <a href="#!" class="filter-with-tags__tag">Мицеллярная вода</a>
-                                    <a href="#!" class="filter-with-tags__tag">Очищающий крем</a>
-                                    <a href="#!" class="filter-with-tags__tag">Очищающие масло</a>
-                                    <a href="#!" class="filter-with-tags__tag">Молочко</a>
-                                    <button class="filter-with-tags__btn-show-more">Показать еще</button>
-                                </div>
-                                <div class="filter-with-tags__select2-group select2-group">
-                                    <select style="width: 50%" class="main-filter__select select-dropdown-sort">
-                                        <option value="Сначала популярные">Сначала популярные</option>
-                                        <option value="Новинки">Новинки</option>
-                                        <option value="Премиум">Премиум</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div> -->
-
+                    <div class="slider-carousel__item item">
+                        <img src="./img/slider/slide2.jpg" alt="Слайд" class="slider-carousel__img">
+                        <!-- <button class="slider-carousel__btn">Вступить</button> -->
                     </div>
-                </div>
-
-                <div class="products-list">
-                    <div class="products-list__wrapper">
-
-                        <div id="mydiv" class="product products-list__product" tabindex="-1">
-                            <div style="--bgColor: #EF2B50" data-status="-30 % АКЦИЯ" class="product__body">
-                                <a class="product__link" href="#!">
-                                    <img src="./img/products/product-1.jpg" alt="сыворотка для глаз"
-                                        class="product__img">
-                                </a>
-                                <p class="product__name">hello beauty</p>
-                                <p class="product__descr">Сыворотка для кожи
-                                    вокруг глаз</p>
-                                <div class="product__colors">
-                                    <span style="color: #EF2B50" class="product__colors-color"></span>
-                                    <span style="color: rgb(250, 85, 115)" class="product__colors-color"></span>
-                                    <span style="color: rgb(163, 62, 81)" class="product__colors-color"></span>
-                                    <span style="color: rgb(177, 11, 42)" class="product__colors-color"></span>
-                                </div>
-                                <p class="product__tag">Сыворотка для глаз</p>
-                                <p class="product__price">от 410 до 470 byn</p>
-                                <button class="product__btn-empty">Сообщить о появлении</button>
-                            </div>
-                            <div class="product__footer">
-                                <button class="product__btn-add">в корзину</button>
-                            </div>
-                        </div>
-
-                        <div class="product products-list__product">
-                            <div style="--bgColor: #B970E8" data-status="MUST HAVE" class="product__body">
-                                <a class="product__link" href="#!">
-                                    <img src="./img/products/product-2.jpg" alt="сыворотка для глаз"
-                                        class="product__img">
-                                </a>
-                                <p class="product__name">hello beauty</p>
-                                <p class="product__descr">Сыворотка для кожи
-                                    вокруг глаз</p>
-                                <p class="product__tag">Сыворотка для глаз</p>
-                                <p class="product__price">от 410 до 470 byn</p>
-                                <button class="product__btn-empty">Сообщить о появлении</button>
-                            </div>
-                            <div class="product__footer">
-                                <button class="product__btn-add">в корзину</button>
-                            </div>
-                        </div>
-
-                        <div class="product products-list__product">
-                            <div style="--bgColor: #1CD169" data-status="НОВИНКА" class="product__body">
-                                <a class="product__link" href="#!">
-                                    <img src="./img/products/product-3.jpg" alt="сыворотка для глаз"
-                                        class="product__img">
-                                </a>
-                                <p class="product__name">hello beauty</p>
-                                <p class="product__descr">Сыворотка для кожи
-                                    вокруг глаз</p>
-                                <p class="product__tag">Сыворотка для глаз</p>
-                                <p class="product__price">от 410 до 470 byn</p>
-                                <button class="product__btn-empty">Сообщить о появлении</button>
-                            </div>
-                            <div class="product__footer">
-                                <button class="product__btn-add">в корзину</button>
-                            </div>
-                        </div>
-
-                        <div class="product products-list__product">
-                            <div style="--bgColor: #F1B155" data-status="БЕСТСЕЛЛЕР" class="product__body">
-                                <a class="product__link" href="#!">
-                                    <img src="./img/products/product-4.jpg" alt="сыворотка для глаз"
-                                        class="product__img">
-                                </a>
-                                <p class="product__name">hello beauty</p>
-                                <p class="product__descr">Сыворотка для кожи
-                                    вокруг глаз</p>
-                                <p class="product__tag">Сыворотка для глаз</p>
-                                <p class="product__price">от 410 до 470 byn</p>
-                                <button class="product__btn-empty">Сообщить о появлении</button>
-                            </div>
-                            <div class="product__footer">
-                                <button class="product__btn-add">в корзину</button>
-                            </div>
-                        </div>
-
-                        <div class="product products-list__product">
-                            <div class="product__body">
-                                <a class="product__link" href="#!">
-                                    <img src="./img/products/product-5.jpg" alt="сыворотка для глаз"
-                                        class="product__img">
-                                </a>
-                                <p class="product__name">hello beauty</p>
-                                <p class="product__descr">Сыворотка для кожи
-                                    вокруг глаз</p>
-                                <p class="product__tag">Сыворотка для глаз</p>
-                                <p class="product__price">от 410 до 470 byn</p>
-                                <button class="product__btn-empty">Сообщить о появлении</button>
-                            </div>
-                            <div class="product__footer">
-                                <button class="product__btn-add">в корзину</button>
-                            </div>
-                        </div>
-
-                        <div class="product products-list__product">
-                            <div class="product__body">
-                                <a class="product__link" href="#!">
-                                    <img src="./img/products/product-6.jpg" alt="сыворотка для глаз"
-                                        class="product__img">
-                                </a>
-                                <p class="product__name">hello beauty</p>
-                                <p class="product__descr">Сыворотка для кожи
-                                    вокруг глаз</p>
-                                <p class="product__tag">Сыворотка для глаз</p>
-                                <p class="product__price">от 410 до 470 byn</p>
-                                <button class="product__btn-empty">Сообщить о появлении</button>
-                            </div>
-                            <div class="product__footer">
-                                <button class="product__btn-add">в корзину</button>
-                            </div>
-                        </div>
-
-                        <div class="product products-list__product">
-                            <div class="product__body">
-                                <a class="product__link" href="#!">
-                                    <img src="./img/products/product-7.jpg" alt="сыворотка для глаз"
-                                        class="product__img">
-                                </a>
-                                <p class="product__name">hello beauty</p>
-                                <p class="product__descr">Сыворотка для кожи
-                                    вокруг глаз</p>
-                                <p class="product__tag">Сыворотка для глаз</p>
-                                <p class="product__price">от 410 до 470 byn</p>
-                                <button class="product__btn-empty">Сообщить о появлении</button>
-                            </div>
-                            <div class="product__footer">
-                                <button class="product__btn-add">в корзину</button>
-                            </div>
-                        </div>
-
-                        <div class="product products-list__product">
-                            <div class="product__body">
-                                <a class="product__link" href="#!">
-                                    <img src="./img/products/product-8.jpg" alt="сыворотка для глаз"
-                                        class="product__img">
-                                </a>
-                                <p class="product__name">hello beauty</p>
-                                <p class="product__descr">Сыворотка для кожи
-                                    вокруг глаз</p>
-                                <p class="product__tag">Сыворотка для глаз</p>
-                                <p class="product__price">от 410 до 470 byn</p>
-                                <button class="product__btn-empty">Сообщить о появлении</button>
-                            </div>
-                            <div class="product__footer">
-                                <button class="product__btn-add">в корзину</button>
-                            </div>
-                        </div>
-
+                    <div class="slider-carousel__item item">
+                        <img src="./img/slider/slide2.jpg" alt="Слайд" class="slider-carousel__img">
+                        <!-- <button class="slider-carousel__btn">Вступить</button> -->
                     </div>
-                </div>
-
-                <div class="products-pagination">
-                    <div class="products-pagination__wrapper">
-                        <p class="products-pagination__status">Показано
-                            <span class="products-pagination__status-current">60</span> из
-                            <span class="products-pagination__status-all">250</span>
-                        </p>
-                        <ul class="products-pagination__list">
-                            <li class="products-pagination__item products-pagination__item-arrow"><a href="#!"
-                                    class="products-pagination__link products-pagination__link-icon demo-icon icon-left-open-big"></a>
-                            </li>
-                            <li class="products-pagination__item active"><a href="#!"
-                                    class="products-pagination__link">1</a></li>
-                            <li class="products-pagination__item"><a href="#!" class="products-pagination__link">2</a>
-                            </li>
-                            <li class="products-pagination__item"><a href="#!" class="products-pagination__link">3</a>
-                            </li>
-                            <li class="products-pagination__item"><a href="#!" class="products-pagination__link">4</a>
-                            </li>
-                            <li class="products-pagination__item"><a href="#!" class="products-pagination__link">5</a>
-                            </li>
-                            <li class="products-pagination__item"><a href="#!" class="products-pagination__link">...</a>
-                            </li>
-                            <li class="products-pagination__item"><a href="#!" class="products-pagination__link">15</a>
-                            </li>
-                            <li class="products-pagination__item products-pagination__item-arrow"><a href="#!"
-                                    class="products-pagination__link products-pagination__link-icon demo-icon icon-right-open-big"></a>
-                            </li>
-                        </ul>
+                    <div class="slider-carousel__item item">
+                        <img src="./img/slider/slide2.jpg" alt="Слайд" class="slider-carousel__img">
+                        <!-- <button class="slider-carousel__btn">Вступить</button> -->
                     </div>
+                    <div class="slider-carousel__item item">
+                        <img src="./img/slider/slide2.jpg" alt="Слайд" class="slider-carousel__img">
+                        <!-- <button class="slider-carousel__btn">Вступить</button> -->
+                    </div>
+                    <div class="slider-carousel__item item">
+                        <img src="./img/slider/slide2.jpg" alt="Слайд" class="slider-carousel__img">
+                        <!-- <button class="slider-carousel__btn">Вступить</button> -->
+                    </div>
+                    <div class="slider-carousel__item item">
+                        <img src="./img/slider/slide2.jpg" alt="Слайд" class="slider-carousel__img">
+                        <!-- <button class="slider-carousel__btn">Вступить</button> -->
+                    </div>
+                    <div class="slider-carousel__item item">
+                        <img src="./img/slider/slide2.jpg" alt="Слайд" class="slider-carousel__img">
+                        <!-- <button class="slider-carousel__btn">Вступить</button> -->
+                    </div>
+                    <div class="slider-carousel__item item">
+                        <img src="./img/slider/slide2.jpg" alt="Слайд" class="slider-carousel__img">
+                        <!-- <button class="slider-carousel__btn">Вступить</button> -->
+                    </div>
+
                 </div>
 
             </div>
         </div>
         <div class="main__img"></div>
+        <div class="main__wrapper">
+
+            <ul class="brands main__brands">
+
+                <li class="brands__item">
+                    <a href="#!" class="brands__letter">A</a>
+                    <ul class="result-list brands__result-list">
+                        <li class="result-list__item">
+                            <a href="#!" class="result-list__link">A'pieu</a>
+                        </li>
+                        <li class="result-list__item">
+                            <a href="#!" class="result-list__link">Absolute New York</a>
+                        </li>
+                        <li class="result-list__item">
+                            <a href="#!" class="result-list__link">Adidas</a>
+                        </li>
+                        <li class="result-list__item">
+                            <a href="#!" class="result-list__link">American Crew</a>
+                        </li>
+                        <li class="result-list__item">
+                            <a href="#!" class="result-list__link">Anskin</a>
+                        </li>
+                        <li class="result-list__item">
+                            <a href="#!" class="result-list__link">Aravia Professional</a>
+                        </li>
+                        <li class="result-list__item">
+                            <a href="#!" class="result-list__link">Art-Visage</a>
+                        </li>
+                        <li class="result-list__item">
+                            <a href="#!" class="result-list__link">AVANT-scène</a>
+                        </li>
+                        <li class="result-list__item">
+                            <a href="#!" class="result-list__link">AXE</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="brands__item">
+                    <a href="#!" class="brands__letter">B</a>
+                    <ul class="result-list brands__result-list">
+                        <li class="result-list__item">
+                            <a href="#!" class="result-list__link">A'pieu</a>
+                        </li>
+                        <li class="result-list__item">
+                            <a href="#!" class="result-list__link">Absolute New York</a>
+                        </li>
+                        <li class="result-list__item">
+                            <a href="#!" class="result-list__link">Adidas</a>
+                        </li>
+                        <li class="result-list__item">
+                            <a href="#!" class="result-list__link">American Crew</a>
+                        </li>
+                        <li class="result-list__item">
+                            <a href="#!" class="result-list__link">Anskin</a>
+                        </li>
+                        <li class="result-list__item">
+                            <a href="#!" class="result-list__link">Aravia Professional</a>
+                        </li>
+                        <li class="result-list__item">
+                            <a href="#!" class="result-list__link">Art-Visage</a>
+                        </li>
+                        <li class="result-list__item">
+                            <a href="#!" class="result-list__link">AVANT-scène</a>
+                        </li>
+                        <li class="result-list__item">
+                            <a href="#!" class="result-list__link">A'pieu</a>
+                        </li>
+                        <li class="result-list__item">
+                            <a href="#!" class="result-list__link">Absolute New York</a>
+                        </li>
+                        <li class="result-list__item">
+                            <a href="#!" class="result-list__link">Adidas</a>
+                        </li>
+                        <li class="result-list__item">
+                            <a href="#!" class="result-list__link">American Crew</a>
+                        </li>
+                        <li class="result-list__item">
+                            <a href="#!" class="result-list__link">Anskin</a>
+                        </li>
+                        <li class="result-list__item">
+                            <a href="#!" class="result-list__link">Aravia Professional</a>
+                        </li>
+                        <li class="result-list__item">
+                            <a href="#!" class="result-list__link">Art-Visage</a>
+                        </li>
+                        <li class="result-list__item">
+                            <a href="#!" class="result-list__link">AVANT-scène</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="brands__item">
+                    <a href="#!" class="brands__letter">B</a>
+                    <ul class="result-list brands__result-list">
+                        <li class="result-list__item">
+                            <a href="#!" class="result-list__link">A'pieu</a>
+                        </li>
+                        <li class="result-list__item">
+                            <a href="#!" class="result-list__link">Absolute New York</a>
+                        </li>
+                        <li class="result-list__item">
+                            <a href="#!" class="result-list__link">Adidas</a>
+                        </li>
+                        <li class="result-list__item">
+                            <a href="#!" class="result-list__link">American Crew</a>
+                        </li>
+                        <li class="result-list__item">
+                            <a href="#!" class="result-list__link">A'pieu</a>
+                        </li>
+                        <li class="result-list__item">
+                            <a href="#!" class="result-list__link">Absolute New York</a>
+                        </li>
+                        <li class="result-list__item">
+                            <a href="#!" class="result-list__link">Adidas</a>
+                        </li>
+                        <li class="result-list__item">
+                            <a href="#!" class="result-list__link">American Crew</a>
+                        </li>
+                        <li class="result-list__item">
+                            <a href="#!" class="result-list__link">Anskin</a>
+                        </li>
+                        <li class="result-list__item">
+                            <a href="#!" class="result-list__link">American Crew</a>
+                        </li>
+                        <li class="result-list__item">
+                            <a href="#!" class="result-list__link">Anskin</a>
+                        </li>
+                        <li class="result-list__item">
+                            <a href="#!" class="result-list__link">Aravia Professional</a>
+                        </li>
+                        <li class="result-list__item">
+                            <a href="#!" class="result-list__link">Art-Visage</a>
+                        </li>
+                        <li class="result-list__item">
+                            <a href="#!" class="result-list__link">AVANT-scène</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="brands__item">
+                    <a href="#!" class="brands__letter">B</a>
+                    <ul class="result-list brands__result-list">
+                        <li class="result-list__item">
+                            <a href="#!" class="result-list__link">A'pieu</a>
+                        </li>
+                        <li class="result-list__item">
+                            <a href="#!" class="result-list__link">Absolute New York</a>
+                        </li>
+                        <li class="result-list__item">
+                            <a href="#!" class="result-list__link">Adidas</a>
+                        </li>
+                        <li class="result-list__item">
+                            <a href="#!" class="result-list__link">American Crew</a>
+                        </li>
+                        <li class="result-list__item">
+                            <a href="#!" class="result-list__link">Anskin</a>
+                        </li>
+                        <li class="result-list__item">
+                            <a href="#!" class="result-list__link">Aravia Professional</a>
+                        </li>
+                        <li class="result-list__item">
+                            <a href="#!" class="result-list__link">Art-Visage</a>
+                        </li>
+                        <li class="result-list__item">
+                            <a href="#!" class="result-list__link">AVANT-scène</a>
+                        <li class="result-list__item">
+                            <a href="#!" class="result-list__link">Anskin</a>
+                        </li>
+                        <li class="result-list__item">
+                            <a href="#!" class="result-list__link">Aravia Professional</a>
+                        </li>
+                        <li class="result-list__item">
+                            <a href="#!" class="result-list__link">Art-Visage</a>
+                        </li>
+                        <li class="result-list__item">
+                            <a href="#!" class="result-list__link">AVANT-scène</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="brands__item">
+                    <a href="#!" class="brands__letter">B</a>
+                    <ul class="result-list brands__result-list">
+                        <li class="result-list__item">
+                            <a href="#!" class="result-list__link">A'pieu</a>
+                        </li>
+                        <li class="result-list__item">
+                            <a href="#!" class="result-list__link">Absolute New York</a>
+                        </li>
+                        <li class="result-list__item">
+                            <a href="#!" class="result-list__link">Adidas</a>
+                        </li>
+                        <li class="result-list__item">
+                            <a href="#!" class="result-list__link">American Crew</a>
+                        </li>
+                        <li class="result-list__item">
+                            <a href="#!" class="result-list__link">Anskin</a>
+                        </li>
+                        <li class="result-list__item">
+                            <a href="#!" class="result-list__link">Aravia Professional</a>
+                        </li>
+                        <li class="result-list__item">
+                            <a href="#!" class="result-list__link">Art-Visage</a>
+                        </li>
+                        <li class="result-list__item">
+                            <a href="#!" class="result-list__link">AVANT-scène</a>
+                        </li>
+                    </ul>
+                </li>
+
+            </ul>
+
+        </div>
     </main>
 
 

@@ -42,24 +42,10 @@
             opacity: 0
     &-icon
         color: #F78C9F
-        font-size: 23px
+        font-size: 32px
         position: relative
         text-align: center
         +reset-btn
-        &::after
-            opacity: 0
-            height: 0
-            display: block
-            left: 0
-            right: 0
-            height: 1.5px
-            transition: all .3s ease
-            content: ""
-            position: absolute
-            width: 100%
-            margin: 0 4px
-            bottom: -6px
-            margin: 0
         &:hover
             color: $hoverpink
             &::after
@@ -142,7 +128,7 @@
             margin-left: 0
     &__basket
         position: relative
-        font-size: 26px
+        font-size: 32px
         &-counter
             position: absolute
             bottom: -4px
@@ -194,7 +180,7 @@
 
 .list-with-title
     &__title
-        font-size: 15px
+        font-size: 14px
         line-height: 22px
         letter-spacing: .04em
         color: #1a1a1a
@@ -205,7 +191,7 @@
         padding: 0
         margin: 0
         list-style: none
-        padding-bottom: 10px
+        padding-bottom: 20px
     &__item
         &:not(:last-child)
             padding-bottom: 10px
@@ -253,8 +239,24 @@
         text-align: center
         padding: 6px 20px
         transition: all .3s ease
+        border-bottom: 1px solid transparent
+        position: relative
+        &::before
+            content: ""
+            position: absolute
+            bottom: -1px
+            left: 0
+            right: 0
+            width: 75%
+            margin: 0 auto
+            height: 1px
+            background: #fff
+            opacity: 0
+            transition: all .3s ease
         &:hover
             color: #fff
+            &::before
+                opacity: 1
     &__inner-navigation
         z-index: 200
         transition: all .4s ease
@@ -476,12 +478,14 @@
             position: absolute
             margin-left: 0
             right: -10px
-            top: 0
+            top: 1px
             border: none
             transition: all .3s ease
         &--contacts
             color: rgb(136, 136, 136)
             margin-right: 90px
+            &::after
+                top: 1px
     &__city
         display: flex
         align-items: center

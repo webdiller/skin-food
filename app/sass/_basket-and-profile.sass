@@ -1,5 +1,33 @@
 .basket
     &__wrapper
+        display: flex
+        flex-wrap: wrap
+        align-items: flex-start
+    &__basket-list
+        flex-basis: 100%
+        width: 100%
+    &__promo-list
+        flex-basis: 100%
+        width: 100%
+    &__contacts
+        flex-basis: 100%
+        width: 100%
+    &__delivery
+    &__address
+    &__bonus
+    &__check
+        flex-basis: 100%
+        width: 100%
+        border-top: 1px solid #e7e7e7
+    &__payment
+        flex-basis: 100%
+        width: 100%
+    &__left
+        flex-basis: 50%
+        width: 50%
+    &__right
+        flex-basis: 50%
+        width: 50%
 
 .basket-list
     display: flex
@@ -115,12 +143,13 @@
 
 .form-input-group
     position: relative
-    height: 37px
+    height: 40px
     &__label
         position: absolute
-        top: 4px
+        top: 3px
         left: 15px
-        font-size: 7px
+        font-weight: 400
+        font-size: 10px
         margin-bottom: 0
         letter-spacing: 0.04em
         text-transform: uppercase
@@ -128,17 +157,46 @@
         &-icon
             color: #f78c9f
     &__input
-        text-transform: capitalize
+        text-transform: none
         border: 1px solid #ADADAD
         box-sizing: border-box
         border-radius: 4px
-        font-size: 11px
+        font-size: 12px
         letter-spacing: 0.04em
         color: #4B4B4B
         height: 100%
         width: 100%
-        padding: 8px 15px 3px 15px
+        padding: 8px 15px 0 15px
         font-weight: 700
+
+.form-textarea-group
+    position: relative
+    height: 40px
+    &__label
+        position: absolute
+        top: 3px
+        left: 15px
+        font-weight: 400
+        font-size: 10px
+        margin-bottom: 0
+        letter-spacing: 0.04em
+        text-transform: uppercase
+        color: #AEAEAE
+        &-icon
+            color: #f78c9f
+    &__textarea
+        text-transform: none
+        border: 1px solid #ADADAD
+        box-sizing: border-box
+        border-radius: 4px
+        font-size: 12px
+        letter-spacing: 0.04em
+        color: #4B4B4B
+        height: 100%
+        width: 100%
+        padding: 14px 15px 0 15px
+        font-weight: 700
+        resize: none
 
 .contacts
     display: flex
@@ -160,8 +218,7 @@
     &__title
         flex-basis: 100%
         width: 100%
-        font-size: 14px
-        line-height: 207.06%
+        font-size: 16px
         letter-spacing: 0.04em
         color: #1E1E1F
         font-weight: 700
@@ -258,13 +315,13 @@
         &.flex-end
             justify-content: flex-end
     &__title
-        font-size: 10px
+        font-size: 14px
         letter-spacing: 0.04em
         color: #1E1E1F
         margin-right: 20px
         font-weight: 700
     &__btn
-        font-size: 9px
+        font-size: 14px
         text-align: center
         letter-spacing: 0.04em
         text-transform: uppercase
@@ -274,11 +331,11 @@
         background:
         background: #F78C9F
         border-radius: 4px
-        max-width: 130px
-        height: 30px
+        min-width: 176px
+        min-height: 40px
         font-weight: 700
     &__subtitle
-        font-size: 8px
+        font-size: 14px
         line-height: 12px
         letter-spacing: 0.04em
         text-transform: uppercase
@@ -291,7 +348,7 @@
         border: 1px solid #ADADAD
         box-sizing: border-box
         border-radius: 4px
-        font-size: 11px
+        font-size: 14px
         padding: 0 6px
         text-transform: uppercase
         font-weight: 700
@@ -301,16 +358,18 @@
 
 .time
     &__title
-        display: block
-        font-size: 11px
+        display: inline-block
+        font-size: 16px
         letter-spacing: 0.04em
         color: #4B4B4B
+        font-weight: 700
+        margin-right: 10px
     &__descr
-        display: block
-        font-size: 11px
+        display: inline-block
+        font-size: 14px
+        font-weight: 700
         letter-spacing: 0.04em
         color: #aeaeae
-        display: block
 
 .delivery
     &__wrapper
@@ -323,15 +382,15 @@
         margin-bottom: 18px
     &__select
         padding: 15px 0
+    &__form-input-group
+        width: 65%
     &__radio-buttons
         padding: 15px 0
     &__time
-        padding-bottom: 20px
+        padding: 10px 0 0 0
     &__bottom-text
-        font-size: 7px
-        line-height: 146.16%
+        font-size: 14px
         letter-spacing: 0.04em
-        text-transform: uppercase
         font-weight: 700
         color: #AEAEAE
 
@@ -361,7 +420,7 @@
         position: relative
         padding-left: 25px
         font-weight: 700
-        font-size: 11px
+        font-size: 14px
         margin-bottom: 0
         color: #AEAEAE
         &::before
@@ -393,8 +452,76 @@
     &__small
         display: block
         padding-left: 30px
-        font-size: 11px
+        font-size: 12px
         line-height: 140.07%
         letter-spacing: 0.04em
         color: #AEAEAE
         font-weight: 700
+
+.address
+    &__wrapper
+        display: flex
+        justify-content: space-between
+        flex-wrap: wrap
+    &__house
+        flex-basis: 90%
+        width: 90%
+        display: flex
+    &__form-group
+        width: 65%
+        width: 65%
+        margin-bottom: 15px
+        &-home
+            width: 35%
+            flex-basis: 35%
+            margin-right: 10px
+        &-flat
+            width: 35%
+            flex-basis: 35%
+        &-comment
+            height: 100px
+    &__text-info
+        font-size: 14px
+        line-height: 146.16%
+        letter-spacing: 0.04em
+        color: #aeaeae
+        font-weight: 700
+        padding-bottom: 15px
+        &-icon
+            color: #F78C9F
+
+.bonus
+    &__wrapper
+        padding: 20px 15px
+    &__title
+        font-size: 14px
+        letter-spacing: .04em
+        color: #1e1e1f
+        font-weight: 700
+        margin-bottom: 18px
+    &__subtitle
+        font-size: 13px
+        letter-spacing: .04em
+        color: #3f3f3f
+        margin-right: 20px
+        font-weight: 700
+    &__btn
+        color: #f78c9f
+        font-size: 13px
+        font-weight: 700
+        padding: 0 0 25px 0
+        text-decoration: underline
+        +reset-btn
+
+.payment
+    &__wrapper
+    &__title
+        font-size: 14px
+        color: #1e1e1f
+        margin-bottom: 18px
+        font-weight: 700
+        padding-top: 20px
+        border-top: 1px solid #E7E7E7
+    &__radio-list
+        &-inner
+            padding: 10px 0 10px 20px
