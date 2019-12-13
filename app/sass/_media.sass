@@ -27,7 +27,34 @@
 			margin-right: 10px
 
 @media only screen and (max-width : 992px)
-
+	// user-cabinet 992px
+	.user-data__person
+		order: 1
+		flex-basis: 100%
+		width: 100%
+	.person__img-and-blank
+		justify-content: flex-start
+	.person__form-input-group
+		flex-basis: 100%
+		width: 100%
+	.user-data__bonus-account
+		order: 2
+	.user-data__addrres
+		order: 3
+	.person__title
+		padding: 0 0 25px 30px
+		border-bottom: 0
+	.bonus-account__title
+		padding: 0 0 25px 30px
+		border-bottom: 0
+	.person__title,
+	.user-addrres__title,
+	.bonus-account__title
+		font-size: 13px
+	.main-filter
+		display: none
+	.filter-with-tags
+		display: none
 	// product
 	.products-list__product
 		display: flex
@@ -132,6 +159,24 @@
 		flex-basis: 90%
 
 @media only screen and (max-width : 768px)
+	.region-modal__list
+		padding-top: 0
+	.region-modal__title
+		text-transform: unset
+	// select2 768px
+	.region-form .select2-container .select2-selection--single
+		height: 30px
+	.region-form .select2-container--default .select2-selection--single .select2-selection__rendered
+		line-height: 30px
+		font-size: 10px
+	.region-form .select2-container--default .select2-selection--single .select2-selection__arrow:before
+		font-size: 14px
+	.region-form__example-search-item.active
+		font-size: 10px
+	.header-icon
+		font-size: 23px
+	.header__basket
+		font-size: 28px
 	.grid-images__head
 		display: none
 	.brands__item

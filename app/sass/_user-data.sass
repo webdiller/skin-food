@@ -1,0 +1,277 @@
+// user-data start
+
+.form-gender-group
+    position: relative
+    &__input
+        z-index: -1
+        opacity: 0
+        background: #fff
+        box-sizing: border-box
+        font-size: 11px
+        width: 0
+        &:focus
+            + .form-gender-group__label
+                &::before
+                    outline: 1px solid #007bff
+        &:checked
+            + .form-gender-group__label
+                color: #eb849a
+                &::after
+                    opacity: 1
+                    visibility: visible
+    &__label
+        position: relative
+        padding-left: 30px
+        font-weight: 400
+        font-size: 14px
+        margin-bottom: 0
+        color: #AEAEAE
+        transition: all .6s ease
+        &::before
+            position: absolute
+            font-family: "fontello"
+            box-sizing: border-box
+            top: 50%
+            transform: translateY(-50%)
+            left: 0
+            font-size: 23px
+    &.man
+        .form-gender-group__label::before
+            content: "\0f062"
+    &.female
+        .form-gender-group__label::before
+            content: "\0f063"
+
+.select-with-label
+    position: relative
+    height: 40px
+    &__select
+    &__label
+        position: absolute
+        top: 3px
+        left: 15px
+        font-weight: 400
+        font-size: 10px
+        margin-bottom: 0
+        letter-spacing: .04em
+        text-transform: uppercase
+        color: #aeaeae
+    .select2-container .select2-selection--single
+        height: 40px
+    .select2-container--default .select2-selection--single .select2-selection__rendered
+        text-transform: none
+        box-sizing: border-box
+        border-radius: 4px
+        font-size: 12px
+        letter-spacing: .04em
+        color: rgb(136, 136, 136)
+        height: 100%
+        width: 100%
+        padding: 8px 0 15px 15px
+        font-weight: 700
+    .select2-container--default .select2-selection--single .select2-selection__arrow
+        height: 100%
+        right: 0
+        -ms-flex-pack: end
+        justify-content: flex-end
+        -ms-flex-align: center
+        align-items: center
+        -ms-flex-pack: center
+        justify-content: center
+    .select2-container--default .select2-selection--single .select2-selection__arrow:before
+        position: absolute
+        font-family: fontello
+        content: "\e802"
+        color: #aeaeae
+
+.form-datepicker-group
+    &__label
+        color: #818181
+        font-weight: 700
+        margin-right: 15px
+        font-size: 14px
+
+.user-data
+    background: #fff
+    border-radius: 5px
+    box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.3)
+    &__wrapper
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+        padding: 55px 0
+    &__person
+        flex-basis: 47.5%
+        width: 47.5%
+    &__addrres
+        flex-basis: 47.5%
+        width: 47.5%
+    &__bonus-account
+        flex-basis: 100%
+        width: 100%
+
+.person
+    &__wrapper
+        display: flex
+        flex-wrap: wrap
+        align-items: flex-start
+    &__title
+        font-size: 14px
+        color: rgb(26, 26, 26)
+        font-weight: 700
+        line-height: 2.357
+        flex-basis: 100%
+        width: 100%
+        padding: 0 0 25px 45px
+        margin-bottom: 25px
+        border-bottom: 1px solid #adadad
+    &__img-wrapper
+        flex-basis: 80px
+        width: 80px
+        margin: 0 50px 0 45px
+        display: flex
+        align-items: flex-start
+        justify-content: center
+    &__pesron-default-img
+        font-size: 100px
+        color: #eb849a
+        &.icon-user:before
+            margin: 0
+    &__important-data
+        padding: 0 0 70px 0
+        flex-basis: 63%
+        display: inline-flex
+        flex-wrap: wrap
+        justify-content: space-between
+        align-items: center
+    &__form-input-group
+        flex-basis: 49%
+        width: 49%
+        margin-bottom: 15px
+    &__birthday-and-gender
+        margin-top: 30px
+    &__gender
+        display: flex
+        white-space: nowrap
+        margin-bottom: 30px
+        &-title
+            font-size: 10px
+            color: rgb(129, 129, 129)
+            font-weight: 700
+            margin-right: 15px
+            font-size: 14px
+        &-group
+            margin-right: 20px
+    &__datepicker-group
+        margin-bottom: 25px
+    &__controll
+        display: flex
+        align-items: center
+    &__btn-change
+        padding: 0
+        font-size: 14px
+        color: rgb(235, 132, 154)
+        font-weight: bold
+        text-decoration: underline
+        white-space: nowrap
+        border: none
+        outline: none
+        background: transparent
+        &:not(:last-child)
+            margin-right: 35px
+    &__img-and-blank
+        flex-basis: 100%
+        width: 100%
+        display: flex
+        justify-content: space-between
+        align-items: flex-start
+
+.user-addrres
+    &__title
+        font-size: 14px
+        color: rgb(26, 26, 26)
+        font-weight: 700
+        line-height: 2.357
+        flex-basis: 100%
+        width: 100%
+        padding: 0 0 25px 0
+        margin-bottom: 25px
+        border-bottom: 1px solid #adadad
+    &__select-country
+        flex-basis: 48%
+        width: 48%
+        margin-bottom: 15px
+    &__select-city
+        flex-basis: 48%
+        width: 48%
+        margin-bottom: 15px
+    &__street
+        flex-basis: 130px
+        width: 130px
+        margin-bottom: 15px
+    &__house
+        flex-basis: 90px
+        width: 90px
+        margin-bottom: 15px
+    &__body
+        flex-basis: 90px
+        width: 90px
+        margin-bottom: 15px
+    &__flat
+        flex-basis: 90px
+        width: 90px
+        margin-bottom: 15px
+    .select2-container
+        width: 100% !important
+    &__form
+        padding-right: 45px
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+    &__bottom
+        margin-top: 140px
+        margin-left: auto
+    &__btn
+        border-radius: 5px
+        background-color: rgb(235, 132, 154)
+        font-size: 14px
+        color: rgb(255, 255, 255)
+        font-weight: bold
+        text-transform: uppercase
+        padding: 12px 5px
+        border: none
+        outline: none
+        max-height: 40px
+        min-width: 210px
+
+.bonus-account
+    &__wrapper
+        display: flex
+        flex-wrap: wrap
+    &__title
+        font-size: 14px
+        color: rgb(26, 26, 26)
+        font-weight: 700
+        line-height: 2.357
+        flex-basis: 100%
+        width: 100%
+        padding: 0 0 25px 45px
+        margin-bottom: 25px
+        border-bottom: 1px solid #adadad
+        flex-basis: 100%
+        width: 100%
+    &__form-input-group
+    .form-input-group__input
+        background: #f5f5f5 
+    &__cart
+        flex-basis: 190px
+        width: 190px
+        margin-right: 10px
+        margin-left: 45px
+    &__balans
+        flex-basis: 130px
+        width: 130px
+        margin-right: 10px
+    &__discount
+        flex-basis: 130px
+        width: 130px

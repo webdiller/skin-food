@@ -162,23 +162,6 @@ $(document).ready(function () {
     }());
 
 
-    const masonryGridModule = (function () {
-        try {
-            // external js: masonry.pkgd.js, imagesloaded.pkgd.js
-            // init Masonry after all images have loaded
-            var $grid = $('.grid').imagesLoaded(function () {
-                $grid.masonry({
-                    itemSelector: '.grid-item',
-                    percentPosition: true,
-                    columnWidth: '.grid-sizer'
-                });
-            });
-        } catch (error) {
-            console.log(error);
-        }
-    }());
-
-
     const fixedHeaderModule = (function () {
         try {
             $(window).scroll(function () {
@@ -199,7 +182,6 @@ $(document).ready(function () {
 
     const select2Module = (function () {
 
-
         var $disabledResults = $(".js-example-disabled-results");
         $disabledResults.select2();
 
@@ -213,6 +195,14 @@ $(document).ready(function () {
             minimumResultsForSearch: Infinity
         });
 
+        $('.select2-multiple-type').select2({
+            multiple: true
+        });
+
+        $('.select2-multiple-type2').select2({
+            multiple: true
+        });
+
         $('.select-dropdown-time').select2({
             placeholder: 'Время применения',
             minimumResultsForSearch: Infinity
@@ -223,8 +213,27 @@ $(document).ready(function () {
             minimumResultsForSearch: Infinity
         });
 
+        $('.select-dropdown-sort').select2({
+            placeholder: 'Сначала популярные',
+            minimumResultsForSearch: Infinity
+        });
+
+        $('.select-dropdown-sort-mobile').select2({
+            placeholder: 'Сначала популярные',
+            minimumResultsForSearch: Infinity
+        });
+
+        var $disabledResults = $(".select-with-label .select-with-label__select");
+        $disabledResults.select2();
+
 
     }());
+
+    const mainFilterModule = (function () {
+        $('#mainFilterHide').click(function () {
+            $(this).closest('#mainFilter').fadeOut();
+        });
+    }())
 
     const productTabIndexModule = ((function () {
         // var products = $('.product');

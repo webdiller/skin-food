@@ -30,7 +30,7 @@
     &.modal
     &__dialog
         background: #fff
-        max-width: 1010px
+        max-width: 1025px
         margin: 100px auto 0 auto
         border-radius: 4px
     &__content
@@ -55,6 +55,7 @@
         font-weight: 700
         letter-spacing: 0.04em
         color: #1e1e1f
+        text-transform: uppercase
     &__close
         color: #F78C9F
         font-size: 19px
@@ -65,7 +66,7 @@
         max-width: 1065px
         margin: 0 auto
         width: 100%
-        padding: 20px 40px 30px 40px
+        padding: 20px 40px 60px 40px
     &__text-with-icon
         font-size: 14px
         letter-spacing: 0.04em
@@ -88,14 +89,15 @@
     &__list
         flex-basis: 60%
         width: 60%
+        padding-top: 10px
     &__form
         flex-basis: 40%
         width: 40%
+        max-height: 200px
 
 .region-form
     display: flex
     flex-direction: column
-    min-height: 300px
     position: relative
     &__btn
         background: #F78C9F
@@ -104,7 +106,7 @@
         min-width: 176.41px
         min-height: 40px
         border-radius: 4px
-        margin-top: auto
+        margin-top: 30px
         display: block
         margin-right: auto
         font-weight: 700
@@ -119,6 +121,21 @@
         margin-bottom: 15px
         font-weight: 700
     &__select2
+    .select2-container--default .select2-selection--single .select2-selection__arrow
+        height: 100%
+        right: 0
+        justify-content: flex-end
+        align-items: center
+        justify-content: center
+        content: ""
+        &::before
+            position: absolute
+            font-family: fontello
+            content: "\e800"
+    .select2-container .select2-selection--single
+        height: 40px
+    .select2-container--default .select2-selection--single .select2-selection__rendered
+        line-height: 40px
     &__example-search
         margin: 0
         list-style: none
@@ -150,6 +167,7 @@
         min-height: 89vh
         display: flex
         flex-direction: column
+        position: relative
     &__buttons
         margin-top: auto
         text-align: right
@@ -184,7 +202,7 @@
         min-height: 45px
         display: inline-block
 
-.main-filter
+.modal-filter
     +reset-ul
     &__item
         padding: 16px 0
@@ -204,7 +222,7 @@
             color: #f78c9f
             font-family: "fontello"
 
-.main-item
+.modal-item
     display: flex
     border-bottom: 1px solid #e7e7e7
     height: 57.8px
@@ -270,6 +288,7 @@
         font-size: 17px
         letter-spacing: 0.04em
         text-transform: uppercase
+        font-weight: 700
         color: #FFFFFF
         margin-left: auto
     &__close

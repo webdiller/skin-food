@@ -26,6 +26,8 @@
 .icon-trash-empty:before { content: '\e818'; } /* '' */
 .icon-shop:before { content: '\e835'; } /* '' */
 .icon-crown:before { content: '\e844'; } /* '' */
+.icon-user-male:before { content: '\f062'; } /* '' */
+.icon-user-female:before { content: '\f063'; } /* '' */
 .icon-menu:before { content: '\f0c9'; } /* '' */
 .icon-shopping-bag:before { content: '\f290'; } /* '' */
 .icon-percent:before { content: '\f295'; } /* '' */

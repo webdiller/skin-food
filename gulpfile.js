@@ -49,9 +49,6 @@ gulp.task(`scripts`, function () {
         `${PATH}/libs/bootstrap/bootstrap.min.js`,
         `${PATH}/libs/bootstrap/popper.min.js`,
         `${PATH}/libs/owl-carousel/owl.carousel.min.js`,
-        `${PATH}/libs/imagesloaded.pkgd.js`,
-        `${PATH}/libs/masonry.pkgd.min.js`,
-        `${PATH}/libs/lozad.js`,
         `${PATH}/libs/ofi.min.js`,
     ])
         .pipe(concat(`libs.min.js`))

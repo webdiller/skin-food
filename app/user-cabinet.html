@@ -13,7 +13,6 @@
             visibility: hidden;
         }
     </style>
-
     <link rel="stylesheet" type="text/css" href="css/style.min.css" />
 </head>
 
@@ -1623,153 +1622,183 @@
 
 
 
-    <div class="slider">
-        <div class="slider__wrapper">
-
-            <div id="sliderCarousel" class="slider-carousel owl-carousel owl-theme">
-
-                <div class="slider-carousel__item item">
-                    <img src="./img/slider/slide2.jpg" alt="Слайд" class="slider-carousel__img">
-                    <!-- <button class="slider-carousel__btn">Вступить</button> -->
-                </div>
-                <div class="slider-carousel__item item">
-                    <img src="./img/slider/slide2.jpg" alt="Слайд" class="slider-carousel__img">
-                    <!-- <button class="slider-carousel__btn">Вступить</button> -->
-                </div>
-                <div class="slider-carousel__item item">
-                    <img src="./img/slider/slide2.jpg" alt="Слайд" class="slider-carousel__img">
-                    <!-- <button class="slider-carousel__btn">Вступить</button> -->
-                </div>
-                <div class="slider-carousel__item item">
-                    <img src="./img/slider/slide2.jpg" alt="Слайд" class="slider-carousel__img">
-                    <!-- <button class="slider-carousel__btn">Вступить</button> -->
-                </div>
-                <div class="slider-carousel__item item">
-                    <img src="./img/slider/slide2.jpg" alt="Слайд" class="slider-carousel__img">
-
-                </div>
-                <div class="slider-carousel__item item">
-                    <img src="./img/slider/slide2.jpg" alt="Слайд" class="slider-carousel__img">
-                    <!-- <button class="slider-carousel__btn">Вступить</button> -->
-                </div>
-                <div class="slider-carousel__item item">
-                    <img src="./img/slider/slide2.jpg" alt="Слайд" class="slider-carousel__img">
-                    <!-- <button class="slider-carousel__btn">Вступить</button> -->
-                </div>
-                <div class="slider-carousel__item item">
-                    <img src="./img/slider/slide2.jpg" alt="Слайд" class="slider-carousel__img">
-                    <!-- <button class="slider-carousel__btn">Вступить</button> -->
-                </div>
-
-            </div>
-
-        </div>
-    </div>
-
-
-    <div class="swiper">
-        <div class="swiper__wrapper">
-
-            <!-- carousel for mobile -->
-            <!-- <div id="swiperCarouselMobile" class="swiper-carousel swiper-carousel--mobile owl-carousel owl-theme">
-                <div class="swiper-carousel__slide item">
-                    <a href="#!" class="swiper-carousel__item active">НОВИНКИ</a>
-                    <a href="#!" class="swiper-carousel__item">БЕСТСЕЛЛЕРЫ</a>
-                </div>
-                <div class="swiper-carousel__slide item">
-                    <a href="#!" class="swiper-carousel__item">АКЦИИ</a>
-                    <a href="#!" class="swiper-carousel__item">популярное</a>
-                </div>
-                <div class="swiper-carousel__slide item">
-                    <a href="#!" class="swiper-carousel__item">премиум</a>
-                    <a href="#!" class="swiper-carousel__item">распродажи</a>
-                </div>
-            </div> -->
-
-            <!-- carousel for desktop -->
-            <!-- <div id="swiperCarouselDesktop" class="swiper-carousel swiper-carousel--desktop owl-carousel owl-theme">
-                <div class="swiper-carousel__slide item">
-                    <a href="#!" class="swiper-carousel__item active">НОВИНКИ</a>
-                    <a href="#!" class="swiper-carousel__item">БЕСТСЕЛЛЕРЫ</a>
-                    <a href="#!" class="swiper-carousel__item">АКЦИИ</a>
-                </div>
-                <div class="swiper-carousel__slide item">
-                    <a href="#!" class="swiper-carousel__item">популярное</a>
-                    <a href="#!" class="swiper-carousel__item">премиум</a>
-                    <a href="#!" class="swiper-carousel__item">распродажи</a>
-                </div>
-            </div> -->
-
-        </div>
-    </div>
-
-
-
-    <main class="main">
-        <div class="main__img"></div>
+    <main class="main main--user-cabinet">
         <div class="main__wrapper">
 
-            <div class="grid-images">
-                <div class="grid-images__wrapper ">
+            <div class="user-data">
+                <div class="user-data__wrapper">
 
-                    <div class="grid-images__layout" style="transform: translate3d(0px, 0px, 0px);">
-                        <a href="#" class="grid-images__head">
-                            <p class="grid-images__title grid-images__title-news">НОВИНКИ</p>
-                        </a>
-                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-1.jpg" alt=""
-                                class="grid-images__img"></a>
-                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-2.jpg" alt=""
-                                class="grid-images__img"></a>
-                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-3.jpg" alt=""
-                                class="grid-images__img">
-                        </a>
+                    <!-- 1 -->
+                    <div class="person user-data__person">
+                        <form class="person__wrapper">
+
+                            <p class="person__title">ПЕРСОНАЛЬНАЯ ИНФОРМАЦИЯ</p>
+
+                            <div class="person__img-and-blank">
+                                <div class="person__img-wrapper">
+                                    <img srcaltclass="person__img">
+                                    <span class="person__pesron-default-img demo-icon icon-user"></span>
+                                </div>
+
+                                <div class="person__important-data">
+                                    <div class="form-input-group person__form-input-group">
+                                        <label for="contactName" class="form-input-group__label">Имя</label>
+                                        <input id="contactName" type="text" placeholder="Мария"
+                                            class="form-input-group__input">
+                                    </div>
+
+                                    <div class="form-input-group person__form-input-group">
+                                        <label for="contactLastName" class="form-input-group__label">Фамилия</label>
+                                        <input id="contactLastName" type="text" placeholder="Нефедова"
+                                            class="form-input-group__input">
+                                    </div>
+
+                                    <div class="form-input-group person__form-input-group">
+                                        <label for="contactEmail" class="form-input-group__label "><span
+                                                class="form-input-group__label-icon">*</span> e-mail</label>
+                                        <input id="contactEmail" type="email" placeholder="example@gmail.com"
+                                            class="form-input-group__input">
+                                    </div>
+
+                                    <div class="form-input-group person__form-input-group">
+                                        <label for="contactCity" class="form-input-group__label "><span
+                                                class="form-input-group__label-icon">*</span> Телефон</label>
+                                        <input placeholder="+375291234567" type="text" class="form-input-group__input">
+                                    </div>
+
+                                    <div class="person__birthday-and-gender">
+                                        <div class="form-datepicker-group person__datepicker-group">
+                                            <label class="form-datepicker-group__label" for="">Дата рождения</label>
+                                        </div>
+
+                                        <div class="person__gender">
+                                            <p class="person__gender-title">Пол</p>
+
+                                            <div class="form-gender-group person__gender-group man">
+                                                <input checked="" type="radio" name="genderType" value="Мужской"
+                                                    id="man" class="form-gender-group__input">
+                                                <label class="form-gender-group__label" for="man">Мужской</label>
+                                            </div>
+
+                                            <div class="form-gender-group person__gender-group female">
+                                                <input checked="" type="radio" name="genderType" value="Женский"
+                                                    id="male" class="form-gender-group__input">
+                                                <label class="form-gender-group__label" for="male">Женский</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="person__controll">
+                                        <button type="button" class="person__btn-change">Изменить пароль</button>
+                                        <button type="button" class="person__btn-change">Изменить почту</button>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                        </form>
+
                     </div>
 
-                    <div class="grid-images__layout" style="transform: translate3d(0px, 0px, 0px);">
-                        <a href="#" class="grid-images__head">
-                            <p class="grid-images__title grid-images__title-must-have">MUST HAVE</p>
-                        </a>
-                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-4.jpg" alt=""
-                                class="grid-images__img"></a>
-                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-5.jpg" alt=""
-                                class="grid-images__img"></a>
-                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-6.jpg" alt=""
-                                class="grid-images__img"></a>
+                    <!-- 2 -->
+                    <div class="user-addrres user-data__addrres">
+                        <div class="user-addrres__wrapper">
+
+                            <p class="user-addrres__title">АДРЕС ДОСТАВКИ</p>
+
+                            <form class="user-addrres__form">
+                                <div class="user-addrres__select-country">
+                                    <div class="select-with-label">
+                                        <select width="100%" id="country"
+                                            class="user-addrres__select-country select-with-label__select">
+                                            <option value="Беларусь" selected>Беларусь</option>
+                                            <option value="Минск">Россия</option>
+                                            <option value="Москва">Украина</option>
+                                            <option value="Владивосток">Канада</option>
+                                            <option value="Калининград">США</option>
+                                            <option value="Калининград">Мексика</option>
+                                            <option value="Воронеж">Аргентира</option>
+                                        </select>
+                                        <label for="country" class="select-with-label__label">Страна</label>
+                                    </div>
+                                </div>
+
+                                <div class="user-addrres__select-city">
+                                    <div class="select-with-label">
+                                        <select width="100%" id="city"
+                                            class="user-addrres__select-city select-with-label__select">
+                                            <option value="Беларусь" selected>Москва</option>
+                                            <option value="Минск">Воронеж</option>
+                                            <option value="Москва">Москва</option>
+                                            <option value="Владивосток">Владивосток</option>
+                                            <option value="Калининград">Калининград</option>
+                                            <option value="Калининград">Калининград</option>
+                                            <option value="Воронеж">Воронеж</option>
+                                        </select>
+                                        <label for="city" class="select-with-label__label">ГОРОД</label>
+                                    </div>
+                                </div>
+
+                                <div class="user-addrres__street form-input-group">
+                                    <label for="contactCity" class="form-input-group__label "><span
+                                            class="form-input-group__label-icon">*</span> Улица</label>
+                                    <input placeholder="Пушкина" type="text" class="form-input-group__input">
+                                </div>
+
+                                <div class="user-addrres__house form-input-group">
+                                    <label for="contactCity" class="form-input-group__label "><span
+                                            class="form-input-group__label-icon">*</span> Дом</label>
+                                    <input placeholder="30" type="text" class="form-input-group__input">
+                                </div>
+
+                                <div class="user-addrres__body form-input-group">
+                                    <label for="contactCity" class="form-input-group__label "><span
+                                            class="form-input-group__label-icon">*</span> Корпус</label>
+                                    <input placeholder="30" type="text" class="form-input-group__input">
+                                </div>
+
+                                <div class="user-addrres__flat form-input-group">
+                                    <label for="contactCity" class="form-input-group__label "><span
+                                            class="form-input-group__label-icon">*</span> Квартира</label>
+                                    <input placeholder="1" type="text" class="form-input-group__input">
+                                </div>
+
+                                <div class="user-addrres__bottom">
+                                    <button type="button" class="user-addrres__btn">сохранить изменения</button>
+                                </div>
+                            </form>
+
+                        </div>
                     </div>
 
-                    <div class="grid-images__layout" style="transform: translate3d(0px, 0px, 0px);">
-                        <a href="#" class="grid-images__head">
-                            <p class="grid-images__title grid-images__title-hits">БЕСТСЕЛЛЕРЫ</p>
-                        </a>
-                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-7.jpg" alt=""
-                                class="grid-images__img"></a>
-                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-8.jpg" alt=""
-                                class="grid-images__img"></a>
-                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-9.jpg" alt=""
-                                class="grid-images__img"></a>
-                    </div>
+                    <!-- 3 -->
+                    <div class="bonus-account user-data__bonus-account">
+                        <div class="bonus-account__wrapper">
 
-                    <div class="grid-images__layout" style="transform: translate3d(0px, 0px, 0px);">
-                        <a href="#" class="grid-images__head">
-                            <p class="grid-images__title grid-images__title-promo">АКЦИИ</p>
-                        </a>
-                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-1.jpg" alt=""
-                                class="grid-images__img"></a>
-                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-2.jpg" alt=""
-                                class="grid-images__img"></a>
+                            <p class="bonus-account__title">БОНУСНЫЙ СЧЕТ</p>
+
+                            <div class="form-input-group bonus-account__form-input-group bonus-account__cart">
+                                <label for="contactName" class="form-input-group__label">НОМЕР БОНУСНОЙ КАРТЫ</label>
+                                <input readonly id="contactName" type="text" placeholder="220104"
+                                    class="form-input-group__input">
+                            </div>
+                            <div class="form-input-group bonus-account__form-input-group bonus-account__balans">
+                                <label for="contactName" class="form-input-group__label">ВАШ БАЛЛАНС</label>
+                                <input readonly id="contactName" type="text" placeholder="150.00 бонусов"
+                                    class="form-input-group__input">
+                            </div>
+                            <div class="form-input-group bonus-account__form-input-group bonus-account__discount">
+                                <label for="contactName" class="form-input-group__label">СКИДКА</label>
+                                <input readonly id="contactName" type="text" placeholder="5%"
+                                    class="form-input-group__input">
+                            </div>
+                        </div>
                     </div>
 
                 </div>
-            </div>
 
-        </div>
-        <div class="main__bottom">
-            <p class="site-title">SKIN <span class="header__title-heart demo-icon icon-heart"></span> FOOD
-            </p>
-            <span class="site-description main__description">
-                laboratory
-            </span>
-        </div>
+            </div>
     </main>
 
 
@@ -1862,66 +1891,8 @@
         </div>
     </div>
 
-    <!-- CUSTOM AND LIBS -->
     <script src="js/libs.min.js"></script>
     <script src="js/common.js"></script>
-    <style>
-        .grid-images__layout {
-            height: fit-content;
-            transition: all .5s;
-        }
-
-        .main__wrapper {
-            overflow: hidden;
-        }
-    </style>
-    <script>
-        try {
-            $(document).ready(function () {
-                var all = document.querySelectorAll(".grid-images__wrapper .grid-images__layout");
-                var minMax = [];
-                for (var i = 0; i < document.querySelectorAll(".grid-images__wrapper .grid-images__layout").length; i++) {
-                    minMax[i] = document.querySelectorAll(".grid-images__wrapper .grid-images__layout")[i].offsetHeight;
-                }
-                var MinH = minMax.reduce(function (a, b) {
-                    return Math.min(a, b);
-                });
-
-                document.querySelector(".grid-images__wrapper").style.height = MinH + "px";
-
-                window.onscroll = function (e) {
-                    var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-                    var height = document.querySelector(".grid-images__wrapper").offsetHeight;
-
-                    for (var i = 0; i < all.length; i++) {
-                        if (scrollTop > 400) {
-
-                            var off = 0;
-
-                            if (scrollTop > 700) {
-                                off = -(((parseInt(all[i].offsetHeight) - MinH) / height) * (scrollTop));
-                                if (off <= -(parseInt(all[i].offsetHeight) - MinH)) continue;
-                            }
-                            else
-                                off = -(((parseInt(all[i].offsetHeight) - MinH) / height) * (scrollTop - 400));
-
-                            if (parseInt(all[i].offsetHeight) == MinH) continue;
-
-                            console.log(parseInt(all[i].style.transform.split(",")[1].replace("px", "").replace(" ", "")) + ":" + -(parseInt(all[i].offsetHeight) - MinH));
-
-                            all[i].style.transform = "translate3d(0px, " + parseInt(off) + "px, 0px)";
-                        }
-                        else {
-                            all[i].style.transform = "translate3d(0px, 0px, 0px)";
-                        }
-                    }
-
-                }
-            });
-        } catch (error) {
-            console.log(error);
-        }
-    </script>
 </body>
 
 </html>

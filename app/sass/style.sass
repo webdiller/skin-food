@@ -421,6 +421,124 @@ a:hover
         padding: 15px
         border-radius: 5px
         background-color: rgb(255, 255, 255)
+        display: flex
+        flex-wrap: wrap
+        align-items: center
+    &__select2-group
+        min-width: 210px
+        margin-bottom: 15px
+        margin-right: 35px
+    .select2-container--default .select2-selection--single .select2-selection__arrow
+        height: 100%
+        right: 0
+        justify-content: flex-end
+        align-items: center
+        justify-content: center
+        content: "1"
+        &::before
+            position: absolute
+            font-family: fontello
+            content: "\e802"
+            color: #aeaeae
+    .select2-container--default .select2-selection--multiple .select2-selection__choice
+        background: #ffdde4
+        border: none
+    .select2-container--default .select2-selection--multiple .select2-selection__choice
+        position: relative
+        padding-right: 25px
+    .select2-container--default .select2-selection--multiple .select2-selection__choice__remove
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+        right: 5px
+        font-size: 22px
+        color: #eb849a
+    &__checkbox-group
+    &__bottom
+        flex-basis: 100%
+        width: 100%
+        display: flex
+        align-items: center
+    &__btn-submit
+        min-width: 170px
+        min-height: 35px
+        line-height: 35px
+        text-align: center
+        border-radius: 5px
+        background-color: rgb(235, 132, 154)
+        font-size: 14px
+        color: rgb(255, 255, 255)
+        font-weight: bold
+        text-transform: uppercase
+        border: 0
+        outline: 04
+        margin-right: 35px
+    &__btn-reset
+        font-size: 14px
+        color: rgb(235, 132, 154)
+        text-decoration: underline
+        line-height: 2.357
+        text-align: center
+        +reset-btn
+    &__btn-hide
+        font-size: 14px
+        color: rgb(115, 115, 115)
+        text-decoration: underline
+        line-height: 2.357
+        text-align: center
+        margin-left: auto
+
+.checkbox-group
+    position: relative
+    height: 35px
+    &__input
+        z-index: -1
+        opacity: 0
+        background: #fff
+        box-sizing: border-box
+        font-size: 11px
+        width: 0
+        &:focus
+            + .checkbox-group__label
+                &::before
+                    border: 1px solid #007bff
+        &:checked
+            + .checkbox-group__label
+                transition: all .5s ease
+                color: #4B4B4B
+                &::after
+                    opacity: 1
+                    visibility: visible
+    &__label
+        position: relative
+        font-weight: 700
+        font-size: 14px
+        margin-bottom: 0
+        color: #AEAEAE
+        padding-right: 30px
+        &::before
+            content: ""
+            position: absolute
+            width: 18px
+            height: 18px
+            border: 1px solid #ADADAD
+            box-sizing: border-box
+            border-radius: 2px
+            right: 0
+            transition: all .2s ease
+        &::after
+            opacity: 0
+            transition: all .2s ease
+            visibility: hidden
+            content: ""
+            position: absolute
+            width: 13px
+            height: 13px
+            background: #F78C9F
+            box-sizing: border-box
+            border-radius: 2px
+            right: 2.5px
+            top: 2.5px
 
 .banner-info
     &__wrapper
@@ -448,6 +566,7 @@ a:hover
         text-align: left
 
 .filter-with-tags
+    box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.3)
     border-radius: 5px
     background-color: rgb(255, 255, 255)
     &__wrapper
@@ -477,10 +596,69 @@ a:hover
     &__btn-show-more
         color: #f78c9f
         font-size: 14px
-        font-weight: 700
+        font-weight: 400
         text-decoration: underline
         +reset-btn
     &__select2-group
+        .select2-container
+            min-width: 190px
+        .select2-container--default .select2-selection--single .select2-selection__arrow
+            height: 100%
+            right: 0
+            justify-content: flex-end
+            align-items: center
+            justify-content: center
+            content: "1"
+            &::before
+                position: absolute
+                font-family: fontello
+                content: "\e802"
+                color: #aeaeae
+        .select2-container--default .select2-selection--single
+            border: none
+        .select2-container--default .select2-selection--single .select2-selection__rendered
+            padding-left: 0
+
+.mobile-filter
+    &__wrapper
+        display: flex
+        align-items: center
+        justify-content: space-between
+        padding: 20px 0
+    &__select2-group
+        .select2-container--default .select2-selection--single
+            border: none
+            background: transparent
+            font-weight: 700
+        .select2-container--default .select2-selection--single .select2-selection__arrow
+            height: 100%
+            right: 0
+            justify-content: flex-end
+            align-items: center
+            justify-content: center
+            border: none
+            &::before
+                position: absolute
+                font-family: fontello
+                content: "\e802"
+                color: #000
+    &__btn
+        font-size: 14px
+        line-height: 29px
+        display: flex
+        align-items: center
+        border: none
+        outline: none
+        min-width: 160px
+        min-height: 30px
+        text-align: center
+        display: inline-block
+        font-weight: 400
+        letter-spacing: 0.04em
+        text-transform: uppercase
+        color: #FFFFFF
+        background: #F78C9F
+        border-radius: 4px
 
 .products-list
     &__wrapper
@@ -606,11 +784,18 @@ a:hover
         border-radius: 4px
         font-size: 14px
         border: none
+        min-width: 140px
+        max-height: 30px
+        line-height: 30px
         outline: none
         letter-spacing: 0.04em
         text-transform: uppercase
         color: #FFFFFF
-        padding: 8px 30px 8px 30px
+        white-space: nowrap
+        text-align: center
+        &.added
+            font-size: 11px
+            background: #C9C9C9
 
 .products-pagination
     border-radius: 5px
@@ -828,5 +1013,6 @@ a:hover
 @import "header"
 @import "modal"
 @import "basket-and-profile"
+@import "user-data"
 @import "footer"
 @import "media"
