@@ -204,7 +204,7 @@
                 <a href="#" class="header__views demo-icon icon-eye">просмотрено
                     <span class="header__views-count">(1)</span>
                 </a>
-                <button class="header-icon header__user demo-icon icon-user" id="user" href="#!"></button>
+                <button class="header-icon header__user demo-icon icon-user" id="user"></button>
                 <a class="header-icon header__like demo-icon icon-heart-circled" id="like" href="#!"></a>
                 <button class="header-icon header__basket demo-icon icon-shop" id="basket"><span id="basketCounter"
                         class="header__basket-counter">0</span>
@@ -1632,140 +1632,140 @@
                     <div class="person user-data__person">
                         <form class="person__wrapper">
 
-                            <p class="person__title">ПЕРСОНАЛЬНАЯ ИНФОРМАЦИЯ</p>
+                            <p class="person__title">Персональная информация</p>
 
-                            <div class="person__img-and-blank">
-                                <div class="person__img-wrapper">
-                                    <img srcaltclass="person__img">
-                                    <span class="person__pesron-default-img demo-icon icon-user"></span>
+                            <!-- 1-1 -->
+                            <div class="person__img-wrapper">
+                                <img src="https://images.pexels.com/photos/3305186/pexels-photo-3305186.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="" class="person__img">
+                                <!-- <span class="person__pesron-default-img demo-icon icon-user"></span> -->
+                            </div>
+                            <!-- 1-2 -->
+                            <div class="person__important-data">
+                                <div class="form-input-group person__form-input-group">
+                                    <label for="contactName" class="form-input-group__label">Имя</label>
+                                    <input id="contactName" type="text" placeholder="Мария"
+                                        class="form-input-group__input">
                                 </div>
 
-                                <div class="person__important-data">
-                                    <div class="form-input-group person__form-input-group">
-                                        <label for="contactName" class="form-input-group__label">Имя</label>
-                                        <input id="contactName" type="text" placeholder="Мария"
-                                            class="form-input-group__input">
+                                <div class="form-input-group person__form-input-group">
+                                    <label for="contactLastName" class="form-input-group__label">Фамилия</label>
+                                    <input id="contactLastName" type="text" placeholder="Нефедова"
+                                        class="form-input-group__input">
+                                </div>
+
+                                <div class="form-input-group person__form-input-group">
+                                    <label for="contactEmail" class="form-input-group__label "><span
+                                            class="form-input-group__label-icon">*</span> e-mail</label>
+                                    <input id="contactEmail" type="email" placeholder="example@gmail.com"
+                                        class="form-input-group__input">
+                                </div>
+
+                                <div class="form-input-group person__form-input-group">
+                                    <label for="contactCity" class="form-input-group__label "><span
+                                            class="form-input-group__label-icon">*</span> Телефон</label>
+                                    <input placeholder="+375291234567" type="text" class="form-input-group__input">
+                                </div>
+                            </div>
+                            <!-- 1-3 -->
+                            <div class="person__birthday-and-gender">
+                                <div class="form-datepicker-group person__datepicker-group">
+                                    <label class="form-datepicker-group__label" for="">Дата рождения</label>
+                                </div>
+
+                                <div class="person__gender">
+                                    <p class="person__gender-title">Пол</p>
+
+                                    <div class="form-gender-group person__gender-group man">
+                                        <input checked="" type="radio" name="genderType" value="Мужской" id="man"
+                                            class="form-gender-group__input">
+                                        <label class="form-gender-group__label" for="man">Мужской</label>
                                     </div>
 
-                                    <div class="form-input-group person__form-input-group">
-                                        <label for="contactLastName" class="form-input-group__label">Фамилия</label>
-                                        <input id="contactLastName" type="text" placeholder="Нефедова"
-                                            class="form-input-group__input">
-                                    </div>
-
-                                    <div class="form-input-group person__form-input-group">
-                                        <label for="contactEmail" class="form-input-group__label "><span
-                                                class="form-input-group__label-icon">*</span> e-mail</label>
-                                        <input id="contactEmail" type="email" placeholder="example@gmail.com"
-                                            class="form-input-group__input">
-                                    </div>
-
-                                    <div class="form-input-group person__form-input-group">
-                                        <label for="contactCity" class="form-input-group__label "><span
-                                                class="form-input-group__label-icon">*</span> Телефон</label>
-                                        <input placeholder="+375291234567" type="text" class="form-input-group__input">
-                                    </div>
-
-                                    <div class="person__birthday-and-gender">
-                                        <div class="form-datepicker-group person__datepicker-group">
-                                            <label class="form-datepicker-group__label" for="">Дата рождения</label>
-                                        </div>
-
-                                        <div class="person__gender">
-                                            <p class="person__gender-title">Пол</p>
-
-                                            <div class="form-gender-group person__gender-group man">
-                                                <input checked="" type="radio" name="genderType" value="Мужской"
-                                                    id="man" class="form-gender-group__input">
-                                                <label class="form-gender-group__label" for="man">Мужской</label>
-                                            </div>
-
-                                            <div class="form-gender-group person__gender-group female">
-                                                <input checked="" type="radio" name="genderType" value="Женский"
-                                                    id="male" class="form-gender-group__input">
-                                                <label class="form-gender-group__label" for="male">Женский</label>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="person__controll">
-                                        <button type="button" class="person__btn-change">Изменить пароль</button>
-                                        <button type="button" class="person__btn-change">Изменить почту</button>
+                                    <div class="form-gender-group person__gender-group female">
+                                        <input checked="" type="radio" name="genderType" value="Женский" id="male"
+                                            class="form-gender-group__input">
+                                        <label class="form-gender-group__label" for="male">Женский</label>
                                     </div>
                                 </div>
                             </div>
-
-
-
+                            <!-- 1-4 -->
+                            <div class="person__controll">
+                                <button type="button" class="person__btn-change">Изменить пароль</button>
+                                <button type="button" class="person__btn-change">Изменить почту</button>
+                            </div>
                         </form>
-
                     </div>
 
                     <!-- 2 -->
-                    <div class="user-addrres user-data__addrres">
-                        <div class="user-addrres__wrapper">
+                    <div class="user-address user-data__address">
+                        <div class="user-address__wrapper">
 
-                            <p class="user-addrres__title">АДРЕС ДОСТАВКИ</p>
+                            <p class="user-address__title">Адрес доставки</p>
 
-                            <form class="user-addrres__form">
-                                <div class="user-addrres__select-country">
-                                    <div class="select-with-label">
-                                        <select width="100%" id="country"
-                                            class="user-addrres__select-country select-with-label__select">
-                                            <option value="Беларусь" selected>Беларусь</option>
-                                            <option value="Минск">Россия</option>
-                                            <option value="Москва">Украина</option>
-                                            <option value="Владивосток">Канада</option>
-                                            <option value="Калининград">США</option>
-                                            <option value="Калининград">Мексика</option>
-                                            <option value="Воронеж">Аргентира</option>
-                                        </select>
-                                        <label for="country" class="select-with-label__label">Страна</label>
+                            <form class="user-address__form">
+
+                                <div class="user-address__country-and-city">
+                                    <div class="user-address__select-country">
+                                        <div class="select-with-label">
+                                            <select style="width:100%" id="country"
+                                                class="user-address__select-country select-with-label__select">
+                                                <option value="Беларусь" selected>Беларусь</option>
+                                                <option value="Минск">Россия</option>
+                                                <option value="Москва">Украина</option>
+                                                <option value="Владивосток">Канада</option>
+                                                <option value="Калининград">США</option>
+                                                <option value="Калининград">Мексика</option>
+                                                <option value="Воронеж">Аргентира</option>
+                                            </select>
+                                            <label for="country" class="select-with-label__label">Страна</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="user-address__select-city">
+                                        <div class="select-with-label">
+                                            <select style="width:100%" id="city"
+                                                class="user-address__select-city select-with-label__select">
+                                                <option value="Беларусь" selected>Москва</option>
+                                                <option value="Минск">Воронеж</option>
+                                                <option value="Москва">Москва</option>
+                                                <option value="Владивосток">Владивосток</option>
+                                                <option value="Калининград">Калининград</option>
+                                                <option value="Калининград">Калининград</option>
+                                                <option value="Воронеж">Воронеж</option>
+                                            </select>
+                                            <label for="city" class="select-with-label__label">ГОРОД</label>
+                                        </div>
                                     </div>
                                 </div>
 
-                                <div class="user-addrres__select-city">
-                                    <div class="select-with-label">
-                                        <select width="100%" id="city"
-                                            class="user-addrres__select-city select-with-label__select">
-                                            <option value="Беларусь" selected>Москва</option>
-                                            <option value="Минск">Воронеж</option>
-                                            <option value="Москва">Москва</option>
-                                            <option value="Владивосток">Владивосток</option>
-                                            <option value="Калининград">Калининград</option>
-                                            <option value="Калининград">Калининград</option>
-                                            <option value="Воронеж">Воронеж</option>
-                                        </select>
-                                        <label for="city" class="select-with-label__label">ГОРОД</label>
-                                    </div>
-                                </div>
-
-                                <div class="user-addrres__street form-input-group">
+                                <div class="user-address__street form-input-group">
                                     <label for="contactCity" class="form-input-group__label "><span
                                             class="form-input-group__label-icon">*</span> Улица</label>
                                     <input placeholder="Пушкина" type="text" class="form-input-group__input">
                                 </div>
 
-                                <div class="user-addrres__house form-input-group">
-                                    <label for="contactCity" class="form-input-group__label "><span
-                                            class="form-input-group__label-icon">*</span> Дом</label>
-                                    <input placeholder="30" type="text" class="form-input-group__input">
+                                <div class="user-address__select-house">
+                                    <div class="user-address__house form-input-group">
+                                        <label for="contactCity" class="form-input-group__label "><span
+                                                class="form-input-group__label-icon">*</span> Дом</label>
+                                        <input placeholder="30" type="text" class="form-input-group__input">
+                                    </div>
+
+                                    <div class="user-address__body form-input-group">
+                                        <label for="contactCity" class="form-input-group__label "><span
+                                                class="form-input-group__label-icon">*</span> Корпус</label>
+                                        <input placeholder="30" type="text" class="form-input-group__input">
+                                    </div>
+
+                                    <div class="user-address__flat form-input-group">
+                                        <label for="contactCity" class="form-input-group__label "><span
+                                                class="form-input-group__label-icon">*</span> Квартира</label>
+                                        <input placeholder="1" type="text" class="form-input-group__input">
+                                    </div>
                                 </div>
 
-                                <div class="user-addrres__body form-input-group">
-                                    <label for="contactCity" class="form-input-group__label "><span
-                                            class="form-input-group__label-icon">*</span> Корпус</label>
-                                    <input placeholder="30" type="text" class="form-input-group__input">
-                                </div>
-
-                                <div class="user-addrres__flat form-input-group">
-                                    <label for="contactCity" class="form-input-group__label "><span
-                                            class="form-input-group__label-icon">*</span> Квартира</label>
-                                    <input placeholder="1" type="text" class="form-input-group__input">
-                                </div>
-
-                                <div class="user-addrres__bottom">
-                                    <button type="button" class="user-addrres__btn">сохранить изменения</button>
+                                <div class="user-address__bottom">
+                                    <button type="button" class="user-address__btn">сохранить изменения</button>
                                 </div>
                             </form>
 
@@ -1776,22 +1776,25 @@
                     <div class="bonus-account user-data__bonus-account">
                         <div class="bonus-account__wrapper">
 
-                            <p class="bonus-account__title">БОНУСНЫЙ СЧЕТ</p>
+                            <p class="bonus-account__title">Бонусный счет</p>
 
-                            <div class="form-input-group bonus-account__form-input-group bonus-account__cart">
-                                <label for="contactName" class="form-input-group__label">НОМЕР БОНУСНОЙ КАРТЫ</label>
-                                <input readonly id="contactName" type="text" placeholder="220104"
-                                    class="form-input-group__input">
-                            </div>
-                            <div class="form-input-group bonus-account__form-input-group bonus-account__balans">
-                                <label for="contactName" class="form-input-group__label">ВАШ БАЛЛАНС</label>
-                                <input readonly id="contactName" type="text" placeholder="150.00 бонусов"
-                                    class="form-input-group__input">
-                            </div>
-                            <div class="form-input-group bonus-account__form-input-group bonus-account__discount">
-                                <label for="contactName" class="form-input-group__label">СКИДКА</label>
-                                <input readonly id="contactName" type="text" placeholder="5%"
-                                    class="form-input-group__input">
+                            <div class="bonus-account__fields">
+                                <div class="form-input-group bonus-account__form-input-group bonus-account__cart">
+                                    <label for="contactName" class="form-input-group__label">НОМЕР БОНУСНОЙ
+                                        КАРТЫ</label>
+                                    <input readonly id="contactName" type="text" placeholder="220104"
+                                        class="form-input-group__input">
+                                </div>
+                                <div class="form-input-group bonus-account__form-input-group bonus-account__balans">
+                                    <label for="contactName" class="form-input-group__label">ВАШ БАЛЛАНС</label>
+                                    <input readonly id="contactName" type="text" placeholder="150.00 бонусов"
+                                        class="form-input-group__input">
+                                </div>
+                                <div class="form-input-group bonus-account__form-input-group bonus-account__discount">
+                                    <label for="contactName" class="form-input-group__label">СКИДКА</label>
+                                    <input readonly id="contactName" type="text" placeholder="5%"
+                                        class="form-input-group__input">
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -1799,6 +1802,8 @@
                 </div>
 
             </div>
+
+        </div>
     </main>
 
 

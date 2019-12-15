@@ -40,6 +40,18 @@ a:hover
     flex-direction: column
     &.disable-y
         overflow-y: hidden
+    &.overlay
+        position: relative
+        &::before
+            transition: all .3s ease
+            content: ""
+            position: absolute
+            top: 0
+            right: 0
+            left: 0
+            bottom: 0
+            width: 100%
+            height: 100%
 
 .site
     &-title
@@ -871,31 +883,57 @@ a:hover
         flex-basis: 24%
         width: 24%
     &__head
-        text-align: center
-        height: 60px
-        display: flex
-        justify-content: center
-        align-items: center
-        border-top-right-radius: 5px
-        border-top-left-radius: 5px
-        background: #fde8ed
         position: relative
-        top: 5px
+        transition: all .3s ease
+        &-wrapper
+            display: flex
+            justify-content: space-between
+            text-align: center
+            height: 60px
+            max-width: 1065px
+            margin: 0 auto
+        &.fixed
+            top: 74px
+            left: 0
+            right: 0
+            position: fixed
+            z-index: 100
+            background: #eb849a
+            .grid-images__title
+                background: transparent
+            .grid-images__head-wrapper
+                padding: 0 20px
+            .grid-images__link
+                color: #fff
+                font-weight: 700
+                padding-left: 0
+            .grid-images__link::before
+                content: ""
     &__title
-        font-size: 14px
+        flex-basis: 24%
+        width: 24%
+        border-top-left-radius: 5px
+        border-top-right-radius: 5px
+        background: #fde8ed
         color: rgb(26, 26, 26)
-        line-height: 2.357
-        position: relative
-        padding-left: 45px
         display: flex
         align-items: center
+        justify-content: center
+    &__link
+        padding-left: 45px
+        font-size: 14px
+        position: relative
+        transition: all .5s
+        &::before
+            top: 50%
+            transform: translateY(-50%)
+            left: 0
+            color: #edadbb
         &-news::before
             position: absolute
             content: "\e80f"
             font-family: "fontello"
             font-size: 23px
-            left: 0
-            color: #edadbb
         &-must-have::before
             position: absolute
             content: "\e806"

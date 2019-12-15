@@ -25,36 +25,137 @@
 		&:nth-last-child(-2n+2)
 			margin-left: auto
 			margin-right: 10px
+	.person__pesron-default-img
+		font-size: 80px
+	.user-data__address, .user-data__person
+		flex-basis: 100%
+		width: 100%
+	.user-address__form
+		padding-left: 45px
+	.person__birthday-and-gender,
+	.person__controll
+		flex-basis: 82%
+		width: 82%
+	.user-address__title
+		padding: 0 0 25px 45px
+		margin: 25px 0 25px 0
+	.user-address__bottom
+		margin-top: 100px
+	.user-address__select-house
+		justify-content: flex-start
+	.user-address__body, .user-address__house
+		margin-right: 20px
 
 @media only screen and (max-width : 992px)
-	// user-cabinet 992px
+	.user-address__street
+		margin-right: 10px
+	.user-address__select-house
+		margin-left: 0
+		flex-basis: 66%
+		width: 66%
 	.user-data__person
 		order: 1
-		flex-basis: 100%
-		width: 100%
-	.person__img-and-blank
-		justify-content: flex-start
-	.person__form-input-group
-		flex-basis: 100%
-		width: 100%
 	.user-data__bonus-account
 		order: 2
-	.user-data__addrres
+	.user-data__address
 		order: 3
 	.person__title
-		padding: 0 0 25px 30px
 		border-bottom: 0
+		padding: 0
+		margin-bottom: 25px
+		text-transform: unset
+	.person__img-wrapper
+		margin-left: 0
+		order: 1
+	.person__important-data
+		flex-basis: 226px
+		width: 226px
+		order: 2
+		flex-direction: column
+	.person__form-input-group
+		width: 100%
+		flex-basis: 100%
+	.person__controll
+		align-items: flex-start
+		order: 3
+		flex-basis: 130px
+		width: 130px
+		margin-left: 63px
+		flex-direction: column
+	.person__birthday-and-gender
+		flex-basis: 100%
+		width: 100%
+	.person__datepicker-group
+		display: flex
+		align-items: center
+	.person__gender-title,
+	.form-datepicker-group__label
+		flex-basis: 125px
+		width: 125px
+		margin-right: 0
+	.user-address__title
+		padding-left: 0
+		border-bottom: 1px solid #e7e7e7
+		text-transform: unset
+	.person__btn-change:not(:last-child)
+		margin: 0 0 20px 0
+	.person__birthday-and-gender
+		order: 4
+	.user-data__wrapper
+		padding: 55px 30px
+	.bonus-account__wrapper
+		padding: 0
+		justify-content: space-between
+		padding-bottom: 25px
+		border-bottom: 1px solid #E7E7E7
+	.bonus-account__cart, .bonus-account__balans, .bonus-account__discount
+		flex-basis: 32.5%
+		width: 32.5%
+		margin-right: 0
+		margin-left: 0
 	.bonus-account__title
-		padding: 0 0 25px 30px
+		padding: 25px 0 25px 0
+		border-top: 1px solid #E7E7E7
 		border-bottom: 0
-	.person__title,
-	.user-addrres__title,
-	.bonus-account__title
-		font-size: 13px
+		margin-bottom: 0
+		text-transform: unset
 	.main-filter
 		display: none
 	.filter-with-tags
 		display: none
+	.user-address__form
+		padding: 0
+		justify-content: flex-start
+	.user-address__country-and-city
+		justify-content: flex-start
+	.user-address__select-country
+		margin-right: 10px
+	.user-address__select-city, .user-address__select-country, .user-address__street
+		flex-basis: 32.5%
+		width: 32.5%
+	.user-address__bottom
+		flex-basis: 100%
+		width: 100%
+		display: flex
+		justify-content: center
+		margin-left: 0
+		margin-right: 0
+		margin-top: 40px
+	.user-address__house, .user-address__body
+		flex-basis: 23.5%
+		width: 23.5%
+		margin-right: 10px
+	.bonus-account__fields
+		width: 100%
+		flex-basis: 100%
+	.person__important-data
+		padding-bottom: 0
+	.person__gender
+		margin-bottom: 25px
+	.user-address__btn
+		font-size: 10px
+		min-width: 190px
+		max-height: 35px
 	// product
 	.products-list__product
 		display: flex
@@ -159,10 +260,38 @@
 		flex-basis: 90%
 
 @media only screen and (max-width : 768px)
+	// user-cabinet 768px
+	.user-address__select-house
+		flex-basis: 65%
+		width: 65%
+	.person__controll
+		margin-left: auto
+	.main.main--user-cabinet .main__wrapper
+		padding: 0
+	.user-data
+		box-shadow: none
+		border-radius: 0
+	.user-data__wrapper
+		padding: 20px 30px
+	.user-address__title
+		margin-bottom: 0
+		border-bottom: 0
+	.person__title,
+	.bonus-account__title,
+	.user-address__title,
+	.person__btn-change
+		font-size: 13px
+	.form-datepicker-group__label, .person__gender-title,
+	.form-gender-group__label
+		font-size: 11px
+	.bonus-account__title
+		padding-bottom: 20px
 	.region-modal__list
 		padding-top: 0
 	.region-modal__title
 		text-transform: unset
+	.user-address__bottom
+		margin-top: 25px
 	// select2 768px
 	.region-form .select2-container .select2-selection--single
 		height: 30px
@@ -362,6 +491,51 @@
 		width: 100%
 
 @media only screen and (max-width : 576px)
+	// .user-data 576px
+	.user-address__select-house
+		flex-basis: 100%
+		width: 100%
+	.user-address__body, .user-address__house
+		flex-basis: 20%
+		width: 20%
+		margin-right: 15px
+		min-width: 97px
+	.person__important-data
+		flex-basis: 210px
+		width: 210px
+		margin-bottom: 5px
+	.form-gender-group__label:before
+		font-size: 21px
+	.form-datepicker-group__label, .person__gender-title
+		flex-basis: 100px
+		width: 100px
+	.bonus-account__title
+		padding: 12px 0 18px 0
+	.person__title
+		margin-bottom: 20px
+	.person__img-wrapper
+		flex-basis: 52px
+		width: 52px
+		margin-right: 48px
+	.person__pesron-default-img
+		font-size: 60px
+	.person__birthday-and-gender
+		order: 3
+	.person__controll
+		flex-basis: 100%
+		width: 100%
+		order: 4
+		margin-left: 0
+		padding-bottom: 25px
+		border-bottom: 1px solid #e7e7e7
+	.user-address__title
+		margin: 12px 0 15px 0
+		border-top: 0
+		padding-bottom: 0
+	.user-data__bonus-account
+		order: 2
+	.user-data__address
+		order: 3
 	.brands__item
 		padding: 20px 20px 15px 20px
 	.brands__letter
@@ -374,6 +548,25 @@
 	.search__body
 		padding: 25px 20px
 		font-size: 13px
+	.bonus-account__fields
+		flex-direction: column
+		justify-content: flex-start
+		align-items: flex-start
+	.bonus-account__balans, .bonus-account__cart, .bonus-account__discount
+		margin-bottom: 15px
+		width: 210px
+	.bonus-account__wrapper
+		padding-bottom: 5px
+	.user-address__country-and-city
+		flex-direction: column
+		align-items: flex-start
+	.user-address__select-city, .user-address__select-country, .user-address__street
+		width: 210px
+		margin-left: 0
+		margin-right: 0
+		max-width: none
+		flex-basis: auto
+		margin-right: auto
 	// products-pagination 576px
 	.products-pagination__status
 		font-size: 11px

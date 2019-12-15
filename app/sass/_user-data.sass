@@ -103,7 +103,7 @@
     &__person
         flex-basis: 47.5%
         width: 47.5%
-    &__addrres
+    &__address
         flex-basis: 47.5%
         width: 47.5%
     &__bonus-account
@@ -125,6 +125,7 @@
         padding: 0 0 25px 45px
         margin-bottom: 25px
         border-bottom: 1px solid #adadad
+        text-transform: uppercase
     &__img-wrapper
         flex-basis: 80px
         width: 80px
@@ -132,13 +133,20 @@
         display: flex
         align-items: flex-start
         justify-content: center
+    &__img
+        max-width: 100%
+        height: auto
     &__pesron-default-img
         font-size: 100px
         color: #eb849a
         &.icon-user:before
             margin: 0
+    &__fields
+        flex-basis: 100%
+        width: 100%
+        display: flex
     &__important-data
-        padding: 0 0 70px 0
+        padding: 0 0 25px 0
         flex-basis: 63%
         display: inline-flex
         flex-wrap: wrap
@@ -149,7 +157,9 @@
         width: 49%
         margin-bottom: 15px
     &__birthday-and-gender
-        margin-top: 30px
+        flex-basis: 63%
+        width: 63%
+        margin-left: auto
     &__gender
         display: flex
         white-space: nowrap
@@ -167,6 +177,9 @@
     &__controll
         display: flex
         align-items: center
+        flex-basis: 63%
+        width: 63%
+        margin-left: auto
     &__btn-change
         padding: 0
         font-size: 14px
@@ -179,14 +192,8 @@
         background: transparent
         &:not(:last-child)
             margin-right: 35px
-    &__img-and-blank
-        flex-basis: 100%
-        width: 100%
-        display: flex
-        justify-content: space-between
-        align-items: flex-start
 
-.user-addrres
+.user-address
     &__title
         font-size: 14px
         color: rgb(26, 26, 26)
@@ -197,17 +204,29 @@
         padding: 0 0 25px 0
         margin-bottom: 25px
         border-bottom: 1px solid #adadad
+        text-transform: uppercase
+    &__country-and-city
+        flex-basis: 100%
+        width: 100%
+        display: flex
+        justify-content: space-between
+    &__select-house
+        display: flex
+        align-items: center
+        justify-content: space-between
+        flex-basis: 65.5%
+        width: 65.5%
     &__select-country
-        flex-basis: 48%
-        width: 48%
+        flex-basis: 49%
+        width: 49%
         margin-bottom: 15px
     &__select-city
-        flex-basis: 48%
-        width: 48%
+        flex-basis: 49%
+        width: 49%
         margin-bottom: 15px
     &__street
-        flex-basis: 130px
-        width: 130px
+        flex-basis: 32.5%
+        width:  32.5%
         margin-bottom: 15px
     &__house
         flex-basis: 90px
@@ -260,6 +279,7 @@
         border-bottom: 1px solid #adadad
         flex-basis: 100%
         width: 100%
+        text-transform: uppercase
     &__form-input-group
     .form-input-group__input
         background: #f5f5f5 
@@ -275,3 +295,7 @@
     &__discount
         flex-basis: 130px
         width: 130px
+    &__fields
+        display: flex
+        align-items: center
+        justify-content: space-between
