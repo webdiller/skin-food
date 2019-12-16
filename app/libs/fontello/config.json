@@ -197,6 +197,12 @@
       "css": "user-male",
       "code": 61538,
       "src": "mfglabs"
+    },
+    {
+      "uid": "eh1m4shhgsndy7pmdzx3ynrakadhozgr",
+      "css": "clock",
+      "code": 59417,
+      "src": "typicons"
     }
   ]
 }

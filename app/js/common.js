@@ -309,4 +309,11 @@ $(document).ready(function () {
         // });
     })());
 
+
+    const userOrdersShowMoreButton = ((function () {
+        $('.orders__show-more').click(function () { 
+            $(this).next('.orders__content').slideToggle();
+         })
+    })());
+
 });

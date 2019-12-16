@@ -47,6 +47,18 @@
 		margin-right: 20px
 
 @media only screen and (max-width : 992px)
+	// user-orders 992px
+	.orders__body
+		padding: 15px 30px
+	.notlogged__title
+		padding-left: 0
+		text-transform: unset
+		text-align: center
+	.notlogged__socials
+		justify-content: center
+	.notlogged__body
+		margin: 0 auto
+		text-align: center
 	.user-address__street
 		margin-right: 10px
 	.user-address__select-house
@@ -260,7 +272,119 @@
 		flex-basis: 90%
 
 @media only screen and (max-width : 768px)
+	// user-orders 992px
+	.orders__header--shadow, .orders__wrapper
+		box-shadow: none
+	.orders__header-tr1,
+	.orders__header-tr2
+		border-bottom: 0
+		background-color: #fff
+	.orders__header-tr1
+		padding: 25px 30px 5px 30px
+	.orders__header-tr2
+		padding: 0px 30px 5px 30px
+	.orders__header-title,
+	.orders__header-subtitle
+		text-align: left
+	.orders__body-title,
+	.orders__body-subtitle
+		color: rgba(30, 30, 31, .6)
+		font-size: 13px
+	.orders__show-more
+		padding: 10px 30px
+		font-size: 13px
+	.orders__body
+		border-bottom: 0
+		position: relative
+		&::before
+			content: ""
+			position: absolute
+			bottom: 0
+			left: 30px
+			right: 30px
+			border-bottom: 1px solid #E7E7E7
+	.orders__pay
+		padding-left: 30px
+		padding-right: 30px
+	.orders__pay-title
+		font-size: 13px
+		margin-right: 10px
+	.orders__pay-summ
+		font-size: 14px
+		font-weight: 700
+	.orders-table.flexible
+		.orders-table__head
+			display: block
+			.orders-table__tr
+				display: block
+				background-color: #fff
+			.orders-table__th
+				display: block
+				padding-left: 30px
+				padding-right: 30px
+				color: #AEAEAE
+				font-size: 13px
+				font-weight: 700
+			.orders-table__th.small:not(:nth-child(1))
+				display: none
+				letter-spacing: 0.04em
+		.orders-table__body
+			display: block
+			.orders-table__tr
+				padding-left: 30px
+				padding-right: 30px
+				display: flex
+				align-items: center
+				justify-content: space-between
+			.orders-table__th
+				display: block
+				padding: 0 
+	.orders-table__counter-simple-count
+		display: none
+	.orders-table__tag
+		order: 1
+		line-height: 17px
+		margin-bottom: 5px
+	.orders-table__name
+		order: 2
+		line-height: 17px
+		margin-bottom: 10px
+	.orders-table__descr
+		display: flex
+		order: 3
+	.orders-table__th
+		padding-left: 30px
+		padding-right: 30px
+	.orders-table__img
+		width: 85px
+		margin-right: 20px
+	.orders__content
+		display: none
+		position: relative
+		padding-bottom: 10px
+		&::before
+			content: ""
+			position: absolute
+			bottom: 0
+			left: 30px
+			right: 30px
+			border-bottom: 1px solid #E7E7E7
+	.orders__content
+		padding-bottom: 30px
 	// user-cabinet 768px
+	.main__img-cabinet
+		background: #fff
+	.notlogged__title
+		padding-bottom: 20px
+		border-bottom: 1px solid #363636
+	.notlogged__title
+		margin-bottom: 20px
+	.notlogged__forgot-btn
+		font-weight: 700
+	.notlogged__footer
+		flex-direction: column
+	.notlogged__btn-enter
+		margin: 0 0 30px 0
 	.user-address__select-house
 		flex-basis: 65%
 		width: 65%
@@ -491,7 +615,53 @@
 		width: 100%
 
 @media only screen and (max-width : 576px)
+	// user-orders 576px
+	.orders-table__content
+		text-align: left
+	.orders-table.flexible .orders-table__body .orders-table__tr
+		flex-wrap: wrap
+	.orders-table__tr:not(:first-child),
+	.orders-table__tr:not(:last-child)
+		margin-bottom: 15px
+	.orders-table.flexible .orders-table__body .orders-table__th:first-child
+		flex-basis: 100%
+		width: 100%
+		margin-bottom: 15px
+	.orders-table__th.orders-table__counter-th
+		margin-left: 100px
+		margin-right: 25px
+	.orders-table__th.orders-table__number-th
+		margin-right: auto
+	.orders__header
+		display: flex
+	.orders__header-tr1
+		padding-top: 20px
+		flex-basis: 40%
+		width: 40%
+		display: flex
+		flex-direction: column
+	.orders__header-tr2
+		padding-top: 20px
+		flex-basis: 60%
+		width: 60%
+		display: flex
+		flex-direction: column
+	.orders__header-title,
+	.orders-table.flexible .orders-table__head .orders-table__th,
+	.orders-table__descr
+		font-size: 11px
+	.orders__header-subtitle
+		font-size: 11px
+		font-weight: 700
+		color: #AEAEAE
+	.orders__show-more
+		font-size: 11px
+	.orders__body-subtitle, .orders__body-title
+		font-size: 12px
 	// .user-data 576px
+	.notlogged__body,
+	.notlogged__footer
+		width: 210px
 	.user-address__select-house
 		flex-basis: 100%
 		width: 100%
