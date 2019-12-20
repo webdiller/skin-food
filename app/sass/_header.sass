@@ -45,6 +45,8 @@
         font-size: 32px
         position: relative
         text-align: center
+        padding: 0
+        &::before
         +reset-btn
         &:hover
             color: $hoverpink
@@ -128,7 +130,7 @@
             margin-left: 0
     &__basket
         position: relative
-        font-size: 32px
+        font-size: 36px
         &-counter
             position: absolute
             bottom: -4px
@@ -389,7 +391,7 @@
             &::before
                 margin: 0
                 font-size: 15px
-                padding-bottom: 3px
+                padding-bottom: 5px
         .search-group__input
             height: 31px
             border-top-right-radius: 4px

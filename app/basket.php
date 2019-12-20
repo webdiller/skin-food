@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0 shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="theme-color" content="#fff">
-    <link rel="icon" href="./img/favicon.png" type="image/png">
     <title>Skin Food</title>
     <style>
         body {
@@ -14,7 +13,6 @@
             visibility: hidden;
         }
     </style>
-
     <link rel="stylesheet" type="text/css" href="css/style.min.css" />
 </head>
 
@@ -206,9 +204,8 @@
                 <a href="#" class="header__views demo-icon icon-eye">просмотрено
                     <span class="header__views-count">(1)</span>
                 </a>
-                <button class="header-icon header__user demo-icon icon-user" id="user"></button>
-                <a class="header-icon header__like demo-icon icon-heart-circled" id="like"
-                    href="user-favorite.html"></a>
+                <button class="header-icon header__user demo-icon icon-user" id="user" href="#!"></button>
+                <a class="header-icon header__like demo-icon icon-heart-circled" id="like" href="#!"></a>
                 <button class="header-icon header__basket demo-icon icon-shop" id="basket"><span id="basketCounter"
                         class="header__basket-counter">0</span>
                 </button>
@@ -223,9 +220,9 @@
                         <button data-toggle="modal" data-target="#userModal" class="user-info__btn-out">Выйти</button>
                     </div>
                     <div class="user-info__body">
-                        <a href="user-cabinet.html" class="user-info__link">Личный кабинет</a>
-                        <a href="user-favorite.html" class="user-info__link">Избранное</a>
-                        <a href="user-orders.html" class="user-info__link">История заказов</a>
+                        <a href="#!" class="user-info__link">Личный кабинет</a>
+                        <a href="#!" class="user-info__link">Избранное</a>
+                        <a href="#!" class="user-info__link">История заказов</a>
                     </div>
                 </div>
 
@@ -493,7 +490,6 @@
         </div>
 
     </header>
-
 
     <div class="navigation">
         <div class="navigation__wrapper">
@@ -1623,325 +1619,307 @@
         </div>
     </div>
 
-
-
-    <div class="slider">
-        <div class="slider__wrapper">
-
-            <div id="sliderCarousel" class="slider-carousel owl-carousel owl-theme">
-
-                <div class="slider-carousel__item item">
-                    <img src="./img/slider/slide2.jpg" alt="Слайд" class="slider-carousel__img">
-                    <!-- <button class="slider-carousel__btn">Вступить</button> -->
-                </div>
-                <div class="slider-carousel__item item">
-                    <img src="./img/slider/slide2.jpg" alt="Слайд" class="slider-carousel__img">
-                    <!-- <button class="slider-carousel__btn">Вступить</button> -->
-                </div>
-                <div class="slider-carousel__item item">
-                    <img src="./img/slider/slide2.jpg" alt="Слайд" class="slider-carousel__img">
-                    <!-- <button class="slider-carousel__btn">Вступить</button> -->
-                </div>
-                <div class="slider-carousel__item item">
-                    <img src="./img/slider/slide2.jpg" alt="Слайд" class="slider-carousel__img">
-                    <!-- <button class="slider-carousel__btn">Вступить</button> -->
-                </div>
-                <div class="slider-carousel__item item">
-                    <img src="./img/slider/slide2.jpg" alt="Слайд" class="slider-carousel__img">
-
-                </div>
-                <div class="slider-carousel__item item">
-                    <img src="./img/slider/slide2.jpg" alt="Слайд" class="slider-carousel__img">
-                    <!-- <button class="slider-carousel__btn">Вступить</button> -->
-                </div>
-                <div class="slider-carousel__item item">
-                    <img src="./img/slider/slide2.jpg" alt="Слайд" class="slider-carousel__img">
-                    <!-- <button class="slider-carousel__btn">Вступить</button> -->
-                </div>
-                <div class="slider-carousel__item item">
-                    <img src="./img/slider/slide2.jpg" alt="Слайд" class="slider-carousel__img">
-                    <!-- <button class="slider-carousel__btn">Вступить</button> -->
-                </div>
-
-            </div>
-
-        </div>
-    </div>
-
-
-    <div class="swiper">
-        <div class="swiper__wrapper">
-
-            <!-- carousel for mobile -->
-            <div id="swiperCarouselMobile" class="d-sm-block d-md-none swiper-carousel owl-carousel owl-theme">
-                <div class="swiper-carousel__slide item">
-                    <a href="#!" class="swiper-carousel__item active">НОВИНКИ</a>
-                    <a href="#!" class="swiper-carousel__item">БЕСТСЕЛЛЕРЫ</a>
-                </div>
-                <div class="swiper-carousel__slide item">
-                    <a href="#!" class="swiper-carousel__item">АКЦИИ</a>
-                    <a href="#!" class="swiper-carousel__item">популярное</a>
-                </div>
-                <div class="swiper-carousel__slide item">
-                    <a href="#!" class="swiper-carousel__item">премиум</a>
-                    <a href="#!" class="swiper-carousel__item">распродажи</a>
-                </div>
-            </div>
-
-            <!-- carousel for tablet -->
-            <div id="swiperCarouselDesktop" class="d-none d-md-block d-lg-none swiper-carousel owl-carousel owl-theme">
-                <div class="swiper-carousel__slide item">
-                    <a href="#!" class="swiper-carousel__item active">НОВИНКИ</a>
-                    <a href="#!" class="swiper-carousel__item">БЕСТСЕЛЛЕРЫ</a>
-                    <a href="#!" class="swiper-carousel__item">АКЦИИ</a>
-                </div>
-                <div class="swiper-carousel__slide item">
-                    <a href="#!" class="swiper-carousel__item">популярное</a>
-                    <a href="#!" class="swiper-carousel__item">премиум</a>
-                    <a href="#!" class="swiper-carousel__item">распродажи</a>
-                </div>
-            </div>
-
-        </div>
-    </div>
-
-
-
-    <main class="main">
-        <div class="main__img"></div>
+    <main class="main main--user-cabinet">
+        <div class="main__img-cabinet"></div>
         <div class="main__wrapper">
 
-            <div class="grid-images">
+            <div class="basket">
+                <div class="basket__wrapper">
 
-                <div class="d-none d-lg-block grid-images__head">
-                    <div class="grid-images__head-wrapper">
-                        <div class="grid-images__title">
-                            <a class="grid-images__link grid-images__link-news" href="#">НОВИНКИ</a>
-                        </div>
-                        <div class="grid-images__title">
-                            <a class="grid-images__link grid-images__link-must-have" href="#">MUST HAVE</a>
-                        </div>
-                        <div class="grid-images__title">
-                            <a class="grid-images__link grid-images__link-hits" href="#">БЕСТСЕЛЛЕРЫ</a>
-                        </div>
-                        <div class="grid-images__title">
-                            <a class="grid-images__link grid-images__link-promo" href="#">АКЦИИ</a>
+                    <div class="basket-header">
+                        <div class="basket-header__wrapper">
+                            <p class="basket-header__tr1">Товар</p>
+                            <p class="basket-header__tr2">Количество</p>
+                            <p class="basket-header__tr3">Стоимость</p>
                         </div>
                     </div>
+
+                    <div class="basket-back basket__back">
+                        <a href="#" class="basket__back-link">Вернуться к покупкам</a>
+                    </div>
+
+                    <ul class="basket-list basket__basket-list">
+                        <li class="basket-list__item">
+
+                            <div class="basket-list__img-with-content">
+                                <img src="./img/products/product-10.jpg"
+                                    alt="Маска для кожи вокруг глаз. SNP Bird’s Nest Aqua Eye Patch"
+                                    class="basket-list__img">
+                                <div class="basket-list__content">
+                                    <p class="basket-list__tag">Маска для кожи вокруг глаз</p>
+                                    <p class="basket-list__name">SNP Bird’s Nest Aqua Eye Patch</p>
+                                    <div class="d-lg-none basket-list__descr">
+                                        <span class="basket-list__descr-key">Тон: </span>
+                                        <span class="basket-list__descr-value">lite beige n.13</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="basket__counter-wrapper">
+                                <div class="basket-counter basket-list__counter">
+                                    <button class="basket-counter__btn-less demo-icon icon-minus"></button>
+                                    <input placeholder="0" type="number" class="basket-counter__input">
+                                    <button class="basket-counter__btn-more demo-icon icon-plus"></button>
+                                    <small class="basket-counter__small-text">шт.</small>
+                                </div>
+                            </div>
+
+                            <p class="basket-list__price">30.20 руб</p>
+                            <button class="basket-list__close"></button>
+                        </li>
+
+                        <li class="basket-list__item">
+                            <div class="basket-list__img-with-content">
+                                <img src="./img/products/product-10.jpg"
+                                    alt="Маска для кожи вокруг глаз. SNP Bird’s Nest Aqua Eye Patch"
+                                    class="basket-list__img">
+                                <div class="basket-list__content">
+                                    <p class="basket-list__tag">Маска для кожи вокруг глаз</p>
+                                    <p class="basket-list__name">SNP Bird’s Nest Aqua Eye Patch</p>
+                                    <div class="d-lg-none basket-list__descr">
+                                        <span class="basket-list__descr-key">Тон: </span>
+                                        <span class="basket-list__descr-value">lite beige n.13</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="basket__counter-wrapper">
+                                <div class="basket-counter basket-list__counter">
+                                    <button class="basket-counter__btn-less demo-icon icon-minus"></button>
+                                    <input placeholder="0" type="number" class="basket-counter__input">
+                                    <button class="basket-counter__btn-more demo-icon icon-plus"></button>
+                                    <small class="basket-counter__small-text">шт.</small>
+                                </div>
+                            </div>
+
+                            <p class="basket-list__price">30.20 руб</p>
+                            <button class="basket-list__close"></button>
+                        </li>
+                    </ul>
+
+                    <ul class="promo-list basket__promo-list">
+                        <li class="promo-list__item">
+                            <p class="promo-list__title">+ Выберите бесплатно к заказу</p>
+                            <button class="promo-list__btn">выбрать подарок</button>
+                        </li>
+                        <li class="promo-list__item flex-end">
+                            <p class="promo-list__subtitle">промокод:</p>
+                            <input type="text" class="promo-list__input">
+                            <button class="promo-list__btn">применить код</button>
+                        </li>
+                    </ul>
+
+                    <ul class="contacts basket__contacts">
+                        <li class="contacts__item space-between">
+                            <p class="contacts__title">Личные данные</p>
+
+                            <div class="contacts__inputs">
+                                <div class="form-input-group contacts__group">
+                                    <label for="contactName" class="form-input-group__label">Имя</label>
+                                    <input id="contactName" type="text" placeholder="Мария" class="form-input-group__input">
+                                </div>
+    
+                                <div class="form-input-group contacts__group">
+                                    <label for="contactLastName" class="form-input-group__label">Фамилия</label>
+                                    <input id="contactLastName" type="text" placeholder="Нефедова"
+                                        class="form-input-group__input">
+                                </div>
+    
+                                <div class="form-input-group contacts__group">
+                                    <label for="contactEmail" class="form-input-group__label required"><span
+                                            class="form-input-group__label-icon">*</span> e-mail</label>
+                                    <input required id="contactEmail" type="email" placeholder="example@gmail.com"
+                                        class="form-input-group__input">
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <div class="basket__left">
+                        <div class="delivery">
+                            <div class="delivery__wrapper">
+                                <p class="delivery__title">Доставка</p>
+
+                                <div class="form-input-group delivery__form-input-group">
+                                    <label for="contactCity" class="form-input-group__label required"><span
+                                            class="form-input-group__label-icon">*</span> город</label>
+                                    <input placeholder="Минск" required id="contactCity" type="text"
+                                        class="form-input-group__input">
+                                </div>
+
+                                <div class="delivery__radio-buttons">
+                                    <div class="form-radio-group mb-2">
+                                        <input checked type="radio" name="deliveryType"
+                                            value="Курьером до клиента - 6 руб" id="delivery1"
+                                            class="form-radio-group__input">
+                                        <label class="form-radio-group__label" for="delivery1">Курьером до клиента - 6
+                                            руб</label>
+                                    </div>
+                                    <div class="form-radio-group">
+                                        <input type="radio" name="deliveryType" value="До ПВЗ г. Минске - 2 руб"
+                                            id="delivery2" class="form-radio-group__input">
+                                        <label class="form-radio-group__label" for="delivery2">До ПВЗ г. Минске - 2 руб
+                                        </label>
+                                        <small class="form-radio-group__small">Бесплатно при сумме заказа от 30
+                                            руб</small>
+                                    </div>
+                                </div>
+
+                                <p class="time delivery__time">
+                                    <span class="time__title">Время доставки</span>
+                                    <span class="time__descr">Среда, 10 Апреля 10:00-16:00</span>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="address">
+                            <div class="address__wrapper">
+
+                                <div class="form-input-group address__form-group">
+                                    <label for="contactCity" class="form-input-group__label required"><span
+                                            class="form-input-group__label-icon">*</span> Улица</label>
+                                    <input placeholder="Пушкина" required type="text" class="form-input-group__input">
+                                </div>
+
+                                <div class="address__house">
+                                    <div class="form-input-group address__form-group address__form-group-home">
+                                        <label for="contactCity" class="form-input-group__label required"><span
+                                                class="form-input-group__label-icon">*</span> Дом</label>
+                                        <input placeholder="30" required type="text" class="form-input-group__input">
+                                    </div>
+
+                                    <div class="form-input-group address__form-group address__form-group-flat">
+                                        <label for="contactCity" class="form-input-group__label required"><span
+                                                class="form-input-group__label-icon">*</span> Квартира</label>
+                                        <input placeholder="1" required type="text" class="form-input-group__input">
+                                    </div>
+                                </div>
+
+                                <div class="form-input-group address__form-group">
+                                    <label for="contactCity" class="form-input-group__label required"><span
+                                            class="form-input-group__label-icon">*</span> Телефон</label>
+                                    <input placeholder="+375291234567" required type="text"
+                                        class="form-input-group__input">
+                                </div>
+
+                                <div class="form-textarea-group address__form-group address__form-group-comment">
+                                    <label class="form-textarea-group__label" for="contactComment">Комментарий</label>
+                                    <textarea rows="30" class="form-textarea-group__textarea"
+                                        id="contactComment"></textarea>
+                                </div>
+
+
+                                <div class="address__text-info">
+                                    <span class="address__text-info-icon">*</span> Поля, обязательные для заполнения
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="basket__right">
+                        <div class="bonus">
+                            <div class="bonus__wrapper">
+                                <p class="bonus__title">Бонусная программа</p>
+                                <p class="bonus__subtitle">Для использования бонусного счета необходимо</p>
+                                <button class="bonus__btn">авторизоваться</button>
+
+                                <div class="payment">
+                                    <div class="payment__wrapper">
+                                        <p class="payment__title">Оплата</p>
+
+
+                                        <div class="payment__radio-list">
+
+                                            <div class="form-radio-group payment__form-radio-group border-bottom pb-2">
+                                                <input checked type="radio" name="paymentType"
+                                                    value="Оплатить при получении" id="paytype1"
+                                                    class="form-radio-group__input">
+                                                <label class="form-radio-group__label" for="paytype1">
+                                                    Оплатить при получении
+                                                </label>
+                                            </div>
+
+                                            <div class="payment__radio-list-inner">
+                                                <div class="form-radio-group payment__form-radio-group">
+                                                    <input checked type="radio" name="paymentTypeInner"
+                                                        value="Наличными" id="paytype11"
+                                                        class="form-radio-group__input">
+                                                    <label class="form-radio-group__label" for="paytype11">
+                                                        Наличными
+                                                    </label>
+                                                </div>
+
+                                                <div class="form-radio-group payment__form-radio-group">
+                                                    <input type="radio" name="paymentTypeInner" value="Картой рассрочки"
+                                                        id="paytype12" class="form-radio-group__input">
+                                                    <label class="form-radio-group__label" for="paytype12">
+                                                        Картой рассрочки
+                                                    </label>
+                                                </div>
+
+                                                <div class="form-radio-group payment__form-radio-group">
+                                                    <input type="radio" name="paymentTypeInner"
+                                                        value="Другой банковской картой" id="paytype13"
+                                                        class="form-radio-group__input">
+                                                    <label class="form-radio-group__label" for="paytype13">
+                                                        Другой банковской картой
+                                                    </label>
+                                                </div>
+
+                                                <div class="form-radio-group payment__form-radio-group">
+                                                    <input type="radio" name="paymentTypeInner"
+                                                        value="Подарочным сертификатом" id="paytype14"
+                                                        class="form-radio-group__input">
+                                                    <label class="form-radio-group__label" for="paytype14">
+                                                        Подарочным сертификатом
+                                                    </label>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-radio-group payment__form-radio-group pb-1 border-bottom">
+                                                <input type="radio" name="paymentType" value="Оплатить сейчас онлайн"
+                                                    id="paytype2" class="form-radio-group__input">
+                                                <label class="form-radio-group__label" for="paytype2">
+                                                    Оплатить сейчас онлайн
+                                                </label>
+                                            </div>
+
+                                            <div class="form-radio-group payment__form-radio-group pt-1">
+                                                <input type="radio" name="paymentType" value="Купить в рассрочку"
+                                                    id="paytype3" class="form-radio-group__input">
+                                                <label class="form-radio-group__label" for="paytype3">
+                                                    Купить в рассрочку
+                                                </label>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="basket-check basket__check">
+                        <div class="basket-check__wrapper">
+                            <p class="basket-check__total-cost">Общая стоимость: 30.20 руб</p>
+                            <p class="basket-check__cost-of-delivery">Стоимость доставки: 6.00 руб</p>
+                            <p class="basket-check__total-pay">К оплате: 30.20 руб</p>
+                        </div>
+                    </div>
+
+
+                    <div class="basket-control basket__control">
+                        <div class="basket-control__wrapper">
+                            <p class="d-none basket-control__total-pay">30.20 руб</p>
+                            <button class="basket-control__btn-pay">Подтвердить заказ</button>
+                        </div>
+                    </div>
+
                 </div>
-
-                <div id="gridDesktop" class="d-none d-lg-flex grid-images__wrapper">
-
-                    <div class="grid-images__layout" style="transform: translate3d(0px, 0px, 0px);">
-                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-4.jpg" alt=""
-                                class="grid-images__img"></a>
-                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-5.jpg" alt=""
-                                class="grid-images__img"></a>
-                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-6.jpg" alt=""
-                                class="grid-images__img"></a>
-                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-5.jpg" alt=""
-                                class="grid-images__img"></a>
-                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-6.jpg" alt=""
-                                class="grid-images__img"></a>
-                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-5.jpg" alt=""
-                                class="grid-images__img"></a>
-                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-6.jpg" alt=""
-                                class="grid-images__img"></a>
-                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-5.jpg" alt=""
-                                class="grid-images__img"></a>
-                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-6.jpg" alt=""
-                                class="grid-images__img"></a>
-                    </div>
-
-                    <div class="grid-images__layout" style="transform: translate3d(0px, 0px, 0px);">
-                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-7.jpg" alt=""
-                                class="grid-images__img"></a>
-                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-8.jpg" alt=""
-                                class="grid-images__img"></a>
-                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-9.jpg" alt=""
-                                class="grid-images__img"></a>
-                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-7.jpg" alt=""
-                                class="grid-images__img"></a>
-                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-8.jpg" alt=""
-                                class="grid-images__img"></a>
-                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-9.jpg" alt=""
-                                class="grid-images__img"></a>
-                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-7.jpg" alt=""
-                                class="grid-images__img"></a>
-                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-8.jpg" alt=""
-                                class="grid-images__img"></a>
-                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-9.jpg" alt=""
-                                class="grid-images__img"></a>
-                    </div>
-
-                    <div class="grid-images__layout" style="transform: translate3d(0px, 0px, 0px);">
-                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-1.jpg" alt=""
-                                class="grid-images__img"></a>
-                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-2.jpg" alt=""
-                                class="grid-images__img"></a>
-                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-1.jpg" alt=""
-                                class="grid-images__img"></a>
-                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-2.jpg" alt=""
-                                class="grid-images__img"></a>
-                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-1.jpg" alt=""
-                                class="grid-images__img"></a>
-                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-2.jpg" alt=""
-                                class="grid-images__img"></a>
-                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-1.jpg" alt=""
-                                class="grid-images__img"></a>
-                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-2.jpg" alt=""
-                                class="grid-images__img"></a>
-                    </div>
-
-                    <div class="grid-images__layout" style="transform: translate3d(0px, 0px, 0px);">
-                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-1.jpg" alt=""
-                                class="grid-images__img"></a>
-                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-2.jpg" alt=""
-                                class="grid-images__img"></a>
-                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-1.jpg" alt=""
-                                class="grid-images__img"></a>
-                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-2.jpg" alt=""
-                                class="grid-images__img"></a>
-                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-1.jpg" alt=""
-                                class="grid-images__img"></a>
-                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-2.jpg" alt=""
-                                class="grid-images__img"></a>
-                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-1.jpg" alt=""
-                                class="grid-images__img"></a>
-                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-2.jpg" alt=""
-                                class="grid-images__img"></a>
-                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-2.jpg" alt=""
-                                class="grid-images__img"></a>
-                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-1.jpg" alt=""
-                                class="grid-images__img"></a>
-                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-2.jpg" alt=""
-                                class="grid-images__img"></a>
-                    </div>
-
-                </div>
-
-                <div id="gridTablet" class="d-none d-sm-flex d-lg-none grid-images__wrapper">
-
-                    <div class="grid-images__layout" style="transform: translate3d(0px, 0px, 0px);">
-                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-7.jpg" alt=""
-                                class="grid-images__img"></a>
-                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-8.jpg" alt=""
-                                class="grid-images__img"></a>
-                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-9.jpg" alt=""
-                                class="grid-images__img"></a>
-                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-7.jpg" alt=""
-                                class="grid-images__img"></a>
-                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-8.jpg" alt=""
-                                class="grid-images__img"></a>
-                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-9.jpg" alt=""
-                                class="grid-images__img"></a>
-                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-7.jpg" alt=""
-                                class="grid-images__img"></a>
-                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-8.jpg" alt=""
-                                class="grid-images__img"></a>
-                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-9.jpg" alt=""
-                                class="grid-images__img"></a>
-                    </div>
-
-                    <div class="grid-images__layout" style="transform: translate3d(0px, 0px, 0px);">
-                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-1.jpg" alt=""
-                                class="grid-images__img"></a>
-                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-2.jpg" alt=""
-                                class="grid-images__img"></a>
-                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-1.jpg" alt=""
-                                class="grid-images__img"></a>
-                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-2.jpg" alt=""
-                                class="grid-images__img"></a>
-                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-1.jpg" alt=""
-                                class="grid-images__img"></a>
-                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-2.jpg" alt=""
-                                class="grid-images__img"></a>
-                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-1.jpg" alt=""
-                                class="grid-images__img"></a>
-                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-2.jpg" alt=""
-                                class="grid-images__img"></a>
-                    </div>
-
-                    <div class="grid-images__layout" style="transform: translate3d(0px, 0px, 0px);">
-                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-1.jpg" alt=""
-                                class="grid-images__img"></a>
-                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-2.jpg" alt=""
-                                class="grid-images__img"></a>
-                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-1.jpg" alt=""
-                                class="grid-images__img"></a>
-                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-2.jpg" alt=""
-                                class="grid-images__img"></a>
-                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-1.jpg" alt=""
-                                class="grid-images__img"></a>
-                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-2.jpg" alt=""
-                                class="grid-images__img"></a>
-                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-1.jpg" alt=""
-                                class="grid-images__img"></a>
-                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-2.jpg" alt=""
-                                class="grid-images__img"></a>
-                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-2.jpg" alt=""
-                                class="grid-images__img"></a>
-                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-1.jpg" alt=""
-                                class="grid-images__img"></a>
-                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-2.jpg" alt=""
-                                class="grid-images__img"></a>
-                    </div>
-
-                </div>
-
-                <div id="gridMobile" class="d-sm-none grid-images__wrapper">
-
-                    <div class="grid-images__layout" style="transform: translate3d(0px, 0px, 0px);">
-                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-7.jpg" alt=""
-                                class="grid-images__img"></a>
-                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-8.jpg" alt=""
-                                class="grid-images__img"></a>
-                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-9.jpg" alt=""
-                                class="grid-images__img"></a>
-                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-7.jpg" alt=""
-                                class="grid-images__img"></a>
-                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-8.jpg" alt=""
-                                class="grid-images__img"></a>
-                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-9.jpg" alt=""
-                                class="grid-images__img"></a>
-                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-7.jpg" alt=""
-                                class="grid-images__img"></a>
-                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-8.jpg" alt=""
-                                class="grid-images__img"></a>
-                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-9.jpg" alt=""
-                                class="grid-images__img"></a>
-                    </div>
-
-                    <div class="grid-images__layout" style="transform: translate3d(0px, 0px, 0px);">
-                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-1.jpg" alt=""
-                                class="grid-images__img"></a>
-                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-2.jpg" alt=""
-                                class="grid-images__img"></a>
-                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-1.jpg" alt=""
-                                class="grid-images__img"></a>
-                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-2.jpg" alt=""
-                                class="grid-images__img"></a>
-                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-1.jpg" alt=""
-                                class="grid-images__img"></a>
-                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-2.jpg" alt=""
-                                class="grid-images__img"></a>
-                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-1.jpg" alt=""
-                                class="grid-images__img"></a>
-                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-2.jpg" alt=""
-                                class="grid-images__img"></a>
-                    </div>
-
-                </div>
-
             </div>
 
-        </div>
-        <div class="main__bottom">
-            <p class="site-title">SKIN <span class="header__title-heart demo-icon icon-heart"></span> FOOD
-            </p>
-            <span class="site-description main__description">
-                laboratory
-            </span>
+
         </div>
     </main>
 
@@ -2038,100 +2016,6 @@
     <!-- CUSTOM AND LIBS -->
     <script src="js/libs.min.js"></script>
     <script src="js/common.js"></script>
-    <style>
-        .grid-images__layout {
-            height: fit-content;
-            transition: all .5s ease;
-            height: -moz-fit-content;
-        }
-    </style>
-    <script>
-
-        $(document).ready(function () {
-            if ($(window).width() >= 992) {
-            HSlide("#gridDesktop");
-        }
-
-
-        if ($(window).width() <= 991) {
-            HSlide("#gridTablet");
-        }
-
-
-
-        if ($(window).width() <= 576) {
-            HSlide("#gridMobile");
-        }
-
-        function HSlide(elem) {
-            try {
-                var all = document.querySelectorAll(elem + " .grid-images__layout");
-                var minMax = [];
-                for (var i = 0; i < document.querySelectorAll(elem + " .grid-images__layout").length; i++) {
-                    minMax[i] = document.querySelectorAll(elem + " .grid-images__layout")[i].offsetHeight;
-                }
-                var MinH = minMax.reduce(function (a, b) {
-                    return Math.min(a, b);
-                });
-
-                var MinM = minMax.reduce(function (a, b) {
-                    return Math.max(a, b);
-                });
-
-                document.querySelector(elem).style.height = MinH + "px";
-
-                window.onscroll = function (e) {
-                    var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
-                    var height = document.querySelector(elem).offsetHeight;
-
-                    for (var i = 0; i < all.length; i++) {
-                        if (MinH > 860) {
-                            if (scrollTop > 400) {
-
-                                var off = 0;
-
-                                if (scrollTop > 700) {
-                                    off = -(((parseInt(all[i].offsetHeight) - MinH) / height) * (scrollTop + 400));
-                                    if (off <= -(parseInt(all[i].offsetHeight) - MinH)) {
-                                        all[i].style.transform = "translate3d(0px," + -(parseInt(all[i].offsetHeight) - MinH) + "px, 0px)";
-                                        continue;
-                                    }
-                                }
-                                else
-                                    off = -(((parseInt(all[i].offsetHeight) - MinH) / height) * (scrollTop - 400));
-
-                                if (parseInt(all[i].offsetHeight) == MinH) continue;
-
-                                all[i].style.transform = "translate3d(0px," + parseInt(off) + "px, 0px)";
-                            }
-                            else {
-                                all[i].style.transform = "translate3d(0px, 0px, 0px)";
-                            }
-                        }
-                        else {
-                            if (scrollTop > 400) {
-                                var off = 0;
-                                off = -(((parseInt(all[i].offsetHeight) - MinH) / height) * (scrollTop + 400));
-                                if (off <= -(parseInt(all[i].offsetHeight) - MinH)) continue;
-
-                                all[i].style.transform = "translate3d(0px," + parseInt(off) + "px, 0px)";
-                            }
-                            else {
-                                all[i].style.transform = "translate3d(0px, 0px, 0px)";
-                            }
-                        }
-                    }
-
-                }
-            } catch (error) {
-                console.log(error);
-            }
-        }
-
-
-        });
-
-    </script>
 </body>
 
 </html>

@@ -1878,9 +1878,6 @@
                                 <p class="product__price">от 410 до 470 byn</p>
                                 <button class="product__btn-empty">Сообщить о появлении</button>
                             </div>
-                            <div class="product__footer">
-                                <button class="product__btn-add added">товар в корзине</button>
-                            </div>
                         </div>
 
                         <div class="product products-list__product">
@@ -1892,9 +1889,14 @@
                                 <p class="product__name">hello beauty</p>
                                 <p class="product__descr">Сыворотка для кожи
                                     вокруг глаз</p>
+                                <div class="product__colors">
+                                    <span style="color: #fff" class="product__colors-color"></span>
+                                    <span style="color: #fff" class="product__colors-color"></span>
+                                    <span style="color: #fff" class="product__colors-color"></span>
+                                    <span style="color: #fff" class="product__colors-color"></span>
+                                </div>
                                 <p class="product__tag">Сыворотка для глаз</p>
                                 <p class="product__price">от 410 до 470 byn</p>
-                                <button class="product__btn-empty">Сообщить о появлении</button>
                             </div>
                             <div class="product__footer">
                                 <button class="product__btn-add">в корзину</button>
@@ -1910,9 +1912,15 @@
                                 <p class="product__name">hello beauty</p>
                                 <p class="product__descr">Сыворотка для кожи
                                     вокруг глаз</p>
+                                <div class="product__colors">
+                                    <span style="color: #fff" class="product__colors-color"></span>
+                                    <span style="color: #fff" class="product__colors-color"></span>
+                                    <span style="color: #fff" class="product__colors-color"></span>
+                                    <span style="color: #fff" class="product__colors-color"></span>
+                                </div>
                                 <p class="product__tag">Сыворотка для глаз</p>
                                 <p class="product__price">от 410 до 470 byn</p>
-                                <button class="product__btn-empty">Сообщить о появлении</button>
+                                <!-- <button class="product__btn-empty">Сообщить о появлении</button> -->
                             </div>
                             <div class="product__footer">
                                 <button class="product__btn-add">в корзину</button>
@@ -1928,9 +1936,14 @@
                                 <p class="product__name">hello beauty</p>
                                 <p class="product__descr">Сыворотка для кожи
                                     вокруг глаз</p>
+                                <div class="product__colors">
+                                    <span style="color: #fff" class="product__colors-color"></span>
+                                    <span style="color: #fff" class="product__colors-color"></span>
+                                    <span style="color: #fff" class="product__colors-color"></span>
+                                    <span style="color: #fff" class="product__colors-color"></span>
+                                </div>
                                 <p class="product__tag">Сыворотка для глаз</p>
                                 <p class="product__price">от 410 до 470 byn</p>
-                                <button class="product__btn-empty">Сообщить о появлении</button>
                             </div>
                             <div class="product__footer">
                                 <button class="product__btn-add">в корзину</button>
@@ -1946,12 +1959,15 @@
                                 <p class="product__name">hello beauty</p>
                                 <p class="product__descr">Сыворотка для кожи
                                     вокруг глаз</p>
+                                <div class="product__colors">
+                                    <span style="color: #fff" class="product__colors-color"></span>
+                                    <span style="color: #fff" class="product__colors-color"></span>
+                                    <span style="color: #fff" class="product__colors-color"></span>
+                                    <span style="color: #fff" class="product__colors-color"></span>
+                                </div>
                                 <p class="product__tag">Сыворотка для глаз</p>
                                 <p class="product__price">от 410 до 470 byn</p>
                                 <button class="product__btn-empty">Сообщить о появлении</button>
-                            </div>
-                            <div class="product__footer">
-                                <button class="product__btn-add">в корзину</button>
                             </div>
                         </div>
 
@@ -1964,9 +1980,15 @@
                                 <p class="product__name">hello beauty</p>
                                 <p class="product__descr">Сыворотка для кожи
                                     вокруг глаз</p>
+                                <div class="product__colors">
+                                    <span style="color: #fff" class="product__colors-color"></span>
+                                    <span style="color: #fff" class="product__colors-color"></span>
+                                    <span style="color: #fff" class="product__colors-color"></span>
+                                    <span style="color: #fff" class="product__colors-color"></span>
+                                </div>
                                 <p class="product__tag">Сыворотка для глаз</p>
                                 <p class="product__price">от 410 до 470 byn</p>
-                                <button class="product__btn-empty">Сообщить о появлении</button>
+                                
                             </div>
                             <div class="product__footer">
                                 <button class="product__btn-add">в корзину</button>
@@ -1982,9 +2004,15 @@
                                 <p class="product__name">hello beauty</p>
                                 <p class="product__descr">Сыворотка для кожи
                                     вокруг глаз</p>
+                                <div class="product__colors">
+                                    <span style="color: #fff" class="product__colors-color"></span>
+                                    <span style="color: #fff" class="product__colors-color"></span>
+                                    <span style="color: #fff" class="product__colors-color"></span>
+                                    <span style="color: #fff" class="product__colors-color"></span>
+                                </div>
                                 <p class="product__tag">Сыворотка для глаз</p>
                                 <p class="product__price">от 410 до 470 byn</p>
-                                <button class="product__btn-empty">Сообщить о появлении</button>
+                               
                             </div>
                             <div class="product__footer">
                                 <button class="product__btn-add">в корзину</button>
@@ -2000,9 +2028,15 @@
                                 <p class="product__name">hello beauty</p>
                                 <p class="product__descr">Сыворотка для кожи
                                     вокруг глаз</p>
+                                <div class="product__colors">
+                                    <span style="color: #fff" class="product__colors-color"></span>
+                                    <span style="color: #fff" class="product__colors-color"></span>
+                                    <span style="color: #fff" class="product__colors-color"></span>
+                                    <span style="color: #fff" class="product__colors-color"></span>
+                                </div>
                                 <p class="product__tag">Сыворотка для глаз</p>
                                 <p class="product__price">от 410 до 470 byn</p>
-                                <button class="product__btn-empty">Сообщить о появлении</button>
+                                
                             </div>
                             <div class="product__footer">
                                 <button class="product__btn-add">в корзину</button>
