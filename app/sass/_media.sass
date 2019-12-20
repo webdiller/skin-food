@@ -7,24 +7,21 @@
 		display: block
 
 @media only screen and (max-width : 1150px)
+	.products-list__wrapper
+		margin-left: -10px
+		margin-right: -10px
+	.products-list__product
+		flex-basis: 31%
+		width: 31%
+		margin-bottom: 20px
+		margin-left: 10px
+		margin-right: 10px
 	.navigation__inner-navigation
 		left: 0
 	.region-modal
 		padding-right: 0 !important
 	.region-modal__dialog
 		margin-top: 0
-	.products-list__wrapper
-		justify-content: space-between
-	.products-list__product
-		flex-basis: 31.5%
-		width: 31.5%
-		margin-bottom: 20px
-		&:last-child
-			margin-right: auto
-			margin-left: 10px
-		&:nth-last-child(-2n+2)
-			margin-left: auto
-			margin-right: 10px
 	.person__pesron-default-img
 		font-size: 80px
 	.user-data__address, .user-data__person
@@ -47,6 +44,58 @@
 		margin-right: 20px
 
 @media only screen and (max-width : 992px)
+	.review-modal__subtitle
+		font-size: 15px
+		margin-right: 15px
+	#full-stars-example-two .rating__icon--star:before
+		font-size: 23px
+	#full-stars-example-two .rating__label:not(:last-child)
+		padding-right: 17px
+	.review-modal__info
+		font-size: 13px
+		margin-bottom: 10px
+	.review-modal__textarea-group:not(:last-child)
+		margin-bottom: 24px
+	.review-modal__label
+		font-size: 11px
+	.review-modal__second-info
+		font-size: 12px
+	.review-modal__btn
+		font-size: 15px
+	.review-modal__content
+		border-radius: 0
+		border: none
+	.review-modal__header
+		padding: 19px 30px
+	.review-modal__close::before
+		font-size: 18px
+	.review-modal__dialog
+		margin: 0
+		width: 100%
+		max-width: 100%
+	.review-modal__content-form
+		padding: 0 75px
+	.grid-images__wrapper
+		justify-content: center
+	.grid-images__layout
+		margin-left: 10px
+		margin-right: 10px
+		flex-basis: 32%
+		width: 32%
+	.favorites__separator-title
+		background: #F78C9F
+		margin-top: 10px
+		margin-bottom: 25px
+		color: #fff
+		font-size: 15px
+		margin-left: -20px
+		margin-right: -20px
+	.products-list__product
+		flex-basis: 30.5%
+		width: 30.5%
+		margin-bottom: 20px
+		margin-left: 10px
+		margin-right: 10px
 	// user-orders 992px
 	.orders__body
 		padding: 15px 30px
@@ -272,7 +321,7 @@
 		flex-basis: 90%
 
 @media only screen and (max-width : 768px)
-	// user-orders 992px
+	// user-orders 768px
 	.orders__header--shadow, .orders__wrapper
 		box-shadow: none
 	.orders__header-tr1,
@@ -338,7 +387,7 @@
 				justify-content: space-between
 			.orders-table__th
 				display: block
-				padding: 0 
+				padding: 0
 	.orders-table__counter-simple-count
 		display: none
 	.orders-table__tag
@@ -425,13 +474,14 @@
 	.region-form .select2-container--default .select2-selection--single .select2-selection__arrow:before
 		font-size: 14px
 	.region-form__example-search-item.active
-		font-size: 10px
+		color: #676666
+	.region-form__example-search-item.active
+		font-size: 14px
+		color: #000
 	.header-icon
 		font-size: 23px
 	.header__basket
 		font-size: 28px
-	.grid-images__head
-		display: none
 	.brands__item
 		padding: 25px 35px 20px 35px
 	.brands__letter
@@ -469,8 +519,8 @@
 		margin-left: 10px
 		margin-right: 10px
 		max-width: 223px
-		flex-basis: auto
-		width: auto
+		flex-basis: 223px
+		width: 223px
 	.product__name
 		font-size: 11px
 		line-height: 23px
@@ -613,8 +663,84 @@
 	.region-modal__list
 		flex-basis: 100%
 		width: 100%
+	.search-group__input::placeholder
+		font-size: 14px
 
 @media only screen and (max-width : 576px)
+	.review-modal__second-info
+		margin-bottom: 25px
+	.review-modal__btn
+		font-size: 11px
+		padding: 0 23px
+		min-width: auto
+		min-height: 25px
+		line-height: 1
+	.review-modal__close:before
+		font-size: 15px
+	.review-modal__title
+		font-size: 14px
+	#full-stars-example-two .rating__icon--star:before
+		font-size: 16px
+	.review-modal__subtitle
+		font-size: 13px
+	.review-modal__subtitle,
+	.review-modal__rate
+		margin-bottom: 13px
+	.review-modal__textarea-group:not(:last-child)
+		margin-bottom: 15px
+	#full-stars-example-two .rating__label:not(:last-child)
+		padding-right: 11px
+	.review-modal__body
+		padding: 15px 20px 30px 20px
+	.review-modal__content-form
+		padding: 0
+	.review-modal__header
+		align-items: center
+		padding: 12px 20px
+	.review-modal__close
+		padding: 0
+		display: flex
+		align-items: center
+	.search-menu__wrapper
+		height: 40px
+	.search-group
+		height: 25px
+	.search-group__input
+		height: 100%
+		padding-top: 0
+		padding-bottom: 0
+		line-height: 2px
+		font-size: 10px
+	.region-modal__icon-car
+		font-size: 22px
+	.region-form__example-search-item.active,
+	.region-form__example-search-item
+		font-size: 10px
+	.grid-images__layout
+		flex-basis: 47%
+		width: 47%
+	.swiper-carousel__slide
+		height: 45px
+	.swiper-carousel.owl-theme .owl-nav [class*=owl-]
+		top: 10px
+	.main__bottom
+		padding-top: 0
+	.swiper-carousel__icon-nav
+		font-size: 16px
+	.swiper-carousel--cabinet.owl-theme .owl-nav [class*=owl-]
+		top: 12px
+	.swiper-carousel--cabinet .swiper-carousel__slide
+		height: 45px
+	.swiper-carousel--cabinet .swiper-carousel__item
+		font-size: 11px
+	.favorites__separator-title
+		font-size: 12px
+		margin-top: 0
+		margin-bottom: 25px
+		height: 35px
+		line-height: 35px
+	.product__btn-empty
+		font-size: 9px
 	// user-orders 576px
 	.orders-table__content
 		text-align: left
@@ -746,13 +872,15 @@
 		font-size: 12px
 		line-height: 18px
 	.products-list__wrapper
-		margin-left: -5px
-		margin-right: -5px
+		margin-left: -10px
+		margin-right: -10px
 		justify-content: center
 	.products-list__product
-		max-width: 157px
-		margin-left: 5px
-		margin-right: 5px
+		min-width: 157px
+		flex-basis: 44%
+		width: 44%
+		margin-left: 10px
+		margin-right: 10px
 	.product__img
 		margin-top: 20px
 		height: auto
@@ -776,9 +904,13 @@
 		width: 100px
 		height: 18px
 		line-height: 18px
-	.product__btn-add
+	.product__btn-add,
+	.product__btn-add.added
 		font-size: 9px
-		line-height: 207.06%
+		line-height: 100%
+		padding: 0 10px
+		min-height: 22px
+		min-width: 96px
 	// .error-page 992px
 	.error-page__title
 		font-size: 135px
@@ -865,6 +997,9 @@
 	.search-group.search-group--modal .search-group__input::placeholder,
 	.search-list__link
 		font-size: 10px
+	.search-group__input::placeholder
+		font-size: 10px
+		line-height: 25px
 	.search-list
 		padding: 12px 15px
 	.search-group.search-group--modal,
@@ -932,6 +1067,9 @@
 		margin-bottom: 15px
 
 @media only screen and (max-width : 420px)
+	.review-modal__info,
+	.review-modal__second-info
+		font-size: 7px
 	// header 420px
 	.header__wrapper
 		height: 55px
@@ -1020,7 +1158,7 @@
 		display: none
 	// swiper 375px
 	.swiper-carousel.owl-theme .owl-nav [class*=owl-]
-		top: 6px
+		top: 10px
 	.swiper-carousel__slide
 		height: 45px
 	// map 375px

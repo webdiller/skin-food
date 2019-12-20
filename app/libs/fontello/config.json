@@ -203,6 +203,12 @@
       "css": "clock",
       "code": 59417,
       "src": "typicons"
+    },
+    {
+      "uid": "7eed700d710c276569f95be26326fa5b",
+      "css": "heart-empty",
+      "code": 59418,
+      "src": "elusive"
     }
   ]
 }

@@ -168,7 +168,25 @@ $(document).ready(function () {
                         items: 1
                     }
                 }
-            })
+            });
+
+            $('#swiperCarouselCabinet').owlCarousel({
+                loop: true,
+                center: true,
+                nav: true,
+                mouseDrag: true,
+                navSpeed: 800,
+                navText: ['<span class="swiper-carousel__icon demo-icon icon-left-open-big"></span>', '<span class="swiper-carousel__icon demo-icon icon-right-open-big"></span>'],
+                dots: false,
+                items: 1,
+                mouseDrag: false,
+                responsive: {
+                    0: {
+                        items: 1
+                    }
+                }
+            });
+
 
             $('#swiperCarouselDesktop').owlCarousel({
                 loop: true,
@@ -189,6 +207,21 @@ $(document).ready(function () {
         } catch (error) {
             console.log(error);
         }
+    }());
+
+
+    const carouselProduct = (function () {
+
+        $('#productCarousel').owlCarousel({
+            loop: true,
+            center: true,
+            nav: true,
+            mouseDrag: false,
+            navSpeed: 800,
+            // navText: ['<span class="swiper-carousel__icon demo-icon icon-left-open-big"></span>', '<span class="swiper-carousel__icon demo-icon icon-right-open-big"></span>'],
+            dots: true,
+            items: 1,
+        });
     }());
 
 
@@ -311,9 +344,31 @@ $(document).ready(function () {
 
 
     const userOrdersShowMoreButton = ((function () {
-        $('.orders__show-more').click(function () { 
+        $('.orders__show-more').click(function () {
             $(this).next('.orders__content').slideToggle();
-         })
+        })
     })());
 
+    const productTabsModule = (function () {
+        $('.cart-tabs__header.tabs-header .tabs-header__link').click(function (e) {
+            e.preventDefault();
+            $(this).tab('show');
+        })
+    }());
+
+
+    const productSliderModule = (function () {
+        // $('#imageGallery').lightSlider({
+        //     gallery: true,
+        //     item: 1,
+        //     horizontal: false,
+        //     vertical: true,
+        //     verticalHeight: 295,
+        //     currentPagerPosition: 'center',
+        //     // vThumbWidth: 50,
+        //     thumbItem: 3,
+        //     thumbMargin: 4,
+        //     slideMargin: 0
+        // });
+    }());
 });

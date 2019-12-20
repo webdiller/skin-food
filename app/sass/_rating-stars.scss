@@ -1,0 +1,68 @@
+#full-stars-example-two {
+
+    /* use display:inline-flex to prevent whitespace issues. alternatively, you can put all the children of .rating-group on a single line */
+    .rating-group {
+      display: inline-flex;
+    }
+    
+    /* make hover effect work properly in IE */
+    .rating__icon {
+      pointer-events: none;
+    }
+    
+    /* hide radio inputs */
+    .rating__input {
+     position: absolute !important;
+     left: -9999px !important;
+    }
+    
+    /* hide 'none' input from screenreaders */
+    .rating__input--none {
+      display: none
+    }
+  
+    /* set icon padding and size */
+    .rating__label {
+      cursor: pointer;
+      padding: 0 0.1em;
+      font-size: 17px;
+      margin-bottom: 0;
+    }
+    
+    /* set default star color */
+    .rating__icon--star {
+      transition: all .3s ease;
+    }
+
+    .rating__icon--star::before {
+      transition: all .3s ease;
+      content: "\e806";
+      font-family: "fontello";
+      font-size: 14px;
+      color: #ee8899;
+      margin: 0;
+    }
+  
+    /* if any input is checked, make its following siblings grey */
+    .rating__input:checked ~ .rating__label .rating__icon--star::before {
+      content: "\e81a";
+      font-family: "fontello";
+      color: #ee8899;
+      transition: all .3s ease;
+    }
+    
+    /* make all stars orange on rating group hover */
+    .rating-group:hover .rating__label .rating__icon--star::before {
+      content: "\e806";
+      font-family: "fontello";
+      transition: all .3s ease;
+    }
+  
+    /* make hovered input's following siblings grey on hover */
+    .rating__input:hover ~ .rating__label .rating__icon--star::before {
+      content: "\e81a";
+      font-family: "fontello";
+      color: #ee8899;
+      transition: all .3s ease;
+    }
+  }

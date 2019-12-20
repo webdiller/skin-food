@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0 shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="theme-color" content="#fff">
+    <link rel="icon" href="./img/favicon.png" type="image/png">
     <title>Skin Food</title>
     <style>
         body {
@@ -205,8 +206,9 @@
                 <a href="#" class="header__views demo-icon icon-eye">просмотрено
                     <span class="header__views-count">(1)</span>
                 </a>
-                <button class="header-icon header__user demo-icon icon-user" id="user" href="#!"></button>
-                <a class="header-icon header__like demo-icon icon-heart-circled" id="like" href="#!"></a>
+                <button class="header-icon header__user demo-icon icon-user" id="user"></button>
+                <a class="header-icon header__like demo-icon icon-heart-circled" id="like"
+                    href="user-favorite.html"></a>
                 <button class="header-icon header__basket demo-icon icon-shop" id="basket"><span id="basketCounter"
                         class="header__basket-counter">0</span>
                 </button>
@@ -221,9 +223,9 @@
                         <button data-toggle="modal" data-target="#userModal" class="user-info__btn-out">Выйти</button>
                     </div>
                     <div class="user-info__body">
-                        <a href="#!" class="user-info__link">Личный кабинет</a>
-                        <a href="#!" class="user-info__link">Избранное</a>
-                        <a href="#!" class="user-info__link">История заказов</a>
+                        <a href="user-cabinet.html" class="user-info__link">Личный кабинет</a>
+                        <a href="user-favorite.html" class="user-info__link">Избранное</a>
+                        <a href="user-orders.html" class="user-info__link">История заказов</a>
                     </div>
                 </div>
 
@@ -1671,7 +1673,7 @@
         <div class="swiper__wrapper">
 
             <!-- carousel for mobile -->
-            <!-- <div id="swiperCarouselMobile" class="swiper-carousel swiper-carousel--mobile owl-carousel owl-theme">
+            <div id="swiperCarouselMobile" class="d-sm-block d-md-none swiper-carousel owl-carousel owl-theme">
                 <div class="swiper-carousel__slide item">
                     <a href="#!" class="swiper-carousel__item active">НОВИНКИ</a>
                     <a href="#!" class="swiper-carousel__item">БЕСТСЕЛЛЕРЫ</a>
@@ -1684,10 +1686,10 @@
                     <a href="#!" class="swiper-carousel__item">премиум</a>
                     <a href="#!" class="swiper-carousel__item">распродажи</a>
                 </div>
-            </div> -->
+            </div>
 
-            <!-- carousel for desktop -->
-            <!-- <div id="swiperCarouselDesktop" class="swiper-carousel swiper-carousel--desktop owl-carousel owl-theme">
+            <!-- carousel for tablet -->
+            <div id="swiperCarouselDesktop" class="d-none d-md-block d-lg-none swiper-carousel owl-carousel owl-theme">
                 <div class="swiper-carousel__slide item">
                     <a href="#!" class="swiper-carousel__item active">НОВИНКИ</a>
                     <a href="#!" class="swiper-carousel__item">БЕСТСЕЛЛЕРЫ</a>
@@ -1698,7 +1700,7 @@
                     <a href="#!" class="swiper-carousel__item">премиум</a>
                     <a href="#!" class="swiper-carousel__item">распродажи</a>
                 </div>
-            </div> -->
+            </div>
 
         </div>
     </div>
@@ -1711,7 +1713,7 @@
 
             <div class="grid-images">
 
-                <div class="grid-images__head">
+                <div class="d-none d-lg-block grid-images__head">
                     <div class="grid-images__head-wrapper">
                         <div class="grid-images__title">
                             <a class="grid-images__link grid-images__link-news" href="#">НОВИНКИ</a>
@@ -1727,20 +1729,23 @@
                         </div>
                     </div>
                 </div>
-                <div class="grid-images__wrapper ">
+
+                <div id="gridDesktop" class="d-none d-lg-flex grid-images__wrapper">
 
                     <div class="grid-images__layout" style="transform: translate3d(0px, 0px, 0px);">
-                            <a href="#!" class="grid-images__item"><img src="./img/grid/banner-1.jpg" alt=""
+                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-4.jpg" alt=""
                                 class="grid-images__img"></a>
-                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-2.jpg" alt=""
+                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-5.jpg" alt=""
                                 class="grid-images__img"></a>
-                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-3.jpg" alt=""
-                                class="grid-images__img">
-                        </a>
-                    </div>
-
-                    <div class="grid-images__layout" style="transform: translate3d(0px, 0px, 0px);">
-                            <a href="#!" class="grid-images__item"><img src="./img/grid/banner-4.jpg" alt=""
+                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-6.jpg" alt=""
+                                class="grid-images__img"></a>
+                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-5.jpg" alt=""
+                                class="grid-images__img"></a>
+                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-6.jpg" alt=""
+                                class="grid-images__img"></a>
+                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-5.jpg" alt=""
+                                class="grid-images__img"></a>
+                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-6.jpg" alt=""
                                 class="grid-images__img"></a>
                         <a href="#!" class="grid-images__item"><img src="./img/grid/banner-5.jpg" alt=""
                                 class="grid-images__img"></a>
@@ -1749,7 +1754,7 @@
                     </div>
 
                     <div class="grid-images__layout" style="transform: translate3d(0px, 0px, 0px);">
-                            <a href="#!" class="grid-images__item"><img src="./img/grid/banner-7.jpg" alt=""
+                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-7.jpg" alt=""
                                 class="grid-images__img"></a>
                         <a href="#!" class="grid-images__item"><img src="./img/grid/banner-8.jpg" alt=""
                                 class="grid-images__img"></a>
@@ -1757,18 +1762,177 @@
                                 class="grid-images__img"></a>
                         <a href="#!" class="grid-images__item"><img src="./img/grid/banner-7.jpg" alt=""
                                 class="grid-images__img"></a>
+                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-8.jpg" alt=""
+                                class="grid-images__img"></a>
+                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-9.jpg" alt=""
+                                class="grid-images__img"></a>
+                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-7.jpg" alt=""
+                                class="grid-images__img"></a>
+                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-8.jpg" alt=""
+                                class="grid-images__img"></a>
+                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-9.jpg" alt=""
+                                class="grid-images__img"></a>
                     </div>
 
                     <div class="grid-images__layout" style="transform: translate3d(0px, 0px, 0px);">
-                            <a href="#!" class="grid-images__item"><img src="./img/grid/banner-1.jpg" alt=""
+                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-1.jpg" alt=""
                                 class="grid-images__img"></a>
                         <a href="#!" class="grid-images__item"><img src="./img/grid/banner-2.jpg" alt=""
                                 class="grid-images__img"></a>
                         <a href="#!" class="grid-images__item"><img src="./img/grid/banner-1.jpg" alt=""
                                 class="grid-images__img"></a>
+                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-2.jpg" alt=""
+                                class="grid-images__img"></a>
+                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-1.jpg" alt=""
+                                class="grid-images__img"></a>
+                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-2.jpg" alt=""
+                                class="grid-images__img"></a>
+                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-1.jpg" alt=""
+                                class="grid-images__img"></a>
+                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-2.jpg" alt=""
+                                class="grid-images__img"></a>
+                    </div>
+
+                    <div class="grid-images__layout" style="transform: translate3d(0px, 0px, 0px);">
+                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-1.jpg" alt=""
+                                class="grid-images__img"></a>
+                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-2.jpg" alt=""
+                                class="grid-images__img"></a>
+                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-1.jpg" alt=""
+                                class="grid-images__img"></a>
+                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-2.jpg" alt=""
+                                class="grid-images__img"></a>
+                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-1.jpg" alt=""
+                                class="grid-images__img"></a>
+                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-2.jpg" alt=""
+                                class="grid-images__img"></a>
+                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-1.jpg" alt=""
+                                class="grid-images__img"></a>
+                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-2.jpg" alt=""
+                                class="grid-images__img"></a>
+                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-2.jpg" alt=""
+                                class="grid-images__img"></a>
+                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-1.jpg" alt=""
+                                class="grid-images__img"></a>
+                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-2.jpg" alt=""
+                                class="grid-images__img"></a>
                     </div>
 
                 </div>
+
+                <div id="gridTablet" class="d-none d-sm-flex d-lg-none grid-images__wrapper">
+
+                    <div class="grid-images__layout" style="transform: translate3d(0px, 0px, 0px);">
+                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-7.jpg" alt=""
+                                class="grid-images__img"></a>
+                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-8.jpg" alt=""
+                                class="grid-images__img"></a>
+                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-9.jpg" alt=""
+                                class="grid-images__img"></a>
+                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-7.jpg" alt=""
+                                class="grid-images__img"></a>
+                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-8.jpg" alt=""
+                                class="grid-images__img"></a>
+                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-9.jpg" alt=""
+                                class="grid-images__img"></a>
+                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-7.jpg" alt=""
+                                class="grid-images__img"></a>
+                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-8.jpg" alt=""
+                                class="grid-images__img"></a>
+                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-9.jpg" alt=""
+                                class="grid-images__img"></a>
+                    </div>
+
+                    <div class="grid-images__layout" style="transform: translate3d(0px, 0px, 0px);">
+                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-1.jpg" alt=""
+                                class="grid-images__img"></a>
+                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-2.jpg" alt=""
+                                class="grid-images__img"></a>
+                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-1.jpg" alt=""
+                                class="grid-images__img"></a>
+                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-2.jpg" alt=""
+                                class="grid-images__img"></a>
+                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-1.jpg" alt=""
+                                class="grid-images__img"></a>
+                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-2.jpg" alt=""
+                                class="grid-images__img"></a>
+                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-1.jpg" alt=""
+                                class="grid-images__img"></a>
+                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-2.jpg" alt=""
+                                class="grid-images__img"></a>
+                    </div>
+
+                    <div class="grid-images__layout" style="transform: translate3d(0px, 0px, 0px);">
+                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-1.jpg" alt=""
+                                class="grid-images__img"></a>
+                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-2.jpg" alt=""
+                                class="grid-images__img"></a>
+                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-1.jpg" alt=""
+                                class="grid-images__img"></a>
+                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-2.jpg" alt=""
+                                class="grid-images__img"></a>
+                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-1.jpg" alt=""
+                                class="grid-images__img"></a>
+                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-2.jpg" alt=""
+                                class="grid-images__img"></a>
+                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-1.jpg" alt=""
+                                class="grid-images__img"></a>
+                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-2.jpg" alt=""
+                                class="grid-images__img"></a>
+                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-2.jpg" alt=""
+                                class="grid-images__img"></a>
+                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-1.jpg" alt=""
+                                class="grid-images__img"></a>
+                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-2.jpg" alt=""
+                                class="grid-images__img"></a>
+                    </div>
+
+                </div>
+
+                <div id="gridMobile" class="d-sm-none grid-images__wrapper">
+
+                    <div class="grid-images__layout" style="transform: translate3d(0px, 0px, 0px);">
+                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-7.jpg" alt=""
+                                class="grid-images__img"></a>
+                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-8.jpg" alt=""
+                                class="grid-images__img"></a>
+                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-9.jpg" alt=""
+                                class="grid-images__img"></a>
+                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-7.jpg" alt=""
+                                class="grid-images__img"></a>
+                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-8.jpg" alt=""
+                                class="grid-images__img"></a>
+                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-9.jpg" alt=""
+                                class="grid-images__img"></a>
+                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-7.jpg" alt=""
+                                class="grid-images__img"></a>
+                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-8.jpg" alt=""
+                                class="grid-images__img"></a>
+                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-9.jpg" alt=""
+                                class="grid-images__img"></a>
+                    </div>
+
+                    <div class="grid-images__layout" style="transform: translate3d(0px, 0px, 0px);">
+                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-1.jpg" alt=""
+                                class="grid-images__img"></a>
+                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-2.jpg" alt=""
+                                class="grid-images__img"></a>
+                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-1.jpg" alt=""
+                                class="grid-images__img"></a>
+                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-2.jpg" alt=""
+                                class="grid-images__img"></a>
+                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-1.jpg" alt=""
+                                class="grid-images__img"></a>
+                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-2.jpg" alt=""
+                                class="grid-images__img"></a>
+                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-1.jpg" alt=""
+                                class="grid-images__img"></a>
+                        <a href="#!" class="grid-images__item"><img src="./img/grid/banner-2.jpg" alt=""
+                                class="grid-images__img"></a>
+                    </div>
+
+                </div>
+
             </div>
 
         </div>
@@ -1875,65 +2039,99 @@
     <script src="js/libs.min.js"></script>
     <script src="js/common.js"></script>
     <style>
-            .grid-images__layout { height: fit-content; transition: all .5s;}
-        </style>
-        <script>
-        var all = document.querySelectorAll(".grid-images__wrapper .grid-images__layout");
-        var minMax = [];
-        for(var i = 0; i < document.querySelectorAll(".grid-images__wrapper .grid-images__layout").length; i++){
-            minMax[i] = document.querySelectorAll(".grid-images__wrapper .grid-images__layout")[i].offsetHeight;
+        .grid-images__layout {
+            height: fit-content;
+            transition: all .5s ease;
+            height: -moz-fit-content;
         }
-        var MinH = minMax.reduce(function(a, b) {
-            return Math.min(a, b);
-        });
-    
-        var MinM = minMax.reduce(function(a, b) {
-            return Math.max(a, b);
-        });
-    
-        document.querySelector(".grid-images__wrapper").style.height = MinH + "px";
-    
-        window.onscroll = function(e){
-            var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-            var height = document.querySelector(".grid-images__wrapper").offsetHeight;
-    
-                for(var i = 0; i < all.length; i++){
-                    if(MinH > 860){
-                        if(scrollTop > 400){
-                            
-                            var off = 0;
-    
-                            if(scrollTop > 700){
-                                    off = -(((parseInt(all[i].offsetHeight) - MinH) / height) * (scrollTop + 400));
-                                if(off <= -(parseInt(all[i].offsetHeight) - MinH)) continue;
-                            }
-                            else
-                                off = -(((parseInt(all[i].offsetHeight) - MinH) / height) * (scrollTop - 400));
-    
-                            if(parseInt(all[i].offsetHeight) == MinH) continue;
-    
-                            all[i].style.transform = "translate3d(0px, " + parseInt(off) + "px, 0px)";
-                        }
-                        else {
-                            all[i].style.transform = "translate3d(0px, 0px, 0px)";
-                        }
-                    }
-                    else {
-                        if(scrollTop > 400){
-                            var off = 0;
-                            off = -(((parseInt(all[i].offsetHeight) - MinH) / height) * (scrollTop + 400));
-                            if(off <= -(parseInt(all[i].offsetHeight) - MinH)) continue;
-    
-                            all[i].style.transform = "translate3d(0px, " + parseInt(off) + "px, 0px)";
-                        }
-                        else {
-                            all[i].style.transform = "translate3d(0px, 0px, 0px)";
-                        }
-                    }
+    </style>
+    <script>
+
+        $(document).ready(function () {
+            if ($(window).width() >= 992) {
+            HSlide("#gridDesktop");
+        }
+
+
+        if ($(window).width() <= 991) {
+            HSlide("#gridTablet");
+        }
+
+
+
+        if ($(window).width() <= 576) {
+            HSlide("#gridMobile");
+        }
+
+        function HSlide(elem) {
+            try {
+                var all = document.querySelectorAll(elem + " .grid-images__layout");
+                var minMax = [];
+                for (var i = 0; i < document.querySelectorAll(elem + " .grid-images__layout").length; i++) {
+                    minMax[i] = document.querySelectorAll(elem + " .grid-images__layout")[i].offsetHeight;
                 }
-    
+                var MinH = minMax.reduce(function (a, b) {
+                    return Math.min(a, b);
+                });
+
+                var MinM = minMax.reduce(function (a, b) {
+                    return Math.max(a, b);
+                });
+
+                document.querySelector(elem).style.height = MinH + "px";
+
+                window.onscroll = function (e) {
+                    var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+                    var height = document.querySelector(elem).offsetHeight;
+
+                    for (var i = 0; i < all.length; i++) {
+                        if (MinH > 860) {
+                            if (scrollTop > 400) {
+
+                                var off = 0;
+
+                                if (scrollTop > 700) {
+                                    off = -(((parseInt(all[i].offsetHeight) - MinH) / height) * (scrollTop + 400));
+                                    if (off <= -(parseInt(all[i].offsetHeight) - MinH)) {
+                                        all[i].style.transform = "translate3d(0px," + -(parseInt(all[i].offsetHeight) - MinH) + "px, 0px)";
+                                        continue;
+                                    }
+                                }
+                                else
+                                    off = -(((parseInt(all[i].offsetHeight) - MinH) / height) * (scrollTop - 400));
+
+                                if (parseInt(all[i].offsetHeight) == MinH) continue;
+
+                                all[i].style.transform = "translate3d(0px," + parseInt(off) + "px, 0px)";
+                            }
+                            else {
+                                all[i].style.transform = "translate3d(0px, 0px, 0px)";
+                            }
+                        }
+                        else {
+                            if (scrollTop > 400) {
+                                var off = 0;
+                                off = -(((parseInt(all[i].offsetHeight) - MinH) / height) * (scrollTop + 400));
+                                if (off <= -(parseInt(all[i].offsetHeight) - MinH)) continue;
+
+                                all[i].style.transform = "translate3d(0px," + parseInt(off) + "px, 0px)";
+                            }
+                            else {
+                                all[i].style.transform = "translate3d(0px, 0px, 0px)";
+                            }
+                        }
+                    }
+
+                }
+            } catch (error) {
+                console.log(error);
+            }
         }
-        </script>
+
+
+        });
+
+    </script>
 </body>
 
 </html>
