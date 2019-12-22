@@ -36,8 +36,8 @@ gulp.task(`sass`, [`cleanapp`], function () {
 
 gulp.task(`browserSync`, function () {
     browserSync({
-        // proxy: "test.ru",
-        server: { baseDir: `app` },
+        proxy: "skin-food",
+        // server: { baseDir: `app` },
         notify: false // отключаем уведомления
     })
 });

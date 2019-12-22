@@ -305,10 +305,14 @@ a:hover
 .slider
     background: url(../img/slider/slider-bg.jpg) no-repeat center
     background-size: cover
+    &--akcii
+        background: #ffddee
+        .slider__wrapper
+            padding-bottom: 0
     &--brands
         background: #ffdde4
     &__wrapper
-        max-width: 1065px
+        max-width: 1085px
         padding: 20px
         margin: 0 auto
 
@@ -408,6 +412,14 @@ a:hover
 .main
     background: #FFDDE4
     position: relative
+    &--akcii
+        .main__wrapper
+            padding-top: 10px
+    &--brands
+        .main__wrapper
+            padding-top: 5px
+    &--basket
+        background: rgb(251, 248, 249)
     &--user-cabinet
         background: rgb(251, 248, 249)
     &--user-favorite
@@ -459,7 +471,7 @@ a:hover
         background-position: center
         background-size: cover
     &__bottom
-        padding-top: 50px
+        padding-top: 0
         padding-bottom: 25px
         position: relative
         z-index: 10
@@ -939,6 +951,9 @@ a:hover
     &__layout
         flex-basis: 24%
         width: 24%
+        height: fit-content
+        transition: all .5s ease
+        height: -moz-fit-content
     &__head
         position: relative
         transition: all .3s ease
@@ -1437,9 +1452,6 @@ a:hover
 .product-carousel
     &__item
         text-align: center
-
-
-
 
 .tabs-content
     &__item

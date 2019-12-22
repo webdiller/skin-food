@@ -43,7 +43,20 @@
 	.user-address__body, .user-address__house
 		margin-right: 20px
 
+@media only screen and (max-width : 1085px)
+	.slider__wrapper
+		padding-left: 10px
+		padding-right: 10px
+
 @media only screen and (max-width : 992px)
+	.payment__form-radio-group-one,
+	.payment__form-radio-group-two
+		border-top: 1px solid #E7E7E7
+		border-bottom: 1px solid #E7E7E7
+	.payment__form-radio-group-three
+		border-bottom: 0
+	.navigation__wrapper
+		padding: 0 20px
 	.review-modal__subtitle
 		font-size: 15px
 		margin-right: 15px
@@ -273,25 +286,123 @@
 		top: 10px
 		position: relative
 	// basket 992px
+	.basket-check__wrapper
+		flex-direction: column
+		align-items: flex-end
+	.basket-check__total-cost,
+	.basket-check__cost-of-delivery
+		color: #AEAEAE
+		font-size: 12px
+	.basket-check__total-pay
+		color: #000
+		font-weight: 700
+		font-size: 14px
+	.basket__wrapper
+		box-shadow: none
+	.basket-check__wrapper
+		padding-top: 20px
+	.basket__promo-list
+		padding-left: 30px
+		padding-right: 30px
+	.basket__basket-list
+		padding-top: 25px
+		padding-left: 30px
+		padding-right: 30px
+	.basket-list__item
+		flex-wrap: nowrap
+	.main.main--basket .main__wrapper
+		padding: 0
+	.basket__back
+		width: 100%
+		flex-basis: 100%
+		background: #FFDDE4
+		padding: 15px 30px
+		&-link
+			font-size: 14px
+			letter-spacing: 0.04em
+			color: #F78C9F
+	.basket-list__img-with-content
+		flex-basis: auto
+		width: auto
+		margin-right: 50px
+	.basket-list__img
+		height: 90px
+		width: 90px
+		margin-right: 36px
+	.basket-list__name
+		font-size: 14px
+	.basket-list__descr
+		font-size: 14px
+	.basket__counter-wrapper
+		flex-basis: 85px
+		width: 85px
+		margin-right: 50px
+	.basket-counter__small-text
+		display: none
+	.basket-list__close:before
+		content: '\e808'
+		color: #F78C9F
+	.contacts__order-title
+		display: none
+	.contacts__group
+		max-width: none
 	.promo-list__title
 		font-size: 	10px
 	.promo-list__btn
 		font-size: 9px
 	.promo-list__subtitle
 		font-size: 8px
-	.basket-list__img
-		height: 90px
-		width: 90px
-	.basket-list__name
-		font-size: 14px
-	.basket-list__descr
-		font-size: 14px
 	.basket-counter
 		height: 30px
 	.basket-list__price
 		font-size: 16px
 		white-space: nowrap
 		margin-right: 20px
+		color: #000
+		flex-basis: auto
+		width: auto
+	.contacts__title,
+	.contacts__inputs,
+	.delivery__title,
+	.delivery__form-input-group,
+	.delivery__radio-buttons,
+	.delivery__time,
+	.address__wrapper,
+	.basket__basket-list
+		padding-left: 0
+		padding-right: 0
+	.delivery__form-input-group
+		margin-left: 0
+		flex-basis: 68%
+		width: 68%
+	.basket__wrapper
+		padding-left: 30px
+		padding-right: 30px
+	.address__form-group-street,
+	.address__house,
+	.address__form-group-phone
+		max-width: none
+		flex-basis: 68%
+		width: 68%
+	.address__form-group-flat, .address__form-group-home
+		min-width: 102px
+	.address__text-info
+		padding-bottom: 20px
+		font-size: 12px
+		color: #aeaeae
+		font-weight: 700
+	.basket__check,
+	.basket__control
+		padding-left: 0
+		padding-right: 0
+	.delivery__title,
+	.bonus__title
+		padding-bottom: 0
+		border-bottom: 0
+	.bonus__subtitle
+		font-weight: 700
+	.address__house
+		justify-content: space-between
 	.promo-list__input,
 	.payment__title,
 	.basket-counter__input,
@@ -312,15 +423,63 @@
 	.address__text-info
 		flex-basis: 100%
 		width: 100%
-		font-size: 7px
 	.promo-list__btn
 		min-width: 130px
 		min-height: 30px
 	.address__form-group-comment
 		width: 90%
 		flex-basis: 90%
+	.basket-control
+		position: fixed
+		left: 0
+		right: 0
+		bottom: 0
+		background: #fff
+        height: 70px
+        display: flex
+        align-items: center
+	.basket-control__total-pay
+		height: 100%
+		flex-basis: 50%
+		width: 50%
+		text-align: right
+		font-size: 23px
+		padding-right: 30px
+		line-height: 70px
+		font-weight: 700
+		letter-spacing: 0.04em
+		color: #1E1E1F
+		border-top: 2px solid #FFDDE4
+		border-right: 2px solid #FFDDE4
+	.basket-control__btn-pay
+		border-radius: 0
+		flex-basis: 50%
+		width: 50%
+		height: 70px
+		line-height: 1
+		display: flex
+		align-items: center
+		justify-content: center
+		font-weight: 700
+		font-size: 17px
+		text-align: center
+		letter-spacing: 0.04em
+		text-transform: uppercase
+		color: #FFFFFF
+		background: #F78C9F
+		text-align: center
+		border: none
+		outline: none
+		transition: all .3s ease
+		&:hover
+			background: #f86480
+		&:focus
+			background: #f86480
 
 @media only screen and (max-width : 768px)
+	.basket__counter-wrapper
+		flex-basis: 50%
+		width: 50%
 	// user-orders 768px
 	.orders__header--shadow, .orders__wrapper
 		box-shadow: none
@@ -546,15 +705,8 @@
 	.banner-info__img
 		margin-right: 20px
 	// basket 768px
-	.basket-control__wrapper
-		height: 60px
-	.basket-control__total-pay
-		font-size: 22px
-		line-height: 60px
 	.basket-check__wrapper
 		padding-bottom: 0
-	.basket-control__btn-pay
-		font-size: 12px
 	.address__form-group-comment
 		width: 95%
 		flex-basis: 95%
@@ -590,9 +742,14 @@
 		order: 4
 		margin-left: 120px
 	.basket-list__price
-		flex-basis: 30%
+		flex-basis: auto
+		margin-right: 0
 		margin-left: auto
 		order: 5
+	.basket-list__img-with-content
+		flex-basis: 100%
+		width: 100%
+		margin-right: 0
 	.basket-list__descr
 		font-size: 12px
 	.basket-list__tag
@@ -670,8 +827,141 @@
 		width: 100%
 	.search-group__input::placeholder
 		font-size: 14px
+	.delivery__form-input-group,
+	.address__form-group-street
+		min-width: 205px
+		flex-basis: 32.5%
+		width: 32.5%
+	.address__wrapper
+		max-width: 310px
+		width: 310px
+	.address__form-group-street,
+	.address__house,
+	.address__form-group-phone
+		flex-basis: 71%
+		width: 71%
+		margin-right: 0
 
 @media only screen and (max-width : 576px)
+	.filter-modal__header
+		padding-top: 8px
+		padding-bottom: 8px
+		height: 40px
+		display: flex
+		align-items: center
+	.filter-modal__title
+		font-size: 14px
+	.modal-filter__link,
+	.filter-child__checkbox-label,
+	.filter-modal__back
+		font-size: 15px
+	.filter-child__after, .filter-child__before,
+	.filter-child__course-text
+		white-space: nowrap
+		font-size: 15px
+		font-weight: 700
+	.filter-child__before
+		margin-left: 0
+	.modal-filter__item,
+	.filter-child__item
+		padding: 11px 0
+		height: 45px
+	.modal-filter__modal-item
+		height: 45px
+	.modal-item__btn
+		font-size: 11px
+	.modal-filter__link:after
+		font-size: 13px
+		top: 2px
+	.modal-item__icon-link:before
+		font-size: 13px
+	.modal-item__title
+		font-size: 11px
+	.modal-item__descr
+		font-size: 11px
+	.basket-list__name
+		order: 2
+	.basket-list__descr
+		order: 3
+	.basket-list__tag
+		order: 1
+	.basket-check__cost-of-delivery, .basket-check__total-cost
+		font-size: 11px
+	.payment__form-radio-group-two
+		border: none
+		border-bottom: 1px solid #E7E7E7 
+		max-width: 234px
+	.payment__form-radio-group-three
+		border: none
+		padding-bottom: 20px
+	.bonus__title
+		margin-bottom: 10px
+	.bonus__btn
+		display: block
+		padding-bottom: 0
+		width: 100%
+		border-bottom: 1px solid #E7E7E7
+		text-align: left
+		padding-bottom: 15px
+		margin-bottom: 12px
+	.payment__title
+		margin-bottom: 10px
+	.basket-list__item:not(:last-child)
+		padding-bottom: 10px
+	.basket-list__item:last-child
+		padding-bottom: 15px
+	.address__house
+		flex-basis: 100%
+		width: 100%
+		justify-content: flex-start
+	.address__form-group-flat, .address__form-group-home
+		max-width: 97px
+		min-width: 97px
+	.address__form-group-phone
+		max-width: 205px
+		min-width: 205px
+	.address__form-group-comment
+		margin-bottom: 15px
+	.address__text-info
+		font-size: 7px
+		border-bottom: 1px solid #E7E7E7
+	.address__wrapper
+		max-width: none
+		width: 100%
+		flex-basis: 100%
+	.basket__wrapper
+		padding-left: 20px
+		padding-right: 20px
+	.contacts__inputs
+		flex-direction: column
+		align-items: flex-start
+	.contacts__group
+		min-width: 205px
+		max-width: 205px
+	.contacts__group:not(:last-child)
+		margin: 0 0 15px 0
+	.contacts__item
+		padding: 12px 0 20px 0
+		border-bottom: 1px solid #c7c7c7
+	.contacts__title
+		border-bottom: 0
+		padding-bottom: 0
+		margin-bottom: 18px
+	.delivery__wrapper
+		padding: 12px 0 18px 0
+	.delivery__form-input-group
+		max-width: 205px
+	.basket-control,
+	.basket-control__btn-pay, .basket-control__total-pay
+		height: 60px
+	.basket-control__total-pay
+		font-size: 22px
+		line-height: 60px
+	.basket-control__btn-pay
+		font-size: 12px
+	.address__form-group-street
+		max-width: 205px
+		min-width: 205px
 	.review-modal__second-info
 		margin-bottom: 25px
 	.review-modal__btn
@@ -1018,6 +1308,16 @@
 		font-size: 11px
 
 @media only screen and (max-width : 480px)
+	.basket-list__item
+		align-items: center
+	.basket__counter-wrapper
+		flex-basis: auto
+		width: auto
+		margin-right: 0
+		margin-left: 75px
+	.basket-list__price
+		flex-basis: auto
+		width: auto
 	.main-navigation.active .header__search.active
 		margin-right: 15px
 	.header__like.active
@@ -1028,8 +1328,6 @@
 		width: 65%
 		&:not(:last-child)
 			margin-bottom: 15px
-	.basket-list__item
-		align-items: flex-start
 	.basket-list__close
 		top: 0
 		right: 0
@@ -1041,12 +1339,6 @@
 		height: 60px
 	.basket-list__counter
 		margin: 10px 0
-	.basket-list__counter,
-	.basket-list__price
-		flex-basis: 100%
-		width: 100%
-		margin-right: 0
-		margin-left: auto
 	// footer 480px
 	.footer__wrapper
 		justify-content: center

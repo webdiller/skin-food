@@ -373,9 +373,11 @@ $(document).ready(function () {
 
 
     const parallaxModule = (function () {
+
         if ($(window).width() >= 992) {
             HSlide("#gridDesktop");
         }
+
         $(window).resize(function () {
             if ($(window).width() <= 991) {
                 HSlide("#gridTablet");
@@ -384,6 +386,7 @@ $(document).ready(function () {
                 HSlide("#gridMobile");
             }
         });
+
         function HSlide(elem) {
             try {
                 var all = document.querySelectorAll(elem + " .grid-images__layout");
@@ -449,4 +452,54 @@ $(document).ready(function () {
             }
         }
     }());
+
+
+    const navigationActiveModule = (function () {
+        // $('.orders__show-more').click(function () {
+        //     $(this).next('.orders__content').slideToggle();
+        // })
+    }());
+
+    const mobileFilterModule = (function () {
+
+        const btnBack = doc.getElementById('btnBack'),
+            titleFilter = doc.getElementById('titleFilter'),
+            closeBtn = doc.getElementById('closeBtn'),
+            mainContent = doc.getElementById('mainContent'),
+            btnReset = doc.getElementById('btnReset'),
+            btnSubmit = doc.getElementById('btnSubmit');
+
+        var mobileFilter = {
+            btnBack: false,
+            titleFilter: 'ФИЛЬТР',
+            closeBtn: false,
+            mainContent: false,
+            btnReset: false,
+            btnSubmit: false
+        };
+
+        function clickLink() {
+            $('a.filterNavigationLink').on('click', function (e) {
+                e.preventDefault();
+                titleFilter.innerText = $(this).attr('data-title');
+                btnBack.classList.remove('disabled');
+                $(this).parent().children().last().removeClass('disabled');
+            });
+        }
+
+        function clickBtnBack() {
+            $('#btnBack').on('click', function (e) {
+                e.preventDefault();
+                titleFilter.innerText = mobileFilter.titleFilter;
+                btnBack.classList.add('disabled');
+                $('.filter-child').addClass('disabled');
+            });
+        }
+
+        clickLink();
+        clickBtnBack();
+
+
+    }());
+
 });
