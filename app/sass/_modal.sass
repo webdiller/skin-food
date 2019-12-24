@@ -236,27 +236,20 @@
         font-weight: 700
         letter-spacing: 0.04em
         color: #1E1E1F
-        transition: transform 0.3s 0.3s
+        transition: all 2s ease
         transition-timing-function: cubic-bezier(0.2,1,0.3,1)
         &.active
-            transform: translate3d(-8px, -12px, 0) scale3d(0.8, 0.8, 1) translateZ(1px)
+            transform: translate3d(-8px, -4px, 0) scale3d(0.8, 0.8, 1) translateZ(1px)
             color: #4B4B4B
     &__descr
+        width: 100%
         font-size: 15px
         letter-spacing: 0.04em
         color: #AEAEAE
-        bottom: 0
-        position: absolute
-        width: 100%
-        left: 0
-        right: 0
-        z-index: -1
-        opacity: 0
-        visibility: hidden
-        &.active
-            z-index: 1
-            opacity: 1
-            visibility: visible
+    &__descr-item
+        font-size: 15px
+        letter-spacing: 0.04em
+        color: #AEAEAE
     &__btn
         margin-left: auto
         border: none
@@ -506,3 +499,5 @@
     &__checkbox-label
         margin-right: auto
         width: 100%
+        font-size: 17px
+        color: #1E1E1F  

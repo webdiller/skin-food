@@ -420,6 +420,10 @@ $(document).ready(function () {
 
     const mobileFilterModule = (function () {
 
+        var mobileFilter = {
+            titleFilter: 'ФИЛЬТР'
+        };
+
         const btnBack = doc.getElementById('btnBack'),
             titleFilter = doc.getElementById('titleFilter'),
             closeBtn = doc.getElementById('closeBtn'),
@@ -427,20 +431,6 @@ $(document).ready(function () {
             btnReset = $('.modal-item__btn'),
             btnCancel = doc.getElementById('btnCancel'),
             btnSubmit = doc.getElementById('btnSubmit');
-
-        var mobileFilter = {
-            btnBack: false,
-            titleFilter: 'ФИЛЬТР',
-            closeBtn: false,
-            mainContent: false,
-            btnReset: false,
-            btnCancel: false,
-            btnSubmit: false
-        };
-
-        var priceObject = {
-            description: ''
-        };
 
         function clickLink() {
             $('a.filterNavigationLink').on('click', function (e) {
@@ -460,40 +450,58 @@ $(document).ready(function () {
             });
         }
 
-        function selectPriceRadio() {
-            $('input[name="priceFilter"]').on('change', () => {
-                let currentChecked = ($('input[name="priceFilter"]:checked').val());
-                let currentCheckedLenght = $('input[name="priceFilter"]:checked').length;
-                return {
-                    text: currentChecked,
-                    length: currentCheckedLenght
+        function btnResel(elementParent) {
+            $(elementParent + ' .modal-item__btn').click(() => {
+                $(elementParent + ' .modal-item__descr').children().remove();
+                $(elementParent + ' .modal-item__title').removeClass('active');
+                $(elementParent+ ' .modal-item__btn').addClass('disabled');
+            });
+        }
+
+
+        function selectInputRadio(parentElement, inputElementName) {
+            $(parentElement + ' input[name="' + inputElementName + '"]').on('change', () => {
+                let currentChecked = ($(parentElement + ' input[name="' + inputElementName + '"]:checked').val());
+
+                if ($(parentElement + ' input[name="' + inputElementName + '"]').is(':checked')) {
+
+                    $(parentElement + ' .modal-item__descr').children().remove();
+
+                    $(parentElement + ' .modal-item__descr').append(
+                        $('<span/>')
+                            .addClass("modal-item__descr-item")
+                            .append("<span/>")
+                            .text(`До ${currentChecked} byn`)
+                    );
+
+                    $(parentElement + ' .modal-item__title').addClass('active');
+                    $(parentElement + ' .modal-item__btn').removeClass('disabled');
                 }
             })
         }
 
-        function selectPriceRange() {
-            $('input[name="priceRange"]').on('change', () => {
-                let currentRange1 = $('#priceRange1').val();
-                let currentRange2 = $('#priceRange2').val();
-                return {
-                    1: currentRange1,
-                    2: currentRange2
-                }
+        function selectRange(parentElement, inputElement1, inputElement2) {
+            $(parentElement + ' ' + inputElement1 + '[type="number"]').on('blur', () => {
+                console.log('work');
+            });
+            $(parentElement + ' ' + inputElement2 + '[type="number"]').on('blur', () => {
+                console.log('work2');
             });
         }
 
-        function createAndInsertElementForPriceGroup(element) {
-            // $(`<span>${selectPriceRadio()}</span>`, {
-            //     "class": "modal-item__descr-item",
-            // }).appendTo("body");
-        }
+        // Price
+        selectRange('#mobileFilterPrice', '#priceRange1', '#priceRange2');
+        selectInputRadio('#mobileFilterPrice', 'priceFilter');
 
-        selectPriceRange();
-        selectPriceRadio();
+        // Age
+        selectRange('#mobileFilterAge', '#ageRange1', '#ageRange2');
+        selectInputRadio('#mobileFilterAge', 'ageFilter');
 
         clickLink();
         clickBtnBack();
-        // <span class="modal-item__descr-item"></span>
+
+        btnResel('#mobileFilterPrice');
+        btnResel('#mobileFilterAge');
 
     }());
 

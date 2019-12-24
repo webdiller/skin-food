@@ -15,28 +15,18 @@
                     <ul id="mainContent" class="modal-filter">
 
                         <!-- Цена -->
-                        <li id="mobileFilterPrice" class="modal-item modal-filter__modal-item">
-                            <a data-title="Цена" class="modal-item__link filterNavigationLink" href="#!">
-                                <p class="modal-item__title">Цена</p>
-                                <div class="modal-item__descr">
-                                    
-                                </div>
-                            </a>
-                            <button type="reset" class="modal-item__btn disabled">очитстить</button>
-                            <a data-title="Действие" href="#!" class="modal-item__icon-link demo-icon filterNavigationLink">
-                            </a>
-
+                        <li class="modal-filter__item"><a data-title="Цена" href="#!" class="modal-filter__link filterNavigationLink">Цена</a>
                             <div class="filter-child disabled">
                                 <div class="filter-child__wrapper">
 
                                     <div class="filter-child__header">
                                         <span class="filter-child__before">от</span>
                                         <div class="filter-child__input-ratio basket-counter">
-                                            <input id="priceRange1" placeholder="" name="priceRange" type="number" class="basket-counter__input">
+                                            <input placeholder="" type="number" class="basket-counter__input">
                                         </div>
                                         <span class="filter-child__after">до</span>
                                         <div class="filter-child__input-ratio basket-counter">
-                                            <input id="priceRange2" placeholder="" name="priceRange" type="number" class="basket-counter__input">
+                                            <input placeholder="" type="number" class="basket-counter__input">
                                         </div>
                                         <span class="filter-child__course-text">До 10 byn</span>
                                     </div>
@@ -64,7 +54,7 @@
 
                                     <div class="filter-child__item">
                                         <div class="checkbox-group filter-child__checkbox-group">
-                                            <input class="checkbox-group__input filter-child__checkbox-input" value="300" type="radio" name="priceFilter" id="price4">
+                                            <input checked class="checkbox-group__input filter-child__checkbox-input" value="300" type="radio" name="priceFilter" id="price4">
                                             <label for="price4" class="checkbox-group__label filter-child__checkbox-label">До 300 byn</label>
                                         </div>
                                     </div>
@@ -75,17 +65,7 @@
                         </li>
 
                         <!-- Тип -->
-                        <li id="mobileFilterType" class="modal-item modal-filter__modal-item">
-                            <a data-title="Тип" class="modal-item__link filterNavigationLink" href="#!">
-                                <p class="modal-item__title">Тип</p>
-                                <div class="modal-item__descr">
-
-                                </div>
-                            </a>
-                            <button type="button" class="modal-item__btn disabled">очитстить</button>
-                            <a data-title="Действие" href="#!" class="modal-item__icon-link demo-icon filterNavigationLink">
-                            </a>
-
+                        <li class="modal-filter__item"><a data-title="Тип" href="#!" class="modal-filter__link filterNavigationLink">Тип</a>
                             <div class="filter-child disabled">
                                 <div class="filter-child__wrapper">
                                     <div class="filter-child__item">
@@ -111,16 +91,7 @@
                         </li>
 
                         <!-- Действие -->
-                        <li id="mobileFilterAction" class="modal-item modal-filter__modal-item">
-                            <a data-title="Действие" class="modal-item__link filterNavigationLink" href="#!">
-                                <p class="modal-item__title">Действие</p>
-                                <div class="modal-item__descr">
-                                    
-                                </div>
-                            </a>
-                            <button type="button" class="modal-item__btn disabled">очитстить</button>
-                            <a data-title="Действие" href="#!" class="modal-item__icon-link demo-icon filterNavigationLink">
-                            </a>
+                        <li class="modal-filter__item"><a data-title="Действие" href="#!" class="modal-filter__link filterNavigationLink">Действие</a>
                             <div class="filter-child disabled">
                                 <div class="filter-child__wrapper">
                                     <div class="filter-child__item">
@@ -146,16 +117,7 @@
                         </li>
 
                         <!-- Тип кожи -->
-                        <li id="mobileFilterTypeSkin" class="modal-item modal-filter__modal-item">
-                            <a data-title="Тип кожи" class="modal-item__link filterNavigationLink" href="#!">
-                                <p class="modal-item__title">Тип кожи</p>
-                                <div class="modal-item__descr">
-                                    
-                                </div>
-                            </a>
-                            <button type="button" class="modal-item__btn disabled">очитстить</button>
-                            <a data-title="Тип кожи" href="#!" class="modal-item__icon-link demo-icon filterNavigationLink">
-                            </a>
+                        <li class="modal-filter__item"><a data-title="Тип кожи" href="#!" class="modal-filter__link filterNavigationLink">Тип кожи</a>
 
                             <div class="filter-child disabled">
                                 <div class="filter-child__wrapper">
@@ -194,72 +156,23 @@
 
                         </li>
 
-                        <!-- Возраст -->
-                        <li id="mobileFilterAge" class="modal-item modal-filter__modal-item">
-                            <a data-title="Возраст" class="modal-item__link filterNavigationLink" href="#!">
-                                <p class="modal-item__title">Возраст</p>
-                                <div class="modal-item__descr"></div>
-                            </a>
-                            <button type="button" class="modal-item__btn disabled">очитстить</button>
-                            <a data-title="Возраст" href="#!" class="modal-item__icon-link demo-icon filterNavigationLink">
-                            </a>
+                        <li class="modal-filter__item"><a data-title="Возраст" href="#!" class="modal-filter__link filterNavigationLink">Возраст</a>
+
                             <div class="filter-child disabled">
                                 <div class="filter-child__wrapper">
-
-                                    <div class="filter-child__header">
-                                        <span class="filter-child__before">от</span>
-                                        <div class="filter-child__input-ratio basket-counter">
-                                            <input placeholder="" id="ageRange1" type="number" class="basket-counter__input">
-                                        </div>
-                                        <span class="filter-child__after">до</span>
-                                        <div class="filter-child__input-ratio basket-counter">
-                                            <input placeholder="" id="ageRange2" type="number" class="basket-counter__input">
-                                        </div>
-                                    </div>
-
-                                    <div class="filter-child__item">
-                                        <div class="checkbox-group filter-child__checkbox-group">
-                                            <input class="checkbox-group__input filter-child__checkbox-input" type="radio" value="20" name="ageFilter" id="ageSelect2">
-                                            <label for="ageSelect2" class="checkbox-group__label filter-child__checkbox-label">До 20</label>
-                                        </div>
-                                    </div>
-
-                                    <div class="filter-child__item">
-                                        <div class="checkbox-group filter-child__checkbox-group">
-                                            <input class="checkbox-group__input filter-child__checkbox-input" type="radio" value="30" name="ageFilter" id="ageSelect3">
-                                            <label for="ageSelect3" class="checkbox-group__label filter-child__checkbox-label">До 30</label>
-                                        </div>
-                                    </div>
-
-                                    <div class="filter-child__item">
-                                        <div class="checkbox-group filter-child__checkbox-group">
-                                            <input class="checkbox-group__input filter-child__checkbox-input" type="radio" value="40" name="ageFilter" id="ageSelect4">
-                                            <label for="ageSelect4" class="checkbox-group__label filter-child__checkbox-label">До 40</label>
-                                        </div>
-                                    </div>
-
-                                    <div class="filter-child__item">
-                                        <div class="checkbox-group filter-child__checkbox-group">
-                                            <input checked class="checkbox-group__input filter-child__checkbox-input" value="50" type="radio" name="ageFilter" id="ageSelect5">
-                                            <label for="ageSelect5" class="checkbox-group__label filter-child__checkbox-label">До 50</label>
-                                        </div>
-                                    </div>
-
-
+                                    <div class="filter-child__item"></div>
                                 </div>
                             </div>
 
                         </li>
 
-                        <!-- Время применения -->
-                        <li id="mobileFilterTime" class="modal-item modal-filter__modal-item">
+                        <li class="modal-item modal-filter__modal-item">
                             <a data-title="Время применения" class="modal-item__link filterNavigationLink" href="#!">
                                 <p class="modal-item__title">Время применения</p>
-                                <div id="descrTime" class="modal-item__descr"></div>
+                                <span class="modal-item__descr">Ночной крем, Дневной крем, Вечерний крем</span>
                             </a>
-                            <button type="button" class="modal-item__btn disabled">очитстить</button>
-                            <a data-title="Время применения" href="#!" class="modal-item__icon-link demo-icon filterNavigationLink">
-                            </a>
+                            <button class="modal-item__btn">очитстить</button>
+                            <a data-title="Время применения" href="#!" class="modal-item__icon-link demo-icon filterNavigationLink"></a>
 
                             <div class="filter-child disabled">
                                 <div class="filter-child__wrapper">
@@ -285,44 +198,18 @@
                             </div>
                         </li>
 
-                        <!-- Активные ингридиенты -->
-                        <li id="mobileFilterIngridients" class="modal-item modal-filter__modal-item">
-                            <a data-title="Активные ингридиенты" class="modal-item__link filterNavigationLink" href="#!">
-                                <p class="modal-item__title">Активные ингридиенты</p>
-                                <div class="modal-item__descr">
-                                </div>
-                            </a>
-                            <button type="button" class="modal-item__btn disabled">очитстить</button>
-                            <a data-title="Активные ингридиенты" href="#!" class="modal-item__icon-link demo-icon filterNavigationLink">
-                            </a>
-
+                        <li class="modal-filter__item">
+                            <a data-title="Активные ингредиенты" href="#!" class="modal-filter__link filterNavigationLink">Активные
+                                ингредиенты</a>
                             <div class="filter-child disabled">
                                 <div class="filter-child__wrapper">
-                                    <div class="filter-child__item">
-                                        <div class="checkbox-group filter-child__checkbox-group">
-                                            <input class="checkbox-group__input filter-child__checkbox-input" type="checkbox" value="Морская соль" name="ingredientsType" id="ingredients1">
-                                            <label for="ingredients1" class="checkbox-group__label filter-child__checkbox-label">Морская соль</label>
-                                        </div>
-                                    </div>
-                                    <div class="filter-child__item">
-                                        <div class="checkbox-group filter-child__checkbox-group">
-                                            <input class="checkbox-group__input filter-child__checkbox-input" type="checkbox" value="Крем авокадо" name="ingredientsType" id="ingredients2">
-                                            <label for="ingredients2" class="checkbox-group__label filter-child__checkbox-label">Крем авокадо</label>
-                                        </div>
-                                    </div>
-                                    <div class="filter-child__item">
-                                        <div class="checkbox-group filter-child__checkbox-group">
-                                            <input class="checkbox-group__input filter-child__checkbox-input" type="checkbox" value="Кожура абрикоса" name="ingredientsType" id="ingredients3">
-                                            <label for="ingredients3" class="checkbox-group__label filter-child__checkbox-label">Кожура абрикоса</label>
-                                        </div>
-                                    </div>
+                                    <div class="filter-child__item"></div>
                                 </div>
                             </div>
                         </li>
-
                     </ul>
                     <div class="filter-form__buttons">
-                        <button type="button" id="btnCancel" class="filter-form__btn-reset">Сбросить</button>
+                        <button type="button" id="btnReset" class="filter-form__btn-reset">Сбросить</button>
                         <button type="button" id="btnSubmit" class="filter-form__btn-show">Показать</button>
                     </div>
                 </div>
