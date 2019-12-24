@@ -7,6 +7,8 @@
     right: 0
     left: 0
     z-index: 1000
+    .header__wrapper
+        height: 50px
     .header__title
         transition: all .3s ease
         opacity: 0
@@ -402,11 +404,15 @@
             text-transform: capitalize
             font-weight: 400
             color: rgb(136, 136, 136)
+            &:focus
+                outline: none
             &::placeholder
                 font-size: 16px
                 font-weight: 400
                 text-transform: capitalize
                 color: rgb(136, 136, 136)
+            &:focus
+                outline: none
     &.search-group--modal
         position: relative
         z-index: 10
@@ -415,6 +421,8 @@
                 border: 1px solid #FFDDE4
                 border-bottom-right-radius: 0
                 border-bottom-left-radius: 0
+                &:focus
+                    outline: none
                 &::placeholder
                     color: #676666
                     font-weight: 400
@@ -426,6 +434,8 @@
         height: 40px
         padding: 10px 35px 10px 14px
         border: none
+        &:focus
+            outline: none
         &::placeholder
             font-size: 14px
             letter-spacing: 0.04em

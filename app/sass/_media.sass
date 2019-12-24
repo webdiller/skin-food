@@ -49,6 +49,178 @@
 		padding-right: 10px
 
 @media only screen and (max-width : 992px)
+	.review-item__name
+		order: 1
+	.review-item__date
+		padding-top: 10px
+		order: 2
+	.review-item__rate
+		order: 3
+		flex-basis: auto
+		width: auto
+		margin-left: auto
+	.review-item__descr
+		order: 4
+		flex-basis: 100%
+		width: 100%
+		padding-right: 0
+	.review-item__priveleges
+		order: 5
+		margin-bottom: 0
+	.review-item__btn
+		font-size: 11px
+		padding: 8px 25px
+	.review-item__name
+		font-size: 16px
+		line-height: auto
+		display: inline-flex
+		align-items: center
+		justify-content: center
+		margin-bottom: 15px
+	.review-item__date
+		font-size: 11px
+		font-weight: 700
+	.good-card__title
+		font-size: 15px
+		line-height: 20px
+		color: #4B4B4B
+	.good-card__price
+		font-size: 15px
+		line-height: 21px
+		text-align: center
+		letter-spacing: 0.04em
+		color: #1E1E1F
+	.good-card__plus-icon,
+	.goods-carousel__icon-equal
+		font-size: 35px
+	.goods-carousel__icon-equal
+		padding-bottom: 0
+		padding-right: 25px
+	.goods-carousel__last-price
+		font-size: 15px
+		line-height: 21px
+		letter-spacing: 0.04em
+		color: #848688
+	.goods-carousel__new-price
+		font-size: 23px
+		line-height: 32px
+		letter-spacing: 0.04em
+		color: #1E1E1F
+		padding-right: 25px
+	.goods-carousel__buy-btn
+		font-size: 12px
+		min-width: 160px
+		min-height: 35px
+	.goods-carousel__footer
+		padding-top: 35px
+	.main--product
+		background: #fff
+	.tabs-item__about
+		padding: 25px 30px 30px 30px
+	.tabs-item__reviews
+		padding: 25px 30px 30px 30px
+	.cart-tabs__header
+		display: none
+	.tabs-item__descr
+		flex-basis: 100%
+		width: 100%
+		order: 1
+		margin-bottom: 28px
+		line-height: 27px
+	.tabs-item__video
+		margin-left: auto
+		margin-right: auto
+		flex-basis: 75%
+		width: 75%
+		order: 2
+		margin-bottom: 35px
+	.tabs-item__options
+		display: block
+	.tabs-options__item
+		display: block
+	.tabs-options__item:not(:last-child)
+		margin-bottom: 10px
+	.tabs-options__key
+		font-weight: 700
+		margin-right: 10px
+	.tabs-options__key
+		display: inline-block
+		flex-basis: auto
+		width: auto
+	.tabs-options__value
+		display: inline
+	.tabs-item__options
+		order: 3
+	.tabs-item__properties
+		order: 4
+	.goods-carousel__body
+		margin-bottom: 30px
+	.goods-carousel__icon
+		color: #F68C9F
+		font-size: 24px
+	.goods-carousel.owl-carousel .owl-nav button.owl-prev
+		background: transparent
+	.goods-carousel.owl-carousel .owl-nav button.owl-next
+		background: transparent
+	.goods-carousel__tabs
+		padding-top: 25px
+		padding-bottom: 30px
+	.goods-tabs__link
+		font-size: 13px
+	.vendor-code__country,
+	.vendor-code__vendor,
+	.vendor-code__title
+		font-size: 13px
+	.vendor-code__country-current,
+	.vendor-code__vendor-current,
+	.vendor-code__title
+		font-weight: 700
+	.vendor-code__wrapper
+		height: 75px
+	.product-section__main-info,
+	.vendor-code__wrapper,
+	.goods-carousel__tabs
+		padding-left: 30px
+		padding-right: 30px
+	.cart-tabs__content
+		padding: 0
+	.main--product .main__wrapper
+		padding: 0
+	.product-section__wrapper
+		padding: 0
+		box-shadow: none
+		border-radius: 0
+	.product-section__delivery
+		padding-left: 0
+		.product-delivery__icon
+			display: none
+	.product-user-info__text, .product-user-info__title
+		font-size: 13px
+		font-weight: 400
+	.product-user-info__wrapper
+		padding: 0 0 10px 0
+	.product-section__user-info
+		background: transparent
+		&::before
+			display: none
+	.product-fav-btn__text
+		font-size: 13px
+	.product-section__counter .basket-counter__small-text
+		display: none
+	.product-section__buttons
+		display: none
+	.product-section__counter
+		margin-right: 40px
+		width: 115px
+		max-width: 115px
+	.product-content__tag
+		font-size: 16px
+		color: #1E1E1F
+	.product-content__name
+		color: #1E1E1F
+		padding-bottom: 20px
+	.product-content__price
+		display: none
 	.payment__form-radio-group-one,
 	.payment__form-radio-group-two
 		border-top: 1px solid #E7E7E7
@@ -352,7 +524,7 @@
 		font-size: 9px
 	.promo-list__subtitle
 		font-size: 8px
-	.basket-counter
+	.basket-list__counter
 		height: 30px
 	.basket-list__price
 		font-size: 16px
@@ -435,9 +607,9 @@
 		right: 0
 		bottom: 0
 		background: #fff
-        height: 70px
-        display: flex
-        align-items: center
+		height: 70px
+		display: flex
+		align-items: center
 	.basket-control__total-pay
 		height: 100%
 		flex-basis: 50%
@@ -477,6 +649,31 @@
 			background: #f86480
 
 @media only screen and (max-width : 768px)
+	.vendor-code__status-list
+		justify-content: flex-end
+	.vendor-code__status-icon
+		width: 10px
+		height: 10px
+	.goods-carousel__card--complect
+		display: flex
+		flex-direction: row
+		align-items: center
+		.good-card__img
+			margin-right: 20px
+		.good-card__title-and-price
+		.good-card__title
+			text-align: left
+		.good-card__price
+			text-align: left
+			margin-left: 0
+	.good-card__plus-icon
+		padding: 10px 0 10px 70px
+	.goods-carousel--tabs
+		padding-top: 25px
+		padding-bottom: 30px
+	.goods-carousel__item-big
+		flex-direction: column
+		align-items: center
 	.basket__counter-wrapper
 		flex-basis: 50%
 		width: 50%
@@ -843,6 +1040,250 @@
 		margin-right: 0
 
 @media only screen and (max-width : 576px)
+	.product-section__fav-btn
+		position: absolute
+		top: 0
+		right: 0
+		margin: 0
+		padding: 0
+		.product-fav-btn__icon
+			margin: 0
+			padding: 0
+			&::before
+				margin: 0
+				padding: 0
+		.product-fav-btn__text
+			display: none
+	.product-section__content
+		position: relative
+		flex-basis: 100%
+		width: 100%
+		display: flex
+		flex-wrap: wrap
+	.product-content__tag
+		flex-basis: 100%
+		width: 100%
+		order: 1
+		padding-bottom: 5px
+	.product-content__name
+		font-size: 17px
+		flex-basis: 100%
+		width: 100%
+		order: 2
+		padding-bottom: 10px
+	.product-section__description
+		order: 3
+		flex-basis: 100%
+		width: 100%
+	.product-section__groups
+		order: 4
+		flex-basis: 50%
+		width: 50%
+		margin-right: auto
+		margin-bottom: 20px
+	.product-group__label,
+	.product-group__label:before
+		width: 40px
+		height: 40px
+	.product-section__interactions
+		order: 5
+		flex-basis: 50%
+		width: 50%
+		margin-bottom: 20px
+	.product-section__counter
+		margin-left: auto
+		margin-right: 0
+	.product-section__user-info
+		order: 6
+		flex-basis: 100%
+		width: 100%
+		padding-bottom: 0
+	.product-user-info__wrapper
+		padding-bottom: 0
+	.product-section__delivery
+		order: 7
+		flex-basis: 100%
+		width: 100%
+	.product-delivery__title
+		color: #4B4B4B
+	.product-delivery__link
+		font-weight: 700
+	.product-delivery__descr,
+	.product-delivery__link--light
+		font-weight: 400
+	.product-section__counter .basket-counter__input
+		font-size: 17px
+	.tabs-item__descr
+		font-size: 12px
+		line-height: 22px
+		letter-spacing: 0.04em
+	.tabs-item__about, .tabs-item__reviews
+		padding-top: 20px
+		padding-bottom: 20px
+	.tabs-item__video
+		flex-basis: 100%
+		width: 100%
+	.tabs-options__key
+		margin-right: 5px
+		position: relative
+		&::after
+			content: ":"
+			top: 0
+			right: 0
+	.tabs-options__key,
+	.tabs-options__value
+		font-size: 12px
+	.tabs-item__options
+		margin-bottom: 15px
+	.tabs-options__item:not(:last-child)
+		margin-bottom: 5px
+	.tabs-properties__title
+		color: #000
+		font-weight: 700
+		display: inline-block
+		font-size: 12px
+	.tabs-properties__descr
+		font-size: 12px
+		display: inline
+	.tabs-item__options,
+	.tabs-properties
+		flex-basis: 100%
+		width: 100%
+	.notlogged__btn-enter
+		font-size: 13px
+		height: 35px
+		min-height: 35px
+	.notlogged__forgot-btn
+		margin-top: 10px
+		margin-bottom: 30px
+	.notlogged__title
+		line-height: 1
+	.notlogged__title,
+	.notlogged__subtitle,
+	.notlogged__forgot-btn,
+	.notlogged__btn-registr,
+	.user-modal__input,
+	.search-group.search-group--modal-user .search-group__input::placeholder
+		font-size: 13px
+	.socials-with-payment__link
+		transform: scale(0.85)
+	.socials-with-payment__link:not(:last-child),
+	.contact-list__messenger:not(:last-child)
+		margin-right: 10px
+	.socials-with-payment__messengers
+		justify-content: center
+	.contact-list__messenger
+		transform: scale(0.9)
+	.contact-list__phone
+		font-size: 14px
+	.goods-carousel__buy-btn
+		font-size: 9px
+		min-height: 25px
+		padding: 0 14px
+		height: auto
+		line-height: 25px
+		min-width: 130px
+	.good-card__plus-icon, .goods-carousel__icon-equal
+		font-size: 28px
+	.goods-carousel__last-price
+		font-size: 12px
+	.goods-carousel__new-price
+		font-size: 17px
+	.goods-carousel__price
+		flex-direction: column
+		padding-right: 30px
+	.goods-carousel__last-price,
+	.goods-carousel__new-price
+		padding-right: 0
+	.review-item__btn
+		font-size: 9px
+		padding: 0 21px
+		min-height: 25px
+		line-height: 1
+		margin-bottom: 20px
+	.review-item__name
+		min-height: 25px
+		line-height: 1
+		margin-bottom: 10px
+		padding: 0 9px
+		font-size: 13px
+		margin-right: 10px
+	.review-item__date
+		font-size: 9px
+	.review-item__rate-item:before
+		font-size: 11px
+	.review-item__rate-item:not(:last-child)
+		margin-right: 6px
+	.review-item__descr
+		font-size: 13px
+		line-height: 24px
+		color: #686868
+	.review-item__prop-key
+		font-size: 13px
+	.review-item__prop-val
+		font-size: 13px
+		color: #686868
+	.product-section__main-info
+	.vendor-code__wrapper,
+	.goods-carousel__tabs,
+	.accordion-tab,
+	.goods-carousel__item-big,
+	.tabs-item__about,
+	.tabs-item__reviews
+		padding-left: 20px
+		padding-right: 20px
+	.accordion-tab
+		height: 40px
+	.accordion-tab__title,
+	.accordion-tab__count
+		font-size: 12px
+	.accordion-tab__title:before
+		font-size: 12px
+		right: -25px
+	.goods-carousel.owl-carousel .owl-nav button.owl-prev
+		left: 0
+		bottom: 40%
+	.goods-carousel.owl-carousel .owl-nav button.owl-next
+		right: 0
+		bottom: 40%
+	.vendor-code__wrapper
+		height: 65px
+	.vendor-code__fav-icon
+		font-size: 32px
+		margin-right: 10px
+	.vendor-code__country
+		display: none
+	.vendor-code__vendor,
+	.vendor-code__fav-icon-text
+		font-size: 11px
+	.goods-tabs__link
+		font-size: 11px
+	.goods-carousel__tabs
+		display: flex
+		align-items: center
+	.good-card__btn-inform
+		font-size: 10px
+		line-height: 15px
+		height: auto
+		min-height: 25px
+	.goods-carousel.owl-carousel .owl-item img
+		width: 150px
+	.good-card__title
+		font-size: 11px
+		line-height: 15px
+	.good-card__price
+		font-size: 13px
+		line-height: 18px
+	.good-card__btn-buy
+		font-size: 9px
+		line-height: 19px
+		max-width: none
+		height: auto
+		min-height: 25px
+		width: auto
+		margin-left: auto
+		margin-right: auto
+		padding: 0 28px
 	.filter-modal__header
 		padding-top: 8px
 		padding-bottom: 8px
@@ -889,7 +1330,7 @@
 		font-size: 11px
 	.payment__form-radio-group-two
 		border: none
-		border-bottom: 1px solid #E7E7E7 
+		border-bottom: 1px solid #E7E7E7
 		max-width: 234px
 	.payment__form-radio-group-three
 		border: none
@@ -1300,6 +1741,8 @@
 	.search-group.search-group--modal,
 	.search-group.search-group--modal .search-group__input
 		height: 30px
+	.search-group--modal-user .search-group__btn
+		height: 40px
 	.search-group__btn
 		font-size: 15px
 	.region-form__btn

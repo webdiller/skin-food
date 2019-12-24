@@ -20,18 +20,19 @@
 
 
     <!-- modals -->
-    <?php include 'components/modals/region-modal.php';?>
-    <?php include 'components/modals/user-modal.php';?>
+    <?php include 'components/modals/region-modal.php'; ?>
+    <?php include 'components/modals/user-modal.php'; ?>
+    <?php include 'components/modals/review-modal.php'; ?>
 
 
     <!-- components -->
-    <?php include 'components/region.php';?>
-    <?php include 'components/header.php';?>
-    <?php include 'components/navigation.php';?>
+    <?php include 'components/region.php'; ?>
+    <?php include 'components/header.php'; ?>
+    <?php include 'components/navigation.php'; ?>
 
 
 
-    <main class="main main--search">
+    <main class="main main--product">
         <div class="main__wrapper">
 
             <div class="product-section">
@@ -43,8 +44,7 @@
                             <div class="breadcrumbs__wrapper px-0">
                                 <nav class="breadcrumbs-nav">
                                     <ul class="breadcrumbs-list">
-                                        <li class="breadcrumbs-list__item"><a href="#!"
-                                                class="breadcrumbs-list__link">Главная</a></li>
+                                        <li class="breadcrumbs-list__item"><a href="#!" class="breadcrumbs-list__link">Главная</a></li>
                                         <li class="breadcrumbs-list__item"><a href="#!" class="breadcrumbs-list__link">
                                                 Лицо</a></li>
                                         <li class="breadcrumbs-list__item"><a href="#!" class="breadcrumbs-list__link">
@@ -57,81 +57,28 @@
                             </div>
                         </div>
 
-                        <div class="product-section__carousel product-carousel">
-                            <!-- <ul id="imageGallery">
-                                <li class="product-carousel__item" data-thumb="./img/products/product-1.jpg"
-                                    data-src="./img/products/product-1.jpg">
-                                    <img class="product-carousel__img" src="./img/products/product-1.jpg" />
-                                </li>
-                                <li class="product-carousel__item" data-thumb="./img/products/product-1.jpg"
-                                    data-src="./img/products/product-1.jpg">
-                                    <img class="product-carousel__img" src="./img/products/product-1.jpg" />
-                                </li>
-                                <li class="product-carousel__item" data-thumb="./img/products/product-1.jpg"
-                                    data-src="./img/products/product-1.jpg">
-                                    <img class="product-carousel__img" src="./img/products/product-1.jpg" />
-                                </li>
-                                <li class="product-carousel__item" data-thumb="./img/products/product-1.jpg"
-                                    data-src="./img/products/product-1.jpg">
-                                    <img class="product-carousel__img" src="./img/products/product-1.jpg" />
-                                </li>
-                                <li class="product-carousel__item" data-thumb="./img/products/product-1.jpg"
-                                    data-src="./img/products/product-1.jpg">
-                                    <img class="product-carousel__img" src="./img/products/product-1.jpg" />
-                                </li>
-                                <li class="product-carousel__item" data-thumb="./img/products/product-1.jpg"
-                                    data-src="./img/products/product-1.jpg">
-                                    <img class="product-carousel__img" src="./img/products/product-1.jpg" />
-                                </li>
-                                <li class="product-carousel__item" data-thumb="./img/products/product-1.jpg"
-                                    data-src="./img/products/product-1.jpg">
-                                    <img class="product-carousel__img" src="./img/products/product-1.jpg" />
-                                </li>
-                                <li class="product-carousel__item" data-thumb="./img/products/product-1.jpg"
-                                    data-src="./img/products/product-1.jpg">
-                                    <img class="product-carousel__img" src="./img/products/product-1.jpg" />
-                                </li>
-                                <li class="product-carousel__item" data-thumb="./img/products/product-1.jpg"
-                                    data-src="./img/products/product-1.jpg">
-                                    <img class="product-carousel__img" src="./img/products/product-1.jpg" />
-                                </li>
-                                <li class="product-carousel__item" data-thumb="./img/products/product-1.jpg"
-                                    data-src="./img/products/product-1.jpg">
-                                    <img class="product-carousel__img" src="./img/products/product-1.jpg" />
-                                </li>
-                                <li class="product-carousel__item" data-thumb="./img/products/product-1.jpg"
-                                    data-src="./img/products/product-1.jpg">
-                                    <img class="product-carousel__img" src="./img/products/product-1.jpg" />
-                                </li>
-                                <li class="product-carousel__item" data-thumb="./img/products/product-1.jpg"
-                                    data-src="./img/products/product-1.jpg">
-                                    <img class="product-carousel__img" src="./img/products/product-1.jpg" />
-                                </li>
-                                <li class="product-carousel__item" data-thumb="./img/products/product-1.jpg"
-                                    data-src="./img/products/product-1.jpg">
-                                    <img class="product-carousel__img" src="./img/products/product-1.jpg" />
-                                </li>
-                                <li class="product-carousel__item" data-thumb="./img/products/product-1.jpg"
-                                    data-src="./img/products/product-1.jpg">
-                                    <img class="product-carousel__img" src="./img/products/product-1.jpg" />
-                                </li>
-                                <li class="product-carousel__item" data-thumb="./img/products/product-1.jpg"
-                                    data-src="./img/products/product-1.jpg">
-                                    <img class="product-carousel__img" src="./img/products/product-1.jpg" />
-                                </li>
-                                <li class="product-carousel__item" data-thumb="./img/products/product-1.jpg"
-                                    data-src="./img/products/product-1.jpg">
-                                    <img class="product-carousel__img" src="./img/products/product-1.jpg" />
-                                </li>
-                                <li class="product-carousel__item" data-thumb="./img/products/product-1.jpg"
-                                    data-src="./img/products/product-1.jpg">
-                                    <img class="product-carousel__img" src="./img/products/product-1.jpg" />
-                                </li>
-                                <li class="product-carousel__item" data-thumb="./img/products/product-1.jpg"
-                                    data-src="./img/products/product-1.jpg">
-                                    <img class="product-carousel__img" src="./img/products/product-1.jpg" />
-                                </li>
-                            </ul> -->
+                        <div class="product-section__carousel-with-img">
+                            <!-- <div id="productCarousel" class="product-carousel owl-carousel owl-theme">
+                                <div class="product-carousel__item item">
+                                    <img class="product-carousel__img" src="./img/products/product-10-1.jpg" alt="">
+                                </div>
+
+                                <div class="product-carousel__item item">
+                                    <img class="product-carousel__img" src="./img/products/product-10-2.jpg" alt="">
+                                </div>
+
+                                <div class="product-carousel__item item">
+                                    <img class="product-carousel__img" src="./img/products/product-10-3.jpg" alt="">
+                                </div>
+
+                                <div class="product-carousel__item item">
+                                    <img class="product-carousel__img" src="./img/products/product-10-3.jpg" alt="">
+                                </div>
+
+                                <div class="product-carousel__item item">
+                                    <img class="product-carousel__img" src="./img/products/product-10-3.jpg" alt="">
+                                </div>
+                            </div> -->
                         </div>
 
                         <div class="product-section__content product-content">
@@ -145,22 +92,19 @@
                             <div class="product-section__groups">
 
                                 <div style="--bgColor: #ADADAD" class="product-section__group product-group mr-2">
-                                    <input type="radio" name="selectProductType" value="1" id="productType1"
-                                        class="product-group__input">
+                                    <input type="radio" name="selectProductType" value="1" id="productType1" class="product-group__input">
                                     <label class="product-group__label" for="productType1">1</label>
                                     <small class="product-group__small">1</small>
                                 </div>
 
                                 <div style="--bgColor: #FFF1E4" class="product-section__group product-group mr-2">
-                                    <input checked type="radio" name="selectProductType" value="2" id="productType2"
-                                        class="product-group__input">
+                                    <input checked type="radio" name="selectProductType" value="2" id="productType2" class="product-group__input">
                                     <label class="product-group__label" for="productType2">2</label>
                                     <small class="product-group__small">2</small>
                                 </div>
 
                                 <div style="--bgColor: #FFFFFF" class="product-section__group product-group">
-                                    <input type="radio" name="selectProductType" value="3" id="productType3"
-                                        class="product-group__input">
+                                    <input type="radio" name="selectProductType" value="3" id="productType3" class="product-group__input">
                                     <label class="product-group__label" for="productType3">3</label>
                                     <small class="product-group__small">3</small>
                                 </div>
@@ -181,11 +125,9 @@
                                     <small class="basket-counter__small-text">шт.</small>
                                 </div>
 
-                                <div class="product-section__subscribe subscribe-group">
-                                    <input type="radio" name="subscribeInput" value="Сообщить о появлении"
-                                        id="subscribeInput" class="subscribe-group__input">
-                                    <label class="subscribe-group__label" for="subscribeInput"></label>
-                                    <small class="subscribe-group__small">Сообщить о появлении</small>
+                                <div class="product-section__buttons">
+                                    <button class="product-section__btn-buy">В корзину</button>
+                                    <!-- <button class="product-section__btn-subscribe">сообщить о появлении</button> -->
                                 </div>
 
                                 <button class="product-section__fav-btn product-fav-btn">
@@ -203,18 +145,18 @@
 
                             <div class="product-section__delivery product-delivery">
                                 <span class="product-delivery__icon demo-icon icon-truck"></span>
-                                <p class="product-delivery__title">Доставка
+                                <div class="product-delivery__title">Доставка
                                     <a href="#!" class="product-delivery__current-city">
                                         по Минску
                                     </a>
                                     <p class="product-delivery__descr">
                                         курьером до клиента — завтра, бесплатно
-                                        до <a href="#!" class="product-delivery__link">ПВЗ в Минске</a>
+                                        до <a href="#!" class="product-delivery__link product-delivery__link--light">ПВЗ в Минске</a>
                                         — сегодня, бесплатно
                                         почтой — бесплатно
                                         <a href="#!" class="product-delivery__link d-block">О доставке по Беларуси</a>
                                     </p>
-                                </p>
+                                </div>
                             </div>
 
                         </div>
@@ -244,13 +186,300 @@
                         </div>
                     </div>
 
+                    <div class="product-section__goods">
+                        <div class="goods-carousel">
+                            <div class="goods-carousel__wrapper">
+
+                                <ul id="goodsTabs" class="goods-carousel__tabs goods-tabs nav nav-tabs">
+                                    <li class="d-none d-md-block goods-tabs__item">
+                                        <a href="#TabCarouselOne" class="goods-tabs__link active">вместе дешевле</a>
+                                    </li>
+                                    <li class="goods-tabs__item">
+                                        <a href="#TabCarouselTwo" class="goods-tabs__link">похожие товары</a>
+                                    </li>
+                                    <li class="goods-tabs__item">
+                                        <a href="#TabCarouselThree" class="goods-tabs__link">товары одной линейки</a>
+                                    </li>
+                                </ul>
+
+                                <div class="goods-carousel__body tab-content">
+
+                                    <div class="tab-pane active" id="TabCarouselOne">
+                                        <div id="goodsAll" class="goods-carousel goods-carousel--tabs goods-carousel--disable-navs owl-carousel owl-theme">
+
+                                            <div class="goods-carousel__item-big item">
+                                                <div class="good-card goods-carousel__card goods-carousel__card--complect">
+                                                    <img src="./img/products/product-10-1.jpg" alt="" class="good-card__img">
+                                                    <div class="good-card__title-and-price">
+                                                        <p class="good-card__title">Маска для кожи вокруг глаз</p>
+                                                        <p class="good-card__price"> 15.30 руб </p>
+                                                    </div>
+                                                </div>
+
+                                                <span class="good-card__plus-icon">+</span>
+
+                                                <div class="good-card goods-carousel__card goods-carousel__card--complect">
+                                                    <img src="./img/products/product-10-1.jpg" alt="" class="good-card__img">
+                                                    <div class="good-card__title-and-price">
+                                                        <p class="good-card__title">Маска для кожи вокруг глаз</p>
+                                                        <p class="good-card__price"> 15.30 руб </p>
+                                                    </div>
+                                                </div>
+
+                                                <span class="good-card__plus-icon">+</span>
+
+                                                <div class="good-card goods-carousel__card goods-carousel__card--complect">
+                                                    <img src="./img/products/product-10-1.jpg" alt="" class="good-card__img">
+                                                    <div class="good-card__title-and-price">
+                                                        <p class="good-card__title">Маска для кожи вокруг глаз</p>
+                                                        <p class="good-card__price"> 15.30 руб </p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="goods-carousel__footer">
+                                                    <span class="goods-carousel__icon-equal">=</span>
+                                                    <div class="goods-carousel__price">
+                                                        <p class="goods-carousel__last-price"> 65.30 руб </p>
+                                                        <p class="goods-carousel__new-price">32.00 руб</p>
+                                                    </div>
+                                                    <button class="goods-carousel__buy-btn">купить комплект</button>
+                                                </div>
+                                            </div>
+
+                                            <div class="goods-carousel__item-big item">
+                                                <div class="good-card goods-carousel__card goods-carousel__card--complect">
+                                                    <img src="./img/products/product-10-1.jpg" alt="" class="good-card__img">
+                                                    <div class="good-card__title-and-price">
+                                                        <p class="good-card__title">Маска для кожи вокруг глаз</p>
+                                                        <p class="good-card__price"> 15.30 руб </p>
+                                                    </div>
+                                                </div>
+                                                <span class="good-card__plus-icon">+</span>
+                                                <div class="good-card goods-carousel__card goods-carousel__card--complect">
+                                                    <img src="./img/products/product-10-1.jpg" alt="" class="good-card__img">
+                                                    <div class="good-card__title-and-price">
+                                                        <p class="good-card__title">Маска для кожи вокруг глаз</p>
+                                                        <p class="good-card__price"> 15.30 руб </p>
+                                                    </div>
+                                                </div>
+                                                <span class="good-card__plus-icon">+</span>
+                                                <div class="good-card goods-carousel__card goods-carousel__card--complect">
+                                                    <img src="./img/products/product-10-1.jpg" alt="" class="good-card__img">
+                                                    <div class="good-card__title-and-price">
+                                                        <p class="good-card__title">Маска для кожи вокруг глаз</p>
+                                                        <p class="good-card__price"> 15.30 руб </p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="goods-carousel__footer">
+                                                    <span class="goods-carousel__icon-equal">=</span>
+                                                    <div class="goods-carousel__price">
+                                                        <p class="goods-carousel__last-price"> 65.30 руб </p>
+                                                        <p class="goods-carousel__new-price">32.00 руб</p>
+                                                    </div>
+                                                    <button class="goods-carousel__buy-btn">купить комплект</button>
+                                                </div>
+                                            </div>
+
+                                            <div class="goods-carousel__item-big item">
+                                                <div class="good-card goods-carousel__card goods-carousel__card--complect">
+                                                    <img src="./img/products/product-10-1.jpg" alt="" class="good-card__img">
+                                                    <div class="good-card__title-and-price">
+                                                        <p class="good-card__title">Маска для кожи вокруг глаз</p>
+                                                        <p class="good-card__price"> 15.30 руб </p>
+                                                    </div>
+                                                </div>
+
+                                                <span class="good-card__plus-icon">+</span>
+
+                                                <div class="good-card goods-carousel__card goods-carousel__card--complect">
+                                                    <img src="./img/products/product-10-1.jpg" alt="" class="good-card__img">
+                                                    <div class="good-card__title-and-price">
+                                                        <p class="good-card__title">Маска для кожи вокруг глаз</p>
+                                                        <p class="good-card__price"> 15.30 руб </p>
+                                                    </div>
+                                                </div>
+
+                                                <span class="good-card__plus-icon">+</span>
+
+                                                <div class="good-card goods-carousel__card goods-carousel__card--complect">
+                                                    <img src="./img/products/product-10-1.jpg" alt="" class="good-card__img">
+                                                    <div class="good-card__title-and-price">
+                                                        <p class="good-card__title">Маска для кожи вокруг глаз</p>
+                                                        <p class="good-card__price"> 15.30 руб </p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="goods-carousel__footer">
+                                                    <span class="goods-carousel__icon-equal">=</span>
+                                                    <div class="goods-carousel__price">
+                                                        <p class="goods-carousel__last-price"> 65.30 руб </p>
+                                                        <p class="goods-carousel__new-price">32.00 руб</p>
+                                                    </div>
+                                                    <button class="goods-carousel__buy-btn">купить комплект</button>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="tab-pane fade" id="TabCarouselTwo">
+                                        <div id="goodsSimilar" class="goods-carousel goods-carousel--paddings owl-carousel owl-theme">
+
+                                            <div class="goods-carousel__item item">
+                                                <div class="good-card goods-carousel__card">
+                                                    <img src="./img/products/product-10-1.jpg" alt="" class="good-card__img">
+                                                    <div class="good-card__title-and-price">
+                                                        <p class="good-card__title">Маска для кожи вокруг глаз</p>
+                                                        <p class="good-card__price"> 15.30 руб </p>
+                                                    </div>
+                                                    <button class="good-card__btn-buy">В корзину</button>
+                                                </div>
+                                            </div>
+
+                                            <div class="goods-carousel__item item">
+                                                <div class="good-card goods-carousel__card">
+                                                    <img src="./img/products/product-10-1.jpg" alt="" class="good-card__img">
+                                                    <div class="good-card__title-and-price">
+                                                        <p class="good-card__title">Маска для кожи вокруг глаз</p>
+                                                        <p class="good-card__price"> 15.30 руб </p>
+                                                    </div>
+                                                    <button class="good-card__btn-inform">Сообщить о появлении</button>
+                                                </div>
+                                            </div>
+
+                                            <div class="goods-carousel__item item">
+                                                <div class="good-card goods-carousel__card">
+                                                    <img src="./img/products/product-10-1.jpg" alt="" class="good-card__img">
+                                                    <div class="good-card__title-and-price">
+                                                        <p class="good-card__title">Маска для кожи вокруг глаз</p>
+                                                        <p class="good-card__price"> 15.30 руб </p>
+                                                    </div>
+                                                    <button class="good-card__btn-buy">В корзину</button>
+                                                </div>
+                                            </div>
+
+                                            <div class="goods-carousel__item item">
+                                                <div class="good-card goods-carousel__card">
+                                                    <img src="./img/products/product-10-1.jpg" alt="" class="good-card__img">
+                                                    <div class="good-card__title-and-price">
+                                                        <p class="good-card__title">Маска для кожи вокруг глаз</p>
+                                                        <p class="good-card__price"> 15.30 руб </p>
+                                                    </div>
+                                                    <button class="good-card__btn-buy">В корзину</button>
+                                                </div>
+                                            </div>
+                                            <div class="goods-carousel__item item">
+                                                <div class="good-card goods-carousel__card">
+                                                    <img src="./img/products/product-10-1.jpg" alt="" class="good-card__img">
+                                                    <div class="good-card__title-and-price">
+                                                        <p class="good-card__title">Маска для кожи вокруг глаз</p>
+                                                        <p class="good-card__price"> 15.30 руб </p>
+                                                    </div>
+                                                    <button class="good-card__btn-buy">В корзину</button>
+                                                </div>
+                                            </div>
+
+                                            <div class="goods-carousel__item item">
+                                                <div class="good-card goods-carousel__card">
+                                                    <img src="./img/products/product-10-1.jpg" alt="" class="good-card__img">
+                                                    <div class="good-card__title-and-price">
+                                                        <p class="good-card__title">Маска для кожи вокруг глаз</p>
+                                                        <p class="good-card__price"> 15.30 руб </p>
+                                                    </div>
+                                                    <button class="good-card__btn-inform">Сообщить о появлении</button>
+                                                </div>
+                                            </div>
+
+                                            <div class="goods-carousel__item item">
+                                                <div class="good-card goods-carousel__card">
+                                                    <img src="./img/products/product-10-1.jpg" alt="" class="good-card__img">
+                                                    <div class="good-card__title-and-price">
+                                                        <p class="good-card__title">Маска для кожи вокруг глаз</p>
+                                                        <p class="good-card__price"> 15.30 руб </p>
+                                                    </div>
+                                                    <button class="good-card__btn-buy">В корзину</button>
+                                                </div>
+                                            </div>
+
+                                            <div class="goods-carousel__item item">
+                                                <div class="good-card goods-carousel__card">
+                                                    <img src="./img/products/product-10-1.jpg" alt="" class="good-card__img">
+                                                    <div class="good-card__title-and-price">
+                                                        <p class="good-card__title">Маска для кожи вокруг глаз</p>
+                                                        <p class="good-card__price"> 15.30 руб </p>
+                                                    </div>
+                                                    <button class="good-card__btn-buy">В корзину</button>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="tab-pane fade" id="TabCarouselThree">
+                                        <div id="goodsOneCategory" class="goods-carousel goods-carousel--paddings owl-carousel owl-theme">
+
+                                            <div class="goods-carousel__item item">
+                                                <div class="good-card goods-carousel__card">
+                                                    <img src="./img/products/product-10-1.jpg" alt="" class="good-card__img">
+                                                    <div class="good-card__title-and-price">
+                                                        <p class="good-card__title">Маска для кожи вокруг глаз</p>
+                                                        <p class="good-card__price"> 15.30 руб </p>
+                                                    </div>
+                                                    <button class="good-card__btn-buy">В корзину</button>
+                                                </div>
+                                            </div>
+
+                                            <div class="goods-carousel__item item">
+                                                <div class="good-card goods-carousel__card">
+                                                    <img src="./img/products/product-10-1.jpg" alt="" class="good-card__img">
+                                                    <div class="good-card__title-and-price">
+                                                        <p class="good-card__title">Маска для кожи вокруг глаз</p>
+                                                        <p class="good-card__price"> 15.30 руб </p>
+                                                    </div>
+                                                    <button class="good-card__btn-buy">В корзину</button>
+                                                </div>
+                                            </div>
+
+                                            <div class="goods-carousel__item item">
+                                                <div class="good-card goods-carousel__card">
+                                                    <img src="./img/products/product-10-1.jpg" alt="" class="good-card__img">
+                                                    <div class="good-card__title-and-price">
+                                                        <p class="good-card__title">Маска для кожи вокруг глаз</p>
+                                                        <p class="good-card__price"> 15.30 руб </p>
+                                                    </div>
+                                                    <button class="good-card__btn-buy">В корзину</button>
+                                                </div>
+                                            </div>
+
+                                            <div class="goods-carousel__item item">
+                                                <div class="good-card goods-carousel__card">
+                                                    <img src="./img/products/product-10-1.jpg" alt="" class="good-card__img">
+                                                    <div class="good-card__title-and-price">
+                                                        <p class="good-card__title">Маска для кожи вокруг глаз</p>
+                                                        <p class="good-card__price"> 15.30 руб </p>
+                                                    </div>
+                                                    <button class="good-card__btn-buy">В корзину</button>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+
                     <!-- desktop tabs -->
 
                     <div class="cart-tabs">
                         <div class="cart-tabs__wrapper">
 
                             <ul class="cart-tabs__header tabs-header nav nav-tabs">
-                                <li class="tabs-header__item tabs-header__item--pl nav-item ">
+                                <li class="tabs-header__item tabs-header__item--pl nav-item">
                                     <a href="#about" class="tabs-header__link nav-link active">о продукте</a>
                                 </li>
                                 <li class="tabs-header__item nav-item">
@@ -258,8 +487,19 @@
                                 </li>
                             </ul>
 
-                            <div class="tabs-content tab-content cart-tabs__content ">
+
+
+                            <div class="tabs-content tab-content cart-tabs__content">
+                                <!-- 0 -->
+                                <div class="d-flex d-md-none accordion-tab product-section__accordion-tab mb-1">
+                                    <a href="#!" id="goodsAllAccTab" class="accordion-tab__title">Вместе дешевле </a>
+                                </div>
+                                <div id="goodsAllContainer"></div>
+
                                 <!-- 1 -->
+                                <div class="d-flex d-lg-none accordion-tab product-section__accordion-tab mb-1">
+                                    <a href="#!" id="aboutAccTab" class="accordion-tab__title">о продукте</a>
+                                </div>
                                 <div id="about" class="tabs-item tabs-content__item tab-pane active">
                                     <div class="tabs-item__about">
                                         <p class="tabs-descr tabs-item__descr">
@@ -277,8 +517,7 @@
 
                                         <div class="tabs-video tabs-item__video">
                                             <div class="embed-responsive embed-responsive embed-responsive-16by9">
-                                                <iframe class="embed-responsive-item"
-                                                    src="https://www.youtube.com/embed/doK8yNtppys"></iframe>
+                                                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/doK8yNtppys"></iframe>
                                             </div>
                                         </div>
 
@@ -347,10 +586,12 @@
                                     </div>
                                 </div>
                                 <!-- 2 -->
+                                <div class="d-flex d-lg-none accordion-tab product-section__accordion-tab">
+                                    <a href="#!" id="reviewsAccTab" class="accordion-tab__title">Отзывы <span class="accordion-tab__count">(815)</span> </a>
+                                </div>
                                 <div id="reviews" class="tabs-item tabs-content__item tab-pane fade">
                                     <div class="tabs-item__reviews">
-                                        <button data-toggle="modal" data-target="#modalReview"
-                                            class="review-item__btn">Добавить отзыв</button>
+                                        <button data-toggle="modal" data-target="#modalReview" class="review-item__btn">Добавить отзыв</button>
                                         <div class="review-item tabs-item__review">
                                             <p class="review-item__name">Татьяна</p>
                                             <span class="review-item__date">24.04.2019</span>
@@ -435,21 +676,14 @@
 
 
                     <!-- mobile tabs -->
-
-
                 </div><!-- product-section__wrapper -->
-
-
-
             </div>
         </div>
 
 
     </main>
 
-
-    
-    <?php include 'components/footer.php';?>
+    <?php include 'components/footer.php'; ?>
 
 
     <script src="js/libs.min.js"></script>

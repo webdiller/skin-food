@@ -116,7 +116,7 @@
                             </div>
                         </form>
 
-                        <div class="breadcrumbs breadcrumbs--pink">
+                        <div class="breadcrumbs breadcrumbs--catalog">
                             <div class="breadcrumbs__wrapper px-0">
                                 <nav class="breadcrumbs-nav">
                                     <ul class="breadcrumbs-list">
@@ -174,7 +174,7 @@
                 <div class="products-list">
                     <div class="products-list__wrapper">
 
-                        <div id="mydiv" class="product products-list__product" tabindex="-1">
+                        <div class="product products-list__product" tabindex="-1">
                             <div style="--bgColor: #EF2B50" data-status="-30 % АКЦИЯ" class="product__body">
                                 <a class="product__link" href="#!">
                                     <img src="./img/products/product-1.jpg" alt="сыворотка для глаз" class="product__img">

@@ -173,11 +173,14 @@ a:hover
         .breadcrumbs-list__link
             text-decoration: none
             text-transform: uppercase
+    &--catalog
+    &--akcii
+    &--brands
     &--pink
         background-color: #fcdce3
     &__wrapper
         max-width: 1065px
-        padding: 0 20px
+        padding: 0 30px
         margin: 0 auto
     &-nav
     &-list
@@ -185,6 +188,7 @@ a:hover
         margin: 0
         display: flex
         list-style-type: none
+        background: transparent
         &__item
             padding: 12px 0 12px 0
         &__link
@@ -422,9 +426,14 @@ a:hover
         background: rgb(251, 248, 249)
     &--user-cabinet
         background: rgb(251, 248, 249)
+        .main__wrapper
+            padding-top: 15px
     &--user-favorite
         .main__wrapper
             padding-top: 0
+        .navigation-cabinet__wrapper
+            padding-top: 40px
+    &--product
     &--search
         .main__wrapper
             min-height: 100vh
@@ -786,7 +795,7 @@ a:hover
         background: #fff
         left: 0
         right: 0
-        bottom: -30px
+        bottom: -40px
         border-bottom-left-radius: 5px
         border-bottom-right-radius: 5px
         z-index: -1
@@ -848,6 +857,8 @@ a:hover
         letter-spacing: 0.04em
         color: #1A1A1A
         font-weight: 700
+        position: relative
+        z-index: 100
     &__btn-empty
         font-size: 12px
         line-height: 18px
@@ -965,7 +976,7 @@ a:hover
             max-width: 1065px
             margin: 0 auto
         &.fixed
-            top: 74px
+            top: 50px
             left: 0
             right: 0
             position: fixed
@@ -974,7 +985,8 @@ a:hover
             .grid-images__title
                 background: transparent
             .grid-images__head-wrapper
-                padding: 0 20px
+                padding: 0 40px
+                height: 45px
             .grid-images__link
                 color: #fff
                 font-weight: 700
@@ -1120,12 +1132,45 @@ a:hover
         &:focus
             transform: translateX(2px)
 
+.accordion-tab
+    padding: 0 30px
+    background: rgba(255, 221, 228, 0.5)
+    height: 60px
+    display: flex
+    align-items: center
+    justify-content: flex-start
+    &__title
+        font-size: 16px
+        line-height: 33px
+        letter-spacing: 0.04em
+        text-transform: uppercase
+        color: #F78C9F
+        position: relative
+        font-weight: 700
+        &:hover
+            color: #F78C9F
+        &::before
+            position: absolute
+            top: 0
+            right: -30px
+            content: "\e80b"
+            font-family: fontello
+            color: #F78C9F
+            font-size: 16px
+    &__count
+        display: inline-block
+        font-size: 16px
+        line-height: 33px
+        letter-spacing: 0.04em
+        text-transform: uppercase
+        color: #F78C9F
+
 .product-section
     &__wrapper
         border-radius: 5px
         background-color: rgb(255, 255, 255)
         box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.3)
-        padding: 20px 0 30px 0
+        padding: 20px 0 40px 0
     &__main-info
         padding: 0 40px
         display: flex
@@ -1133,12 +1178,47 @@ a:hover
     &__breadcrumbs
         flex-basis: 100%
         width: 100%
-    &__carousel
-        flex-basis: 55%
-        width: 55%
-    &__content
+    &__carousel-with-img
         flex-basis: 44%
         width: 44%
+        margin-bottom: 20px
+    &__buttons
+    &__btn-buy
+        height: 40px
+        border-radius: 5px
+        background-color: rgb(235, 132, 154)
+        font-size: 14px
+        color: rgb(255, 255, 255)
+        font-weight: bold
+        text-transform: uppercase
+        display: flex
+        align-items: center
+        justify-content: center
+        padding: 0 25px
+        border: none
+        outline: none
+    &__btn-subscribe
+        height: 40px
+        display: flex
+        align-items: center
+        justify-content: center
+        border-radius: 5px
+        font-size: 14px
+        font-weight: bold
+        text-transform: uppercase
+        padding: 0 25px
+        border: 1px solid #fdeaee
+        font-size: 10px
+        background: #fff
+        color: rgb(235, 132, 154)
+        font-weight: bold
+        max-width: 130px
+        transition: all .3s ease
+        &.active
+            background: rgb(235, 132, 154)
+            border-color: rgb(235, 132, 154)
+            color: #fff
+    &__content
         margin-bottom: 20px
     &__groups
         display: flex
@@ -1149,16 +1229,22 @@ a:hover
     &__vendor
         flex-basis: 100%
         width: 100%
-    &__subscribe
-        height: 40px
     &__interactions
         display: flex
         align-items: center
         margin-bottom: 15px
     &__counter
         margin-right: 50px
+        height: 40px
+        .basket-counter__input
+            font-size: 24px
+        .basket-counter__btn-less
+            font-size: 22px
+        .basket-counter__btn-more
+            font-size: 22px
     &__user-info
         margin-bottom: 10px
+    &__accordion-tab
 
 .product-content
     &__tag
@@ -1450,8 +1536,190 @@ a:hover
         margin-bottom: 20px
 
 .product-carousel
+    &.owl-carousel
     &__item
+
+.goods-tabs
+    border-bottom: none
+    &__item
+        &:not(:last-child)
+            margin-right: 50px
+    &__link
+        font-size: 14px
+        color: rgb(26, 26, 26)
+        font-weight: bold
+        border-bottom: 1px solid #c4c4c4
+        text-transform: uppercase
+        line-height: 2.357
+        &.active
+            color: rgb(235, 132, 154)
+            border-bottom: none
+
+.goods-carousel
+    &--paddings
+        padding: 0 25px
+    &--disable-navs.owl-carousel.owl-theme .owl-nav
+        display: none
+    &--tabs
+    &.owl-carousel .owl-stage
+        display: flex
+        align-items: stretch
+    &.owl-theme .owl-nav
+        margin: 0
+        height: 0
+        display: flex
+        justify-content: space-between
+    &.owl-carousel .owl-nav button.owl-prev
+        width: 40px
+        height: 40px
+        background: #d7d7d7
+        display: flex
+        align-items: center
+        justify-content: center
+        border-radius: 50%
+        margin: 0
+        position: absolute
+        left: 10px
+        bottom: 60%
+    &__card
+        height: 100%
+    &__icon
+        color: #fff
+        font-size: 24px
+    &.owl-carousel .owl-nav button.owl-next
+        width: 40px
+        height: 40px
+        background: #d7d7d7
+        display: flex
+        align-items: center
+        justify-content: center
+        border-radius: 50%
+        margin: 0
+        position: absolute
+        right: 10px
+        bottom: 60%
+    &.owl-carousel .owl-item img
+        max-width: 100%
+        width: 180px
+    &__tabs
+        padding: 30px 45px 40px 45px
+    &__item
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-around
+        align-items: center
+        height: 100%
+    &__item-big
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-around
+        align-items: center
+        padding: 0 40px
+    &__body
+        margin-bottom: 50px
+    &__footer
+        padding-top: 20px
+        flex-basis: 100%
+        width: 100%
+        display: flex
+        align-items: center
+        justify-content: center
+    &__icon-equal
+        font-size: 45px
+        color: rgb(26, 26, 26)
+        font-weight: bold
+        line-height: 0.444
         text-align: center
+        padding-right: 20px
+    &__price
+        display: flex
+        align-items: center
+    &__last-price
+        font-size: 20px
+        color: rgb(113, 113, 113)
+        font-weight: bold
+        line-height: 1
+        text-align: center
+        padding-right: 20px
+    &__new-price
+        font-size: 28px
+        color: rgb(26, 26, 26)
+        font-weight: bold
+        line-height: 0.714
+        text-align: center
+        padding-right: 20px
+    &__buy-btn
+        height: 32px
+        line-height: 32px
+        padding: 0 12px
+        border: none
+        outline: none
+        border-radius: 5px
+        background-color: rgb(235, 132, 154)
+        font-size: 12px
+        color: rgb(255, 255, 255)
+        font-weight: bold
+        text-transform: uppercase
+
+.good-card
+    display: flex
+    flex-direction: column
+    &__img
+        max-width: 100% !important
+        height: auto
+        width: 180px
+        padding-bottom: 10px
+    &__title-and-price
+        display: flex
+        align-items: center
+        flex-direction: column
+        padding-bottom: 10px
+    &__title
+        font-size: 14px
+        color: rgb(80, 150, 255)
+        text-decoration: underline
+        line-height: 1.429
+        text-align: center
+        padding-bottom: 10px
+        max-width: 115px
+        margin: 0 auto
+    &__price
+        font-size: 18px
+        color: rgb(70, 70, 70)
+        font-weight: bold
+        line-height: 1.111
+        margin: 0 auto
+    &__plus-icon
+        font-size: 45px
+        color: rgb(26, 26, 26)
+        font-weight: bold
+        line-height: 0.444
+        text-align: center
+        padding-bottom: 20px
+    &__btn-inform
+        margin-top: auto
+        font-size: 14px
+        color: rgb(80, 150, 255)
+        text-decoration: underline
+        line-height: 32px
+        height: 32px
+        text-align: center
+        border: none
+        outline: none
+        background: transparent
+    &__btn-buy
+        margin-top: auto
+        border-radius: 5px
+        background-color: rgb(235, 132, 154)
+        font-size: 12px
+        color: #fff
+        font-weight: bold
+        text-transform: uppercase
+        line-height: 32px
+        height: 32px
+        display: inline-block
+        border: none
+        outline: none
 
 .tabs-content
     &__item
@@ -1501,6 +1769,8 @@ a:hover
     &__reviews
         padding-top: 35px
     &__review
+        display: flex
+        flex-wrap: wrap
         &:not(:last-child)
             margin-bottom: 15px
 
@@ -1526,7 +1796,6 @@ a:hover
     &__value
         flex-basis: 48%
         width: 48%
-    &__value
 
 .tabs-properties
     font-size: 14px
@@ -1552,6 +1821,7 @@ a:hover
         letter-spacing: 0.04em
         text-transform: uppercase
         margin-bottom: 25px
+        flex-basis: 100%
     &__name
         padding: 0 24px
         height: 30px
@@ -1562,21 +1832,24 @@ a:hover
         font-weight: 700
         border-radius: 4px
         letter-spacing: 0.04em
-        text-transform: uppercase
         margin-bottom: 25px
         display: inline-block
         margin-right: 20px
+        align-self: flex-start
     &__date
         font-size: 14px
-        line-height: 15px
         letter-spacing: 0.04em
         color: #AEAEAE
+        padding-top: 5px
     &__descr
         font-size: 14px
         color: rgb(26, 26, 26)
         line-height: 1.533
         text-align: left
         margin-bottom: 5px
+        flex-basis: 100%
+        width: 100%
+        padding-right: 30%
     &__priveleges
         font-size: 14px
         color: rgb(26, 26, 26)
@@ -1590,6 +1863,8 @@ a:hover
     &__prop-val
         display: inline-block
     &__rate
+        flex-basis: 100%
+        width: 100%
         &-item
             &::before
                 content: "\e81a"

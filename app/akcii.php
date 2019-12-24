@@ -102,7 +102,7 @@
                             </div>
                         </form>
 
-                        <div class="breadcrumbs breadcrumbs--pink">
+                        <div class="breadcrumbs breadcrumbs--akcii">
                             <div class="breadcrumbs__wrapper px-0">
                                 <nav class="breadcrumbs-nav">
                                     <ul class="breadcrumbs-list">

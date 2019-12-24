@@ -39,7 +39,7 @@
                 <div class="user-data__wrapper">
 
                     <!-- if user is not logged then add d-none -->
-                    <div class="d-none notlogged user-data__notlogged">
+                    <div class="notlogged user-data__notlogged">
                         <form class="notlogged__wrapper">
                             <div class="notlogged__head">
                                 <p class="notlogged__title">Для просмотра информации необходимо авторизоваться</p>
@@ -78,7 +78,7 @@
                     </div>
 
                     <!-- if user is logged then remove d-none -->
-                    <div class="person user-data__person">
+                    <div class="d-none person user-data__person">
                         <form class="person__wrapper">
 
                             <p class="person__title">Персональная информация</p>
@@ -114,33 +114,6 @@
                             <div class="person__birthday-and-gender">
                                 <div class="form-datepicker-group person__datepicker-group">
                                     <label class="form-datepicker-group__label">Дата рождения</label>
-                                    <select style="width:100%" id="userDay" class="user-address__select-country select-with-label__select">
-                                        <option value="Беларусь" selected>Беларусь</option>
-                                        <option value="Минск">Россия</option>
-                                        <option value="Москва">Украина</option>
-                                        <option value="Владивосток">Канада</option>
-                                        <option value="Калининград">США</option>
-                                        <option value="Калининград">Мексика</option>
-                                        <option value="Воронеж">Аргентира</option>
-                                    </select>
-                                    <select style="width:100%" id="userMonth" class="user-address__select-country select-with-label__select">
-                                        <option value="Беларусь" selected>Беларусь</option>
-                                        <option value="Минск">Россия</option>
-                                        <option value="Москва">Украина</option>
-                                        <option value="Владивосток">Канада</option>
-                                        <option value="Калининград">США</option>
-                                        <option value="Калининград">Мексика</option>
-                                        <option value="Воронеж">Аргентира</option>
-                                    </select>
-                                    <select style="width:100%" id="userYear" class="user-address__select-country select-with-label__select">
-                                        <option value="Беларусь" selected>Беларусь</option>
-                                        <option value="Минск">Россия</option>
-                                        <option value="Москва">Украина</option>
-                                        <option value="Владивосток">Канада</option>
-                                        <option value="Калининград">США</option>
-                                        <option value="Калининград">Мексика</option>
-                                        <option value="Воронеж">Аргентира</option>
-                                    </select>
                                 </div>
 
                                 <div class="person__gender">
@@ -166,7 +139,7 @@
                     </div>
 
                     <!-- 2 -->
-                    <div class="user-address user-data__address">
+                    <div class="d-none user-address user-data__address">
                         <div class="user-address__wrapper">
 
                             <p class="user-address__title">Адрес доставки</p>
@@ -236,7 +209,7 @@
                     </div>
 
                     <!-- 3 -->
-                    <div class="bonus-account user-data__bonus-account">
+                    <div class="d-none bonus-account user-data__bonus-account">
                         <div class="bonus-account__wrapper">
 
                             <p class="bonus-account__title">Бонусный счет</p>

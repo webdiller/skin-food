@@ -232,14 +232,31 @@
         flex-direction: column
         justify-content: center
     &__title
-        font-size: 14px
+        font-size: 17px
         font-weight: 700
         letter-spacing: 0.04em
-        color: #4B4B4B
+        color: #1E1E1F
+        transition: transform 0.3s 0.3s
+        transition-timing-function: cubic-bezier(0.2,1,0.3,1)
+        &.active
+            transform: translate3d(-8px, -12px, 0) scale3d(0.8, 0.8, 1) translateZ(1px)
+            color: #4B4B4B
     &__descr
         font-size: 15px
         letter-spacing: 0.04em
         color: #AEAEAE
+        bottom: 0
+        position: absolute
+        width: 100%
+        left: 0
+        right: 0
+        z-index: -1
+        opacity: 0
+        visibility: hidden
+        &.active
+            z-index: 1
+            opacity: 1
+            visibility: visible
     &__btn
         margin-left: auto
         border: none
@@ -251,6 +268,14 @@
         text-decoration-line: underline
         color: #F68C9F
         margin-right: 20px
+        transition: all .3s ease
+        z-index: 1
+        opacity: 1
+        visibility: visible
+        &.disabled
+            opacity: 0
+            visibility: hidden
+            z-index: -1
     &__icon-link
         display: flex
         align-items: center
@@ -291,7 +316,7 @@
         border: none
         outline: none
         margin: 0
-        padding: 0 
+        padding: 0
         background: transparent
         font-size: 19px
         transition: all .3s ease
@@ -315,9 +340,12 @@
         color: #fff
         font-size: 19px
         transition: all .3s ease
+        margin-right: 0
         &:hover
             opacity: .9
             color: #fff
+        &::before
+            margin: 0
     &__list
 
 .user-modal
@@ -423,7 +451,7 @@
     height: 100%
     background: #fff
     transition: all .3s ease
-    z-index: 10
+    z-index: 100
     opacity: 1
     visibility: visible
     &.disabled

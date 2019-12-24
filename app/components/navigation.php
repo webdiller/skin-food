@@ -1121,7 +1121,7 @@
                 </div>
             </li>
 
-            <li class="navigation__item active"><a href="#!" class="navigation__link">АКЦИИ</a></li>
+            <li class="navigation__item active"><a href="akcii.php" class="navigation__link">АКЦИИ</a></li>
         </ul>
     </div>
 </div>

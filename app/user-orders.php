@@ -33,7 +33,8 @@
         <div class="main__img-cabinet"></div>
         <div class="main__wrapper">
 
-            <?php include 'components/navigaion-cabinet.php';?>
+            <?php include 'components/navigation-user--orders.php'; ?>
+
 
             <div class="orders">
                 <div class="orders__wrapper">

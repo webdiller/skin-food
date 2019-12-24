@@ -1,4 +1,4 @@
-"use strict"
+"use strict";
 
 $(document).ready(function () {
 
@@ -210,7 +210,6 @@ $(document).ready(function () {
 
 
     const carouselProduct = (function () {
-
         $('#productCarousel').owlCarousel({
             loop: true,
             center: true,
@@ -219,7 +218,7 @@ $(document).ready(function () {
             navSpeed: 800,
             // navText: ['<span class="swiper-carousel__icon demo-icon icon-left-open-big"></span>', '<span class="swiper-carousel__icon demo-icon icon-right-open-big"></span>'],
             dots: true,
-            items: 1,
+            items: 3,
         });
     }());
 
@@ -341,7 +340,6 @@ $(document).ready(function () {
         // });
     })());
 
-
     const userOrdersShowMoreButton = ((function () {
         $('.orders__show-more').click(function () {
             $(this).next('.orders__content').slideToggle();
@@ -352,107 +350,67 @@ $(document).ready(function () {
         $('.cart-tabs__header.tabs-header .tabs-header__link').click(function (e) {
             e.preventDefault();
             $(this).tab('show');
-        })
+        });
     }());
 
+    const productTabsCarouselModule = (function () {
+        $('#goodsTabs a').click(function (e) {
+            e.preventDefault();
+            $(this).tab('show');
+        });
+    }());
 
     const productSliderModule = (function () {
-        // $('#imageGallery').lightSlider({
-        //     gallery: true,
-        //     item: 1,
-        //     horizontal: false,
-        //     vertical: true,
-        //     verticalHeight: 295,
-        //     currentPagerPosition: 'center',
-        //     // vThumbWidth: 50,
-        //     thumbItem: 3,
-        //     thumbMargin: 4,
-        //     slideMargin: 0
-        // });
-    }());
-
-
-    const parallaxModule = (function () {
-
-        if ($(window).width() >= 992) {
-            HSlide("#gridDesktop");
-        }
-
-        $(window).resize(function () {
-            if ($(window).width() <= 991) {
-                HSlide("#gridTablet");
-            }
-            if ($(window).width() <= 576) {
-                HSlide("#gridMobile");
+        $('#goodsAll').owlCarousel({
+            loop: false,
+            center: false,
+            nav: false,
+            items: 1,
+            autoHeight: true,
+            dots: false,
+            margin: 0
+        });
+        $('#goodsSimilar').owlCarousel({
+            loop: true,
+            center: false,
+            nav: true,
+            navText: ['<span class="goods-carousel__icon demo-icon icon-left-open-big"></span>', '<span class="goods-carousel__icon demo-icon icon-right-open-big"></span>'],
+            items: 2,
+            autoHeight: true,
+            dots: false,
+            margin: 0,
+            responsive: {
+                680: {
+                    items: 3,
+                    margin: 0
+                },
+                992: {
+                    items: 4,
+                    margin: 0
+                },
             }
         });
-
-        function HSlide(elem) {
-            try {
-                var all = document.querySelectorAll(elem + " .grid-images__layout");
-                var minMax = [];
-                for (var i = 0; i < document.querySelectorAll(elem + " .grid-images__layout").length; i++) {
-                    minMax[i] = document.querySelectorAll(elem + " .grid-images__layout")[i].offsetHeight;
-                }
-                var MinH = minMax.reduce(function (a, b) {
-                    return Math.min(a, b);
-                });
-
-                var MinM = minMax.reduce(function (a, b) {
-                    return Math.max(a, b);
-                });
-
-                document.querySelector(elem).style.height = MinH + "px";
-
-                window.onscroll = function (e) {
-                    var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
-                    var height = document.querySelector(elem).offsetHeight;
-
-                    for (var i = 0; i < all.length; i++) {
-                        if (MinH > 860) {
-                            if (scrollTop > 400) {
-
-                                var off = 0;
-
-                                if (scrollTop > 700) {
-                                    off = -(((parseInt(all[i].offsetHeight) - MinH) / height) * (scrollTop + 400));
-                                    if (off <= -(parseInt(all[i].offsetHeight) - MinH)) {
-                                        all[i].style.transform = "translate3d(0px," + -(parseInt(all[i].offsetHeight) - MinH) + "px, 0px)";
-                                        continue;
-                                    }
-                                }
-                                else
-                                    off = -(((parseInt(all[i].offsetHeight) - MinH) / height) * (scrollTop - 400));
-
-                                if (parseInt(all[i].offsetHeight) == MinH) continue;
-
-                                all[i].style.transform = "translate3d(0px," + parseInt(off) + "px, 0px)";
-                            }
-                            else {
-                                all[i].style.transform = "translate3d(0px, 0px, 0px)";
-                            }
-                        }
-                        else {
-                            if (scrollTop > 400) {
-                                var off = 0;
-                                off = -(((parseInt(all[i].offsetHeight) - MinH) / height) * (scrollTop + 400));
-                                if (off <= -(parseInt(all[i].offsetHeight) - MinH)) continue;
-
-                                all[i].style.transform = "translate3d(0px," + parseInt(off) + "px, 0px)";
-                            }
-                            else {
-                                all[i].style.transform = "translate3d(0px, 0px, 0px)";
-                            }
-                        }
-                    }
-
-                }
-            } catch (error) {
-                console.log(error);
+        $('#goodsOneCategory').owlCarousel({
+            loop: true,
+            center: false,
+            nav: true,
+            navText: ['<span class="goods-carousel__icon demo-icon icon-left-open-big"></span>', '<span class="goods-carousel__icon demo-icon icon-right-open-big"></span>'],
+            items: 2,
+            autoHeight: true,
+            dots: false,
+            margin: 0,
+            responsive: {
+                680: {
+                    items: 3,
+                    margin: 0
+                },
+                992: {
+                    items: 4,
+                    margin: 0
+                },
             }
-        }
+        });
     }());
-
 
     const navigationActiveModule = (function () {
         // $('.orders__show-more').click(function () {
@@ -466,7 +424,8 @@ $(document).ready(function () {
             titleFilter = doc.getElementById('titleFilter'),
             closeBtn = doc.getElementById('closeBtn'),
             mainContent = doc.getElementById('mainContent'),
-            btnReset = doc.getElementById('btnReset'),
+            btnReset = $('.modal-item__btn'),
+            btnCancel = doc.getElementById('btnCancel'),
             btnSubmit = doc.getElementById('btnSubmit');
 
         var mobileFilter = {
@@ -475,7 +434,12 @@ $(document).ready(function () {
             closeBtn: false,
             mainContent: false,
             btnReset: false,
+            btnCancel: false,
             btnSubmit: false
+        };
+
+        var priceObject = {
+            description: ''
         };
 
         function clickLink() {
@@ -496,10 +460,77 @@ $(document).ready(function () {
             });
         }
 
+        function selectPriceRadio() {
+            $('input[name="priceFilter"]').on('change', () => {
+                let currentChecked = ($('input[name="priceFilter"]:checked').val());
+                let currentCheckedLenght = $('input[name="priceFilter"]:checked').length;
+                return {
+                    text: currentChecked,
+                    length: currentCheckedLenght
+                }
+            })
+        }
+
+        function selectPriceRange() {
+            $('input[name="priceRange"]').on('change', () => {
+                let currentRange1 = $('#priceRange1').val();
+                let currentRange2 = $('#priceRange2').val();
+                return {
+                    1: currentRange1,
+                    2: currentRange2
+                }
+            });
+        }
+
+        function createAndInsertElementForPriceGroup(element) {
+            // $(`<span>${selectPriceRadio()}</span>`, {
+            //     "class": "modal-item__descr-item",
+            // }).appendTo("body");
+        }
+
+        selectPriceRange();
+        selectPriceRadio();
+
         clickLink();
         clickBtnBack();
+        // <span class="modal-item__descr-item"></span>
 
+    }());
+
+    const productAccordionAndBreakpointsModule = (function () {
+
+        // Замена и перемещение блоков для страницы product-card
+        // replacement and moving blocks for page product-card
+
+        $(window).resize(function () {
+            if (window.matchMedia("(max-width: 992px)").matches) {
+                $('#reviews').removeClass('fade active show tab-pane');
+            }
+            if (window.matchMedia("(max-width: 768px)").matches) {
+                $('#goodsAllContainer').append($('#goodsAll'));
+            }
+        });
+
+        if (window.matchMedia("(max-width: 992px)").matches) {
+            $('#reviews').removeClass('fade active show tab-pane');
+        }
+        if (window.matchMedia("(max-width: 768px)").matches) {
+            $('#goodsAllContainer').append($('#goodsAll'));
+        }
+
+
+        // slideToggle
+        $('#goodsAllAccTab').click(function () {
+            $("#goodsAllContainer").slideToggle();
+        });
+        $('#aboutAccTab').click(function () {
+            $("#about").slideToggle();
+        });
+        $('#reviewsAccTab').click(function () {
+            $("#reviews").slideToggle();
+        });
 
     }());
 
 });
+
