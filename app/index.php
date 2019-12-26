@@ -68,7 +68,7 @@
         </div>
     </div>
 
-    <main class="main">
+    <main class="main main--index">
         <div class="main__img"></div>
         <div class="main__wrapper">
 
@@ -228,23 +228,23 @@
     <script src="js/libs.min.js"></script>
     <script src="js/common.js"></script>
     <script>
-
-
-        if ($(window).width() >= 992) {
+        if ($(window).width() >= 991) {
+            console.log('>= 991');
             HSlide("#gridDesktop");
         }
 
 
         if ($(window).width() <= 991) {
+            console.log('<= 991');
             HSlide("#gridTablet");
         }
 
 
 
-        if ($(window).width() <= 576) {
+        if ($(window).width() <= 575) {
+            console.log('<= 575');
             HSlide("#gridMobile");
         }
-
 
 
         function HSlide(elem) {
@@ -254,17 +254,17 @@
                 for (var i = 0; i < document.querySelectorAll(elem + " .grid-images__layout").length; i++) {
                     minMax[i] = document.querySelectorAll(elem + " .grid-images__layout")[i].offsetHeight;
                 }
-                var MinH = minMax.reduce(function (a, b) {
+                var MinH = minMax.reduce(function(a, b) {
                     return Math.min(a, b);
                 });
 
-                var MinM = minMax.reduce(function (a, b) {
+                var MinM = minMax.reduce(function(a, b) {
                     return Math.max(a, b);
                 });
 
                 document.querySelector(elem).style.height = MinH + "px";
 
-                window.onscroll = function (e) {
+                window.onscroll = function(e) {
                     var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
                     var height = document.querySelector(elem).offsetHeight;
 
@@ -280,27 +280,23 @@
                                         all[i].style.transform = "translate3d(0px," + -(parseInt(all[i].offsetHeight) - MinH) + "px, 0px)";
                                         continue;
                                     }
-                                }
-                                else
+                                } else
                                     off = -(((parseInt(all[i].offsetHeight) - MinH) / height) * (scrollTop - 400));
 
                                 if (parseInt(all[i].offsetHeight) == MinH) continue;
 
                                 all[i].style.transform = "translate3d(0px," + parseInt(off) + "px, 0px)";
-                            }
-                            else {
+                            } else {
                                 all[i].style.transform = "translate3d(0px, 0px, 0px)";
                             }
-                        }
-                        else {
+                        } else {
                             if (scrollTop > 400) {
                                 var off = 0;
                                 off = -(((parseInt(all[i].offsetHeight) - MinH) / height) * (scrollTop + 400));
                                 if (off <= -(parseInt(all[i].offsetHeight) - MinH)) continue;
 
                                 all[i].style.transform = "translate3d(0px," + parseInt(off) + "px, 0px)";
-                            }
-                            else {
+                            } else {
                                 all[i].style.transform = "translate3d(0px, 0px, 0px)";
                             }
                         }
@@ -312,6 +308,8 @@
             }
         }
 
+
+        
     </script>
 </body>
 

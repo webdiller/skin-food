@@ -114,7 +114,7 @@
                             <div class="person__birthday-and-gender">
                                 <div class="form-datepicker-group person__datepicker-group">
                                     <label class="form-datepicker-group__label">Дата рождения</label>
-                                    <select style="width:100%" id="userDay" class="user-address__select-country select-with-label__select">
+                                    <!-- <select style="width:100%" id="userDay" class="user-address__select-country select-with-label__select">
                                         <option value="Беларусь" selected>Беларусь</option>
                                         <option value="Минск">Россия</option>
                                         <option value="Москва">Украина</option>
@@ -140,7 +140,7 @@
                                         <option value="Калининград">США</option>
                                         <option value="Калининград">Мексика</option>
                                         <option value="Воронеж">Аргентира</option>
-                                    </select>
+                                    </select> -->
                                 </div>
 
                                 <div class="person__gender">

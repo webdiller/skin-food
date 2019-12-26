@@ -57,28 +57,35 @@
                             </div>
                         </div>
 
-                        <div class="product-section__carousel-with-img">
-                            <!-- <div id="productCarousel" class="product-carousel owl-carousel owl-theme">
-                                <div class="product-carousel__item item">
-                                    <img class="product-carousel__img" src="./img/products/product-10-1.jpg" alt="">
-                                </div>
+                        <div class="product-section__carousel-with-img prod-slider">
 
-                                <div class="product-carousel__item item">
-                                    <img class="product-carousel__img" src="./img/products/product-10-2.jpg" alt="">
-                                </div>
+                            <ul class="prod-slider__list" id="prodSliderDesktop">
+                                <li style="--bgColor: #EF2B50" data-status="-30 % АКЦИЯ" class="prod-slider__item" data-thumb="./img/products/product-10-1.jpg">
+                                    <img class="prod-slider__img" src="./img/products/product-10-big.jpg" />
+                                </li>
+                                <li style="--bgColor: #EF2B50" data-status="-30 % АКЦИЯ" class="prod-slider__item" data-thumb="./img/products/product-10-1.jpg">
+                                    <img class="prod-slider__img" src="./img/products/product-10-big.jpg" />
+                                </li>
+                                <li style="--bgColor: #EF2B50" data-status="-30 % АКЦИЯ" class="prod-slider__item" data-thumb="./img/products/product-10-1.jpg">
+                                    <img class="prod-slider__img" src="./img/products/product-10-big.jpg" />
+                                </li>
+                                <li style="--bgColor: #EF2B50" data-status="-30 % АКЦИЯ" class="prod-slider__item" data-thumb="./img/products/product-10-1.jpg">
+                                    <img class="prod-slider__img" src="./img/products/product-10-big.jpg" />
+                                </li>
+                                <li style="--bgColor: #EF2B50" data-status="-30 % АКЦИЯ" class="prod-slider__item" data-thumb="./img/products/product-10-1.jpg">
+                                    <img class="prod-slider__img" src="./img/products/product-10-big.jpg" />
+                                </li>
+                                <li style="--bgColor: #EF2B50" data-status="-30 % АКЦИЯ" class="prod-slider__item" data-thumb="./img/products/product-10-1.jpg">
+                                    <img class="prod-slider__img" src="./img/products/product-10-big.jpg" />
+                                </li>
+                                <li style="--bgColor: #EF2B50" data-status="-30 % АКЦИЯ" class="prod-slider__item" data-thumb="./img/products/product-10-1.jpg">
+                                    <img class="prod-slider__img" src="./img/products/product-10-big.jpg" />
+                                </li>
+                                <li style="--bgColor: #EF2B50" data-status="-30 % АКЦИЯ" class="prod-slider__item" data-thumb="./img/products/product-10-1.jpg">
+                                    <img class="prod-slider__img" src="./img/products/product-10-big.jpg" />
+                                </li>
+                            </ul>
 
-                                <div class="product-carousel__item item">
-                                    <img class="product-carousel__img" src="./img/products/product-10-3.jpg" alt="">
-                                </div>
-
-                                <div class="product-carousel__item item">
-                                    <img class="product-carousel__img" src="./img/products/product-10-3.jpg" alt="">
-                                </div>
-
-                                <div class="product-carousel__item item">
-                                    <img class="product-carousel__img" src="./img/products/product-10-3.jpg" alt="">
-                                </div>
-                            </div> -->
                         </div>
 
                         <div class="product-section__content product-content">
@@ -139,7 +146,7 @@
                             <div class="product-section__user-info product-user-info">
                                 <div class="product-user-info__wrapper">
                                     <p class="product-user-info__title">В рассрочку без переплат</p>
-                                    <span class="product-user-info__text">от 2 до 6 месяцев</span>
+                                    <button type="button" class="product-user-info__btn">от 2 до 6 месяцев</button>
                                 </div>
                             </div>
 
@@ -679,7 +686,6 @@
                 </div><!-- product-section__wrapper -->
             </div>
         </div>
-
 
     </main>
 

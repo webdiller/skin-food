@@ -186,7 +186,6 @@ $(document).ready(function () {
                 }
             });
 
-
             $('#swiperCarouselDesktop').owlCarousel({
                 loop: true,
                 center: false,
@@ -316,29 +315,6 @@ $(document).ready(function () {
         });
     }())
 
-    const productTabIndexModule = ((function () {
-        // var products = $('.product');
-        // for (let i = 0; i < products.length; i++) {
-        //     $(products[i]).focusin(function () {
-        //         $(".product").addClass('focused');
-        //     });
-        //     $(products[i]).focusout(function () {
-        //         $(".product").removeClass("focused");
-        //     });
-        // }
-
-        // $(".product").focusin(function () {
-        //     $(".product").addClass('focused');
-        // });
-        // $(".product").focusout(function () {
-        //     $(".product").removeClass("focused");
-        // });
-
-        // Accepts any class name
-        // var rellax = new Rellax('.rellax', {
-        //     wrapper: '.grid-images'
-        // });
-    })());
 
     const userOrdersShowMoreButton = ((function () {
         $('.orders__show-more').click(function () {
@@ -379,6 +355,9 @@ $(document).ready(function () {
             autoHeight: true,
             dots: false,
             margin: 0,
+            onInitialized: function () {
+                $('#goodsSimilar').css('min-height', '290px');
+            },
             responsive: {
                 680: {
                     items: 3,
@@ -390,6 +369,7 @@ $(document).ready(function () {
                 },
             }
         });
+
         $('#goodsOneCategory').owlCarousel({
             loop: true,
             center: false,
@@ -399,6 +379,9 @@ $(document).ready(function () {
             autoHeight: true,
             dots: false,
             margin: 0,
+            onInitialized: function () {
+                $('#goodsOneCategory').css('min-height', '290px');
+            },
             responsive: {
                 680: {
                     items: 3,
@@ -410,27 +393,51 @@ $(document).ready(function () {
                 },
             }
         });
+
+        $('#prodSliderDesktop').lightSlider({
+            gallery: true,
+            item: 1,
+            vertical: true,
+            addClass: 'prodSliderDesktop',
+            verticalHeight: '100%',
+            vThumbWidth: 125,
+            galleryMargin: 0,
+            thumbMargin: 0,
+            thumbsLeft: true,
+            controls: true,
+            prevHtml: '<span class="prod-slider__icon-up icon-up-open-big"></span>',
+            nextHtml: '<span class="prod-slider__icon-down icon-down-open-big"></span>',
+            thumbItem: 3,
+            thumbMargin: 0,
+            slideMargin: 0,
+            onSliderLoad: () => {
+                // $('.product-section__carousel-with-img.prod-slider').append($('.prodSliderDesktop .lSAction'));
+            }
+        });
+
     }());
 
-    const navigationActiveModule = (function () {
-        // $('.orders__show-more').click(function () {
-        //     $(this).next('.orders__content').slideToggle();
-        // })
-    }());
 
     const mobileFilterModule = (function () {
 
         var mobileFilter = {
-            titleFilter: 'ФИЛЬТР'
+            titleFilter: 'ФИЛЬТР',
+            btnSubmitShow: 'ПОКАЗАТЬ',
+            btnSubmitAccess: 'ПРИМЕНИТЬ',
+            btnResetEnabled: 'СБРОСИТЬ',
+            btnResetDisabled: 'ОТМЕНА',
         };
 
         const btnBack = doc.getElementById('btnBack'),
             titleFilter = doc.getElementById('titleFilter'),
             closeBtn = doc.getElementById('closeBtn'),
             mainContent = doc.getElementById('mainContent'),
-            btnReset = $('.modal-item__btn'),
             btnCancel = doc.getElementById('btnCancel'),
             btnSubmit = doc.getElementById('btnSubmit');
+
+        function resetForm() {
+
+        }
 
         function clickLink() {
             $('a.filterNavigationLink').on('click', function (e) {
@@ -450,16 +457,16 @@ $(document).ready(function () {
             });
         }
 
-        function btnResel(elementParent) {
+        function btnReset(elementParent) {
             $(elementParent + ' .modal-item__btn').click(() => {
                 $(elementParent + ' .modal-item__descr').children().remove();
                 $(elementParent + ' .modal-item__title').removeClass('active');
-                $(elementParent+ ' .modal-item__btn').addClass('disabled');
+                $(elementParent + ' .modal-item__btn').addClass('disabled');
             });
         }
 
+        function selectInputRadio(parentElement, inputElementName, beforeText = '', afterText = '') {
 
-        function selectInputRadio(parentElement, inputElementName) {
             $(parentElement + ' input[name="' + inputElementName + '"]').on('change', () => {
                 let currentChecked = ($(parentElement + ' input[name="' + inputElementName + '"]:checked').val());
 
@@ -471,7 +478,7 @@ $(document).ready(function () {
                         $('<span/>')
                             .addClass("modal-item__descr-item")
                             .append("<span/>")
-                            .text(`До ${currentChecked} byn`)
+                            .text(`${beforeText} ${currentChecked} ${afterText}`)
                     );
 
                     $(parentElement + ' .modal-item__title').addClass('active');
@@ -480,28 +487,104 @@ $(document).ready(function () {
             })
         }
 
-        function selectRange(parentElement, inputElement1, inputElement2) {
-            $(parentElement + ' ' + inputElement1 + '[type="number"]').on('blur', () => {
-                console.log('work');
-            });
-            $(parentElement + ' ' + inputElement2 + '[type="number"]').on('blur', () => {
-                console.log('work2');
-            });
+        function selectInputCheckbox(parentElement, inputElementName, beforeText = '', afterText = '') {
+
+            $(parentElement + ' input[name="' + inputElementName + '"]').on('change', () => {
+                let currentChecked = ($(parentElement + ' input[name="' + inputElementName + '"]:checked').val());
+                let length = ($(parentElement + ' input[name="' + inputElementName + '"]:checked').length);
+
+                if ($(parentElement + ' input[name="' + inputElementName + '"]').is(':checked')) {
+
+                    $(parentElement + ' .modal-item__descr').children().remove();
+
+                    let selectedItems = $(parentElement + ' input[name="' + inputElementName + '"]:checked').map(
+                        function () { return this.value; }).get().join(", ");
+
+                    (function () {
+                        if (selectedItems.length > 35) {
+                            selectedItems = selectedItems.slice(0, 35);
+                            selectedItems += '...'
+                        }
+                        $(parentElement + ' .modal-item__descr').append(
+                            $('<span/>')
+                                .addClass("modal-item__descr-item")
+                                .append("<span/>")
+                                .text(`${beforeText} ${selectedItems} ${afterText}`)
+                        );
+                    }());
+
+
+                    $(parentElement + ' .modal-item__title').addClass('active');
+                    $(parentElement + ' .modal-item__btn').removeClass('disabled');
+                }
+            })
         }
 
-        // Price
-        selectRange('#mobileFilterPrice', '#priceRange1', '#priceRange2');
-        selectInputRadio('#mobileFilterPrice', 'priceFilter');
+        function selectRange(parentElement, inputElement1, inputElement2, inputElementName, beforeText = '', afterText = '') {
+            let item1 = '';
+            let item2 = '';
+            $(parentElement + ' ' + inputElement1 + '[type="number"]').on('blur', () => {
+                if (!$(parentElement + ' input[name="' + inputElementName + '"]').is(':checked')) {
+                    item1 = $(parentElement + ' ' + inputElement1 + '[type="number"]').val();
+                    $(parentElement + ' .modal-item__descr').children().remove();
+                    $(parentElement + ' .modal-item__descr').append(
+                        $('<span/>')
+                            .addClass("modal-item__descr-item")
+                            .append("<span/>")
+                            .text(`${beforeText} ${item1} ${afterText}`)
+                    );
+                }
+            });
+            $(parentElement + ' ' + inputElement2 + '[type="number"]').on('blur', () => {
+                if (!$(parentElement + ' input[name="' + inputElementName + '"]').is(':checked')) {
+                    item2 = $(parentElement + ' ' + inputElement2 + '[type="number"]').val();
+                    $(parentElement + ' .modal-item__descr').append(
+                        $('<span/>')
+                            .addClass("modal-item__descr-item")
+                            .append("<span/>")
+                            .text(` ${item2}`)
+                    );
+                    $(parentElement + ' .modal-item__title').addClass('active');
+                    $(parentElement + ' .modal-item__btn').removeClass('disabled');
+                }
+            });
 
-        // Age
-        selectRange('#mobileFilterAge', '#ageRange1', '#ageRange2');
-        selectInputRadio('#mobileFilterAge', 'ageFilter');
+        }
+
+
+        // Цена
+        selectRange('#mobileFilterPrice', '#priceRange1', '#priceRange2', 'priceFilter', 'От', 'до');
+        selectInputRadio('#mobileFilterPrice', 'priceFilter', 'До', 'byn');
+
+        // Тип
+        selectInputRadio('#mobileFilterType', 'typeType');
+
+        // Действие
+        selectInputRadio('#mobileFilterAction', 'actionType');
+
+        // Тип кожи
+        selectInputRadio('#mobileFilterTypeSkin', 'skinType');
+
+        // Возраст
+        selectRange('#mobileFilterAge', '#ageRange1', '#ageRange2', 'ageFilter', 'От', 'до');
+        selectInputRadio('#mobileFilterAge', 'ageFilter', 'До', 'byn');
+
+        // Время применения
+        selectInputRadio('#mobileFilterTime', 'dailyType');
+
+        // Ингридиенты
+        selectInputCheckbox('#mobileFilterIngridients', 'ingredientsType');
 
         clickLink();
         clickBtnBack();
 
-        btnResel('#mobileFilterPrice');
-        btnResel('#mobileFilterAge');
+        btnReset('#mobileFilterPrice');
+        btnReset('#mobileFilterType');
+        btnReset('#mobileFilterAction');
+        btnReset('#mobileFilterTypeSkin');
+        btnReset('#mobileFilterAge');
+        btnReset('#mobileFilterTime');
+        btnReset('#mobileFilterIngridients');
 
     }());
 
@@ -516,6 +599,8 @@ $(document).ready(function () {
             }
             if (window.matchMedia("(max-width: 768px)").matches) {
                 $('#goodsAllContainer').append($('#goodsAll'));
+
+                $('.goods-tabs__link[href="#TabCarouselTwo"]').trigger('click');
             }
         });
 
@@ -524,8 +609,9 @@ $(document).ready(function () {
         }
         if (window.matchMedia("(max-width: 768px)").matches) {
             $('#goodsAllContainer').append($('#goodsAll'));
-        }
 
+            $('.goods-tabs__link[href="#TabCarouselTwo"]').trigger('click');
+        }
 
         // slideToggle
         $('#goodsAllAccTab').click(function () {

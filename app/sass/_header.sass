@@ -1,6 +1,6 @@
  /* header start
  */
-    
+
 .main-fixed
     position: fixed
     top: 0
@@ -33,7 +33,7 @@
         align-items: center
         max-width: 1065px
         margin: 0 auto
-        padding: 0 20px
+        padding: 0 30px
         height: 75px
         background: #fff
         opacity: 1
@@ -48,8 +48,9 @@
         position: relative
         text-align: center
         padding: 0
-        &::before
         +reset-btn
+        &::before
+            margin: 0
         &:hover
             color: $hoverpink
             &::after
@@ -63,6 +64,8 @@
         margin-left: auto
         margin-right: auto
         font-size: 30px
+        position: relative
+        left: 10px
         &-heart
             font-size: 9px
             margin: 0 10px
@@ -123,23 +126,29 @@
             margin-right: 30px
             margin-left: 0
     &__user
-        margin-right: 25px
+        margin-right: 35px
         margin-left: auto
     &__like
-        margin-right: 25px
+        margin-right: 35px
         &.active
             margin-right: 30px
             margin-left: 0
     &__basket
         position: relative
         font-size: 36px
+        display: flex
+        align-items: center
+        justify-content: center
         &-counter
+            font-family: $proxy
             position: absolute
-            bottom: -4px
+            font-size: 15px !important
+            bottom: -6px
             font-size: 10px
             left: 50%
             transform: translateX(-50%)
             color: #fff
+            font-weight: 700
 
 .search
     &-menu
@@ -469,7 +478,7 @@
         position: relative
         +set-container
     &__title
-        margin-right: 10px
+        margin-right: 25px
         font-size: 14px
         color: #888888
     &-icon

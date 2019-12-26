@@ -93,13 +93,13 @@ a:hover
         &.active
             opacity: 1
             visibility: visible
-            padding: 15px 20px 65px 20px
             height: 100%
 
 .menu-list
     transition: all .3s ease
     margin-bottom: 0
     visibility: hidden
+    padding: 0 20px 0 20px
     &.active
         visibility: visible
     &__item
@@ -107,7 +107,7 @@ a:hover
         border-bottom: 1px solid #E7E7E7
     &__link
         display: block
-        font-size: 15px
+        font-size: 17px
         line-height: 31px
         letter-spacing: 0.04em
         color: #1E1E1F
@@ -117,27 +117,46 @@ a:hover
             font-family: "fontello"
             color: #CFCFCF
             position: absolute
-            margin-left: 10px
+            margin-left: 15px
             border: none
             transition: all .3s ease
+            font-size: 13px
         &[aria-expanded="true"]::after
             transform: rotate(90deg)
     &__inner-list
     &__inner-item
+        padding-left: 20px
     &__inner-link
+        font-size: 17px
+        line-height: 40px
+        letter-spacing: 0.04em
+        color: #686868
         display: block
+        position: relative
+        &::after
+            content: "\e80a"
+            font-family: "fontello"
+            color: #CFCFCF
+            position: absolute
+            margin-left: 15px
+            border: none
+            transition: all .3s ease
+            font-size: 13px
+        &[aria-expanded="true"]::after
+            transform: rotate(90deg)
 
 .profile-menu
-    padding: 0
+    border-top: 2px solid #F68C9F
     margin: 0
     list-style-type: none
+    padding: 0 20px 65px 20px
     &__item
         padding: 13px 0
         display: flex
         align-items: center
         border-bottom: 1px solid #E7E7E7
     &__title
-        font-size: 15px
+        font-size: 17px
         line-height: 31px
         letter-spacing: 0.04em
         color: #1E1E1F
@@ -153,14 +172,14 @@ a:hover
         border: none
         outline: none
         background: transparent
-        font-size: 14px
+        font-size: 13px
         text-align: right
         letter-spacing: 0.04em
         color: #f78c9f
         text-decoration: underline
     &__link
         margin-right: auto
-        font-size: 15px
+        font-size: 17px
         line-height: 31px
         letter-spacing: 0.04em
         color: #1E1E1F
@@ -416,6 +435,9 @@ a:hover
 .main
     background: #FFDDE4
     position: relative
+    &--index
+        .main__wrapper
+            overflow-y: hidden
     &--akcii
         .main__wrapper
             padding-top: 10px
@@ -1175,15 +1197,21 @@ a:hover
         padding: 0 40px
         display: flex
         flex-wrap: wrap
+        justify-content: space-between
     &__breadcrumbs
         flex-basis: 100%
         width: 100%
     &__carousel-with-img
-        flex-basis: 44%
-        width: 44%
+        flex-basis: 55%
+        width: 55%
         margin-bottom: 20px
+    &__content
+        margin-bottom: 20px
+        flex-basis: 43%
+        width: 43%
     &__buttons
     &__btn-buy
+        white-space: nowrap
         height: 40px
         border-radius: 5px
         background-color: rgb(235, 132, 154)
@@ -1218,8 +1246,6 @@ a:hover
             background: rgb(235, 132, 154)
             border-color: rgb(235, 132, 154)
             color: #fff
-    &__content
-        margin-bottom: 20px
     &__groups
         display: flex
         align-items: center
@@ -1433,11 +1459,14 @@ a:hover
         text-align: left
         margin-right: 5px
         white-space: nowrap
-    &__text
+    &__btn
         font-size: 14px
         font-weight: bold
         text-align: left
         color: #eb849a
+        background: transparent
+        border: none
+        outline: none
         text-decoration: underline
         white-space: nowrap
 
@@ -1538,6 +1567,46 @@ a:hover
 .product-carousel
     &.owl-carousel
     &__item
+
+.prod-slider
+    position: relative
+    &__list
+    &__item
+        position: relative
+        &::before
+            content: attr(data-status)
+            position: absolute
+            top: 1px
+            right: 0
+            width: 110px
+            height: 24px
+            font-size: 14px
+            font-weight: 400
+            display: flex
+            align-items: center
+            justify-content: center
+            background: var(--bgColor)
+            letter-spacing: 0.04em
+            color: #fff
+            border-top-right-radius: 6px
+    &__img
+        border-top-right-radius: 6px
+        max-width: 100%
+        height: 100%
+        object-fit: cover
+    .lSAction
+        position: absolute
+        right: 0
+        top: 0
+        bottom: 0
+    .lSSlideOuter .lSPager.lSGallery li
+        border: 2px solid #fff
+        transition: all .3s ease
+    .lSSlideOuter .lSPager.lSGallery li.active
+        border: 2px solid #eb849a
+        border-radius: 0
+    .lSSlideOuter.vertical .lSGallery
+        left: 0
 
 .goods-tabs
     border-bottom: none
@@ -1948,6 +2017,30 @@ a:hover
         margin-left: auto
         letter-spacing: 1px
         color: #fff
+
+// slider example
+#slider
+    width: 125px
+    height: 100%
+    position: relative
+    overflow: hidden
+
+.polosa
+    position: absolute
+    top: 0
+    left: 0
+    bottom: 0
+    width: 100%
+    height: 100%
+    display: flex
+    flex-direction: column
+    transition: all .3s ease
+    img
+        width: 125px
+        height: 125px
+        object-fit: cover
+
+.slider__controls
 
 @import "rating-stars"
 @import "modal"
