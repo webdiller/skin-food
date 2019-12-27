@@ -25,19 +25,31 @@
 
 
     <!-- components -->
-    <?php include 'components/region.php';?>
-    <?php include 'components/header.php';?>
-    <?php include 'components/navigation.php';?>
-    <?php include 'components/slider-akcii.php';?>
+    <?php include 'components/region.php'; ?>
+    <?php include 'components/header.php'; ?>
+    <?php include 'components/navigation.php'; ?>
 
 
-    <main class="main main--akcii">
+    <main class="main main--brands2">
         <div class="main__wrapper">
 
             <div class="products">
 
                 <div class="products-head">
                     <div class="products-head__wrapper">
+
+                        <div class="banner-info d-none d-md-block">
+                            <div class="banner-info__wrapper clearfix">
+                                <img src="https://static-eu.insales.ru/images/collections/1/7909/1990373/brands_1548324413_APIEU_Logo_800x800.png" alt=",rand image" class="banner-info__img">
+                                <p class="banner-info__title"></p>
+                                <div class="banner-info__description">
+                                    Бренд A'PIEU является дочерним брендом Missha. Прекрасный дизайн, непревзойденное
+                                    качество, демократичные цены! Продукция рассчитана преимущественно для молодой кожи
+                                    от 20 лет. Бережно очищает нежную молодую кожу и защищает от негативных факторов
+                                    окружающей среды.
+                                </div>
+                            </div>
+                        </div>
 
                         <form id="mainFilter" class="main-filter main-filter--paddings">
                             <div class="main-filter__wrapper">
@@ -374,7 +386,7 @@
     </main>
 
 
-    <?php include 'components/footer.php';?>
+    <?php include 'components/footer.php'; ?>
 
     <!-- CUSTOM AND LIBS -->
     <script src="js/libs.min.js"></script>

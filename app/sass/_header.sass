@@ -31,7 +31,7 @@
         display: flex
         justify-content: space-between
         align-items: center
-        max-width: 1065px
+        max-width: 1085px
         margin: 0 auto
         padding: 0 30px
         height: 75px
@@ -154,7 +154,7 @@
     &-menu
         background: #FFDDE4
         &__wrapper
-            max-width: 1065px
+            max-width: 1085px
             padding: 0 20px
             margin: 0 auto
             display: flex
@@ -212,7 +212,7 @@
 .navigation
     background: #eb849a
     &__wrapper
-        max-width: 1065px
+        max-width: 1085px
         padding: 0 130px
         margin: 0 auto
         height: 42px
@@ -385,6 +385,8 @@
                 font-weight: 400
                 text-transform: lowercase
                 color: rgb(136, 136, 136)
+            &:focus
+                outline: none
     &.search-group--header
         max-width: 290px
         height: 31px
@@ -403,6 +405,8 @@
                 margin: 0
                 font-size: 15px
                 padding-bottom: 5px
+            &:focus
+                outline: none
         .search-group__input
             height: 31px
             border-top-right-radius: 4px
@@ -484,6 +488,8 @@
     &-icon
         color: $pink
         margin-right: 10px
+        &::before
+            margin: 0
     &__btn
         background: transparent
         border: none
@@ -517,6 +523,7 @@
         font-size: 14px
         color: rgb(136, 136, 136)
         font-weight: bold
+        padding: 0
         +reset-btn
     &-list
         display: flex
@@ -736,7 +743,6 @@
 .region-info
     position: absolute
     top: 0
-    left: 20px
     z-index: 100
     border: 1px solid #adadad
     border-radius: 4px

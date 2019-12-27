@@ -15,7 +15,7 @@
 </div>
 
 <!-- navigation for 768px - more -->
-<div class="d-none d-md-block navigation-cabinet">
+<div class="d-none d-md-block navigation-cabinet navigation-cabinet--user-data">
     <div class="navigation-cabinet__wrapper">
         <ul class="navigation-cabinet-list">
             <li class="navigation-cabinet-list__item active">

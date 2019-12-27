@@ -2,9 +2,19 @@
 
 .navigation-cabinet
     &__wrapper
-        max-width: 1065px
-        padding: 50px 0 0 0
+        max-width: 1085px
+        padding: 50px 30px 0 30px
         margin: 0 auto 15px auto
+    &--user-data
+        .navigation-cabinet__wrapper
+            padding-top: 60px
+            padding-left: 0
+            padding-right: 0
+    &--orders
+        .navigation-cabinet__wrapper
+            padding-top: 60px
+            padding-left: 0
+            padding-right: 0
 
 .notlogged
     &__wrapper
@@ -95,7 +105,7 @@
                 position: absolute
                 bottom: 10px
                 left: 0
-                right: -10px
+                right: 0
                 margin: 0 auto
                 height: 2px
                 width: 100%
@@ -113,6 +123,8 @@
         font-size: 25px
         transition: all .3s ease
         margin-right: 10px
+        &::before
+            margin: 0
 
 .form-gender-group
     position: relative
@@ -617,6 +629,9 @@
     &__list
         &-wrapper
             margin-bottom: 0
+            padding: 0
+            padding-left: 30px
+            padding-right: 30px
     &__separator-title
         font-size: 14px
         color: rgb(26, 26, 26)

@@ -40,7 +40,7 @@
         border-bottom: 1px solid #adadad
         padding: 0
     &__header-wrapper
-        max-width: 1065px
+        max-width: 1085px
         width: 100%
         padding: 20px 40px
         display: flex
@@ -63,7 +63,7 @@
         &:hover
             color: #f24d69
     &__body
-        max-width: 1065px
+        max-width: 1085px
         margin: 0 auto
         width: 100%
         padding: 20px 40px 60px 40px
@@ -161,8 +161,8 @@
     background: #fff
     height: 100%
     &__wrapper
-        max-width: 1065px
-        padding: 0 20px
+        max-width: 1085px
+        padding: 0 30px
         margin: 0 auto
         min-height: 89vh
         display: flex
@@ -302,8 +302,8 @@
         padding: 0
         border: none
     &__wrapper
-        max-width: 1065px
-        padding: 0 20px
+        max-width: 1085px
+        padding: 0 30px
         margin: 0 auto
         width: 100%
         display: flex
@@ -508,4 +508,245 @@
         margin-right: auto
         width: 100%
         font-size: 17px
-        color: #1E1E1F  
+        color: #1E1E1F
+
+.custom-modal
+    &__dialog
+        background: #fff
+    &__content
+    &__header
+    &__title
+    &__close
+
+.cards-offers
+    padding: 0
+    margin: 0
+    list-style-type: none
+    &__item
+        padding: 22px 0
+        display: flex
+        transition: all .3s ease
+        box-shadow: inset 0 -1px 0 #fef
+    &__inner-item
+        flex-basis: 50%
+        width: 50%
+        text-align: left
+        font-size: 16px
+        letter-spacing: 0.04em
+        color: #1E1E1F
+    &__title
+        font-weight: 700
+    &__sec-text
+        font-weight: 400
+    &__last-text
+        font-weight: 400
+
+.offers-info
+    &__text
+        font-size: 14px
+        &.with-star
+            position: relative
+            &::before
+                content: "*"
+                position: absolute
+                top: -6px
+                left: -10px
+                color: #F78C9F
+                font-size: 20px
+
+.offers-bottom
+    padding: 20px 20px 40px 25px
+    background: #FDF1F4
+    &__title
+        margin-bottom: 20px
+        font-size: 16px
+        letter-spacing: 0.04em
+        text-transform: uppercase
+        color: #F78C9F
+        font-weight: 700
+    &__subtitle
+        margin-bottom: 5px
+        font-size: 15px
+        line-height: 207.06%
+        letter-spacing: 0.04em
+        text-transform: uppercase
+        color: #1E1E1F
+        font-weight: 700
+    &__list
+        padding-left: 10px
+        padding-top: 0
+        margin: 0
+        list-style-type: none
+        padding-bottom: 15px
+    &__item
+        font-size: 14px
+        line-height: 207.06%
+        letter-spacing: 0.04em
+        color: #1E1E1F
+        position: relative
+        &::before
+            position: absolute
+            content: "\2022"
+            color: red
+            font-weight: bold
+            display: inline-block
+            width: 5px
+            height: 5px
+            margin-left: -10px
+            top: -2px
+            color: #F78C9F
+
+
+.cards-modal
+    padding-right: 0 !important
+    border-radius: 4px
+    &__dialog
+        max-width: 1025px
+        background: #fff
+        border-radius: 4px
+    &__header
+        width: 100%
+        padding: 20px 40px
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        margin: 0 auto
+        font-size: 17px
+        letter-spacing: 0.04em
+        color: #F78C9F
+        border-bottom: 1px solid #ffeeea
+    &__close
+        margin-left: auto
+        opacity: 1
+        color: #F78C9F
+        font-size: 19px
+        transition: all .3s ease
+        margin-right: 0
+        border: none
+        background: transparent
+        outline: none
+        &:hover
+            opacity: .9
+            color: #F78C9F
+        &::before
+            margin: 0
+    &__body
+    &__tab-container
+        padding: 0 30px 0 40px
+    &__tab1
+        display: flex
+        flex-wrap: wrap
+        max-height: 750px
+        overflow-y: scroll
+        position: relative
+        &::-webkit-scrollbar
+            width: 0 !important
+            overflow: -moz-scrollbars-none
+            -ms-overflow-style: none
+    &__tab2
+        display: flex
+        flex-wrap: wrap
+        position: relative
+    &__cards-list
+        flex-basis: 50%
+        width: 50%
+    &__description-info
+        text-align: left
+        padding-top: 40px
+        padding-left: 20px
+        flex-basis: 48%
+        width: 48%
+        position: sticky
+        top: 0
+        right: 0
+    &__description-info-text
+        font-size: 14px
+        &.with-star
+            position: relative
+            &::before
+                content: "*"
+                position: absolute
+                top: -6px
+                left: -10px
+                color: #F78C9F
+                font-size: 20px
+    &__cards-offers
+        flex-basis: 100%
+        width: 100%
+    &__offers-bottom
+        flex-basis: 100%
+        width: 100%
+        border-radius: 4px
+        margin-bottom: 52px
+    &__offers-info
+        flex-basis: 100%
+        width: 100%
+        text-align: left
+        padding: 23px 0 20px 0
+    &__footer
+        padding-bottom: 40px
+        text-align: right
+        padding-right: 30px
+    &__btn-add
+        display: inline-block
+        border-radius: 4px
+        border: none
+        outline: none
+        background: #f78c9f
+        border: none
+        outline: none
+        min-width: 200px
+        min-height: 45px
+        line-height: 45px
+        border-radius: 4px
+        letter-spacing: 1px
+        color: #fff
+        font-weight: 700
+
+.cards-list
+    padding: 0
+    margin: 0
+    &__item
+    &__link
+        padding: 22px 0
+        display: flex
+        align-items: flex-start
+        justify-content: space-between
+        transition: all .3s ease
+        box-shadow: inset 0 -1px 0 #ffeeff
+        &:hover
+            box-shadow: inset 0 -1px 0 #ffd6ff
+        &:focus
+            box-shadow: inset 0 -1px 0 #ffd6ff
+    &__descr
+        padding-top: 15px
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+    &__title
+        font-weight: 700
+        font-size: 16px
+    &__subtitle
+        font-size: 16px
+    &__img
+        margin-left: auto
+        padding-right: 45px
+        max-width: 100%
+        height: auto
+        width: 155px
+
+.cards-modal-tabs
+    border-bottom: none
+    &__item
+        &:not(:last-child)
+            margin-right: 45px
+    &__link
+        font-size: 17px
+        font-weight: 700
+        letter-spacing: 0.04em
+        color: #1e1e1f
+        text-transform: uppercase
+        border-bottom: 1px solid #c4c4c4
+        &.active
+            color: #F78C9F
+            border-bottom: 0

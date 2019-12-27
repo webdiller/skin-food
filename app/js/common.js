@@ -334,6 +334,10 @@ $(document).ready(function () {
             e.preventDefault();
             $(this).tab('show');
         });
+        $('#cardsModalNavs .cards-modal-tabs__link').click(function (e) {
+            e.preventDefault();
+            $(this).tab('show');
+        });
     }());
 
     const productSliderModule = (function () {
@@ -412,11 +416,23 @@ $(document).ready(function () {
             slideMargin: 0,
             onSliderLoad: () => {
                 // $('.product-section__carousel-with-img.prod-slider').append($('.prodSliderDesktop .lSAction'));
-            }
+            },
+            responsive: [
+                {
+                    breakpoint: 577,
+                    settings: {
+                        gallery: false,
+                        useCSS: true,
+                        cssEasing: 'ease',
+                        easing: 'linear',
+                        mode: 'fade'
+                    }
+                },
+
+            ]
         });
 
     }());
-
 
     const mobileFilterModule = (function () {
 

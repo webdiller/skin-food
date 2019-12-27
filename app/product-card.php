@@ -23,6 +23,7 @@
     <?php include 'components/modals/region-modal.php'; ?>
     <?php include 'components/modals/user-modal.php'; ?>
     <?php include 'components/modals/review-modal.php'; ?>
+    <?php include 'components/modals/cards-modal.php'; ?>
 
 
     <!-- components -->
@@ -146,7 +147,7 @@
                             <div class="product-section__user-info product-user-info">
                                 <div class="product-user-info__wrapper">
                                     <p class="product-user-info__title">В рассрочку без переплат</p>
-                                    <button type="button" class="product-user-info__btn">от 2 до 6 месяцев</button>
+                                    <button data-toggle="modal" data-target="#cardsModal" type="button" class="product-user-info__btn">от 2 до 6 месяцев</button>
                                 </div>
                             </div>
 

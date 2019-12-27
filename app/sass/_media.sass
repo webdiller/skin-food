@@ -8,8 +8,8 @@
 
 @media only screen and (max-width : 1150px)
 	.products-list__wrapper
-		margin-left: -10px
-		margin-right: -10px
+		margin-left: 0
+		margin-right: 0
 	.products-list__product
 		flex-basis: 31%
 		width: 31%
@@ -45,10 +45,71 @@
 
 @media only screen and (max-width : 1085px)
 	.slider__wrapper
-		padding-left: 10px
-		padding-right: 10px
+		padding-left: 20px
+		padding-right: 20px
 
-@media only screen and (max-width : 992px)
+@media only screen and (max-width : 991px)
+	.offers-info__text
+		font-size: 12px
+		color: #7a7a7a
+	.offers-bottom__title
+		font-size: 15px
+	.cards-offers__inner-item,
+	.cards-list__title,
+	.cards-list__subtitle
+		font-size: 14px
+	.cards-list__img
+		padding-right: 0
+	.cards-list__descr
+		padding-top: 5px
+	.offers-bottom__subtitle
+		font-size: 12px
+	.cards-modal__description-info-text
+		color: #7a7a7a
+		font-size: 12px
+		&.with-star
+			padding-left: 10px
+			&::before
+				left: 0
+	.cards-modal__btn-add
+		min-width: 176px
+		min-height: 40px
+		line-height: 40px
+		font-size: 15px
+	.cards-modal-tabs__item:not(:last-child)
+		margin-right: 40px
+	.cards-modal__header
+		height: 60px
+		padding-left: 30px
+		padding-right: 30px
+	.cards-modal__tab-container
+		padding-left: 30px
+		padding-right: 30px
+	.cards-modal__dialog
+		border-top-right-radius: 0
+		border-top-left-radius: 0
+		margin-top: 0
+	.cards-modal
+		border-top-right-radius: 0
+		border-top-left-radius: 0
+		.modal-content
+			border-top-right-radius: 0
+			border-top-left-radius: 0
+	.cards-modal__cards-list
+		flex-basis: 100%
+		width: 100%
+	.cards-modal__tab1
+		overflow-y: auto
+		max-height: none
+	.cards-modal__description-info
+		flex-basis: 100%
+		width: 100%
+		position: static
+		padding: 25px 0 38px 0
+	.prod-slider__img
+		height: auto
+	.breadcrumbs--catalog .breadcrumbs__wrapper
+		height: auto
 	.header__title
 		left: 0
 	.review-item__name
@@ -179,10 +240,16 @@
 		font-weight: 700
 	.vendor-code__wrapper
 		height: 75px
-	.product-section__main-info,
 	.vendor-code__wrapper,
 	.goods-carousel__tabs
 		padding-left: 30px
+		padding-right: 30px
+	.product-section__main-info
+		padding-left: 0
+		padding-right: 0
+	.product-section__carousel-with-img
+		padding-left: 30px
+	.product-section__content
 		padding-right: 30px
 	.cart-tabs__content
 		padding: 0
@@ -230,7 +297,7 @@
 	.payment__form-radio-group-three
 		border-bottom: 0
 	.navigation__wrapper
-		padding: 0 20px
+		padding: 0 30px
 	.review-modal__subtitle
 		font-size: 15px
 		margin-right: 15px
@@ -275,8 +342,8 @@
 		margin-bottom: 25px
 		color: #fff
 		font-size: 15px
-		margin-left: -20px
-		margin-right: -20px
+		margin-left: 0
+		margin-right: 0
 	.products-list__product
 		flex-basis: 30.5%
 		width: 30.5%
@@ -471,13 +538,11 @@
 		color: #000
 		font-weight: 700
 		font-size: 14px
-	.basket__wrapper
-		box-shadow: none
 	.basket-check__wrapper
 		padding-top: 20px
 	.basket__promo-list
-		padding-left: 30px
-		padding-right: 30px
+		padding-left: 0
+		padding-right: 0
 	.basket__basket-list
 		padding-top: 25px
 		padding-left: 30px
@@ -490,7 +555,8 @@
 		width: 100%
 		flex-basis: 100%
 		background: #FFDDE4
-		padding: 15px 30px
+		padding: 10px 30px
+		height: 45px
 		&-link
 			font-size: 14px
 			letter-spacing: 0.04em
@@ -552,6 +618,7 @@
 	.basket__wrapper
 		padding-left: 30px
 		padding-right: 30px
+		box-shadow: none
 	.address__form-group-street,
 	.address__house,
 	.address__form-group-phone
@@ -649,8 +716,68 @@
 			background: #f86480
 		&:focus
 			background: #f86480
+	.basket-control__wrapper
+		width: 100%
+	.main--catalog .main__wrapper
+		padding-top: 0
+	.breadcrumbs--product
+		padding-left: 30px
+		padding-right: 30px
+		margin-bottom: 10px
 
-@media only screen and (max-width : 768px)
+@media only screen and (max-width : 767px)
+	.prod-slider__img
+		height: 100%
+	.product-section__content
+		flex-basis: 100%
+		width: 100%
+		padding-left: 30px
+	.product-section__carousel-with-img
+		padding-left: 30px
+		padding-right: 30px
+		flex-basis: 100%
+		width: 100%
+	.breadcrumbs__wrapper
+		padding-top: 0
+		height: 75px
+	.mobile-filter__wrapper
+		padding-top: 10px
+		padding-bottom: 15px
+	.basket__back-link
+		font-size: 14px
+		&::before
+			font-size: 14px
+	.basket-list__item:last-child
+		padding-bottom: 25px
+	.promo-list__item
+		flex-basis: 100%
+		width: 100%
+		height: 60px
+		padding-top: 0
+		padding-bottom: 0
+	.promo-list__item:first-child
+		border-bottom: 1px solid #e7e7e7
+	.breadcrumbs--akcii,
+	.breadcrumbs--catalog,
+	.breadcrumbs--product
+		background: #F78C9F
+		.breadcrumbs-list__link
+			font-size: 14px
+			letter-spacing: 0.04em
+			text-decoration-line: underline
+			color: #FFFFFF
+		.breadcrumbs__current
+			display: block
+	.breadcrumbs--product
+		background: #FFDDE4
+		.breadcrumbs__wrapper
+			height: 45px
+		.breadcrumbs-list__link
+			font-size: 14px
+			letter-spacing: 0.04em
+			text-transform: unset
+			text-decoration-line: underline
+			color: #F78C9F
 	.vendor-code__status-list
 		justify-content: flex-end
 	.vendor-code__status-icon
@@ -680,6 +807,8 @@
 		flex-basis: 50%
 		width: 50%
 	// user-orders 768px
+	.main--catalog .main__wrapper
+		padding-top: 0
 	.orders__header--shadow, .orders__wrapper
 		box-shadow: none
 	.orders__header-tr1,
@@ -854,7 +983,10 @@
 	.search__body
 		padding: 25px 35px
 	// products-pagination 768px
+	.products-pagination
 	.products-pagination__wrapper
+		box-shadow: none
+		background: transparent
 		padding: 0
 	.products-pagination
 		box-shadow: none
@@ -869,8 +1001,8 @@
 		color: #363636
 		border-bottom: 1px solid #000
 	.products-list__wrapper
-		margin-left: -10px
-		margin-right: -10px
+		margin-left: 0
+		margin-right: 0
 		justify-content: center
 	.products-list__product
 		margin-bottom: 25px
@@ -937,6 +1069,8 @@
 		top: 20px
 		right: 0
 		order: 3
+		&::before
+			font-size: 15px
 	.basket-list__counter
 		order: 4
 		margin-left: 120px
@@ -984,11 +1118,10 @@
 		display: none
 	.header__menu
 		display: block
-		margin-right: 23px
-	.header__like
-		margin-right: 15px
-	.header__like.active
-		margin-right: 21px
+		margin-right: 35px
+	.header__basket-counter
+		font-size: 12px !important
+		bottom: -6px
 	.header__search
 		display: block
 		margin-right: 0
@@ -999,8 +1132,9 @@
 	.main-fixed
 		.header__search
 			margin-right: auto
-	.main-navigation.active .header__search.active
-		margin-right: 26px
+	.header__search.active,
+	.header__like.active
+		margin-right: 35px
 	.filter-form__btn-reset
 		margin-right: 20px
 	.filter-form__btn-reset, .filter-form__btn-show
@@ -1040,30 +1174,12 @@
 		flex-basis: 71%
 		width: 71%
 		margin-right: 0
-
-@media only screen and (max-width : 576px)
-	.person__btn-change
-		font-size: 11px
-	.profile-menu
-		padding-bottom: 40px
-	.menu-list__link,
-	.profile-menu__link,
-	.profile-menu__title,
-	.menu-list__inner-link
-		font-size: 15px
-	.modal-item__title.active
-		font-size: 11px
-		transform: translate3d(0,-9px,0) translateZ(1px)
-	.modal-item__descr
-		bottom: 2px
-	.modal-item__descr-item
-		font-size: 13px
-	.filter-child__checkbox-label
-		font-size: 15px
+	.main--brands2 .main__wrapper
+		padding-top: 0
 	.product-section__fav-btn
 		position: absolute
 		top: 0
-		right: 0
+		right: 30px
 		margin: 0
 		padding: 0
 		.product-fav-btn__icon
@@ -1133,6 +1249,151 @@
 		font-weight: 400
 	.product-section__counter .basket-counter__input
 		font-size: 17px
+
+@media only screen and (max-width : 576px)
+	.cards-modal__offers-bottom
+		padding: 16px 15px 30px 15px
+	.offers-bottom__title
+		margin-bottom: 10px
+		font-size: 13px
+	.offers-bottom__subtitle
+		font-size: 10px
+	.offers-bottom__item
+		font-size: 11px
+	.cards-modal__offers-bottom
+		margin-bottom: 33px
+	.offers-info__text
+		font-size: 7px
+	.cards-modal__offers-info
+		padding: 15px 0 20px 0
+	.cards-offers__item
+		padding: 15px 0
+	.cards-offers__inner-item
+		font-size: 11px
+	.cards-list__subtitle, .cards-list__title
+		font-size: 12px
+	.cards-list__img
+		width: 108px
+	.cards-list__link
+		padding: 15px 0
+	.cards-modal__description-info
+		padding: 12px 0 26px 0
+	.cards-modal__description-info-text
+		font-size: 7px
+	.cards-modal__btn-add
+		font-size: 11px
+		min-width: 110px
+		min-height: 25px
+		line-height: 25px
+	.cards-modal__footer
+		padding-bottom: 30px
+	.cards-modal__tab-container
+		padding-left: 20px
+		padding-right: 20px
+	.cards-modal__dialog
+		margin-left: 0
+		margin-right: 0
+	.cards-modal-tabs__link
+		font-size: 12px
+	.cards-modal-tabs__item:not(:last-child)
+		margin-right: 30px
+	.cards-modal__close
+		font-size: 15px
+	.cards-modal__header
+		padding-left: 20px
+		padding-right: 20px
+		height: 40px
+		padding-top: 0
+		padding-bottom: 0
+	.prod-slider .lSSlideOuter.vertical .lSGallery
+		display: none
+	.prod-slider .lSSlideOuter.vertical
+		padding-left: 0 !important
+	.breadcrumbs--product
+		background: #FFDDE4
+		.breadcrumbs__wrapper
+			height: 30px
+	.swiper-carousel--cabinet.owl-theme .owl-nav
+		left: 20px !important
+		right: 20px !important
+	.basket__back
+		height: 30px
+		padding-top: 2px
+	.basket__back-link, .basket__back-link:before
+		font-size: 11px
+	.mobile-filter__btn
+		font-size: 10px
+		min-height: 25px
+		line-height: 25px
+		min-width: 110px
+	.mobile-filter__select2-group .select2-container--default .select2-selection--single .select2-selection__rendered
+		font-size: 13px
+	.breadcrumbs-list__item
+		padding: 7px 0 6px 0
+		line-height: 1
+	.breadcrumbs--akcii,
+	.breadcrumbs--catalog
+		.breadcrumbs-list__link
+			font-size: 11px
+	.breadcrumbs--akcii,
+	.breadcrumbs--catalog
+		.breadcrumbs__current
+			font-size: 12px
+	.breadcrumbs__wrapper
+		height: 55px
+	.header__basket-counter
+		font-size: 9px !important
+	.header__search.active
+		margin-right: 30px
+	.header__like.active
+		margin-right: 30px
+	.grid-images__item
+		margin-bottom: 15px
+	.region__title
+		margin-right: 10px
+	.region__title,
+	.region__btn
+		font-size: 11px
+	.region__wrapper,
+	.header__wrapper,
+	.swiper__wrapper,
+	.main__wrapper,
+	.footer__wrapper,
+	.credits__wrapper,
+	.menu-list,
+	.profile-menu,
+	.breadcrumbs--akcii,
+	.mobile-filter__wrapper,
+	.products-list__wrapper,
+	.products-pagination--paddings,
+	.filter-modal__wrapper,
+	.filter-form__wrapper,
+	.basket__back,
+	.orders__show-more,
+	.orders__body,
+	.orders__pay,
+	.orders-table.flexible .orders-table__body .orders-table__tr,
+	.user-data__wrapper
+		padding-left: 20px
+		padding-right: 20px
+	.person__btn-change
+		font-size: 11px
+	.profile-menu
+		padding-bottom: 40px
+	.menu-list__link,
+	.profile-menu__link,
+	.profile-menu__title,
+	.menu-list__inner-link
+		font-size: 15px
+	.modal-item__title.active
+		font-size: 11px
+		transform: translate3d(0,-9px,0) translateZ(1px)
+	.modal-item__descr
+		bottom: 2px
+	.modal-item__descr-item
+		font-size: 13px
+	.filter-child__checkbox-label
+		font-size: 15px
 	.tabs-item__descr
 		font-size: 12px
 		line-height: 22px
@@ -1243,7 +1504,6 @@
 	.review-item__prop-val
 		font-size: 13px
 		color: #686868
-	.product-section__main-info
 	.vendor-code__wrapper,
 	.goods-carousel__tabs,
 	.accordion-tab,
@@ -1522,7 +1782,11 @@
 		width: 40%
 		display: flex
 		flex-direction: column
+		padding-left: 20px
+		padding-right: 20px
 	.orders__header-tr2
+		padding-left: 20px
+		padding-right: 20px
 		padding-top: 20px
 		flex-basis: 60%
 		width: 60%
@@ -1628,8 +1892,6 @@
 		font-size: 12px
 		line-height: 18px
 	.products-list__wrapper
-		margin-left: -10px
-		margin-right: -10px
 		justify-content: center
 	.products-list__product
 		min-width: 157px
@@ -1637,6 +1899,7 @@
 		width: 44%
 		margin-left: 10px
 		margin-right: 10px
+		margin-bottom: 15px
 	.product__img
 		margin-top: 20px
 		height: auto
@@ -1769,8 +2032,38 @@
 		min-width: 110px
 		min-height: 25px
 		font-size: 11px
+	.header__wrapper
+		height: 55px
+	.header-icon
+		font-size: 17px
+	.header__basket
+		font-size: 22px
+	.header__like
+		margin-right: 22px
+	.header__basket-counter
+		bottom: -3px
+		font-size: 9px
+	.header__menu
+		margin-right: 25px
+	.header__title
+		font-size: 22px
+		&-heart
+			margin: 0 5px
+			font-size: 7px
+	.site-title
+		font-size: 22px
+		&-heart
+			margin: 0 5px
+			font-size: 7px
 
 @media only screen and (max-width : 480px)
+	.products-list__wrapper
+		justify-content: space-between
+	.products-list__product
+		margin-left: 0
+		margin-right: 0
+		flex-basis: 47.5%
+		width: 47.5%
 	.basket-list__item
 		align-items: center
 	.basket__counter-wrapper
@@ -1781,10 +2074,6 @@
 	.basket-list__price
 		flex-basis: auto
 		width: auto
-	.main-navigation.active .header__search.active
-		margin-right: 15px
-	.header__like.active
-		margin-right: 10px
 	// basket 480px
 	.contacts__group
 		flex-basis: 65%
@@ -1830,28 +2119,6 @@
 	.review-modal__info,
 	.review-modal__second-info
 		font-size: 7px
-	// header 420px
-	.header__wrapper
-		height: 55px
-	.header-icon
-		font-size: 17px
-	.header__basket
-		font-size: 22px
-	.header__basket-counter
-		bottom: -3px
-		font-size: 9px
-	.header__menu
-		margin-right: 20px
-	.header__title
-		font-size: 22px
-		&-heart
-			margin: 0 5px
-			font-size: 7px
-	.site-title
-		font-size: 22px
-		&-heart
-			margin: 0 5px
-			font-size: 7px
 	// masonry grid 420px
 	.grid-item, .grid-sizer
 		width: 50%
@@ -1900,10 +2167,6 @@
 	// header 375px
 	.region-info__body
 		width: 280px
-	.header__menu
-		margin-right: 10px
-	.header__like
-		margin-right: 10px
 	.region__wrapper p,
 	.region__btn
 		font-size: 11px

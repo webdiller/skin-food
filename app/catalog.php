@@ -26,13 +26,13 @@
 
 
     <!-- components -->
-    <?php include 'components/region.php';?>
-    <?php include 'components/header.php';?>
-    <?php include 'components/navigation.php';?>
+    <?php include 'components/region.php'; ?>
+    <?php include 'components/header.php'; ?>
+    <?php include 'components/navigation.php'; ?>
 
 
 
-    <main class="main">
+    <main class="main main--catalog">
         <div class="main__wrapper">
 
             <div class="products">
@@ -40,20 +40,7 @@
                 <div class="products-head">
                     <div class="products-head__wrapper">
 
-                        <div class="banner-info">
-                            <div class="banner-info__wrapper clearfix">
-                                <img src="https://static-eu.insales.ru/images/collections/1/7909/1990373/brands_1548324413_APIEU_Logo_800x800.png" alt=",rand image" class="banner-info__img">
-                                <p class="banner-info__title"></p>
-                                <div class="banner-info__description">
-                                    Бренд A'PIEU является дочерним брендом Missha. Прекрасный дизайн, непревзойденное
-                                    качество, демократичные цены! Продукция рассчитана преимущественно для молодой кожи
-                                    от 20 лет. Бережно очищает нежную молодую кожу и защищает от негативных факторов
-                                    окружающей среды.
-                                </div>
-                            </div>
-                        </div>
-
-                        <form id="mainFilter" class="main-filter">
+                        <form id="mainFilter" class="main-filter main-filter--paddings">
                             <div class="main-filter__wrapper">
                                 <div class="select2-group main-filter__select2-group">
                                     <select style="width: 100%" class="main-filter__select select-dropdown-type">
@@ -130,10 +117,11 @@
                                         </li>
                                     </ul>
                                 </nav>
+                                <p class="breadcrumbs__current">Очищающий крем</p>
                             </div>
                         </div>
 
-                        <form class="filter-with-tags">
+                        <form class="filter-with-tags filter-with-tags--paddings">
                             <div class="filter-with-tags__wrapper">
                                 <p class="filter-with-tags__current">очищающий крем</p>
                                 <div class="filter-with-tags__tags">
@@ -353,7 +341,7 @@
                     </div>
                 </div>
 
-                <div class="products-pagination">
+                <div class="products-pagination products-pagination--paddings">
                     <div class="products-pagination__wrapper">
                         <p class="products-pagination__status">Показано
                             <span class="products-pagination__status-current">60</span> из
@@ -387,7 +375,7 @@
     </main>
 
 
-    <?php include 'components/footer.php';?>
+    <?php include 'components/footer.php'; ?>
 
     <!-- CUSTOM AND LIBS -->
     <script src="js/libs.min.js"></script>
