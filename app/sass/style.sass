@@ -1255,13 +1255,19 @@ a:hover
         flex-basis: 100%
         width: 100%
     &__carousel-with-img
-        flex-basis: 55%
-        width: 55%
+        flex-basis: 53.5%
+        width: 53.5%
         margin-bottom: 20px
+        display: flex
+    &__navs
+        flex-basis: 125px
+        width: 125px
+    &__main
+        flex-basis: 100%
     &__content
         margin-bottom: 20px
-        flex-basis: 43%
-        width: 43%
+        flex-basis: 45%
+        width: 45%
     &__buttons
     &__btn-buy
         white-space: nowrap
@@ -1312,6 +1318,8 @@ a:hover
         display: flex
         align-items: center
         margin-bottom: 15px
+    &__basket-control
+        display: none
     &__counter
         margin-right: 50px
         height: 40px
@@ -1621,47 +1629,6 @@ a:hover
     &.owl-carousel
     &__item
 
-.prod-slider
-    position: relative
-    &__list
-    &__item
-        position: relative
-        &::before
-            content: attr(data-status)
-            position: absolute
-            top: 1px
-            right: 0
-            width: 110px
-            height: 24px
-            font-size: 14px
-            font-weight: 400
-            display: flex
-            align-items: center
-            justify-content: center
-            background: var(--bgColor)
-            letter-spacing: 0.04em
-            color: #fff
-            border-top-right-radius: 6px
-    &__img
-        border-top-right-radius: 6px
-        max-width: 100%
-        width: 100%
-        height: 100%
-        object-fit: cover
-    .lSAction
-        position: absolute
-        right: 0
-        top: 0
-        bottom: 0
-    .lSSlideOuter .lSPager.lSGallery li
-        border: 2px solid #fff
-        transition: all .3s ease
-    .lSSlideOuter .lSPager.lSGallery li.active
-        border: 2px solid #eb849a
-        border-radius: 0
-    .lSSlideOuter.vertical .lSGallery
-        left: 0
-
 .goods-tabs
     border-bottom: none
     &__item
@@ -1764,6 +1731,7 @@ a:hover
         line-height: 1
         text-align: center
         padding-right: 20px
+        text-decoration: line-through
     &__new-price
         font-size: 28px
         color: rgb(26, 26, 26)
@@ -1902,6 +1870,7 @@ a:hover
     color: rgb(26, 26, 26)
     line-height: 1.533
     text-align: left
+
 .tabs-options
     &__item
         font-size: 14px
@@ -2072,28 +2041,8 @@ a:hover
         letter-spacing: 1px
         color: #fff
 
-// slider example
-#slider
-    width: 125px
-    height: 100%
-    position: relative
-    overflow: hidden
 
-.polosa
-    position: absolute
-    top: 0
-    left: 0
-    bottom: 0
-    width: 100%
-    height: 100%
-    display: flex
-    flex-direction: column
-    transition: all .3s ease
-    img
-        width: 125px
-        height: 125px
-        object-fit: cover
-
+@import "flicky-slider"
 @import "rating-stars"
 @import "modal"
 @import "basket-and-profile"

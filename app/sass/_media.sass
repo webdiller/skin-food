@@ -106,8 +106,6 @@
 		width: 100%
 		position: static
 		padding: 25px 0 38px 0
-	.prod-slider__img
-		height: auto
 	.breadcrumbs--catalog .breadcrumbs__wrapper
 		height: auto
 	.header__title
@@ -676,28 +674,26 @@
 		right: 0
 		bottom: 0
 		background: #fff
-		height: 70px
 		display: flex
 		align-items: center
-	.basket-control__total-pay
-		height: 100%
+		&__wrapper
+			height: 70px
+			align-items: stretch
+	.basket-control__pay
 		flex-basis: 50%
 		width: 50%
 		text-align: right
 		font-size: 23px
-		padding-right: 30px
-		line-height: 70px
 		font-weight: 700
 		letter-spacing: 0.04em
 		color: #1E1E1F
 		border-top: 2px solid #FFDDE4
 		border-right: 2px solid #FFDDE4
 	.basket-control__btn-pay
+		height: 100%
 		border-radius: 0
 		flex-basis: 50%
 		width: 50%
-		height: 70px
-		line-height: 1
 		display: flex
 		align-items: center
 		justify-content: center
@@ -724,10 +720,39 @@
 		padding-left: 30px
 		padding-right: 30px
 		margin-bottom: 10px
+	.product-section__carousel-with-img
+		flex-wrap: wrap
+	.product-section__main
+		order: 1
+		flex-basis: 100%
+		width: 100%
+	.product-section__navs
+		order: 2
+		flex-basis: 100%
+		width: 100%
+	.product-section__main,
+	.slide-main__cell
+		height: 295px
+	.slide-nav
+		transform-origin: top left
+		width: 225px
+		transform: rotate(0) translate(0,0)
+	.slide-nav__cell
+		transform: rotate(0)
+		width: 75px
+		height: 75px
+	.slide-nav .flickity-prev-next-button.previous,
+	.slide-nav .flickity-prev-next-button.next
+		width: 15px
+		height: 15px
 
 @media only screen and (max-width : 767px)
-	.prod-slider__img
-		height: 100%
+	.product-section__main
+		flex-basis: 100%
+		width: 100%
+		min-width: 246px
+		margin-left: auto
+		margin-right: auto
 	.product-section__content
 		flex-basis: 100%
 		width: 100%
@@ -1251,6 +1276,53 @@
 		font-size: 17px
 
 @media only screen and (max-width : 576px)
+	.basket-control__course
+		font-size: 14px
+	.basket-control__wrapper
+		height: 60px
+	.basket-control__pay
+		justify-content: center
+	.basket-control__current-price
+		font-size: 22px
+		padding-right: 0
+	.basket-control__last-price
+		font-size: 12px
+		padding-right: 5px
+	.breadcrumbs--product .breadcrumbs-list__link
+		font-size: 11px
+	.slide-main .flickity-prev-next-button.next, .slide-main .flickity-prev-next-button.previous
+		width: 25px
+		height: 25px
+	.slide-main__cell:before
+		font-size: 9px
+		min-width: 95px
+		height: 15px
+		width: auto
+		padding-left: 10px
+		padding-right: 10px
+	.product-section__main, .slide-main__cell
+		height: 212px
+	.product-section__main
+		flex-basis: 77%
+		width: 77%
+		margin-left: auto
+		margin-right: auto
+	.product-section__carousel-with-img
+		position: relative
+		margin-bottom: 15px
+	.product-section__navs
+		display: none
+	.slide-main
+		position: static
+		.flickity-prev-next-button.next
+			right: 10px
+		.flickity-prev-next-button.previous
+			left: 10px
+		.flickity-prev-next-button.next,
+		.flickity-prev-next-button.previous
+			display: block
+			background: transparent
+			color: #F68C9F
 	.cards-modal__offers-bottom
 		padding: 16px 15px 30px 15px
 	.offers-bottom__title
@@ -1305,10 +1377,6 @@
 		height: 40px
 		padding-top: 0
 		padding-bottom: 0
-	.prod-slider .lSSlideOuter.vertical .lSGallery
-		display: none
-	.prod-slider .lSSlideOuter.vertical
-		padding-left: 0 !important
 	.breadcrumbs--product
 		background: #FFDDE4
 		.breadcrumbs__wrapper
@@ -1521,11 +1589,11 @@
 		font-size: 12px
 		right: -25px
 	.goods-carousel.owl-carousel .owl-nav button.owl-prev
-		left: 0
-		bottom: 40%
+		left: 10px
+		bottom: 45%
 	.goods-carousel.owl-carousel .owl-nav button.owl-next
-		right: 0
-		bottom: 40%
+		right: 10px
+		bottom: 45%
 	.vendor-code__wrapper
 		height: 65px
 	.vendor-code__fav-icon
@@ -1547,7 +1615,7 @@
 		height: auto
 		min-height: 25px
 	.goods-carousel.owl-carousel .owl-item img
-		width: 150px
+		width: 135px
 	.good-card__title
 		font-size: 11px
 		line-height: 15px
@@ -1672,14 +1740,12 @@
 		padding: 12px 0 18px 0
 	.delivery__form-input-group
 		max-width: 205px
-	.basket-control,
-	.basket-control__btn-pay, .basket-control__total-pay
+	.basket-control__wrapper
 		height: 60px
-	.basket-control__total-pay
+	.basket-control__pay
 		font-size: 22px
-		line-height: 60px
 	.basket-control__btn-pay
-		font-size: 12px
+		font-size: 15px
 	.address__form-group-street
 		max-width: 205px
 		min-width: 205px
@@ -2075,6 +2141,9 @@
 		flex-basis: auto
 		width: auto
 	// basket 480px
+	.basket__control
+		.basket-control__btn-pay
+			font-size: 12px
 	.contacts__group
 		flex-basis: 65%
 		width: 65%

@@ -12,7 +12,7 @@
         </div>
     </div>
     <div class="region__wrapper-for-information">
-        <div class="region-info">
+        <div class="region-info disabled">
             <div class="region-info__body">
                 <p class="region-info__top-text">Информация о доставке <br> будет отображаться для региона</p>
                 <p class="region-info__current-city">г.Минск</p>

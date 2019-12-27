@@ -200,7 +200,7 @@
                                 <p class="product__price">от 410 до 470 byn</p>
                             </div>
                             <div class="product__footer">
-                                <button class="product__btn-add">в корзину</button>
+                                <button class="product__btn-add added">Уже в корзине</button>
                             </div>
                         </div>
 

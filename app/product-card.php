@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0 shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="theme-color" content="#fff">
+    <link rel="icon" href="./img/favicon.png" type="image/png">
     <title>Skin Food</title>
     <style>
         body {
@@ -58,35 +59,28 @@
                             </div>
                         </div>
 
-                        <div class="product-section__carousel-with-img prod-slider">
+                        <div id="calcHeightForCarousel" class="product-section__carousel-with-img">
 
-                            <ul class="prod-slider__list" id="prodSliderDesktop">
-                                <li style="--bgColor: #EF2B50" data-status="-30 % АКЦИЯ" class="prod-slider__item" data-thumb="./img/products/product-10-1.jpg">
-                                    <img class="prod-slider__img" src="./img/products/product-10-big.jpg" />
-                                </li>
-                                <li style="--bgColor: #EF2B50" data-status="-30 % АКЦИЯ" class="prod-slider__item" data-thumb="./img/products/product-10-1.jpg">
-                                    <img class="prod-slider__img" src="./img/products/product-10-big.jpg" />
-                                </li>
-                                <li style="--bgColor: #EF2B50" data-status="-30 % АКЦИЯ" class="prod-slider__item" data-thumb="./img/products/product-10-1.jpg">
-                                    <img class="prod-slider__img" src="./img/products/product-10-big.jpg" />
-                                </li>
-                                <li style="--bgColor: #EF2B50" data-status="-30 % АКЦИЯ" class="prod-slider__item" data-thumb="./img/products/product-10-1.jpg">
-                                    <img class="prod-slider__img" src="./img/products/product-10-big.jpg" />
-                                </li>
-                                <li style="--bgColor: #EF2B50" data-status="-30 % АКЦИЯ" class="prod-slider__item" data-thumb="./img/products/product-10-1.jpg">
-                                    <img class="prod-slider__img" src="./img/products/product-10-big.jpg" />
-                                </li>
-                                <li style="--bgColor: #EF2B50" data-status="-30 % АКЦИЯ" class="prod-slider__item" data-thumb="./img/products/product-10-1.jpg">
-                                    <img class="prod-slider__img" src="./img/products/product-10-big.jpg" />
-                                </li>
-                                <li style="--bgColor: #EF2B50" data-status="-30 % АКЦИЯ" class="prod-slider__item" data-thumb="./img/products/product-10-1.jpg">
-                                    <img class="prod-slider__img" src="./img/products/product-10-big.jpg" />
-                                </li>
-                                <li style="--bgColor: #EF2B50" data-status="-30 % АКЦИЯ" class="prod-slider__item" data-thumb="./img/products/product-10-1.jpg">
-                                    <img class="prod-slider__img" src="./img/products/product-10-big.jpg" />
-                                </li>
-                            </ul>
 
+                            <div class="product-section__navs">
+                                <div class="slide-nav">
+                                    <div class="slide-nav__cell"><img src="./img/products/product-10-1.jpg" alt="" class="slide-nav__img"></div>
+                                    <div class="slide-nav__cell"><img src="./img/products/product-10-1.jpg" alt="" class="slide-nav__img"></div>
+                                    <div class="slide-nav__cell"><img src="./img/products/product-10-1.jpg" alt="" class="slide-nav__img"></div>
+                                    <div class="slide-nav__cell"><img src="./img/products/product-10-1.jpg" alt="" class="slide-nav__img"></div>
+                                    <div class="slide-nav__cell"><img src="./img/products/product-10-1.jpg" alt="" class="slide-nav__img"></div>
+                                </div>
+
+                            </div>
+                            <div class="product-section__main">
+                                <div class="slide-main">
+                                    <div style="--bgColor: #EF2B50" data-status="-30 % АКЦИЯ" class="slide-main__cell"><img src="./img/products/product-10-big.jpg" alt="" class="slide-main__img"></div>
+                                    <div style="--bgColor: #EF2B50" data-status="-30 % АКЦИЯ" class="slide-main__cell"><img src="./img/products/product-10-big.jpg" alt="" class="slide-main__img"></div>
+                                    <div style="--bgColor: #EF2B50" data-status="-30 % АКЦИЯ" class="slide-main__cell"><img src="./img/products/product-10-big.jpg" alt="" class="slide-main__img"></div>
+                                    <div style="--bgColor: #EF2B50" data-status="-30 % АКЦИЯ" class="slide-main__cell"><img src="./img/products/product-10-big.jpg" alt="" class="slide-main__img"></div>
+                                    <div style="--bgColor: #EF2B50" data-status="-30 % АКЦИЯ" class="slide-main__cell"><img src="./img/products/product-10-big.jpg" alt="" class="slide-main__img"></div>
+                                </div>
+                            </div>
                         </div>
 
                         <div class="product-section__content product-content">
@@ -142,6 +136,17 @@
                                     <span class="product-fav-btn__icon demo-icon icon-heart"></span>
                                     <span class="product-fav-btn__text">В избранное</span>
                                 </button>
+                            </div>
+
+                            <!-- show for 768 < -->
+                            <div class="product-section__basket-control basket-control basket-control--product-card">
+                                <div class="basket-control__wrapper">
+                                    <div class="basket-control__pay">
+                                        <p class="basket-control__last-price">32.00 руб</p>
+                                        <p class="basket-control__current-price">30.20 <span class="basket-control__course">руб</span></p>
+                                    </div>
+                                    <button class="basket-control__btn-pay">В корзину</button>
+                                </div>
                             </div>
 
                             <div class="product-section__user-info product-user-info">

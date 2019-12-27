@@ -654,21 +654,40 @@
 
 .basket-control
     background: #fff
+    &--product-card
+        z-index: 1000
     &__wrapper
         display: flex
         align-items: center
-    &__total-pay
+        height: 70px
+    &__pay
+        display: flex
+        align-items: center
+        justify-content: flex-end
         height: 100%
         flex-basis: 50%
         width: 50%
         text-align: right
+    &__last-price
+        font-weight: 700
+        letter-spacing: 0.04em
+        color: #848688
+        font-size: 16px
+        line-height: 17px
+        letter-spacing: 0.04em
+        text-decoration: line-through
+        padding-right: 10px
+    &__current-price
         font-size: 23px
-        padding-right: 30px
-        line-height: 70px
+        padding-right: 0
         font-weight: 700
         letter-spacing: 0.04em
         color: #1E1E1F
+        padding-right: 36px
     &__btn-pay
+        display: flex
+        align-items: center
+        justify-content: center
         font-weight: 700
         font-size: 14px
         height: 40px
@@ -684,3 +703,9 @@
         outline: none
         transition: all .3s ease
         background: #df8a9e
+    &__course
+        font-size: 17px
+        padding-right: 0
+        font-weight: 700
+        letter-spacing: 0.04em
+        color: #1E1E1F

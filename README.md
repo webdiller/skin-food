@@ -27,13 +27,16 @@
 6. http://css.skinfood.dev.2mhost.ru/user-favorite.php
 7. http://css.skinfood.dev.2mhost.ru/user-orders.php
 8. http://css.skinfood.dev.2mhost.ru/user-visited.php
-9.
-10.
-11.
-12.
-13.
-14.
-15.
+
+9. http://css.skinfood.dev.2mhost.ru/akcii.php
+10. http://css.skinfood.dev.2mhost.ru/brands2.php
+11. http://css.skinfood.dev.2mhost.ru/catalog.php
+12. http://css.skinfood.dev.2mhost.ru/user-notlogged.php
+
+13. basket.php
+14. product-card.php
+15. oplata-i-dostavka.php
+
 
 1. ~~Поправить отступы в контейнере на каждой странице~~
 2. ~~Поправить расстояние у значков в шапке~~
@@ -45,6 +48,3 @@
 9. Сверстать страницу доставки
 10. Сверстать модальное окно выбора подарка и пробника
 11. Сверстать кнопки пробника и подарка в десктоп версии
-
-
-http://css.skinfood.dev.2mhost.ru/404.php

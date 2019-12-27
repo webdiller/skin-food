@@ -311,7 +311,10 @@
                     <!-- show for 768 < -->
                     <div class="basket-control basket__control">
                         <div class="basket-control__wrapper">
-                            <p class="d-block d-lg-none basket-control__total-pay">30.20 руб</p>
+                            <div class="d-flex d-lg-none basket-control__pay">
+                                <p class="d-none basket-control__last-price">32.00 руб</p>
+                                <p class="basket-control__current-price">30.20 <span class="basket-control__course">руб</span></p>
+                            </div>
                             <button class="basket-control__btn-pay">Подтвердить заказ</button>
                         </div>
                     </div>
