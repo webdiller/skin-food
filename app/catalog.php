@@ -23,6 +23,7 @@
     <?php include 'components/modals/region-modal.php'; ?>
     <?php include 'components/modals/user-modal.php'; ?>
     <?php include 'components/modals/filter-modal.php'; ?>
+    <?php include 'components/modals/find-out-modal.php'; ?>
 
 
     <!-- components -->
@@ -178,7 +179,7 @@
                                 </div>
                                 <p class="product__tag">Сыворотка для глаз</p>
                                 <p class="product__price">от 410 до 470 byn</p>
-                                <button class="product__btn-empty">Сообщить о появлении</button>
+                                <button data-toggle="modal" data-target="#findOutModal" type="button" class="product__btn-empty">Сообщить о появлении</button>
                             </div>
                         </div>
 
@@ -220,7 +221,7 @@
                                 </div>
                                 <p class="product__tag">Сыворотка для глаз</p>
                                 <p class="product__price">от 410 до 470 byn</p>
-                                <!-- <button class="product__btn-empty">Сообщить о появлении</button> -->
+                                <!-- <button data-toggle="modal" data-target="#findOutModal" type="button" class="product__btn-empty">Сообщить о появлении</button> -->
                             </div>
                             <div class="product__footer">
                                 <button class="product__btn-add">в корзину</button>
@@ -265,7 +266,7 @@
                                 </div>
                                 <p class="product__tag">Сыворотка для глаз</p>
                                 <p class="product__price">от 410 до 470 byn</p>
-                                <button class="product__btn-empty">Сообщить о появлении</button>
+                                <button data-toggle="modal" data-target="#findOutModal" type="button" class="product__btn-empty">Сообщить о появлении</button>
                             </div>
                         </div>
 

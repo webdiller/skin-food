@@ -22,6 +22,7 @@
     <!-- modals -->
     <?php include 'components/modals/region-modal.php'; ?>
     <?php include 'components/modals/user-modal.php'; ?>
+    <?php include 'components/modals/success-modal.php'; ?>
 
 
     <!-- components -->
@@ -338,7 +339,7 @@
                                 <p class="d-none basket-control__last-price">32.00 руб</p>
                                 <p class="basket-control__current-price">30.20 <span class="basket-control__course">руб</span></p>
                             </div>
-                            <button class="basket-control__btn-pay">Подтвердить заказ</button>
+                            <button data-toggle="modal" data-target="#successModal" class="basket-control__btn-pay">Подтвердить заказ</button>
                         </div>
                     </div>
 

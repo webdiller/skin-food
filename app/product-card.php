@@ -145,7 +145,7 @@
                                         <p class="basket-control__last-price">32.00 руб</p>
                                         <p class="basket-control__current-price">30.20 <span class="basket-control__course">руб</span></p>
                                     </div>
-                                    <button class="basket-control__btn-pay">В корзину</button>
+                                    <button type="button"class="basket-control__btn-pay">В корзину</button>
                                 </div>
                             </div>
 

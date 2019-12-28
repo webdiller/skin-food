@@ -49,6 +49,28 @@
 		padding-right: 20px
 
 @media only screen and (max-width : 991px)
+	.success-modal__title
+		text-transform: unset
+	.success-modal__dialog
+		border-top-left-radius: 0
+		border-top-right-radius: 0
+		margin-top: 0
+	.success-modal
+		border-top-left-radius: 0
+		border-top-right-radius: 0
+	.success-modal__content
+		border-top-left-radius: 0
+		border-top-right-radius: 0
+	.find-modal__title
+		text-transform: unset
+	.find-modal__dialog
+		margin-top: 0
+	.find-modal__dialog,
+	.find-modal,
+	.find-modal__dialog,
+	.find-modal__content
+		border-top-left-radius: 0
+		border-top-right-radius: 0
 	.person__birthday
 		.person__day::before
 			display: none
@@ -828,6 +850,19 @@
 		font-size: 9px
 
 @media only screen and (max-width : 767px)
+	.success-modal__subtitle
+		font-size: 13px
+	.success-modal__count
+		font-size: 40px
+	.success-modal__descr
+		font-size: 12px
+	.success-modal__btn
+		font-size: 12px
+	.find-modal__input
+		font-size: 13px
+	.find-modal__btn
+		height: 35px
+		line-height: 35px
 	.promo-list__desktop-promo
 		flex-basis: 100%
 		width: 100%
@@ -1369,6 +1404,41 @@
 		font-size: 17px
 
 @media only screen and (max-width : 576px)
+	.success-modal__body
+		margin: 20px auto 52px auto
+	.success-modal__subtitle
+		font-size: 12px
+	.success-modal__count
+		padding-bottom: 15px
+	.success-modal__descr
+		font-size: 11px
+		max-width: 220px
+	.success-modal__btn
+		font-size: 11px
+	.find-modal__dialog,
+	.success-modal__dialog
+		margin: 0
+	.find-modal__title,
+	.success-modal__title
+		font-size: 14px
+	.find-modal__header,
+	.success-modal__header
+		height: 40px
+		padding: 0 20px
+	.find-modal__input
+		height: 35px
+		margin-bottom: 15px
+		&-last
+			margin-bottom: 35px
+	.find-modal__btn
+		min-width: 140px
+		font-size: 12px
+	.find-modal__body
+		width: 205px
+		padding-bottom: 70px
+	.success-modal__close,
+	.find-modal__close
+		font-size: 15px
 	.person__birthday
 		margin-left: 0
 	.contacts__group,
