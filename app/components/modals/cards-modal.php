@@ -1,4 +1,4 @@
-<div class="cards-modal modal fade" id="cardsModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div class="cards-modal modal fade" id="cardsModal" tabindex="-1" role="dialog" aria-hidden="true">
 
     <div class="cards-modal__dialog modal-dialog" role="document">
 

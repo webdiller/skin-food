@@ -25,6 +25,7 @@
         letter-spacing: 0.04em
         color: #4B4B4B
         height: 100%
+        height: 40px
         width: 100%
         padding: 8px 15px 0 10px
         font-weight: 700
@@ -180,6 +181,61 @@
         color: #1E1E1F
         margin-right: 20px
         font-weight: 700
+    &__gift-and-probe
+        display: flex
+        align-content: center
+    &__gift
+        display: flex
+        align-content: center
+        padding-right: 35px
+        position: relative
+        &::before
+            content: "\e802"
+            font-family: fontello
+            position: absolute
+            margin-left: 0
+            color: #f78c9f
+            right: 20px
+            font-size: 20px
+            top: 0
+    &__gift-btn
+        font-size: 16px
+        color: #f78c9f
+        text-decoration: underline
+        border: none
+        outline: none
+        background: transparent
+        padding: 0 5px 0 0
+    &__gift-count
+        display: inline-block
+        font-size: 16px
+        color: #f78c9f
+        letter-spacing: 2px
+    &__probe
+        display: flex
+        align-items: center
+        position: relative
+        &::before
+            content: "\e802"
+            font-family: fontello
+            position: absolute
+            margin-left: 0
+            color: #f78c9f
+            right: -15px
+            font-size: 20px
+            top: 0
+    &__probe-btn
+        font-size: 16px
+        color: #f78c9f
+        text-decoration: underline
+        border: none
+        outline: none
+        background: transparent
+        padding: 0
+    &__probe-count
+        font-size: 16px
+        color: #f78c9f
+        display: inline-block
     &__btn
         font-size: 14px
         text-align: center
@@ -215,6 +271,10 @@
         color: #6a6a6a
         text-align: center
         margin-right: 30px
+    &__promo-group
+        max-width: 150px
+        margin-right: 15px
+        
 
 .time
     &__title

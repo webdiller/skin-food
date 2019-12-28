@@ -49,6 +49,65 @@
 		padding-right: 20px
 
 @media only screen and (max-width : 991px)
+	.person__birthday
+		.person__day::before
+			display: none
+		.person__day
+			border: 1px solid #adadad
+			box-sizing: border-box
+			border-radius: 4px
+			width: 55px
+			height: 37px
+			.select2-container
+				width: 52px !important
+			.select2-container--default .select2-selection--single .select2-selection__rendered
+				padding-left: 10px
+				font-size: 11px
+			.select2-container--default .select2-selection--single .select2-selection__arrow
+				width: 0
+				&::before
+					font-size: 20px
+			.select2-container--default .select2-selection--single .select2-selection__arrow:before
+				right: 5px
+		.person__month::before
+			display: none
+		.person__month
+			border: 1px solid #adadad
+			box-sizing: border-box
+			border-radius: 4px
+			width: 55px
+			height: 37px
+			margin-right: 20px
+			.select2-container
+				width: 52px !important
+			.select2-container--default .select2-selection--single .select2-selection__rendered
+				padding-left: 10px
+				font-size: 11px
+			.select2-container--default .select2-selection--single .select2-selection__arrow
+				width: 0
+				&::before
+					font-size: 20px
+			.select2-container--default .select2-selection--single .select2-selection__arrow:before
+				right: 5px
+		.person__year::before
+			display: none
+		.person__year
+			border: 1px solid #adadad
+			box-sizing: border-box
+			border-radius: 4px
+			width: 83px
+			height: 37px
+			.select2-container
+				width: 81px !important
+			.select2-container--default .select2-selection--single .select2-selection__rendered
+				padding-left: 10px
+				font-size: 11px
+			.select2-container--default .select2-selection--single .select2-selection__arrow
+				width: 0
+				&::before
+					font-size: 20px
+			.select2-container--default .select2-selection--single .select2-selection__arrow:before
+				right: 5px
 	.offers-info__text
 		font-size: 12px
 		color: #7a7a7a
@@ -584,6 +643,26 @@
 		display: none
 	.contacts__group
 		max-width: none
+	.contacts__group,
+	.delivery__form-input-group,
+	.address__form-group-street,
+	.address__form-group-home,
+	.address__form-group-flat,
+	.address__form-group-phone,
+	.person__form-input-group,
+	.user-address__select-city, .user-address__select-country,
+	.user-address__street,
+	.user-address__house,
+	.user-address__body,
+	.user-address__flat,
+	.bonus-account__cart,
+	.bonus-account__balans,
+	.bonus-account__discount,
+	.user-address__select-country .select-with-label .select2-container .select2-selection--single,
+	.user-address__select-city .select-with-label .select2-container .select2-selection--single
+		height: 37px
+		.form-input-group__input
+			height: 37px
 	.promo-list__title
 		font-size: 	10px
 	.promo-list__btn
@@ -745,8 +824,24 @@
 	.slide-nav .flickity-prev-next-button.next
 		width: 15px
 		height: 15px
+	.select-with-label__label
+		font-size: 9px
 
 @media only screen and (max-width : 767px)
+	.promo-list__desktop-promo
+		flex-basis: 100%
+		width: 100%
+	.promo-list__subtitle
+		margin-right: 20px
+	.select-with-label__label,
+	.form-input-group__label,
+	.form-textarea-group__label
+		font-size: 7px
+	.form-gender-group__label
+		font-weight: 700
+	.form-datepicker-group__label, .person__gender-title
+		text-transform: unset
+		font-size: 11px
 	.product-section__main
 		flex-basis: 100%
 		width: 100%
@@ -1072,8 +1167,6 @@
 		justify-content: space-between
 	.basket__promo-list
 		flex-wrap: wrap
-	.promo-list__subtitle
-		margin-right: auto
 	.basket__left, .basket__right
 		flex-basis: 100%
 		width: 100%
@@ -1276,6 +1369,67 @@
 		font-size: 17px
 
 @media only screen and (max-width : 576px)
+	.person__birthday
+		margin-left: 0
+	.contacts__group,
+	.delivery__form-input-group,
+	.address__form-group-street,
+	.address__form-group-home,
+	.address__form-group-flat,
+	.address__form-group-phone,
+	.person__form-input-group,
+	.user-address__select-city, .user-address__select-country,
+	.user-address__street,
+	.user-address__house,
+	.user-address__body,
+	.user-address__flat,
+	.bonus-account__cart,
+	.bonus-account__balans,
+	.bonus-account__discount,
+	.user-address__select-country .select-with-label .select2-container .select2-selection--single,
+	.user-address__select-city .select-with-label .select2-container .select2-selection--single
+		height: 35px
+		.form-input-group__input
+			height: 35px
+	.person__birthday
+		.person__day
+			border: 1px solid #adadad
+			box-sizing: border-box
+			border-radius: 4px
+			width: 50px
+			height: 35px
+			margin-right: 15px
+			.select2-container--default .select2-selection--single
+				background: transparent
+			.select2-container--default .select2-selection--single .select2-selection__arrow:before
+				right: 10px
+		.person__month
+			margin-right: 15px
+			border: 1px solid #adadad
+			box-sizing: border-box
+			border-radius: 4px
+			width: 50px
+			height: 35px
+			.select2-container--default .select2-selection--single
+				background: transparent
+			.select2-container--default .select2-selection--single .select2-selection__arrow:before
+				right: 10px
+		.person__year
+			margin-right: 15px
+			border: 1px solid #adadad
+			box-sizing: border-box
+			border-radius: 4px
+			width: 77px
+			height: 35px
+			.select2-container--default .select2-selection--single
+				background: transparent
+			.select2-container--default .select2-selection--single .select2-selection__arrow:before
+				right: 10px
+	.product-section__fav-btn
+		right: 20px
+	.product-section__content
+		padding-left: 20px
+		padding-right: 20px
 	.basket-control__course
 		font-size: 14px
 	.basket-control__wrapper

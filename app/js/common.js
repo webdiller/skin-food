@@ -303,6 +303,12 @@ $(document).ready(function () {
             minimumResultsForSearch: Infinity
         });
 
+        
+        $('.select-dropdown-birthday').select2({
+            placeholder: 'Сначала популярные',
+            minimumResultsForSearch: Infinity
+        });
+
         var $disabledResults = $(".select-with-label .select-with-label__select");
         $disabledResults.select2();
 
@@ -314,7 +320,6 @@ $(document).ready(function () {
             $(this).closest('#mainFilter').fadeOut();
         });
     }())
-
 
     const userOrdersShowMoreButton = ((function () {
         $('.orders__show-more').click(function () {
@@ -647,5 +652,8 @@ $(document).ready(function () {
 
     }());
 
-});
+    const productViewModule = (function () {
+        
+    }());
 
+});

@@ -111,11 +111,34 @@
                     <ul class="promo-list basket__promo-list">
                         <li class="promo-list__item">
                             <p class="promo-list__title">+ Выберите бесплатно к заказу:</p>
-                            <button class="promo-list__btn">выбрать подарок</button>
+
+                            <div class="d-none d-lg-flex promo-list__gift-and-probe">
+                                <div class="promo-list__gift">
+                                    <button class="promo-list__gift-btn">Подарок</button>
+                                    <span class="promo-list__gift-count">(1)</span>
+                                </div>
+                                <div class="promo-list__probe">
+                                    <button class="promo-list__probe-btn">Пробник</button>
+                                    <span class="promo-list__probe-count"></span>
+                                </div>
+                            </div>
+
+                            <button class="d-block d-lg-none promo-list__btn">выбрать подарок</button>
                         </li>
+
                         <li class="promo-list__item flex-end">
-                            <p class="promo-list__subtitle">промокод:</p>
-                            <input type="text" class="promo-list__input">
+                            <div class="d-flex d-lg-none align-items-center promo-list__desktop-promo">
+                                <p class="promo-list__subtitle">промокод:</p>
+                                <input type="text" class="promo-list__input">
+                            </div>
+                            <div class="d-none d-lg-flex promo-list__promo">
+
+                                <div class="form-input-group promo-list__promo-group">
+                                    <label for="promoInputDesktop" class="form-input-group__label">Промокод</label>
+                                    <input  id="promoInputDesktop" type="text" placeholder="" class="form-input-group__input">
+                                </div>
+
+                            </div>
                             <button class="promo-list__btn">применить код</button>
                         </li>
                     </ul>
