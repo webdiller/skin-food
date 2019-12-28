@@ -20,9 +20,10 @@
             <a href="#" class="header__views demo-icon icon-eye">просмотрено
                 <span class="header__views-count">(1)</span>
             </a>
-            <button class="header-icon header__user demo-icon icon-user" id="user"></button>
-            <a class="header-icon header__like demo-icon icon-heart-circled" id="like" href="user-favorite.php"></a>
-            <button class="header-icon header__basket demo-icon icon-shop" id="basket"><span id="basketCounter" class="header__basket-counter">3</span>
+            <button class="header-icon header__user" id="user"></button>
+
+            <a class="header-icon header__like" id="like" href="user-favorite.php"></a>
+            <button class="header-icon header__basket" id="basket"><span id="basketCounter" class="header__basket-counter">3</span>
             </button>
 
         </div>
@@ -59,7 +60,7 @@
                                     <p class="tiny-basket__tag">Маска для кожи вокруг глаз</p>
                                     <p class="tiny-basket__type">Маска</p>
                                 </div>
-                                <button class="tiny-basket__btn-delete demo-icon icon-trash-empty"></button>
+                                <button type="button" class="tiny-basket__btn-delete demo-icon icon-trash-empty"></button>
                                 <p class="tiny-basket__price">1 X 30 BYN</p>
                             </li>
                             <li class="tiny-basket__item">
@@ -69,7 +70,7 @@
                                     <p class="tiny-basket__tag">Маска для кожи вокруг глаз</p>
                                     <p class="tiny-basket__type">Маска</p>
                                 </div>
-                                <button class="tiny-basket__btn-delete demo-icon icon-trash-empty"></button>
+                                <button type="button"  class="tiny-basket__btn-delete demo-icon icon-trash-empty"></button>
                                 <p class="tiny-basket__price">1 X 30 BYN</p>
                             </li>
                             <li class="tiny-basket__item">
@@ -79,7 +80,7 @@
                                     <p class="tiny-basket__tag">Маска для кожи вокруг глаз</p>
                                     <p class="tiny-basket__type">Маска</p>
                                 </div>
-                                <button class="tiny-basket__btn-delete demo-icon icon-trash-empty"></button>
+                                <button type="button"  class="tiny-basket__btn-delete demo-icon icon-trash-empty"></button>
                                 <p class="tiny-basket__price">1 X 30 BYN</p>
                             </li>
                         </ul>

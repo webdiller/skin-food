@@ -13,6 +13,14 @@ html
 *, *::before, *::after
     box-sizing: border-box
 
+input,
+select,
+button,
+textarea,
+label
+    &:focus
+        outline: none !important
+
 body
     overflow-x: hidden
     font-family: $proxy
@@ -223,7 +231,30 @@ a:hover
         color: #F68C9F
         font-size: 21px
         transition: all .3s ease
-        margin-right: 10px
+        margin-right: 15px
+        padding-bottom: 5px
+        transform: scale(0.8)
+        &-user
+            height: 26px
+            width: 23px
+            background: url(../img/icons/css_sprites-navigation.png) -1px 0
+            background-size: auto 100%
+        &-orders
+            height: 32px
+            width: 32px
+            background: url(../img/icons/css_sprites-navigation.png) -32px 0
+            background-size: auto 100%
+        &-fav
+            height: 26px
+            width: 26px
+            background: url(../img/icons/css_sprites-navigation.png) 78px 0
+            background-size: auto 100%
+        &-visited
+            width: 23px
+            height: 23px
+            background: url(../img/icons/css_sprites-navigation.png) 46px 0
+            background-size: auto 100%
+            transform: scale(1.1)
     &__item
         flex-basis: 220px
         width: 220px
@@ -654,15 +685,19 @@ a:hover
         text-decoration: underline
         +reset-btn
     &__select2-group
+        .select2-container--focus.select2-container--open
+            .select2-selection__arrow:before
+                transform: rotate(180deg)
         .select2-container
             min-width: 190px
+        .select2-container--default .select2-selection--single
+            outline: none !important
         .select2-container--default .select2-selection--single .select2-selection__arrow
             height: 100%
             right: 0
             justify-content: flex-end
             align-items: center
             justify-content: center
-            content: "1"
             &::before
                 position: absolute
                 font-family: fontello
@@ -683,10 +718,13 @@ a:hover
         border-radius: 5px
     &--paddings
         padding: 0 30px
+    &__select
     &__select2-group
         min-width: 210px
         margin-bottom: 15px
         margin-right: 35px
+        .select2-container--default .select2-selection--single
+            outline: none
     .select2-container--default .select2-selection--single .select2-selection__arrow
         height: 100%
         right: 0
@@ -1970,79 +2008,6 @@ a:hover
                 content: "\e806"
             &:not(:last-child)
                 margin-right: 7px
-
-.review-modal
-    padding-right: 0 !important
-    &__dialog
-        max-width: 660px
-        margin: 50px auto 50px auto  auto
-    &__content
-    &__header
-        padding: 20px 40px
-        border-bottom: 1px solid #f78c9f
-    &__title
-        font-size: 17px
-        font-weight: 700
-        letter-spacing: .04em
-        color: #f78c9f
-        text-transform: uppercase
-    &__close
-        color: #f78c9f
-        opacity: 1 !important
-        &:hover
-            color: #f78c9f
-            opacity: 1 !important
-        &::before
-            margin: 0
-    &__body
-        padding: 30px 40px 40px 40px
-    &__content-form
-        padding: 0 55px
-        display: flex
-        align-items: center
-        flex-wrap: wrap
-    &__subtitle
-        font-size: 18px
-        margin-right: 30px
-        letter-spacing: 0.04em
-        font-weight: 700
-        color: #1E1E1F
-        margin-bottom: 20px
-    &__rate
-        margin-bottom: 20px
-    &__info
-        flex-basis: 100%
-        width: 100%
-        font-size: 14px
-        letter-spacing: 0.04em
-        color: #F78C9F
-        margin-bottom: 5px
-    &__textarea-group
-        flex-basis: 100%
-        width: 100%
-        height: 125px !important
-        &:not(:last-child)
-            margin-bottom: 20px
-    &__second-info
-        flex-basis: 100%
-        width: 100%
-        font-size: 13px
-        color: #AEAEAE
-        margin-bottom: 80px
-    &__btn
-        font-weight: 700
-        text-transform: uppercase
-        background: #f78c9f
-        border: none
-        outline: none
-        min-width: 176.41px
-        min-height: 40px
-        border-radius: 4px
-        display: block
-        margin-left: auto
-        letter-spacing: 1px
-        color: #fff
-
 
 @import "flicky-slider"
 @import "rating-stars"

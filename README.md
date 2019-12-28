@@ -27,14 +27,12 @@
 6. http://css.skinfood.dev.2mhost.ru/user-favorite.php
 7. http://css.skinfood.dev.2mhost.ru/user-orders.php
 8. http://css.skinfood.dev.2mhost.ru/user-visited.php
-
 9. http://css.skinfood.dev.2mhost.ru/akcii.php
 10. http://css.skinfood.dev.2mhost.ru/brands2.php
 11. http://css.skinfood.dev.2mhost.ru/catalog.php
 12. http://css.skinfood.dev.2mhost.ru/user-notlogged.php
-
 13. http://css.skinfood.dev.2mhost.ru/product-card.php
-14. basket.php
+14. http://css.skinfood.dev.2mhost.ru/basket.php
 15. oplata-i-dostavka.php
 
 

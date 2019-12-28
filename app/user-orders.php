@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="theme-color" content="#fff">
     <title>Skin Food</title>
+    <link rel="icon" href="./img/favicon.png" type="image/png">
     <style>
         body {
             opacity: 0;

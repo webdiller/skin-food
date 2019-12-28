@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="theme-color" content="#fff">
     <title>Skin Food</title>
+    <link rel="icon" href="./img/favicon.png" type="image/png">
     <style>
         body {
             opacity: 0;
@@ -108,8 +109,8 @@
                                         (111)</button>
                                     <button id="mainFilterReset" type="button" class="main-filter__btn-reset">Очистить
                                         форму</button>
-                                    <button id="mainFilterHide" type="button" class="btn main-filter__btn-hide">Скрыть
-                                        фильтр</button>
+                                    <!-- <button id="mainFilterHide" type="button" class="btn main-filter__btn-hide">Скрыть
+                                        фильтр</button> -->
                                 </div>
                             </div>
                         </form>
@@ -173,7 +174,7 @@
                 <div class="products-list">
                     <div class="products-list__wrapper">
 
-                        <div id="mydiv" class="product products-list__product" tabindex="-1">
+                        <div class="product products-list__product">
                             <div style="--bgColor: #EF2B50" data-status="-30 % АКЦИЯ" class="product__body">
                                 <a class="product__link" href="#!">
                                     <img src="./img/products/product-1.jpg" alt="сыворотка для глаз" class="product__img">
@@ -254,6 +255,95 @@
                                 </div>
                                 <p class="product__tag">Сыворотка для глаз</p>
                                 <p class="product__price">от 410 до 470 byn</p>
+                            </div>
+                            <div class="product__footer">
+                                <button class="product__btn-add">в корзину</button>
+                            </div>
+                        </div>
+
+                        <div class="product products-list__product">
+                            <div class="product__body">
+                                <a class="product__link" href="#!">
+                                    <img src="./img/products/product-5.jpg" alt="сыворотка для глаз" class="product__img">
+                                </a>
+                                <p class="product__name">hello beauty</p>
+                                <p class="product__descr">Сыворотка для кожи
+                                    вокруг глаз</p>
+                                <div class="product__colors">
+                                    <span style="color: #fff" class="product__colors-color"></span>
+                                    <span style="color: #fff" class="product__colors-color"></span>
+                                    <span style="color: #fff" class="product__colors-color"></span>
+                                    <span style="color: #fff" class="product__colors-color"></span>
+                                </div>
+                                <p class="product__tag">Сыворотка для глаз</p>
+                                <p class="product__price">от 410 до 470 byn</p>
+                                <button class="product__btn-empty">Сообщить о появлении</button>
+                            </div>
+                        </div>
+
+                        <div class="product products-list__product">
+                            <div class="product__body">
+                                <a class="product__link" href="#!">
+                                    <img src="./img/products/product-6.jpg" alt="сыворотка для глаз" class="product__img">
+                                </a>
+                                <p class="product__name">hello beauty</p>
+                                <p class="product__descr">Сыворотка для кожи
+                                    вокруг глаз</p>
+                                <div class="product__colors">
+                                    <span style="color: #fff" class="product__colors-color"></span>
+                                    <span style="color: #fff" class="product__colors-color"></span>
+                                    <span style="color: #fff" class="product__colors-color"></span>
+                                    <span style="color: #fff" class="product__colors-color"></span>
+                                </div>
+                                <p class="product__tag">Сыворотка для глаз</p>
+                                <p class="product__price">от 410 до 470 byn</p>
+
+                            </div>
+                            <div class="product__footer">
+                                <button class="product__btn-add">в корзину</button>
+                            </div>
+                        </div>
+
+                        <div class="product products-list__product">
+                            <div class="product__body">
+                                <a class="product__link" href="#!">
+                                    <img src="./img/products/product-7.jpg" alt="сыворотка для глаз" class="product__img">
+                                </a>
+                                <p class="product__name">hello beauty</p>
+                                <p class="product__descr">Сыворотка для кожи
+                                    вокруг глаз</p>
+                                <div class="product__colors">
+                                    <span style="color: #fff" class="product__colors-color"></span>
+                                    <span style="color: #fff" class="product__colors-color"></span>
+                                    <span style="color: #fff" class="product__colors-color"></span>
+                                    <span style="color: #fff" class="product__colors-color"></span>
+                                </div>
+                                <p class="product__tag">Сыворотка для глаз</p>
+                                <p class="product__price">от 410 до 470 byn</p>
+
+                            </div>
+                            <div class="product__footer">
+                                <button class="product__btn-add">в корзину</button>
+                            </div>
+                        </div>
+
+                        <div class="product products-list__product">
+                            <div class="product__body">
+                                <a class="product__link" href="#!">
+                                    <img src="./img/products/product-8.jpg" alt="сыворотка для глаз" class="product__img">
+                                </a>
+                                <p class="product__name">hello beauty</p>
+                                <p class="product__descr">Сыворотка для кожи
+                                    вокруг глаз</p>
+                                <div class="product__colors">
+                                    <span style="color: #fff" class="product__colors-color"></span>
+                                    <span style="color: #fff" class="product__colors-color"></span>
+                                    <span style="color: #fff" class="product__colors-color"></span>
+                                    <span style="color: #fff" class="product__colors-color"></span>
+                                </div>
+                                <p class="product__tag">Сыворотка для глаз</p>
+                                <p class="product__price">от 410 до 470 byn</p>
+
                             </div>
                             <div class="product__footer">
                                 <button class="product__btn-add">в корзину</button>

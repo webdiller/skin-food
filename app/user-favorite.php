@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="theme-color" content="#fff">
     <title>Skin Food</title>
+    <link rel="icon" href="./img/favicon.png" type="image/png">
     <style>
         body {
             opacity: 0;
@@ -42,7 +43,7 @@
                     <div class="favorites__list products-list">
                         <div class="favorites__list-wrapper products-list__wrapper">
 
-                            <div class="product products-list__product" tabindex="-1">
+                            <div class="product products-list__product">
                                 <div style="--bgColor: #EF2B50" data-status="-30 % АКЦИЯ" class="product__body">
                                     <a class="product__link" href="#!">
                                         <img src="./img/products/product-1.jpg" alt="сыворотка для глаз" class="product__img">
@@ -137,7 +138,7 @@
                     <div class="favorites__list products-list">
                         <div class="favorites__list-wrapper products-list__wrapper">
 
-                            <div class="product products-list__product" tabindex="-1">
+                            <div class="product products-list__product">
                                 <div style="--bgColor: #EF2B50" data-status="-30 % АКЦИЯ" class="product__body">
                                     <a class="product__link" href="#!">
                                         <img src="./img/products/product-1.jpg" alt="сыворотка для глаз" class="product__img">

@@ -10,12 +10,23 @@
 	.products-list__wrapper
 		margin-left: 0
 		margin-right: 0
+		justify-content: space-between
+	.favorites__list-wrapper
+		justify-content: center
+		padding-left: 10px
+		padding-right: 10px
+		.product
+			margin-left: 10px
+			margin-right: 10px
+			flex-basis: 30%
+			width: 30%
+			min-width: 223px
 	.products-list__product
-		flex-basis: 31%
-		width: 31%
+		flex-basis: 32%
+		width: 32%
 		margin-bottom: 20px
-		margin-left: 10px
-		margin-right: 10px
+		margin-left: 0
+		margin-right: 0
 	.navigation__inner-navigation
 		left: 0
 	.region-modal
@@ -49,6 +60,12 @@
 		padding-right: 20px
 
 @media only screen and (max-width : 991px)
+	.products-list__product
+		flex-basis: 32%
+		width: 32%
+		margin-bottom: 20px
+		margin-left: 5px
+		margin-right: 5px
 	.success-modal__title
 		text-transform: unset
 	.success-modal__dialog
@@ -424,11 +441,23 @@
 		margin-left: 0
 		margin-right: 0
 	.products-list__product
-		flex-basis: 30.5%
-		width: 30.5%
+		flex-basis: 31.5%
+		width: 31.5%
 		margin-bottom: 20px
-		margin-left: 10px
-		margin-right: 10px
+		// product
+	.products-list__product
+		display: flex
+		flex-direction: column
+		&:hover
+			.product__footer
+				box-shadow: none
+	.product__footer
+		position: static
+		opacity: 1
+		visibility: visible
+		z-index: 2
+		bottom: 0
+		margin-top: auto
 	// user-orders 992px
 	.orders__body
 		padding: 15px 30px
@@ -550,20 +579,6 @@
 		font-size: 10px
 		min-width: 190px
 		max-height: 35px
-	// product
-	.products-list__product
-		display: flex
-		flex-direction: column
-		&:hover
-			.product__footer
-				box-shadow: none
-	.product__footer
-		position: static
-		opacity: 1
-		visibility: visible
-		z-index: 2
-		bottom: 0
-		margin-top: auto
 	// .error-page 992px
 	.error-page__title
 		font-size: 200px
@@ -850,6 +865,20 @@
 		font-size: 9px
 
 @media only screen and (max-width : 767px)
+	.main-navigation.active
+		.basket-info
+			right: auto
+			left: 20px
+	.header__basket
+		width: 22px
+		height: 25px
+		background-position: 23px 0
+		&-counter
+			font-size: 12px !important
+	.header__like
+		width: 23px
+		height: 23px
+		background-position: -46px 0
 	.success-modal__subtitle
 		font-size: 13px
 	.success-modal__count
@@ -1273,8 +1302,8 @@
 		display: block
 		margin-right: 35px
 	.header__basket-counter
-		font-size: 12px !important
-		bottom: -6px
+		font-size: 12px
+		bottom: -1px
 	.header__search
 		display: block
 		margin-right: 0
@@ -1404,6 +1433,26 @@
 		font-size: 17px
 
 @media only screen and (max-width : 576px)
+	.products-list__wrapper.favorites__list-wrapper
+		padding-left: 10px
+		padding-right: 10px
+		justify-content: center
+		.product
+			min-width: auto
+			flex-basis: 44%
+			width: 44%
+			margin-left: 10px
+			margin-right: 10px
+	.header__basket
+		width: 15px
+		height: 17px
+		background-position: 16px 0
+		&-counter
+			bottom: -2px
+	.header__like
+		width: 17.5px
+		height: 16px
+		background-position: -31.5px 0
 	.success-modal__body
 		margin: 20px auto 52px auto
 	.success-modal__subtitle
@@ -2033,6 +2082,12 @@
 		padding-top: 0
 	.swiper-carousel__icon-nav
 		font-size: 16px
+		transform: scale(0.7)
+		margin-right: 5px
+	.swiper-carousel__icon-nav-orders
+		transform: scale(0.6)
+	.swiper-carousel__icon-nav-visited
+		transform: scale(0.9)
 	.swiper-carousel--cabinet.owl-theme .owl-nav [class*=owl-]
 		top: 12px
 	.swiper-carousel--cabinet .swiper-carousel__slide
@@ -2330,9 +2385,6 @@
 		font-size: 22px
 	.header__like
 		margin-right: 22px
-	.header__basket-counter
-		bottom: -3px
-		font-size: 9px
 	.header__menu
 		margin-right: 25px
 	.header__title

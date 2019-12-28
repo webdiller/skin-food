@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="theme-color" content="#fff">
     <title>Skin Food</title>
+    <link rel="icon" href="./img/favicon.png" type="image/png">
     <style>
         body {
             opacity: 0;
@@ -22,6 +23,7 @@
     <!-- modals -->
     <?php include 'components/modals/region-modal.php'; ?>
     <?php include 'components/modals/user-modal.php'; ?>
+    <?php include 'components/modals/find-out-modal.php'; ?>
 
 
     <!-- components -->
@@ -41,7 +43,7 @@
                     <div class="favorites__list products-list">
                         <div class="favorites__list-wrapper products-list__wrapper">
 
-                            <div class="product products-list__product" tabindex="-1">
+                            <div class="product products-list__product">
                                 <div style="--bgColor: #EF2B50" data-status="-30 % АКЦИЯ" class="product__body">
                                     <a class="product__link" href="#!">
                                         <img src="./img/products/product-1.jpg" alt="сыворотка для глаз" class="product__img">
@@ -57,7 +59,7 @@
                                     </div>
                                     <p class="product__tag">Сыворотка для глаз</p>
                                     <p class="product__price">от 410 до 470 byn</p>
-                                    <button class="product__btn-empty">Сообщить о появлении</button>
+                                    <button data-toggle="modal" data-target="#findOutModal" type="button"  class="product__btn-empty">Сообщить о появлении</button>
                                 </div>
                             </div>
 
@@ -128,7 +130,7 @@
                                 </div>
                             </div>
 
-                            <div class="product products-list__product" tabindex="-1">
+                            <div class="product products-list__product">
                                 <div style="--bgColor: #EF2B50" data-status="-30 % АКЦИЯ" class="product__body">
                                     <a class="product__link" href="#!">
                                         <img src="./img/products/product-1.jpg" alt="сыворотка для глаз" class="product__img">
@@ -144,7 +146,7 @@
                                     </div>
                                     <p class="product__tag">Сыворотка для глаз</p>
                                     <p class="product__price">от 410 до 470 byn</p>
-                                    <button class="product__btn-empty">Сообщить о появлении</button>
+                                    <button data-toggle="modal" data-target="#findOutModal" type="button"  class="product__btn-empty">Сообщить о появлении</button>
                                 </div>
                             </div>
 
@@ -218,7 +220,7 @@
                         </div>
                     </div>
 
-                    <div class="products-pagination">
+                    <div class="products-pagination products-pagination--paddings">
                         <div class="products-pagination__wrapper">
                             <p class="products-pagination__status">Показано
                                 <span class="products-pagination__status-current">60</span> из
