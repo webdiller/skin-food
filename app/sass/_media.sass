@@ -28,7 +28,9 @@
 		margin-left: 0
 		margin-right: 0
 	.navigation__inner-navigation
-		left: 0
+		left: 30px
+		right: 20px
+		max-width: calc(100% - 60px)
 	.region-modal
 		padding-right: 0 !important
 	.region-modal__dialog
@@ -865,6 +867,10 @@
 		font-size: 9px
 
 @media only screen and (max-width : 767px)
+	.swiper-carousel__icon-nav-fav
+		background-position: 53px 0
+	.swiper-carousel__icon-nav-visited
+		background-position: 24px 0
 	.main-navigation.active
 		.basket-info
 			right: auto
@@ -872,13 +878,14 @@
 	.header__basket
 		width: 22px
 		height: 25px
-		background-position: 23px 0
+		background-position: 74px 0
 		&-counter
-			font-size: 12px !important
+			font-size: 12px
+			bottom: 0
 	.header__like
 		width: 23px
 		height: 23px
-		background-position: -46px 0
+		background-position: -69px 0
 	.success-modal__subtitle
 		font-size: 13px
 	.success-modal__count
@@ -1151,8 +1158,6 @@
 		color: #000
 	.header-icon
 		font-size: 23px
-	.header__basket
-		font-size: 28px
 	.brands__item
 		padding: 25px 35px 20px 35px
 	.brands__letter
@@ -1301,9 +1306,6 @@
 	.header__menu
 		display: block
 		margin-right: 35px
-	.header__basket-counter
-		font-size: 12px
-		bottom: -1px
 	.header__search
 		display: block
 		margin-right: 0
@@ -1444,15 +1446,15 @@
 			margin-left: 10px
 			margin-right: 10px
 	.header__basket
-		width: 15px
-		height: 17px
-		background-position: 16px 0
+		width: 16px
+		height: 18px
+		background-position: -37px 0 
 		&-counter
-			bottom: -2px
+			bottom: -1px
 	.header__like
-		width: 17.5px
-		height: 16px
-		background-position: -31.5px 0
+		width: 18px
+		height: 18px
+		background-position: -54px 0
 	.success-modal__body
 		margin: 20px auto 52px auto
 	.success-modal__subtitle
@@ -2379,10 +2381,16 @@
 		font-size: 11px
 	.header__wrapper
 		height: 55px
+		padding-top: 16px
+		padding-bottom: 18px
+	.main-fixed .header__wrapper
+		padding-top: 16px
+		padding-bottom: 18px
+		padding-left: 20px
+		padding-right: 20px
+		height: 55px
 	.header-icon
 		font-size: 17px
-	.header__basket
-		font-size: 22px
 	.header__like
 		margin-right: 22px
 	.header__menu
