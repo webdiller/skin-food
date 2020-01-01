@@ -27,7 +27,7 @@
                 <div class="error-page__wrapper">
                     <h1 class="error-page__title">404</h1>
                     <div class="error-page__descr">Запрашиваемая вами страница не найдена</div>
-                    <a href="index.html" class="error-page__btn">на главную</a>
+                    <a href="index.php" class="error-page__btn">на главную</a>
                 </div>
             </div>
         </div>
