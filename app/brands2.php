@@ -164,7 +164,7 @@
                                         <option value="Премиум">Премиум</option>
                                     </select>
                                 </div>
-                                <button data-toggle="modal" data-target="#filterModal" class="mobile-filter__btn">Фильтр</button>
+                                <button data-toggle="modal" data-target="#filterModal" class="mobile-filter__btn">Фильтр <span class="mobile-filter__btn-arrow demo-icon icon-right-open-big"></span></button>
                             </div>
                         </div>
 

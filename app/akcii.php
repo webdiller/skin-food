@@ -17,7 +17,7 @@
     <link rel="stylesheet" type="text/css" href="css/style.min.css" />
 </head>
 
-<body id="bodySelector" class="body-container">
+<body id="bodySelector" class="body-container body-container--select2">
 
     <!-- modals -->
     <?php include 'components/modals/region-modal.php'; ?>
@@ -145,14 +145,14 @@
 
                         <div class="mobile-filter d-block d-lg-none">
                             <div class="mobile-filter__wrapper">
-                                <div class="mobile-filter__select2-group select2-group">
-                                    <select class="mobile-filter__select select-dropdown-sort-mobile">
+                            <div class="filter-with-tags__select2-group select2-group">
+                                    <select class="main-filter__select select-dropdown-sort">
                                         <option value="Сначала популярные">Сначала популярные</option>
                                         <option value="Новинки">Новинки</option>
                                         <option value="Премиум">Премиум</option>
                                     </select>
                                 </div>
-                                <button data-toggle="modal" data-target="#filterModal" class="mobile-filter__btn">Фильтр</button>
+                                <button data-toggle="modal" data-target="#filterModal" class="mobile-filter__btn">Фильтр <span class="mobile-filter__btn-arrow demo-icon icon-right-open-big"></span></button>
                             </div>
                         </div>
 

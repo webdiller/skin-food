@@ -61,6 +61,10 @@ a:hover
             bottom: 0
             width: 100%
             height: 100%
+    &--select2
+        .select2-container--open .select2-dropdown--below
+            width: auto !important
+            white-space: nowrap
 
 .site
     &-title
@@ -442,6 +446,7 @@ a:hover
         background: rgb(251, 248, 249)
         .main__wrapper
             padding-top: 15px
+            min-height: auto
     &--user-favorite
         .main__wrapper
             padding-top: 0
@@ -721,7 +726,6 @@ a:hover
         border-radius: 5px
     &--paddings
         padding: 0 30px
-    &__select
     &__select2-group
         min-width: 210px
         margin-bottom: 15px
@@ -815,21 +819,23 @@ a:hover
                 color: #000
     &__btn
         font-size: 14px
-        line-height: 29px
-        display: flex
-        align-items: center
         border: none
         outline: none
         min-width: 160px
-        min-height: 30px
-        text-align: center
-        display: inline-block
+        min-height: 35px
+        display: inline-flex
+        justify-content: center
+        align-items: center
         font-weight: 400
         letter-spacing: 0.04em
         text-transform: uppercase
         color: #FFFFFF
         background: #F78C9F
         border-radius: 4px
+        position: relative
+        &-arrow
+            display: inline-block
+            padding-left: 15px
 
 .products-head
     &__wrapper

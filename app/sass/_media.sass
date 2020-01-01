@@ -47,6 +47,16 @@
 		width: 53%
 
 @media only screen and (max-width : 991px)
+	.filter-with-tags__select2-group
+		.select2-container--default .select2-selection--single
+			background: transparent
+		.select2-container--default .select2-selection--single .select2-selection__rendered
+			color: #000
+			font-weight: 700
+		.select2-container--default .select2-selection--single .select2-selection__arrow:before
+			color: #000
+	.mobile-filter__select2-group .select2-container--default .select2-selection--single .select2-selection__arrow
+		right: -5px
 	.user-data__bonus-account
 		padding-top: 0
 	.user-data__address, .user-data__person
@@ -870,6 +880,7 @@
 		font-size: 9px
 
 @media only screen and (max-width : 767px)
+
 	.swiper-carousel__icon-nav-fav
 		background-position: 53px 0
 	.swiper-carousel__icon-nav-visited
@@ -911,11 +922,21 @@
 	.form-input-group__label,
 	.form-textarea-group__label
 		font-size: 7px
-	.form-gender-group__label
-		font-weight: 700
+	.form-gender-group
+		&__label
+			font-weight: 700
+			color: #4B4B4B
+			&::before
+				color: #aeaeae
+		&__input
+			&:checked
+				+ .form-gender-group__label::before
+					color: #eb849a !important
 	.form-datepicker-group__label, .person__gender-title
 		text-transform: unset
 		font-size: 11px
+	.person__gender
+		margin-bottom: 21px
 	.product-section__main
 		flex-basis: 100%
 		width: 100%
@@ -1001,6 +1022,13 @@
 		flex-basis: 50%
 		width: 50%
 	// user-orders 768px
+	.user-address__select-country,
+	.user-address__select-city
+		.select-with-label .select2-container--default .select2-selection--single .select2-selection__rendered
+			font-size: 11px
+			padding: 4px 0 19px 9px
+		.select2-results__option[aria-selected]
+			font-size: 11px !important
 	.main--catalog .main__wrapper
 		padding-top: 0
 	.orders__header--shadow, .orders__wrapper
@@ -1130,6 +1158,7 @@
 	.user-address__title
 		margin-bottom: 0
 		border-bottom: 0
+		line-height: 1
 	.person__title,
 	.bonus-account__title,
 	.user-address__title,
@@ -1451,7 +1480,7 @@
 	.header__basket
 		width: 16px
 		height: 18px
-		background-position: -37px 0 
+		background-position: -37px 0
 		&-counter
 			bottom: -1px
 	.header__like
@@ -1670,8 +1699,9 @@
 	.mobile-filter__btn
 		font-size: 10px
 		min-height: 25px
-		line-height: 25px
 		min-width: 110px
+		&-arrow
+			padding-left: 10px
 	.mobile-filter__select2-group .select2-container--default .select2-selection--single .select2-selection__rendered
 		font-size: 13px
 	.breadcrumbs-list__item
@@ -2176,6 +2206,7 @@
 		flex-basis: 100px
 		width: 100px
 	.bonus-account__title
+		border-top: 0
 		padding: 12px 0 18px 0
 	.person__title
 		margin-bottom: 20px
@@ -2195,9 +2226,10 @@
 		padding-bottom: 25px
 		border-bottom: 1px solid #e7e7e7
 	.user-address__title
-		margin: 12px 0 15px 0
+		margin: 12px 0 18px 0
 		border-top: 0
 		padding-bottom: 0
+		line-height: 1
 	.user-data__bonus-account
 		order: 2
 	.user-data__address

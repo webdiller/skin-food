@@ -120,7 +120,7 @@
 
                                         <div class="person__day select2-group">
                                             <select class="select-dropdown-birthday" name="birthdayDay" id="birthdaySelect2Day">
-                                                <option value="01">01</option>
+                                                <option selected value="01">01</option>
                                                 <option value="02">02</option>
                                                 <option value="03">03</option>
                                                 <option value="04">04</option>
@@ -161,7 +161,7 @@
                                                 <option value="03">03</option>
                                                 <option value="04">04</option>
                                                 <option value="05">05</option>
-                                                <option value="06">06</option>
+                                                <option selected value="06">06</option>
                                                 <option value="07">07</option>
                                                 <option value="08">08</option>
                                                 <option value="09">09</option>
@@ -178,7 +178,7 @@
                                                 <option value="03">Март</option>
                                                 <option value="04">Апрель</option>
                                                 <option value="05">Май</option>
-                                                <option value="06">Июнь</option>
+                                                <option selected value="06">Июнь</option>
                                                 <option value="07">Июль</option>
                                                 <option value="08">Авуст</option>
                                                 <option value="09">Себтябрь</option>
@@ -229,7 +229,7 @@
                                                 <option value="1994">1994</option>
                                                 <option value="1993">1993</option>
                                                 <option value="1992">1992</option>
-                                                <option value="1991">1991</option>
+                                                <option selected value="1991">1991</option>
                                                 <option value="1990">1990</option>
                                                 <option value="1989">1989</option>
                                                 <option value="1988">1988</option>
@@ -346,7 +346,7 @@
                             <!-- 1-4 -->
                             <div class="person__controll">
                                 <button type="button" class="person__btn-change">Изменить пароль</button>
-                                <button type="button" class="person__btn-change">Изменить почту</button>
+                                <!-- <button type="button" class="person__btn-change">Изменить почту</button> -->
                             </div>
                         </form>
                     </div>

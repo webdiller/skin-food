@@ -201,7 +201,24 @@ $(document).ready(function () {
                         items: 1
                     }
                 }
-            })
+            });
+
+
+            let locationArr = window.location.href.split('/');
+            for (let item of locationArr) {
+                if (item.includes('user-cabinet')) {
+                    $('#swiperCarouselCabinet').trigger("to.owl.carousel", [0, 900]);
+                } else if (item.includes('user-orders')) {
+                    $('#swiperCarouselCabinet').trigger("to.owl.carousel", [1, 900]);
+                } else if (item.includes('user-favorite')) {
+                    $('#swiperCarouselCabinet').trigger("to.owl.carousel", [2, 900]);
+                } else if (item.includes('user-visited')) {
+                    $('#swiperCarouselCabinet').trigger("to.owl.carousel", [3, 900]);
+                } else {
+                    $('#swiperCarouselCabinet').trigger("to.owl.carousel", [0, 900]);
+                }
+            }
+
         } catch (error) {
             console.log(error);
         }
@@ -303,7 +320,7 @@ $(document).ready(function () {
             minimumResultsForSearch: Infinity
         });
 
-        
+
         $('.select-dropdown-birthday').select2({
             placeholder: 'Сначала популярные',
             minimumResultsForSearch: Infinity
@@ -653,7 +670,7 @@ $(document).ready(function () {
     }());
 
     const productViewModule = (function () {
-        
+
     }());
 
 });
