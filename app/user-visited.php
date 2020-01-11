@@ -35,7 +35,7 @@
         <div class="main__img-favorite"></div>
         <div class="main__wrapper">
 
-            <?php include 'components/navigation-user--visited.php'; ?>
+        <?php include 'components/navigation-user--visited.php'; ?>
 
             <div class="favorites">
                 <div class="favorites__wrapper">
@@ -59,7 +59,7 @@
                                     </div>
                                     <p class="product__tag">Сыворотка для глаз</p>
                                     <p class="product__price">от 410 до 470 byn</p>
-                                    <button data-toggle="modal" data-target="#findOutModal" type="button"  class="product__btn-empty">Сообщить о появлении</button>
+                                    <button data-toggle="modal" data-target="#findOutModal" type="button" class="product__btn-empty">Сообщить о появлении</button>
                                 </div>
                             </div>
 
@@ -146,7 +146,7 @@
                                     </div>
                                     <p class="product__tag">Сыворотка для глаз</p>
                                     <p class="product__price">от 410 до 470 byn</p>
-                                    <button data-toggle="modal" data-target="#findOutModal" type="button"  class="product__btn-empty">Сообщить о появлении</button>
+                                    <button data-toggle="modal" data-target="#findOutModal" type="button" class="product__btn-empty">Сообщить о появлении</button>
                                 </div>
                             </div>
 

@@ -34,7 +34,7 @@
         <div class="main__img-favorite"></div>
         <div class="main__wrapper">
 
-            <?php include 'components/navigation-user--favorite.php'; ?>
+        <?php include 'components/navigation-user--favorite.php'; ?>
 
 
             <div class="favorites">

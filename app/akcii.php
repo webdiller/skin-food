@@ -26,10 +26,10 @@
 
 
     <!-- components -->
-    <?php include 'components/region.php';?>
-    <?php include 'components/header.php';?>
-    <?php include 'components/navigation.php';?>
-    <?php include 'components/slider-akcii.php';?>
+    <?php include 'components/region.php'; ?>
+    <?php include 'components/header.php'; ?>
+    <?php include 'components/navigation.php'; ?>
+    <?php include 'components/slider-akcii.php'; ?>
 
 
     <main class="main main--akcii">
@@ -145,7 +145,7 @@
 
                         <div class="mobile-filter d-block d-lg-none">
                             <div class="mobile-filter__wrapper">
-                            <div class="filter-with-tags__select2-group select2-group">
+                                <div class="filter-with-tags__select2-group select2-group">
                                     <select class="main-filter__select select-dropdown-sort">
                                         <option value="Сначала популярные">Сначала популярные</option>
                                         <option value="Новинки">Новинки</option>
@@ -464,7 +464,7 @@
     </main>
 
 
-    <?php include 'components/footer.php';?>
+    <?php include 'components/footer.php'; ?>
 
     <!-- CUSTOM AND LIBS -->
     <script src="js/libs.min.js"></script>

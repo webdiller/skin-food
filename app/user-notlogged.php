@@ -34,7 +34,7 @@
         <div class="main__img-cabinet"></div>
         <div class="main__wrapper">
 
-            <?php include 'components/navigation-user--cabinet.php'; ?>
+        <?php include 'components/navigation-user--cabinet.php'; ?>
 
             <div class="user-data">
                 <div class="user-data__wrapper">

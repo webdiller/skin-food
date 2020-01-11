@@ -137,7 +137,7 @@
 
                                 <div class="form-input-group promo-list__promo-group">
                                     <label for="promoInputDesktop" class="form-input-group__label">Промокод</label>
-                                    <input  id="promoInputDesktop" type="text" placeholder="" class="form-input-group__input">
+                                    <input id="promoInputDesktop" type="text" placeholder="" class="form-input-group__input">
                                 </div>
 
                             </div>
@@ -255,9 +255,9 @@
                                         <p class="payment__title">Оплата</p>
 
 
-                                        <div class="payment__radio-list">
+                                        <form id="paymentForm" class="payment__radio-list">
 
-                                            <div class="form-radio-group payment__form-radio-group payment__form-radio-group-one">
+                                            <div id="paymentTypeInnerTitle" class="form-radio-group payment__form-radio-group payment__form-radio-group-one">
                                                 <input checked type="radio" name="paymentType" value="Оплатить при получении" id="paytype1" class="form-radio-group__input">
                                                 <label class="form-radio-group__label" for="paytype1">
                                                     Оплатить при получении
@@ -266,48 +266,48 @@
 
                                             <div class="payment__radio-list-inner">
                                                 <div class="form-radio-group payment__form-radio-group">
-                                                    <input checked type="radio" name="paymentTypeInner" value="Наличными" id="paytype11" class="form-radio-group__input">
+                                                    <input checked type="checkbox" name="paymentTypeInner" value="Наличными" id="paytype11" class="form-radio-group__input">
                                                     <label class="form-radio-group__label" for="paytype11">
                                                         Наличными
                                                     </label>
                                                 </div>
 
                                                 <div class="form-radio-group payment__form-radio-group">
-                                                    <input type="radio" name="paymentTypeInner" value="Картой рассрочки" id="paytype12" class="form-radio-group__input">
+                                                    <input type="checkbox" name="paymentTypeInner" value="Картой рассрочки" id="paytype12" class="form-radio-group__input">
                                                     <label class="form-radio-group__label" for="paytype12">
                                                         Картой рассрочки
                                                     </label>
                                                 </div>
 
                                                 <div class="form-radio-group payment__form-radio-group">
-                                                    <input type="radio" name="paymentTypeInner" value="Другой банковской картой" id="paytype13" class="form-radio-group__input">
+                                                    <input type="checkbox" name="paymentTypeInner" value="Другой банковской картой" id="paytype13" class="form-radio-group__input">
                                                     <label class="form-radio-group__label" for="paytype13">
                                                         Другой банковской картой
                                                     </label>
                                                 </div>
 
                                                 <div class="form-radio-group payment__form-radio-group">
-                                                    <input type="radio" name="paymentTypeInner" value="Подарочным сертификатом" id="paytype14" class="form-radio-group__input">
+                                                    <input type="checkbox" name="paymentTypeInner" value="Подарочным сертификатом" id="paytype14" class="form-radio-group__input">
                                                     <label class="form-radio-group__label" for="paytype14">
                                                         Подарочным сертификатом
                                                     </label>
                                                 </div>
                                             </div>
 
-                                            <div class="form-radio-group payment__form-radio-group payment__form-radio-group-two">
+                                            <div id="paymentTypeNow" class="form-radio-group payment__form-radio-group payment__form-radio-group-two">
                                                 <input type="radio" name="paymentType" value="Оплатить сейчас онлайн" id="paytype2" class="form-radio-group__input">
                                                 <label class="form-radio-group__label" for="paytype2">
                                                     Оплатить сейчас онлайн
                                                 </label>
                                             </div>
 
-                                            <div class="form-radio-group payment__form-radio-group payment__form-radio-group-three">
+                                            <div id="paymentTypeCredit" class="form-radio-group payment__form-radio-group payment__form-radio-group-three">
                                                 <input type="radio" name="paymentType" value="Купить в рассрочку" id="paytype3" class="form-radio-group__input">
                                                 <label class="form-radio-group__label" for="paytype3">
                                                     Купить в рассрочку
                                                 </label>
                                             </div>
-                                        </div>
+                                        </form>
 
 
                                     </div>

@@ -228,7 +228,9 @@
     <script src="js/libs.min.js"></script>
     <script src="js/common.js"></script>
     <script>
-        if ($(window).width() >= 991) {
+
+        $(document).ready(function () {
+            if ($(window).width() >= 991) {
             console.log('>= 991');
             HSlide("#gridDesktop");
         }
@@ -307,6 +309,7 @@
                 console.log(error);
             }
         }
+        });
 
 
         

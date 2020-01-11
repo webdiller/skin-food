@@ -26,8 +26,7 @@ gulp.task(`sass`, [`cleanapp`], function () {
             }))
         )
         .pipe(groupmq()) // Group media queries!
-        .pipe(autoprefixer([`last 15 version`, `>1%`, `ie 8`, `ie 7`], { cascade: true }))
-        .pipe(cssnano())
+        .pipe(autoprefixer(['> 1%', 'last 2 versions', 'firefox >= 4', 'safari >= 5', 'IE 8', 'IE 9', 'IE 10', 'IE 11'], { cascade: true }))
         .pipe(rename({ suffix: `.min` }))
         .pipe(gulp.dest(`${PATH}/css`))
         .pipe(browserSync.reload({ stream: true })) /* добавляем после установки browserSync, чтобы обновлялись стили*/
