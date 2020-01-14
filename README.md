@@ -49,14 +49,10 @@
 12. Сверстать страницу доставки
 13. Сверстать модальное окно выбора подарка и пробника
 
-
-
 Crossbrowsering   
 1. http://css.skinfood.dev.2mhost.ru/404.php
 2. http://css.skinfood.dev.2mhost.ru/brands.php
 3. http://css.skinfood.dev.2mhost.ru/index.php
-    - Параллакс не всегда работает   
-    - line-height: 3
 4. http://css.skinfood.dev.2mhost.ru/poisk.php
 5. http://css.skinfood.dev.2mhost.ru/user-cabinet.php
 6. http://css.skinfood.dev.2mhost.ru/user-favorite.php
@@ -64,14 +60,13 @@ Crossbrowsering
 8. http://css.skinfood.dev.2mhost.ru/user-visited.php
 9. http://css.skinfood.dev.2mhost.ru/akcii.php
 10. http://css.skinfood.dev.2mhost.ru/brands2.php
-    - поправить иконку треугольника
 11. http://css.skinfood.dev.2mhost.ru/catalog.php
-    - поправить иконку треугольника
 12. http://css.skinfood.dev.2mhost.ru/user-notlogged.php
 13. http://css.skinfood.dev.2mhost.ru/product-card.php
-    - проблема с модальным окном        
-    - align-items для кнопки купить     
 14. http://css.skinfood.dev.2mhost.ru/basket.php
-    ширина инпутов: улица, дом, квартира, телефон
-    display: inline-flex ?
 15. oplata-i-dostavka.php
+
+поправить оверлей карзину
+~~поправить выравнивание в header~~
+dragable навигация
+~~поправить ширину слайдера~~

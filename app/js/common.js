@@ -694,4 +694,13 @@ $(document).ready(function () {
 
     }());
 
+    const cardsModalModule = (function () {
+        $('#cardsModal').on('show.bs.modal', function (event) {
+            $('#productDeliveryIcon').addClass('hidden');
+        })
+        $('#cardsModal').on('hidden.bs.modal', function (event) {
+            $('#productDeliveryIcon').removeClass('hidden');
+        })
+    }());
+
 });

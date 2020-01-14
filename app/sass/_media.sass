@@ -716,7 +716,7 @@
 		.form-input-group__input
 			height: 37px
 	.promo-list__title
-		font-size: 	10px
+		font-size: 10px
 	.promo-list__btn
 		font-size: 9px
 	.promo-list__subtitle
@@ -861,6 +861,7 @@
 		order: 2
 		flex-basis: 100%
 		width: 100%
+		height: 75px
 	.product-section__main,
 	.slide-main__cell
 		height: 295px
@@ -876,6 +877,12 @@
 	.slide-nav .flickity-prev-next-button.next
 		width: 15px
 		height: 15px
+	.slide-nav .flickity-prev-next-button.previous
+		transform: translateY(0)
+		top: 25%
+	.slide-nav .flickity-prev-next-button.next
+		transform: translateY(0)
+		top: 30%
 	.select-with-label__label
 		font-size: 9px
 	.main-fixed .header__arrow-up, .main-fixed .header__views
@@ -1798,7 +1805,7 @@
 		font-size: 15px
 	.modal-item__title.active
 		font-size: 11px
-		transform: translate3d(0,-9px,0) translateZ(1px)
+		transform: translate3d(0,-9px,0)
 	.modal-item__descr
 		bottom: 2px
 	.modal-item__descr-item
@@ -1856,6 +1863,10 @@
 	.notlogged__btn-registr,
 	.user-modal__input,
 	.search-group.search-group--modal-user .search-group__input::placeholder
+		font-size: 13px
+	.search-group.search-group--modal-user .search-group__input
+		line-height: 1.8
+	.user-modal__input::placeholder
 		font-size: 13px
 	.socials-with-payment__link
 		transform: scale(0.85)
@@ -2130,11 +2141,13 @@
 		height: 40px
 	.search-group
 		height: 25px
+		&--modal-user
+			height: auto
 	.search-group__input
 		height: 100%
 		padding-top: 0
 		padding-bottom: 0
-		line-height: 1
+		line-height: 3
 		font-size: 10px
 	.region-modal__icon-car
 		font-size: 22px
@@ -2403,6 +2416,9 @@
 	.footer__contact-list, .footer__navigation-main, .footer__navigation-users, .footer__socials-with-payment
 		padding-left: 0
 	// modal 576px
+	.slider__wrapper
+		padding-left: 10px
+		padding-right: 10px
 	.region-modal__close
 		font-size: 15px
 	.region-modal__header-wrapper
@@ -2478,6 +2494,9 @@
 			font-size: 7px
 
 @media only screen and (max-width : 480px)
+	.main-fixed .header__wrapper,
+	.header__wrapper
+		align-items: flex-end
 	.products-list__wrapper
 		justify-content: space-between
 	.products-list__product
@@ -2590,12 +2609,15 @@
 		font-size: 9px
 	// header 375px
 	.region-info__body
-		width: 280px
+		width: 100%
+	.region-modal__close,
+	.modal-header .close
+		padding: 0
 	.region__wrapper p,
 	.region__btn
 		font-size: 11px
 	.slider__wrapper
-		padding: 15px 20px
+		padding: 15px 10px
 	.slider-carousel__item
 		height: 188px
 	.region-list__item
@@ -2623,3 +2645,15 @@
 	.user-modal__link-entry,
 	.user-modal__link-registration
 		font-size: 12px
+
+// @media only screen and (max-width : 340px)
+// 	.region-modal__title
+// 		font-size: 12px
+// 	.user-address__body, .user-address__house
+// 		flex-basis: 10%
+// 		width: 10%
+// 		margin-right: 5px
+// 		min-width: 60px
+// 	.user-address__flat
+// 		flex-basis: 80px
+// 		width: 80px

@@ -157,7 +157,7 @@
                             </div>
 
                             <div class="product-section__delivery product-delivery">
-                                <span class="product-delivery__icon demo-icon icon-truck"></span>
+                                <span id="productDeliveryIcon" class="product-delivery__icon demo-icon icon-truck"></span>
                                 <div class="product-delivery__title">Доставка
                                     <a href="#!" class="product-delivery__current-city">
                                         по Минску

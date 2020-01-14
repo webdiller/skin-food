@@ -25,7 +25,7 @@ body
     overflow-x: hidden
     font-family: $proxy
     font-weight: 400
-    min-width: 345px
+    min-width: 375px
     min-height: 100vh
     margin: 0
     padding: 0
@@ -1658,6 +1658,8 @@ a:hover
         top: 0
         left: 0
         transform: rotateY(3.142rad)
+        &.hidden
+            z-index: -1
     &__title
         font-weight: bold
         margin-bottom: 5px
