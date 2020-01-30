@@ -80,8 +80,12 @@
         font-size: 22px
         color: #f78c9f
         margin-right: 20px
+        transition: all .1s ease
         &::before
             transform: rotateY(3.142rad)
+        &.hidden
+            opacity: 0
+            visibility: hidden
     &__cities
         display: flex
         justify-content: space-between
@@ -973,3 +977,75 @@
         margin-left: auto
         letter-spacing: 1px
         color: #fff
+
+.map-list
+    +reset-ul
+    display: flex
+    flex-direction: column
+    &__item
+        font-size: 16px
+        line-height: 207.06%
+        letter-spacing: 0.04em
+        color: #1E1E1F
+    &__link
+        border-bottom: 1px solid #FFDDE4
+        padding: 9.5px 0
+        display: inline-block
+        width: 100%
+        transition: all .3s ease
+        &:hover
+            background: rgba(255, 221, 228, .4)
+        &:focus
+            background: rgba(255, 221, 228, .4)
+            outline: none
+    &__link-title
+        font-weight: 600
+
+.map-modal
+    padding-right: 0 !important
+    &__dialog
+        background: #fff
+        max-width: 1025px
+        margin: 100px auto 50px auto
+        border-radius: 4px
+    &__content
+        max-width: 1085px
+    &__header
+        width: 100%
+        padding: 20px 40px
+        display: flex
+        justify-content: space-between
+        align-items: center
+        margin: 0 auto
+        color: #F78C9F
+        border-bottom: 1px solid #adadad
+    &__title
+        font-size: 17px
+        font-weight: 700
+        letter-spacing: 0.04em
+        color: #1e1e1f
+        text-transform: uppercase
+    &__close
+        color: #F78C9F
+        font-size: 19px
+        opacity: 1
+        padding: 0
+        +reset-btn
+        &::before
+            margin: 0
+        &:hover
+            opacity: 1
+            color: #F78C9F
+    &__body
+        padding: 16px 40px 60px 40px
+    &__map
+        background: url(../img/map.jpg) no-repeat center / cover
+        height: 375px
+    &__list-title
+        font-size: 17px
+        line-height: 207.06%
+        letter-spacing: 0.04em
+        color: #F78C9F
+        padding-top: 20px
+    &__list
+    &__footer

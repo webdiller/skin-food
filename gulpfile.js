@@ -50,6 +50,7 @@ gulp.task(`scripts`, function () {
         `${PATH}/libs/owl-carousel/owl.carousel.min.js`,
         `${PATH}/libs/moment/moment.js`,
         `${PATH}/libs/flickity/flickity.js`,
+        `${PATH}/libs/lazyload.js`,
     ])
         .pipe(concat(`libs.min.js`))
         .pipe(uglify())

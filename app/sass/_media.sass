@@ -7,6 +7,8 @@
 		display: block
 
 @media only screen and (max-width : 1150px)
+	.map-modal__dialog
+		margin-top: 0
 	.products-list__wrapper
 		margin-left: 0
 		margin-right: 0
@@ -47,6 +49,60 @@
 		width: 53%
 
 @media only screen and (max-width : 991px)
+	.region-modal__header
+		border-bottom: 2px solid #F78C9F
+	.map-modal__content
+		border: none
+		border-radius: 0
+	.map-modal__header
+		padding-top: 0
+		padding-bottom: 0
+		height: 60px
+		align-items: center
+		display: flex
+		border-bottom: 2px solid #F78C9F
+	.map-modal__title
+		font-size: 17px
+		line-height: 207.06%
+		letter-spacing: 0.04em
+		color: #F78C9F
+		text-transform: unset
+	.map-modal__title
+		line-height: 1
+	.map-modal__header
+		padding-left: 30px
+		padding-right: 30px
+	.map-modal__body
+		padding: 16px 30px 45px 30px
+	.type-payment__images
+		padding-bottom: 30px
+	.payment-delivery__region
+		padding-left: 30px !important
+		padding-right: 30px !important
+	.type-delivery__head,
+	.type-delivery__item,
+	.type-payment__head,
+	.type-payment__body
+		padding-left: 30px
+		padding-right: 30px
+	.type-delivery__item
+		padding-top: 15px
+		padding-bottom: 15px
+	.type-delivery__col-title,
+	.type-delivery__col-btn-title
+		font-size: 14px
+	.type-payment__subtitle,
+	.type-payment__title
+		font-size: 15px
+	.type-payment__head
+		padding-top: 30px
+		padding-bottom: 30px
+	.type-payment__body
+		flex-direction: column
+	.type-payment__content
+		max-width: unset
+	.type-payment__cards-list
+		max-width: 400px
 	.filter-with-tags__select2-group
 		.select2-container--default .select2-selection--single
 			background: transparent
@@ -889,8 +945,22 @@
 		display: none
 	.main-fixed .header__user
 		margin-left: auto
+	.type-delivery__head
+		display: none
+	.type-delivery__item
+		display: none
+	.type-delivery__mobile
+		display: flex
 
 @media only screen and (max-width : 767px)
+	.map-modal__map
+		height: 254px
+	.type-delivery__title
+		padding-top: 0
+	.type-payment__head-title
+		padding-bottom: 0
+		line-height: 1
+		text-transform: unset
 	.filter-with-tags__select2-group
 		font-size: 14px
 	.basket__back-link:before
@@ -1045,6 +1115,8 @@
 		flex-basis: 50%
 		width: 50%
 	// user-orders 768px
+	.type-delivery__acc-btn-current
+		font-size: 13px
 	.user-address__select-country,
 	.user-address__select-city
 		.select-with-label .select2-container--default .select2-selection--single .select2-selection__rendered
@@ -1222,9 +1294,11 @@
 		font-size: 13px
 	.result-list__link
 		padding-bottom: 5px
-	.search__head
+	.search__head,
+	.payment-delivery__head
 		padding: 25px 35px
-	.search__body
+	.search__body,
+	.payment-delivery__body
 		padding: 25px 35px
 	// products-pagination 768px
 	.products-pagination
@@ -1485,6 +1559,46 @@
 		font-size: 17px
 
 @media only screen and (max-width : 576px)
+	.map-modal__header
+		height: 40px
+		padding-left: 20px
+		padding-right: 20px
+		border-bottom-width: 1.5px
+	.map-modal__title
+		font-size: 14px
+	.map-modal__close
+		font-size: 15px
+	.map-modal__body
+		padding: 20px 20px 30px 20px
+	.map-modal__list-title
+		font-size: 15px
+		line-height: 207.06%
+		letter-spacing: 0.04em
+		color: #F78C9F
+	.map-list__link
+		font-size: 12px
+		line-height: 207.06%
+		letter-spacing: 0.04em
+		color: #1E1E1F
+		padding: 6px 0
+	.type-payment__cards-list .cards-list__item
+		padding-top: 10px
+	.type-payment__cards-list .cards-list__item:not(:last-child)
+		padding-bottom: 10px
+	.type-payment__right
+		min-width: 100%
+	.payment-delivery__head,
+	.type-delivery__title,
+	.type-delivery__acc-item,
+	.type-payment__body,
+	.type-payment__head
+		padding-left: 15px
+		padding-right: 15px
+	.payment-delivery__region
+		padding-left: 15px !important
+		padding-right: 15px !important
+	.type-payment__body
+		padding-bottom: 30px
 	.filter-with-tags__select2-group
 		font-size: 13px
 	.person__gender-group
@@ -2290,9 +2404,11 @@
 		width: 20%
 	.brands__result-list
 		column-count: 2
-	.search__head
+	.search__head,
+	.payment-delivery__head
 		padding: 25px 20px
-	.search__body
+	.search__body,
+	.payment-delivery__body
 		padding: 25px 20px
 		font-size: 13px
 	.bonus-account__fields
@@ -2423,6 +2539,8 @@
 		font-size: 15px
 	.region-modal__header-wrapper
 		padding: 10px 20px
+	.region-modal__header
+		border-bottom: 1.5px solid #F78C9F
 	.region-modal__title
 		color: #F78C9F
 		white-space: nowrap
@@ -2470,20 +2588,24 @@
 		height: 55px
 		padding-top: 16px
 		padding-bottom: 18px
+		align-items: flex-end
 	.main-fixed .header__wrapper
 		padding-top: 16px
 		padding-bottom: 18px
 		padding-left: 20px
 		padding-right: 20px
 		height: 55px
+		align-items: flex-end
 	.header-icon
 		font-size: 17px
 	.header__like
 		margin-right: 22px
 	.header__menu
 		margin-right: 25px
+		top: 2px
 	.header__title
 		font-size: 22px
+		top: 3px
 		&-heart
 			margin: 0 5px
 			font-size: 7px
@@ -2494,6 +2616,19 @@
 			font-size: 7px
 
 @media only screen and (max-width : 480px)
+	.header__search
+		bottom: 1px
+		font-size: 16px
+	.header__like
+		width: 16px
+		height: 16px
+		background-position: -48px 0
+	.header__basket
+		width: 15px
+		height: 17px
+		background-position: -35px 0
+	.basket-info
+		width: 100%
 	.main-fixed .header__wrapper,
 	.header__wrapper
 		align-items: flex-end
