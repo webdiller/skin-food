@@ -35,7 +35,7 @@
             <a href="brands2.php" class="site-menu__item">Бренды каталог</a>
             <a href="poisk.php" class="site-menu__item">Поиск</a>
 
-            <a href="oplata-i-dostavka.php" class="site-menu__item">Ооплата и доставка</a>
+            <a href="oplata-i-dostavka.php" class="site-menu__item">Оплата и доставка</a>
             <a href="product-card.php" class="site-menu__item">Карточка товара</a>
 
             <a href="user-cabinet.php" class="site-menu__item">Кабинет пользователя</a>
