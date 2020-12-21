@@ -2,6 +2,9 @@
 > $ gulp    
 > gulp: 3.9.1   
 
+### design
+>[figma](https://www.figma.com/file/hhoaSOt7zXh0kcnBrMIIzu/Skin-food?node-id=0%3A1&viewport=302%2C300%2C0.044329434633255005)   
+
 ### production      
 1. http://test2.webdiller.ru/404.php
 2. http://test2.webdiller.ru/brands.php
